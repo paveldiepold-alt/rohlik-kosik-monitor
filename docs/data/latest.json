@@ -1,10 +1,10 @@
 {
   "date": "2026-10-18",
-  "checked_at": "2026-10-18T17:12+02:00",
+  "checked_at": "2026-10-18T17:15+02:00",
   "sources": {
     "Rohlík": {
       "status": "ok",
-      "cards": 172
+      "cards": 173
     },
     "Košík": {
       "status": "ok",
@@ -17,9 +17,9 @@
   },
   "product_details": {
     "visited": 8,
-    "filled": 5,
+    "filled": 7,
     "errors": 0,
-    "photos_cached": 5
+    "photos_cached": 7
   },
   "delivery": {
     "postal_code": "149 00",
@@ -70,10 +70,10 @@
       "category": "Majonézy",
       "rule_id": "W027",
       "note": "",
-      "image_url": "",
+      "image_url": "data/images/9a278d9a6e176b55348bda.webp",
       "unit_price": 115.8,
       "unit_label": "Kč/l",
-      "detail_source": "listing"
+      "detail_source": "detail page"
     },
     {
       "shop": "Košík",
@@ -116,10 +116,10 @@
       "category": "Majonézy",
       "rule_id": "W027",
       "note": "",
-      "image_url": "",
+      "image_url": "data/images/3dd7edd6e573fef96f48b0.webp",
       "unit_price": 156.67,
       "unit_label": "Kč/l",
-      "detail_source": "listing"
+      "detail_source": "detail page"
     },
     {
       "shop": "Rohlík",
