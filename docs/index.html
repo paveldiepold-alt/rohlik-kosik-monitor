@@ -112,7 +112,7 @@ button{font:inherit;cursor:pointer}
 <body>
 <header><h1>🛒 Rohlík × Košík</h1><p>Hlídač slev – značky, oblíbené produkty a ověřené cenové srovnání</p></header>
 <main>
-<div class="warn">Neoficiální monitor veřejných akčních nabídek. Přesné ceny a dostupnost pro PSČ 149 00 nejsou ověřeny. Neúspěšný sběr ≠ žádné slevy.</div>
+<div class="warn">NEÚPLNÝ vzorek akcí ze dvou veřejných stránek, nikoliv seznam všech zlevněných produktů. Přesné ceny a dostupnost pro PSČ 149 00 nejsou ověřeny. Neúspěšný sběr ≠ žádné slevy.</div>
 <div id="alerts"></div>
 <div class="stats">
 <div class="stat"><div id="n" class="num">–</div><div class="cap">Nalezených zlevněných položek</div></div>
@@ -190,6 +190,7 @@ function refresh(){
  $('alerts').replaceChildren();
  if(data.demo)showError('DEMO DATA – uvedené ceny nejsou skutečné.');
  for(const [shop,info] of Object.entries(data.sources||{})){if(info.status!=='ok'&&!data.demo)showError(`${shop}: ${info.status}. Nulový počet neznamená žádné slevy.`)}
+ for(const [shop,info] of Object.entries(data.sources||{})){if(info.status==='ok'&&info.reason&&!data.demo)showError(`${shop}: ${info.cards} načtených karet. ${info.reason}.`)}
  const brands=[...new Set(offers.map(o=>o.brand||'Ostatní'))].sort((a,b)=>a.localeCompare(b,'cs'));const keepBrand=$('brand').value;
  $('brand').replaceChildren(node('option','Všechny značky'));$('brand').firstElementChild.value='';
  for(const brand of brands){const opt=node('option',brand);opt.value=brand;$('brand').appendChild(opt)}

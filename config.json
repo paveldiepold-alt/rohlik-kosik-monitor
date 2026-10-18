@@ -7,47 +7,53 @@
     "notify_once_per_day": true,
     "free_plan_daypart": "morning",
     "interpret_watch_rules_as_favorites": true,
-    "description": "Všechna pravidla včetně nových papírových výrobků mají P1. Zewa balíčkové kapesníky jsou jen Deluxe Standard/Family; papírové kuchyňské utěrky a krabičkové 3vrstvé kapesníky mohou být jakékoli značky."
+    "description": "Všechna pravidla včetně nových papírových výrobků mají P1. Zewa balíčkové kapesníky jsou jen Deluxe Standard/Family; papírové kuchyňské utěrky a krabičkové 3vrstvé kapesníky mohou být jakékoli značky.",
+    "coverage_notice": "Pouze nalezené akce ze dvou veřejných akčních stránek, nikoliv kompletní sortiment; chybějící položka neznamená, že není v akci."
   },
   "favorite_min_discount_pct": 5,
-  "max_items_per_store": 700,
+  "max_items_per_store": 3500,
   "watch_rules": [
     {
       "id": "W001",
       "category": "Maso",
-      "label": "Drůbeží prsní řízky",
+      "label": "Kuřecí prsní řízky (syrové)",
       "priority": 1,
       "product_any": [
-        "prsní říz*",
         "kuřecí prs*",
-        "krůtí prs*",
         "kuřecí říz*",
-        "krůtí říz*"
+        "prsní říz*"
       ],
       "exclude_any": [
         "obalované",
         "smažen*",
-        "hotové jídlo",
         "nugget*",
-        "marinovan*"
+        "marinovan*",
+        "krůtí řízky",
+        "hotové jídlo",
+        "krůtí",
+        "krůtí prsa"
       ]
     },
     {
       "id": "W002",
       "category": "Maso",
-      "label": "Drůbeží stehna",
+      "label": "Kuřecí stehna (syrová)",
       "priority": 1,
       "product_any": [
         "kuřecí stehn*",
-        "krůtí stehn*",
+        "kuřecí vykostěn*",
+        "kuřecí horní stehn*",
+        "kuřecí spodní stehn*",
         "kuřecí paličk*",
-        "stehenní řízk*"
+        "kuřecí stehenní"
       ],
       "exclude_any": [
-        "hotové jídlo",
-        "pečen*",
+        "krůtí stehna",
         "smažen*",
-        "marinovan*"
+        "pečen*",
+        "marinovan*",
+        "hotové jídlo",
+        "krůtí"
       ]
     },
     {
@@ -90,13 +96,13 @@
       "product_any": [
         "hovězí svíčkov*",
         "svíčková hovězí",
-        "svíčková pravá",
-        "svíčková falešná"
+        "svíčková pravá"
       ],
       "exclude_any": [
-        "svíčková omáčk*",
+        "hotové jídlo",
         "svíčková na smetaně",
-        "hotové jídlo"
+        "falešná",
+        "svíčková omáčk*"
       ]
     },
     {
@@ -1759,5 +1765,6 @@
     "country": "CZ",
     "postcode_specific_prices_verified": false,
     "note": "PSČ je preferovaná doručovací oblast. Automatický sběrač dosud neumí na Rohlíku a Košíku spolehlivě nastavit adresu; veřejné ceny nejsou ověřeny pro toto PSČ."
-  }
+  },
+  "max_scroll_rounds": 85
 }

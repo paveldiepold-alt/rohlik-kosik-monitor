@@ -117,15 +117,30 @@ RAW_MEAT_CUT_TERMS = (
 
 
 def is_raw_meat_name(name: str) -> bool:
-    """Conservative raw-cut detector; no prepared, seasoned or shelf-stable meat."""
+    """Only raw *chicken* breast/thigh cuts, pork neck/tenderloin, beef tenderloin.
+
+    A user's updated shopping list removed all turkey. Search terms may have
+    descriptive words between chicken and thighs: e.g. 'Kuřecí vykostěná
+    stehna'. Reject cooked, seasoned and otherwise processed meat first.
+    """
     n = normalized(clean_product_name(name))
     if any(term_matches(n, bad) for bad in NON_RAW_MEAT):
         return False
-    if not any(term_matches(n, cut) for cut in RAW_MEAT_CUT_TERMS):
-        return False
-    # Genuine raw cuts can be chilled or frozen; unlike cured or dried meat,
-    # freezing alone does not change a cut into a prepared food.
-    return True
+    # Poultry is chicken ONLY, including reordered / descriptively expanded titles.
+    # 'Krůtí' is deliberately excluded even when there are chicken-like words.
+    chicken = (term_matches(n, 'kureci') and not term_matches(n, 'kruti')
+               and any(term_matches(n, cut) for cut in (
+                   'prsni riz*', 'prsa', 'prsou', 'prsick*', 'stehn*', 'palick*',
+                   'rizky', 'rizku', 'rizky')))
+    # Krkovice and panenka are names of pork cuts; processed versions are
+    # blocked by NON_RAW_MEAT above.
+    pork = (term_matches(n, 'krkovic*') or
+            (term_matches(n, 'panenk*') and any(term_matches(n, w) for w in
+                                                ('veprova', 'veprove', 'veprovy', 'veprove'))))
+    # A 'falešná svíčková' is a different cut; exclude it specifically.
+    beef = (term_matches(n, 'svickov*') and not term_matches(n, 'falesn*')
+            and (term_matches(n, 'hovezi') or term_matches(n, 'prava')))
+    return bool(chicken or pork or beef)
 
 
 def scrub_historical_meat(config: dict) -> int:
@@ -561,6 +576,38 @@ def parse_item_price(text: str) -> float | None:
     return parse_price(value)
 
 
+# Some Rohlík listing cards expose the STRUCK-THROUGH old price as the
+# apparent current-price element. Before publishing a discount, cross-check
+# the two visible prices against the claimed sale percentage.
+_CARD_PRICE_WITH_CURRENCY = re.compile(
+    r'(?<!\d)(\d{1,5})[,. \u00a0\u202f\n]+(\d{2})\s*(?:Kč|CZK)\b', re.I
+)
+
+
+def price_pair_before_discount(card: str, discount_pct: int) -> tuple[float, float] | None:
+    """Find an explicitly visible discounted/original price pair, if unambiguous.
+
+    Ignore unit prices such as '139,90 Kč/kg'. Never estimate a price from
+    discount alone. Pair is selected only if its ratio confirms the label.
+    """
+    m = SALE_PCT.search(card or '')
+    if not m:
+        return None
+    head = _UNIT_PRICE_TEXT.sub(' ', card[:m.start()])
+    nums = []
+    for found in _CARD_PRICE_WITH_CURRENCY.finditer(head):
+        amount = float(f'{found.group(1)}.{found.group(2)}')
+        if 0 < amount < 100000 and amount not in nums:
+            nums.append(amount)
+    valid = []
+    for i, left in enumerate(nums):
+        for right in nums[i+1:]:
+            low, high = sorted((left, right))
+            if abs((1-low/high)*100-discount_pct) <= 2.0:
+                valid.append((low,high))
+    return valid[0] if len(valid)==1 else None
+
+
 def quantity_of(name: str, context: str) -> str:
     # Prefer product name, which distinguishes multipacks from single units.
     m = SIZE_PATTERN.search(name) or SIZE_PATTERN.search(context[:160])
@@ -713,6 +760,12 @@ def parse_card(shop: str, row: dict, config: dict) -> Offer | None:
     if price is None:
         return None  # Never fabricate a price.
     old_price = parse_item_price(row.get("old_price", "")) if row.get("old_price") else None
+    # Critical correction: the sale price may be present on the card but the
+    # CSS selector found the struck-through original price. The grape offer
+    # showed 111,92 Kč / -50 % instead of its actual sale-price pair 55,92.
+    verified_pair = price_pair_before_discount(snippet, discount)
+    if verified_pair:
+        price, old_price = verified_pair
     # Cross-check an explicit old price if available; allow rounding differences.
     if old_price is not None:
         if old_price <= price:
@@ -816,33 +869,72 @@ EXTRACT_JS = r"""() => {
 }"""
 
 
-def fetch_shop(shop: str, url: str, max_items: int) -> tuple[list[dict], str]:
+def fetch_shop(shop: str, url: str, max_items: int, *, max_rounds: int = 85) -> tuple[list[dict], str, dict]:
+    """Collect visible sale cards; report how incomplete the sample may be.
+
+    Unlike the original nine-scroll-only implementation, this also tries the
+    shop's visible 'Načíst další' button. It still cannot guarantee that all
+    product listings have been loaded or that every promotion is in this page.
+    """
     from playwright.sync_api import sync_playwright
     with sync_playwright() as p:
-        browser = p.chromium.launch(headless=True, args=["--no-sandbox"])
-        page = browser.new_page(locale="cs-CZ", timezone_id="Europe/Prague", viewport={"width": 1365, "height": 1000},
-                                user_agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 Chrome/133.0 Safari/537.36")
+        browser = p.chromium.launch(headless=True, args=['--no-sandbox'])
+        page = browser.new_page(locale='cs-CZ', timezone_id='Europe/Prague',
+                                viewport={'width': 1365, 'height': 1000},
+                                user_agent='Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 Chrome/133.0 Safari/537.36')
+        metrics = {'scroll_rounds': 0, 'load_more_clicks': 0, 'sample_is_complete': False,
+                   'reason': 'Neověřená úplnost; jen veřejná akční stránka'}
         try:
-            resp = page.goto(url, wait_until="domcontentloaded", timeout=45000)
+            resp = page.goto(url, wait_until='domcontentloaded', timeout=45000)
             if resp is None or resp.status >= 400:
-                return [], f"HTTP {resp.status if resp else 'bez odpovědi'}"
-            page.wait_for_timeout(2500)
+                return [], f"HTTP {resp.status if resp else 'bez odpovědi'}", metrics
+            page.wait_for_timeout(2000)
             try:
-                page.get_by_role("button", name=re.compile("Přijmout|Souhlasím|Povolit vše", re.I)).first.click(timeout=1200)
+                page.get_by_role('button', name=re.compile('Přijmout|Souhlasím|Povolit vše', re.I)).first.click(timeout=1000)
             except Exception:
                 pass
             all_rows: dict[str, dict] = {}
-            for _ in range(9):
+            stagnant = 0
+            for iteration in range(max(1, max_rounds)):
+                metrics['scroll_rounds'] = iteration + 1
                 rows = page.evaluate(EXTRACT_JS)
+                before = len(all_rows)
                 for row in rows:
-                    all_rows[row["url"]] = row
+                    all_rows[row['url']] = row
                 if len(all_rows) >= max_items:
+                    metrics['reason'] = f'Zastaveno po limitu {max_items} karet; neúplný vzorek'
                     break
-                page.mouse.wheel(0, 2400)
-                page.wait_for_timeout(850)
-                # Many sites paginate or virtualize: this is a sampled subset,
-                # explicitly NOT a claim of all sale items.
-            return list(all_rows.values())[:max_items], "ok" if all_rows else "Nenalezeny produktové karty; pravděpodobně změna webu nebo blokování"
+                if len(all_rows) == before:
+                    stagnant += 1
+                else:
+                    stagnant = 0
+                # Košík uses 'Načíst další' on large offer lists. Simply
+                # scrolling nine times missed many products and brands.
+                clicked = False
+                for selector in ('button:has-text("Načíst další")',
+                                 'a:has-text("Načíst další")',
+                                 'button:has-text("Zobrazit další")'):
+                    try:
+                        control = page.locator(selector).first
+                        if control.count() and control.is_visible():
+                            control.click(timeout=1250)
+                            metrics['load_more_clicks'] += 1
+                            clicked = True
+                            page.wait_for_timeout(550)
+                            break
+                    except Exception:
+                        pass
+                if not clicked:
+                    page.evaluate('window.scrollBy(0, Math.max(1600, window.innerHeight*2))')
+                    page.wait_for_timeout(500)
+                if stagnant >= 10 and not clicked:
+                    metrics['reason'] = 'Další nové karty se již nenačítají; úplnost není prokázána'
+                    break
+            metrics['cards_found'] = len(all_rows)
+            if len(all_rows) >= max_items:
+                metrics['reason'] = f'Dosažen limit {max_items}; další akce mohou chybět'
+            rows = list(all_rows.values())[:max_items]
+            return rows, 'ok' if rows else 'Nenalezeny produktové karty / blokování nebo změna HTML', metrics
         finally:
             browser.close()
 
@@ -1292,14 +1384,17 @@ def main() -> int:
     for shop, url in cfg["sources"].items():
         if not args.demo:
             try:
-                rows, status = fetch_shop(shop, url, int(cfg.get("max_items_per_store", 400)))
+                rows, status, collection_meta = fetch_shop(
+                    shop, url, int(cfg.get('max_items_per_store', 3500)),
+                    max_rounds=int(cfg.get('max_scroll_rounds', 85)))
             except Exception as exc:
-                rows, status = [], f"CHYBA: {type(exc).__name__}: {str(exc)[:150]}"
+                rows, status, collection_meta = [], f"CHYBA: {type(exc).__name__}: {str(exc)[:150]}", {}
             rows_by_shop[shop] = rows
         else:
             status = "DEMO – syntetická data"
             rows = rows_by_shop[shop]
-        statuses[shop] = {"status": status, "cards": len(rows)}
+            collection_meta = {'reason': 'DEMO'}
+        statuses[shop] = {'status': status, 'cards': len(rows), **collection_meta}
     previous = read_previous()
     offers = []
     for shop, rows in rows_by_shop.items():
@@ -1328,7 +1423,7 @@ def main() -> int:
                 "offers": [asdict(o) for o in offers],
                 "changes": compare_changes(offers, previous),
                 "demo": args.demo,
-                "disclaimer": "Veřejný vzorek, ne úplný katalog; PSČ je zadáno pouze jako preference (neověřené lokální ceny a dostupnost); množstevní slevy podmíněné."}
+                "disclaimer": "Veřejný NEÚPLNÝ vzorek; ne úplný katalog; PSČ je zadáno pouze jako preference (neověřené lokální ceny a dostupnost); množstevní slevy podmíněné."}
     write_snapshot(snapshot)
     print(f"{snapshot['checked_at']} | {len(offers)} nabídek | {statuses}")
     # Exit nonzero if ALL sources fail; do NOT present this as 'no sales'.
