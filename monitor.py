@@ -65,6 +65,90 @@ def normalized(s: str) -> str:
     return " ".join(s.split())
 
 
+# Retailer accessibility labels are UI commands, not product identities.
+# Košík can expose an anchor as "Zobrazit detail produktu Hellmann's Majonéza".
+UI_TITLE_PREFIXES = (
+    re.compile(r"^(?:zobrazit|otev[rř][ií]t|prohl[eé]dnout)\s+detail\s+produktu\s*[:\-–]?\s*", re.I),
+    re.compile(r"^(?:zobrazit|otev[rř][ií]t)\s+produkt\s*[:\-–]?\s*", re.I),
+)
+
+
+def clean_product_name(raw: str) -> str:
+    if not isinstance(raw, str):
+        return ""
+    value = " ".join(raw.replace("\u00a0", " ").split()).strip()
+    for pat in UI_TITLE_PREFIXES:
+        value = pat.sub("", value, count=1).strip()
+    return value
+
+
+# Only plain RAW cuts of meat are eligible. Matching a keyword such as
+# "krůtí prsa" inside a jerky/can/ready meal must not create a notification.
+# Do not assume every processed product discloses its treatment in its title:
+# ambiguous listings are omitted where a reliable raw-cut descriptor is absent.
+NON_RAW_MEAT = (
+    "just meat", "jerky", "biltong", "snack*", "proteinov*", "tycink*",
+    "susen*", "vysusen*", "dehydratovan*", "lyofilizovan*", "fermentovan*",
+    "konzerv*", "plechov*", "plechovk*", "sklenic*", "sterilovan*", "zavaren*",
+    "hotov*", "predvar*", "vareny", "varene", "varena", "dusen*", "pecen*",
+    "grilovan*", "smazen*", "sote", "sous vide", "trhane maso",
+    "uzen*", "uzene", "uzena", "uzenin*", "sunka", "parky", "parek",
+    "klobas*", "salam*", "pastik*", "pomazank*", "masova smes", "ragu",
+    "omack*", "polevk*", "na smetane", "burger", "hamburger", "sendvic*", "baget*",
+    "salat", "salaty", "wrap", "pizza", "rizoto", "testovin*", "ravioli",
+    "nugget*", "obalovan*", "strouhank*", "sekan*", "mlete*", "mleta*",
+    "masovy vyrobek", "marinovan*", "marinad*", "nakladan*", "ochucen*",
+    "korenen*", "kořeněn*", "pepr*", "pepr", "peprem", "soleny", "solene",
+    "solena", "s soli", "soli", "s korenim", "s bylinkami", "bylinkov*",
+    "cesnekov*", "grilovaci", "bbq", "teriyaki", "pikantni", "paprikov*",
+)
+
+# In raw cuts, simple titles like "Kuřecí prsní řízky bez kosti" and
+# "Vepřová krkovice plátky" are okay, but marketing names alone aren't.
+RAW_MEAT_CUT_TERMS = (
+    "prsni riz*", "kureci prs*", "kruti prs*", "kureci riz*", "kruti riz*",
+    "kureci stehn*", "kruti stehn*", "kureci palick*", "stehenni riz*",
+    "veprova krkovic*", "krkovice vepr*", "krkovic*",
+    "veprova panenk*", "panenka vepr*",
+    "hovezi svickov*", "svickova hovezi", "svickova prava", "svickova falesna",
+)
+
+
+def is_raw_meat_name(name: str) -> bool:
+    """Conservative raw-cut detector; no prepared, seasoned or shelf-stable meat."""
+    n = normalized(clean_product_name(name))
+    if any(term_matches(n, bad) for bad in NON_RAW_MEAT):
+        return False
+    if not any(term_matches(n, cut) for cut in RAW_MEAT_CUT_TERMS):
+        return False
+    # Genuine raw cuts can be chilled or frozen; unlike cured or dried meat,
+    # freezing alone does not change a cut into a prepared food.
+    return True
+
+
+def scrub_historical_meat(config: dict) -> int:
+    """Remove meat false positives from archival snapshots (idempotent)."""
+    history = DATA / "history"
+    removed_total = 0
+    for path in sorted(history.glob("*.json")) if history.exists() else []:
+        try:
+            snapshot = json.loads(path.read_text(encoding="utf-8"))
+        except (OSError, ValueError):
+            continue
+        offers = snapshot.get("offers")
+        if not isinstance(offers, list):
+            continue
+        kept = [o for o in offers if o.get("category") != "Maso" or is_raw_meat_name(o.get("name", ""))]
+        if len(offers) != len(kept):
+            snapshot["offers"] = kept
+            urls = {o.get("url") for o in kept}
+            snapshot["changes"] = [x for x in snapshot.get("changes", []) if x.get("url") in urls]
+            snapshot["raw_meat_filter_repaired"] = True
+            path.write_text(json.dumps(snapshot, ensure_ascii=False, indent=2), encoding="utf-8")
+            removed_total += len(offers) - len(kept)
+    return removed_total
+
+
 def brand_of(name: str, brands: list[dict]) -> str:
     # Anchored: avoids matching brand names inside unrelated words.
     check = " " + normalized(name) + " "
@@ -137,7 +221,7 @@ NON_FRESH_PRODUCE = (
     "chips*", "cokolad*", "polev*", "bonbon*", "cukrovink*", "cereali*",
     "marmelad*", "dzem*", "protlak*", "kecup*", "kase", "kasi",
     "pyre", "presnidavk*", "prichut*", "aroma*", "ochucen*", "esence",
-    "ravioli", "testovin*", "rizoto", "pizza", "omack*", "polevk*",
+    "ravioli", "testovin*", "rizoto", "pizza", "omack*", "polevk*", "na smetane",
     "hotove jidlo", "hotov*", "pomazank*", "koreni", "mlet*",
     "konzerv*", "sterilovan*", "nakladan*", "zavaren*", "kysel*", "kandovan*", "plnen*",
     "fermentovan*", "grilovan*", "pecen*", "marinovan*", "olej*",
@@ -321,6 +405,8 @@ def match_rules(name: str, rules: list[dict]) -> dict | None:
             continue
         if r.get("category") in ("Ovoce", "Zelenina") and not is_fresh_produce_name(name, r):
             continue
+        if r.get("category") == "Maso" and not is_raw_meat_name(name):
+            continue
         if r.get("category") in BEVERAGE_SIZES and not is_allowed_beverage(name, r):
             continue
         if r.get("product_any") and not any(term_matches(n, term) for term in r["product_any"]):
@@ -354,6 +440,22 @@ def parse_price(text: str) -> float | None:
     return None
 
 
+# Retailer listings contain unit prices (e.g. 699,00 Kč/kg) alongside the
+# actual sale price (69,90 Kč). Unit prices are NOT payable item prices.
+_UNIT_PRICE_TEXT = re.compile(
+    r"(?<!\d)(?:\d{1,5}[,.]\d{2}|\d{1,5}[ \u00a0\u202f\n]\d{2})"
+    r"\s*(?:Kč|CZK|kc)\s*/\s*(?:kg|l|ml|g|100\s*g|ks|d[aá]vk[auy]?)\b",
+    re.I,
+)
+
+
+def parse_item_price(text: str) -> float | None:
+    if not isinstance(text, str):
+        return None
+    value = _UNIT_PRICE_TEXT.sub(" ", text)
+    return parse_price(value)
+
+
 def quantity_of(name: str, context: str) -> str:
     # Prefer product name, which distinguishes multipacks from single units.
     m = SIZE_PATTERN.search(name) or SIZE_PATTERN.search(context[:160])
@@ -369,7 +471,9 @@ def safe_image_url(raw: str, base: str = "") -> str:
         parsed = urlparse(url)
         if parsed.scheme != "https" or not parsed.hostname or len(url) > 1300:
             return ""
-        if parsed.path.lower().endswith((".svg", ".gif")):
+        if parsed.path.lower().endswith((".svg", ".gif")) or any(
+            x in parsed.path.lower() for x in ("placeholder", "no-image", "no_image", "default-image", "fallback", "/logo")
+        ):
             return ""
         return url
     except ValueError:
@@ -458,7 +562,7 @@ def parse_card(shop: str, row: dict, config: dict) -> Offer | None:
         return None
     if not PRODUCT_URLS[shop].match(urlparse(url).path):
         return None
-    name = re.sub(r"\s+", " ", row.get("name", "")).strip()
+    name = clean_product_name(row.get("name", ""))
     if len(name) < 4 or len(name) > 180:
         return None
     brand = brand_of(name, config.get("brands", []))
@@ -490,15 +594,15 @@ def parse_card(shop: str, row: dict, config: dict) -> Offer | None:
     # If the page only exposes the price after a minimum quantity, treat this
     # offer as quantity-conditional, and never compare it as an ordinary price.
     candidate = row.get("current_price", "")
-    price = parse_price(candidate) if candidate else None
+    price = parse_item_price(candidate) if candidate else None
     if price is None:
         # Card begins with price on Košík; Rohlík cards usually place 0 kusů first.
         prefix = snippet.split(name)[0]
         prefix = re.sub(r"\b0\s+kus[uů]\s+v\s+ko[sš][ií]ku\b", "", prefix, flags=re.I)
-        price = parse_price(prefix)
+        price = parse_item_price(prefix)
     if price is None:
         return None  # Never fabricate a price.
-    old_price = parse_price(row.get("old_price", "")) if row.get("old_price") else None
+    old_price = parse_item_price(row.get("old_price", "")) if row.get("old_price") else None
     # Cross-check an explicit old price if available; allow rounding differences.
     if old_price is not None:
         if old_price <= price:
@@ -557,8 +661,26 @@ EXTRACT_JS = r"""() => {
     let imageUrl='';
     if(photo){
       const candidates=[photo.currentSrc, photo.getAttribute('data-src'), photo.getAttribute('src'),
+                        photo.getAttribute('data-original'),
                         (photo.getAttribute('srcset')||'').split(',')[0].trim().split(/\s+/)[0]];
       imageUrl=candidates.find(u=>u && /^https?:|^\//i.test(u)) || '';
+    }
+    // Some Košík thumbnails are lazy-loaded in <picture><source>, or drawn
+    // with background-image on a child of the product anchor (not an <img>).
+    // Search THIS product anchor only, never another card's neighbour.
+    if(!imageUrl){
+      const sources=[...a.querySelectorAll('picture source')];
+      const responsive=sources.map(e=>(e.getAttribute('srcset')||e.getAttribute('data-srcset')||'')
+           .split(',')[0].trim().split(/\s+/)[0]);
+      imageUrl=responsive.find(u=>u && /^https?:|^\//i.test(u))||'';
+    }
+    if(!imageUrl){
+      const nodes=[a,...a.querySelectorAll('div, span, picture')].slice(0,25);
+      for(const el of nodes){
+        const style=window.getComputedStyle(el).backgroundImage || el.style?.backgroundImage || '';
+        const m=style.match(/url\(\s*["']?([^"')]+)["']?\s*\)/i);
+        if(m && /^https?:|^\//i.test(m[1])){imageUrl=m[1];break;}
+      }
     }
     const title=(a.getAttribute('title')||a.getAttribute('aria-label')||'').trim();
     const raw=(a.innerText||'').trim();
@@ -567,7 +689,7 @@ EXTRACT_JS = r"""() => {
     // it contains Kč, discount percentages or basket UI elements.
     const titleCandidate=[imgAlt,title,raw].find(t=>t.length>4 && t.length<180
       && !/(?:Kč|kusů v košíku|[-−]\s*\d{1,2}\s*%)/i.test(t))||'';
-    let name=titleCandidate;
+    let name=titleCandidate.replace(/^(?:(?:Zobrazit|Otevřít|Prohlédnout)\s+detail\s+produktu|(?:Zobrazit|Otevřít)\s+produkt)\s*[:\-–]?\s*/i, '').trim();
     if (!name) {
       const near=selected.querySelector('a[href="'+a.getAttribute('href')+'"]');
       name=(near?.getAttribute('title')||near?.getAttribute('aria-label')||'').trim();
@@ -618,33 +740,62 @@ def fetch_shop(shop: str, url: str, max_items: int) -> tuple[list[dict], str]:
 # Read *visible product detail page* when listing omits packaging or photo.
 # Never use a free-text page-wide regex: related items might have other sizes.
 DETAIL_JS = r"""() => {
-  const h=document.querySelector('h1');
+  const h=document.querySelector('main h1') || document.querySelector('h1');
   const heading=(h?.innerText||'').trim();
-  const near=(h?.parentElement?.innerText||'').trim().slice(0,240);
-  const meta=document.querySelector('meta[property="og:image"]')?.content || '';
   const ogTitle=document.querySelector('meta[property="og:title"]')?.content || '';
-  // First capacity right next to the main product heading, not in a gallery.
   const sizePattern=/(?<!\d)(\d+(?:[.,]\d+)?)\s*(ml|l|kg|g|ks)\b/i;
   let size='';
+  // Restrict packaging to h1 itself, or the FIRST text line directly after
+  // its heading in its immediate parent/nearby product heading container.
   if(heading){
-    const inHeading=heading.match(sizePattern);
-    if(inHeading) size=inHeading[0];
-    if(!size && near.toLocaleLowerCase('cs').startsWith(heading.toLocaleLowerCase('cs'))){
-      const tail=near.slice(heading.length).trim().slice(0,80);
-      const firstLine=tail.split('\n').map(x=>x.trim()).filter(Boolean)[0] || '';
-      const m=firstLine.match(sizePattern);
-      if(m && m.index <= 10) size=m[0];
+    const own=heading.match(sizePattern);
+    if(own) size=own[0];
+    for(let a=h?.parentElement, depth=0; a && !size && depth<3; a=a.parentElement,depth++){
+      const full=(a.innerText||'').trim();
+      const at=full.indexOf(heading);
+      if(at<0 || at>120) continue;
+      const following=full.slice(at+heading.length).trim();
+      const first=following.split('\n').map(x=>x.trim()).filter(Boolean).slice(0,2);
+      for(const line of first){const m=line.match(/^\s*(?:balen[ií]\s*:?\s*)?(\d+(?:[.,]\d+)?\s*(?:ml|l|kg|g|ks))\b/i);
+        if(m){size=m[1];break;}}
     }
   }
-  // Detail image is taken from the product's meta image or main product photo.
-  const img=(document.querySelector('main img[alt]') || document.querySelector('img[alt]'));
-  return {heading, og_title:ogTitle, size, image_url:meta || img?.currentSrc || img?.src || ''};
+  // Prefer schema.org Product image, which often exists even when Košík uses
+  // a CSS background or a lazy-loaded responsive <picture> for the hero shot.
+  let schemaImage='';
+  const schemas=[...document.querySelectorAll('script[type="application/ld+json"]')];
+  function flatten(x){if(!x || typeof x!=='object')return [];
+    return [...(Array.isArray(x)?x.flatMap(flatten):[x]),...(x['@graph']?flatten(x['@graph']):[])];}
+  const simplified=x=>(x||'').toLocaleLowerCase('cs').replace(/[^\p{L}\p{N}]+/gu,' ').trim();
+  for(const script of schemas){try{const obj=JSON.parse(script.textContent||'');
+    for(const product of flatten(obj)){
+      const typ=product['@type'];const isProduct=Array.isArray(typ)?typ.includes('Product'):typ==='Product';
+      if(!isProduct) continue;
+      const schemaName=simplified(product.name||''); const trueName=simplified(heading);
+      if(!schemaName || !trueName || !(schemaName.includes(trueName)||trueName.includes(schemaName)))continue;
+      const img=product.image; const first=Array.isArray(img)?img[0]:img;
+      schemaImage=typeof first==='string'?first:first?.url||first?.contentUrl||'';
+      if(schemaImage)break;
+    }
+  }catch(_e){}if(schemaImage)break;}
+  const metaImage=document.querySelector('meta[property="og:image"]')?.content ||
+                  document.querySelector('meta[name="twitter:image"]')?.content || '';
+  const imgCandidates=[...document.querySelectorAll('main picture img, main img, picture img, img')];
+  const relevant=imgCandidates.find(img=>{
+    const alt=simplified(img.alt||'').replace(/^zobrazit detail produktu /,'');
+    const h=simplified(heading);
+    return h && alt && (alt.includes(h)||h.includes(alt)) && alt.length>5;
+  });
+  const link=document.querySelector('link[rel="image_src"]')?.href || '';
+  const resolveImg=img=>img?.currentSrc || img?.getAttribute('data-src') || img?.getAttribute('src') ||
+    img?.getAttribute('srcset')?.split(',')[0].trim().split(/\s+/)[0] || '';
+  return {heading, og_title:ogTitle, size, image_url:schemaImage || metaImage || resolveImg(relevant) || link};
 }"""
 
 
 def detail_belongs_to_offer(heading: str, offer_name: str) -> bool:
     """Guard against redirect to generic landing pages and wrong variants."""
-    a, b = normalized(heading), normalized(offer_name)
+    a, b = normalized(clean_product_name(heading)), normalized(clean_product_name(offer_name))
     # A product title may add/remove "Original" or a pack suffix, so check
     # meaningful product tokens instead of exact string equality.
     wa = set(a.split()); wb = set(b.split());
@@ -857,6 +1008,7 @@ def main() -> int:
     if not args.demo:
         scrub_historical_produce(cfg)
         scrub_historical_beverages(cfg)
+        scrub_historical_meat(cfg)
     add_comparisons(offers, cfg.get("canonical_pairs", []))
     offers.sort(key=lambda o: (not o.favorite, -o.discount_pct, o.brand, o.name))
     snapshot = {"date": now.date().isoformat(), "checked_at": now.isoformat(timespec="minutes"),
