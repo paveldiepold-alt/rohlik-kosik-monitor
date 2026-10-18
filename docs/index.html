@@ -7,7 +7,7 @@
 :root{font-family:Inter,"Segoe UI",Arial,sans-serif;color:#172336;background:#f2f4f7}
 *{box-sizing:border-box}body{margin:0}header{background:#172336;color:#fff;padding:27px max(24px,calc((100vw - 1660px)/2))}
 h1{font-size:29px;margin:0 0 6px}header p{color:#cbd5e1;margin:0}main{max-width:1660px;margin:25px auto;padding:0 18px}
-.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.stat,.panel{background:white;box-shadow:0 2px 10px #15223b0a;border-radius:13px;padding:18px}
+.stats{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px}.stat,.panel{background:white;box-shadow:0 2px 10px #15223b0a;border-radius:13px;padding:18px}
 .stat .num{font-size:29px;font-weight:800;color:#213a57}.stat .cap{font-size:13px;color:#5b6574;margin-top:4px}
 .toolbar{display:flex;gap:11px;flex-wrap:wrap;align-items:end;margin:16px 0}.control{display:flex;flex-direction:column;gap:5px;color:#5b6574;font-size:12px;font-weight:700}
 select,input{border:1px solid #d6dce6;padding:11px 10px;background:white;border-radius:8px;color:#1d2939;font-size:14px}
@@ -68,6 +68,7 @@ button{font:inherit;cursor:pointer}
   .panel{margin-top:10px!important;padding:12px 10px}
   .toolbar{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:end;gap:10px;margin:12px 0 8px}
   .toolbar .control{min-width:0;font-size:12px}
+  .toolbar .mode-control{order:0;grid-column:1/-1}
   .toolbar .date-control{order:1;grid-column:1}
   .toolbar .search-control{order:3;grid-column:1/-1}
   .toolbar .advanced-control{display:none;grid-column:1/-1;order:5}
@@ -112,9 +113,10 @@ button{font:inherit;cursor:pointer}
 <body>
 <header><h1>🛒 Rohlík × Košík</h1><p>Hlídač slev – značky, oblíbené produkty a ověřené cenové srovnání</p></header>
 <main>
-<div class="warn">NEÚPLNÝ vzorek akcí ze dvou veřejných stránek, nikoliv seznam všech zlevněných produktů. Přesné ceny a dostupnost pro PSČ 149 00 nejsou ověřeny. Neúspěšný sběr ≠ žádné slevy.</div>
-<div id="alerts"></div>
+<div class="warn">NEÚPLNÝ vzorek: rozšířený sběr prochází vyhledávání výrobků ze VŠECH sledovaných kategorií a značek v obou obchodech. Úplnost výsledků je nutné ověřovat podle pokrytí dotazů. Přesné ceny a dostupnost pro PSČ 149 00 nejsou ověřeny. Neúspěšný sběr ≠ žádné slevy.</div>
+<div id="alerts"></div><div id="coverage" class="note" style="margin:10px 3px 14px;padding:9px 12px;background:#e9f4fb;border-radius:8px" aria-live="polite">Kontrola pokrytí katalogu: načítám…</div>
 <div class="stats">
+<div class="stat"><div id="catalogCount" class="num">–</div><div class="cap">Nalezených výrobků (včetně nezlevněných)</div></div>
 <div class="stat"><div id="n" class="num">–</div><div class="cap">Nalezených zlevněných položek</div></div>
 <div class="stat"><div id="fav" class="num">–</div><div class="cap">Z toho oblíbených</div></div>
 <div class="stat"><div id="pairs" class="num">–</div><div class="cap">Ověřených srovnání dvojic</div></div>
@@ -123,6 +125,7 @@ button{font:inherit;cursor:pointer}
 <section class="panel" style="margin-top:16px">
 <strong style="font-size:17px">Denní přehled</strong><div class="note" id="checked"></div>
 <div class="toolbar">
+<label class="control mode-control">Zobrazení<select id="viewmode"><option value="sale">Jen zlevněné</option><option value="catalog">Všechny nalezené výrobky</option></select></label>
 <label class="control date-control">Datum<select id="date"><option value="latest">Poslední</option></select></label>
 <button type="button" id="filter-toggle" class="mobile-filters-toggle" aria-expanded="false" aria-controls="brand">☷ Filtry</button>
 <label class="control advanced-control">Značka / výrobek<select id="brand"><option value="">Všechny značky</option></select></label>
@@ -144,7 +147,7 @@ button{font:inherit;cursor:pointer}
 <div id="mobile-list" class="mobile-list" aria-live="polite"></div>
 <p class="note">*Porovnáváme pouze shodné a jednoznačně identifikované nabídky, pokud je náš sběr nalezl u obou obchodů. Množstevní ceny se nesměšují s běžnými. Prázdné srovnání <b>neznamená</b>, že produkt v druhém obchodě není. Historie začíná prvním skutečným sběrem.</p>
 </section>
-<div class="footer"><b>Zdroj:</b> veřejné akční stránky <a href="https://www.rohlik.cz/cenove-trhaky" target="_blank" rel="noopener noreferrer">Rohlík</a> a <a href="https://www.kosik.cz/s1-akce" target="_blank" rel="noopener noreferrer">Košík</a>. Neoficiální nástroj. Preferované PSČ 149 00; veřejně zobrazené ceny a dostupnost nemusí platit pro toto PSČ, dokud není oblast výslovně ověřena. <a href="report.html">Strojově čitelný denní report pro ChatGPT</a>.</div>
+<div class="footer"><b>Zdroj:</b> veřejné vyhledávání napříč sortimentem a původní akční stránky <a href="https://www.rohlik.cz/cenove-trhaky" target="_blank" rel="noopener noreferrer">Rohlík</a> a <a href="https://www.kosik.cz/s1-akce" target="_blank" rel="noopener noreferrer">Košík</a>. Neoficiální nástroj. Preferované PSČ 149 00; veřejně zobrazené ceny a dostupnost nemusí platit pro toto PSČ, dokud není oblast výslovně ověřena. <a href="report.html">Strojově čitelný denní report pro ChatGPT</a> · <a href="data/search_status.json" target="_blank" rel="noopener noreferrer">Diagnostika vyhledávání</a>.</div>
 </main>
 <script>
 "use strict";
@@ -182,20 +185,24 @@ function productPhoto(o,extraClass=''){
 function refresh(){
  if(!data)return;
  const offers=data.offers||[];
+ $('catalogCount').textContent=(data.catalog||[]).length;
  $('n').textContent=offers.length;$('fav').textContent=offers.filter(isPreferred).length;
  $('pairs').textContent=offers.filter(o=>o.other_shop_url).length/2;
  $('changes').textContent=(data.changes||[]).length;
  const photos=offers.filter(o=>/^data\/images\/[a-f0-9]{22}\.webp$/i.test(o.image_url||'')||isHellmann625(o)).length;
+ const cov=data.catalog_coverage;
+ $('coverage').textContent=cov?`Pokrytí za posledních 24 h: ${cov.queries_responded_24h}/${cov.queries_planned} dotazů, ${cov.watch_rules_with_search_24h}/${cov.watch_rules_total} sledovaných pravidel; potíže u ${cov.failed_queries_24h||0} dotazů. Nalezeno ${data.catalog?.length||0} výrobků napříč sortimentem, ne všechny jsou ve slevě. Žádný výsledek ≠ produkt neexistuje.`:'Pokrytí katalogu pro tento report není dostupné (starší verze sběru).';
  $('checked').textContent=`Datum: ${data.date||'—'} · Kontrola: ${data.checked_at||'—'} · PSČ: ${data.delivery?.postal_code||'149 00'} · Veřejné ceny · Fotografie: ${photos}/${offers.length} (včetně 625 ml z předlohy)`;
  $('alerts').replaceChildren();
  if(data.demo)showError('DEMO DATA – uvedené ceny nejsou skutečné.');
  for(const [shop,info] of Object.entries(data.sources||{})){if(info.status!=='ok'&&!data.demo)showError(`${shop}: ${info.status}. Nulový počet neznamená žádné slevy.`)}
  for(const [shop,info] of Object.entries(data.sources||{})){if(info.status==='ok'&&info.reason&&!data.demo)showError(`${shop}: ${info.cards} načtených karet. ${info.reason}.`)}
- const brands=[...new Set(offers.map(o=>o.brand||'Ostatní'))].sort((a,b)=>a.localeCompare(b,'cs'));const keepBrand=$('brand').value;
+ const allProducts=[...offers,...(data.catalog||[])];
+ const brands=[...new Set(allProducts.map(o=>o.brand||'Ostatní'))].sort((a,b)=>a.localeCompare(b,'cs'));const keepBrand=$('brand').value;
  $('brand').replaceChildren(node('option','Všechny značky'));$('brand').firstElementChild.value='';
  for(const brand of brands){const opt=node('option',brand);opt.value=brand;$('brand').appendChild(opt)}
  $('brand').value=brands.includes(keepBrand)?keepBrand:'';
- const cats=[...new Set(offers.map(o=>o.category||'Ostatní'))].sort((a,b)=>a.localeCompare(b,'cs'));const keepCat=$('category').value;
+ const cats=[...new Set(allProducts.map(o=>o.category||'Ostatní'))].sort((a,b)=>a.localeCompare(b,'cs'));const keepCat=$('category').value;
  $('category').replaceChildren(node('option','Všechny kategorie'));$('category').firstElementChild.value='';
  for(const cat of cats){const opt=node('option',cat);opt.value=cat;$('category').appendChild(opt)}
  $('category').value=cats.includes(keepCat)?keepCat:'';
@@ -203,7 +210,8 @@ function refresh(){
 }
 function filteredOffers(){
  const b=$('brand').value,c=$('category').value,s=$('shop').value,p=$('priority').value,m=Number($('min').value)||0,q=$('search').value.toLocaleLowerCase('cs');
- return (data?.offers||[]).filter(o=>(!b||o.brand===b)&&(!c||(o.category||'Ostatní')===c)&&(!s||o.shop===s)&&(!p||isPreferred(o))&&Number(o.discount_pct)>=m&&displayProductName(o.name).toLocaleLowerCase('cs').includes(q));
+ const source=$('viewmode').value==='catalog'?(data?.catalog||[]):(data?.offers||[]);
+ return source.filter(o=>(!b||o.brand===b)&&(!c||(o.category||'Ostatní')===c)&&(!s||o.shop===s)&&(!p||isPreferred(o))&&Number(o.discount_pct||0)>=m&&displayProductName(o.name).toLocaleLowerCase('cs').includes(q));
 }
 function comparison(o){return o.other_shop_price!=null?`${o.other_shop}: ${money(o.other_shop_price)} (${o.other_shop_price>o.price?'+':''}${(o.other_shop_price-o.price).toFixed(2)} Kč)`:'Bez ověřeného páru'}
 function desktopCell(txt,cls){let td=document.createElement('td');td.appendChild(node('span',txt,cls));return td}
@@ -222,7 +230,7 @@ function renderDesktop(visible){
  tr.appendChild(productCell(o));
  tr.appendChild(desktopCell(o.shop||'—'));
  tr.appendChild(desktopCell(money(o.price)));
- tr.appendChild(desktopCell('−'+o.discount_pct+' %','good'));
+ tr.appendChild(desktopCell(o.discount_pct>0?'−'+o.discount_pct+' %':'—',o.discount_pct>0?'good':''));
  tr.appendChild(desktopCell(o.terms||'—',(o.terms||'').startsWith('množstevní')?'tag conditional':''));
  tr.appendChild(desktopCell(comparison(o)));
  const td=document.createElement('td');const a=node('a','Otevřít ↗');a.href=o.url||'#';a.target='_blank';a.rel='noopener noreferrer';td.appendChild(a);tr.appendChild(td);tbody.appendChild(tr);
@@ -241,9 +249,10 @@ function makeCard(o){
  const meta=node('div','','item-meta');
  if(o.quantity)meta.appendChild(node('span',o.quantity,'pack-chip'));
  if(o.unit_price!=null && o.unit_label)meta.appendChild(node('span',money(o.unit_price)+'/'+o.unit_label.replace(/^Kč\//,''),'unit-info'));
- const price=node('div','','price-line');price.append(node('span',money(o.price),'item-price'),node('span','−'+o.discount_pct+' %','discount-chip'));
+ const price=node('div','','price-line');price.append(node('span',money(o.price),'item-price'));if(o.discount_pct>0)price.appendChild(node('span','−'+o.discount_pct+' %','discount-chip'));
  content.append(title,meta,price);
- if(o.terms && o.terms!=='akce')content.appendChild(node('span',o.terms,'item-terms'));
+ if($('viewmode').value==='catalog' && o.checked_at)content.appendChild(node('span','Kontrola: '+o.checked_at,'unit-info'));
+ if(o.terms && o.terms!=='akce' && o.terms!=='běžná nabídka')content.appendChild(node('span',o.terms,'item-terms'));
  main.append(productPhoto(o),content);
  const comp=node('div',o.other_shop_price!=null?'Srovnání: '+comparison(o):'Srovnání: bez ověřené dvojice','item-compare');
  const link=node('a','Otevřít na '+(o.shop||'obchodě')+' ↗','item-action');link.href=o.url||'#';link.target='_blank';link.rel='noopener noreferrer';
@@ -257,7 +266,7 @@ function renderMobile(visible){
  const list=$('mobile-list');list.replaceChildren();
  if(!offers.length)list.appendChild(node('div','Žádné nabídky pro zadané filtry.','card-empty'));
  else for(const o of offers)list.appendChild(makeCard(o));
- $('mobile-count').textContent=`Zobrazeno ${offers.length} z ${data?.offers?.length||0} nabídek`;
+ $('mobile-count').textContent=`Zobrazeno ${offers.length} z ${$('viewmode').value==='catalog'?(data?.catalog?.length||0):(data?.offers?.length||0)} položek`;
 }
 function syncQuick(){
  const shop=$('shop').value,p=$('priority').value;
@@ -268,7 +277,7 @@ function applyFilters(){if(!data)return;const offers=filteredOffers();renderDesk
 async function load(sel='latest'){try{const path=sel==='latest'?'data/latest.json':`data/history/${encodeURIComponent(sel)}.json`;const response=await fetch(path,{cache:'no-store'});if(!response.ok)throw Error('HTTP '+response.status);data=await response.json();refresh()}catch(e){$('alerts').replaceChildren();showError('Nepodařilo se načíst report: '+e.message+'. Zkontroluj GitHub Actions a Pages.')}}
 (async()=>{try{const r=await fetch('data/index.json',{cache:'no-store'});if(r.ok){for(const d of await r.json()){const op=node('option',d);op.value=d;$('date').appendChild(op)}}}catch(e){}const q=new URLSearchParams(location.search).get('date');if(q&&[...$('date').options].some(o=>o.value===q)){$('date').value=q;await load(q)}else await load()})();
 $('date').addEventListener('change',e=>{const url=new URL(location.href);if(e.target.value==='latest')url.searchParams.delete('date');else url.searchParams.set('date',e.target.value);history.replaceState({},'',url);load(e.target.value)});
-for(const id of ['brand','category','shop','priority','min','search','mobile-sort'])$(id).addEventListener('input',applyFilters);
+for(const id of ['viewmode','brand','category','shop','priority','min','search','mobile-sort'])$(id).addEventListener('input',applyFilters);
 $('filter-toggle').addEventListener('click',()=>{const box=document.querySelector('.toolbar');const expanded=box.classList.toggle('filters-open');$('filter-toggle').setAttribute('aria-expanded',String(expanded));$('filter-toggle').textContent=expanded?'✕ Zavřít filtry':'☷ Filtry'});
 for(const button of document.querySelectorAll('[data-quick]'))button.addEventListener('click',()=>{const type=button.dataset.quick;
  $('shop').value=(type==='Rohlík'||type==='Košík')?type:'';

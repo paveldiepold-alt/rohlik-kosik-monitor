@@ -1,0 +1,75 @@
+ROHLÍK × KOŠÍK – v16: VYHLEDÁVÁNÍ NAPŘÍČ CELÝM SORTIMENTEM
+============================================================
+
+CO SE MĚNÍ
+- Předchozí verze vycházela především ze stránek Akce/Cenové trháky.
+- Nová verze prochází veřejné VYHLEDÁVÁNÍ přímo na Rohlíku i Košíku.
+- Pro každou z 75 sledovaných skupin jsou sestaveny relevantní hledané výrazy.
+- Katalog ukládá i produkty BEZ SLEVY. Podle ověřeného slevového štítku a ceny
+  se rozhoduje, zda se položka zároveň zobrazí mezi akčními nabídkami.
+- Celkem 98 unikátních dotazů × 2 obchody = 196 vyhledávacích úloh.
+- Kontrola probíhá dávkově: nejvýše 72 vyhledávání na jedno spuštění;
+  při 3 automatických kontrolách denně se plán může celý projít.
+- Úplnost vyhledávání nelze garantovat. Dashboard ukazuje pokrytí dotazů,
+  chyby, časy pozorování a počet nalezených položek. Blokace se neobchází.
+- Když nefunguje celé veřejné vyhledávání obchodu, zkusí se pouze jako
+  nouzová náhrada původní stránka Akce; takový zdroj je označen.
+- Předchozí pravidla: pouze syrové kuřecí/vepřové/hovězí maso; čerstvé ovoce
+  a zelenina; PET nápoje; Zewa; všechny oblíbené produkty zůstala zachována.
+- Nově dashboard nabízí režimy „Jen zlevněné“ a „Všechny nalezené výrobky“.
+
+JAK NAHRÁT NA GITHUB – BEZ PROPOJOVÁNÍ CHATGPT S GITHUBEM
+
+Repozitář: https://github.com/paveldiepold-alt/rohlik-kosik-monitor
+
+Balíček PATCH má správnou strukturu KOŘENE repozitáře (není v něm žádná
+nadřazená složka). Po jeho rozbalení uvidíš monitor.py, catalog_scan.py,
+config.json, docs a tests.
+
+A) NOVÝ SOUBOR catalog_scan.py (NUTNÝ)
+  1. Otevři https://github.com/paveldiepold-alt/rohlik-kosik-monitor/new/main
+  2. Do „Name your file...“ napiš catalog_scan.py
+  3. Z přiloženého catalog_scan_v16_KOD.txt zkopíruj celý text a vlož do editoru.
+  4. Klikni „Commit changes“.
+
+B) NAHRAĎ PŮVODNÍ monitor.py
+  https://github.com/paveldiepold-alt/rohlik-kosik-monitor/edit/main/monitor.py
+  Obsah v editoru celý označ Ctrl+A, vlož obsah monitor_v16_KOD.txt,
+  pak „Commit changes“.
+
+C) NAHRAĎ PŮVODNÍ config.json
+  https://github.com/paveldiepold-alt/rohlik-kosik-monitor/edit/main/config.json
+  Celý obsah nahraď config_v16_KOD.txt, pak „Commit changes“.
+
+D) NAHRAĎ PŮVODNÍ docs/index.html
+  https://github.com/paveldiepold-alt/rohlik-kosik-monitor/edit/main/docs/index.html
+  Celý obsah nahraď dashboard_v16_HTML_KOD.txt, pak „Commit changes“.
+
+VOLITELNĚ: nový test vlož do tests/test_catalog_scan_v16.py. Bez tohoto
+nového souboru bude monitor běžet také; dosavadní testy se spouští dál.
+
+PO DOKONČENÍ
+  1. Otevři https://github.com/paveldiepold-alt/rohlik-kosik-monitor/actions
+  2. Vyber „Rohlík Košík – scan and publish“ → „Run workflow“ → „Run workflow“.
+  3. Po dokončení (zelená fajfka) otevři:
+     https://paveldiepold-alt.github.io/rohlik-kosik-monitor/
+  4. V menu „Zobrazení“ vyber „Všechny nalezené výrobky“.
+  5. Sleduj ukazatel pokrytí vyhledávacích dotazů: napoprvé bude pouze
+     přibližně 72/196, postupně po dalších dvou bězích až 196/196,
+     POKUD vyhledávání obou obchodů skutečně funguje.
+  6. Diagnostika: .../data/search_status.json
+  7. Nečekej s jistotou určitý počet slev – nelze potvrdit bez prvního
+     produkčního běhu. „Nula“ při neúspěšném dotazu není „není ve slevě“.
+
+STÁVAJÍCÍ AUTOMATIZACE V CHATGPT FREE
+- Není nutné měnit její TXT. Adresa report.html se nemění.
+- ChatGPT na druhém účtu bude nadále číst https://paveldiepold-alt.github.io/rohlik-kosik-monitor/report.html
+
+DŮLEŽITÁ OMEZENÍ
+- Lokálně prošly jednotkové testy a test webového UI na ukázkových datech.
+- Reálné provedení vyhledávání na Rohlíku a Košíku na GitHub Actions dosud
+  NEBYLO OVĚŘENO: e-shopy mohou měnit vstupní pole, výsledky i blokovat robota.
+- 100% kompletnost sortimentu nelze automaticky prokázat; v dashboardu je
+  přiznané pokrytí námi naplánovaných dotazů, ne celých skladových databází.
+- Ceny a skladová dostupnost pro PSČ 149 00 nebyly potvrzeny přihlášeným účtem.
+- Skript nepoužívá přihlašovací údaje a neobchází CAPTCHA/rate limit.

@@ -1,5 +1,5 @@
 {
-  "version": "14.0",
+  "version": "16.0",
   "timezone": "Europe/Prague",
   "monitoring": {
     "favorite_min_discount_pct": 5,
@@ -8,7 +8,7 @@
     "free_plan_daypart": "morning",
     "interpret_watch_rules_as_favorites": true,
     "description": "Všechna pravidla včetně nových papírových výrobků mají P1. Zewa balíčkové kapesníky jsou jen Deluxe Standard/Family; papírové kuchyňské utěrky a krabičkové 3vrstvé kapesníky mohou být jakékoli značky.",
-    "coverage_notice": "Pouze nalezené akce ze dvou veřejných akčních stránek, nikoliv kompletní sortiment; chybějící položka neznamená, že není v akci."
+    "coverage_notice": "Prohledávaný celý veřejný sortiment pomocí dotazů po značkách a kategoriích. Každá skupina × každý obchod, stav a nedostupné dotazy se zaznamenávají. Nelze garantovat úplnost sortimentu ani lokální cenu pro PSČ."
   },
   "favorite_min_discount_pct": 5,
   "max_items_per_store": 3500,
@@ -1766,5 +1766,17 @@
     "postcode_specific_prices_verified": false,
     "note": "PSČ je preferovaná doručovací oblast. Automatický sběrač dosud neumí na Rohlíku a Košíku spolehlivě nastavit adresu; veřejné ceny nejsou ověřeny pro toto PSČ."
   },
-  "max_scroll_rounds": 85
+  "max_scroll_rounds": 85,
+  "catalog_search": {
+    "enabled": true,
+    "strategy": "Visible public shop search for every watch rule, all product categories, sale and regular prices.",
+    "max_queries_per_run": 72,
+    "scrolls_per_query": 8,
+    "max_cards_per_query": 260,
+    "cache_retention_hours": 72,
+    "price_max_age_hours": 18,
+    "schedule_note": "Three scheduled runs of 72 searches attempt all targeted catalog queries at both stores once per day; coverage is recorded and failures are explicit.",
+    "fallback_to_sales_page": true
+  },
+  "detail_max_per_run": 12
 }

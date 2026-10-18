@@ -1332,12 +1332,15 @@ def build_report(snapshot: dict) -> str:
     offers = [Offer(**x) for x in snapshot["offers"]]
     offers.sort(key=lambda o: (not o.favorite, -o.discount_pct, o.brand, o.name))
     lines = [f"ROHLÍK × KOŠÍK | {snapshot['date']} | poslední kontrola: {snapshot['checked_at']}",
-             "VEŘEJNÉ AKCE – pouze položky skutečně nalezené při kontrole, nikoli kompletní katalog.",
+             "VEŘEJNÉ VYHLEDÁVÁNÍ NAPŘÍČ SORTIMENTEM – pouze skutečně nalezené položky, nikoli úplný katalog." if snapshot.get('catalog_coverage') else "VEŘEJNÉ AKCE – pouze položky skutečně nalezené při kontrole, nikoli kompletní katalog.",
              f"Doručovací oblast: PSČ {snapshot.get('delivery', {}).get('postal_code', 'neuvedeno')} (referenční požadavek, nikoli automaticky ověřená lokální cena).",
              "Bez potvrzené volby oblasti v e-shopu: ceny a dostupnost se mohou lišit podle doručovací adresy / členství.",
              "STAV ZDROJŮ: " + "; ".join(f"{s}: {v['status']} ({v['cards']} karet)" for s, v in snapshot["sources"].items()),
              f"Nalezeno {len(offers)} sledovaných zlevněných položek; nově zaznamenané / zlevněné: {len(snapshot['changes'])}.",
              "OBLÍBENÉ PRODUKTY A ZNAČKY (všechna zadaná pravidla = oblíbené):"]
+    if snapshot.get('catalog_coverage'):
+        cov=snapshot['catalog_coverage']
+        lines.append(f"KATALOG: {len(snapshot.get('catalog',[]))} nalezených výrobků (včetně nezlevněných); 24h pokrytí vyhledávacích dotazů {cov['queries_responded_24h']}/{cov['queries_planned']} a nákupních pravidel {cov['watch_rules_with_search_24h']}/{cov['watch_rules_total']}. Neznamená úplný katalog.")
     if not offers:
         lines.append("Žádná ověřená nabídka v dostupném vzorku; neznamená to, že žádná sleva neexistuje.")
     for o in offers[:80]:
@@ -1375,9 +1378,16 @@ def write_snapshot(snapshot: dict) -> None:
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--demo", action="store_true", help="Generate synthetic demo results (NOT real prices)")
+    ap.add_argument("--legacy-sales-only", action="store_true", help="Run old sales-page-only collector (emergency fallback)")
     ap.add_argument("--config", type=Path, default=CONFIG)
     args = ap.parse_args()
     cfg = json.loads(args.config.read_text(encoding="utf-8"))
+    if cfg.get('catalog_search', {}).get('enabled', False) and not args.demo and not args.legacy_sales_only:
+        # Incremental public storefront searches across EVERY watch-rule group.
+        # Sales are detected among all observed matching products, not just
+        # products featured in a special promotions collection.
+        from catalog_scan import run_catalog_monitor
+        return run_catalog_monitor(cfg, sys.modules[__name__])
     now = dt.datetime.now(ZoneInfo(cfg.get("timezone", "Europe/Prague")))
     rows_by_shop = demo_rows() if args.demo else {}
     statuses = {}
