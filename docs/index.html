@@ -5,14 +5,43 @@
 <title>Rohlík × Košík | Hlídač cen</title>
 <style>
 :root{font-family:Inter,"Segoe UI",Arial,sans-serif;color:#172336;background:#f2f4f7}
-*{box-sizing:border-box}body{margin:0}header{background:#172336;color:#fff;padding:27px max(24px,calc((100vw - 1210px)/2))}
-h1{font-size:29px;margin:0 0 6px}header p{color:#cbd5e1;margin:0}main{max-width:1210px;margin:25px auto;padding:0 18px}
+*{box-sizing:border-box}body{margin:0}header{background:#172336;color:#fff;padding:27px max(24px,calc((100vw - 1660px)/2))}
+h1{font-size:29px;margin:0 0 6px}header p{color:#cbd5e1;margin:0}main{max-width:1660px;margin:25px auto;padding:0 18px}
 .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.stat,.panel{background:white;box-shadow:0 2px 10px #15223b0a;border-radius:13px;padding:18px}
 .stat .num{font-size:29px;font-weight:800;color:#213a57}.stat .cap{font-size:13px;color:#5b6574;margin-top:4px}
 .toolbar{display:flex;gap:11px;flex-wrap:wrap;align-items:end;margin:16px 0}.control{display:flex;flex-direction:column;gap:5px;color:#5b6574;font-size:12px;font-weight:700}
 select,input{border:1px solid #d6dce6;padding:11px 10px;background:white;border-radius:8px;color:#1d2939;font-size:14px}
-.gridwrap{overflow-x:auto;-webkit-overflow-scrolling:touch}table{border-collapse:collapse;min-width:950px;width:100%;font-size:13.5px}th{color:#596678;text-align:left;font-size:12px;background:#f6f8fa;white-space:nowrap}
-th,td{padding:12px 9px;border-bottom:1px solid #e8ebef;vertical-align:middle}td a{color:#1362b3;font-weight:700;text-decoration:none}td a:hover{text-decoration:underline}
+/* Preserve price / discount / comparison text on one line; scroll only if needed. */
+.gridwrap{overflow-x:auto;-webkit-overflow-scrolling:touch}
+table{border-collapse:collapse;min-width:1210px;width:100%;font-size:13.5px;table-layout:auto}
+th{color:#596678;text-align:left;font-size:12px;background:#f6f8fa;white-space:nowrap}
+th,td{padding:12px 8px;border-bottom:1px solid #e8ebef;vertical-align:middle}
+/* Keep the values in the highlighted screenshot columns unbroken. */
+th:nth-child(6),td:nth-child(6){white-space:nowrap;min-width:98px;font-variant-numeric:tabular-nums}
+th:nth-child(7),td:nth-child(7){white-space:nowrap;min-width:65px;font-variant-numeric:tabular-nums}
+th:nth-child(9),td:nth-child(9){white-space:nowrap;min-width:155px}
+th:nth-child(10),td:nth-child(10){white-space:nowrap;min-width:75px}
+/* Category and brand stay compact; long product descriptions wrap rather than hiding prices. */
+th:nth-child(1),td:nth-child(1){min-width:100px}
+th:nth-child(2),td:nth-child(2){min-width:128px;white-space:nowrap}
+th:nth-child(3),td:nth-child(3){min-width:135px;white-space:nowrap}
+th:nth-child(4),td:nth-child(4){min-width:310px}
+th:nth-child(5),td:nth-child(5){min-width:65px}
+th:nth-child(8),td:nth-child(8){min-width:67px}
+
+/* Compact product thumbnail + variant: same row as product, photo from the
+   corresponding retailer. If unavailable, render a neutral placeholder. */
+.product-identity{display:flex;align-items:center;gap:11px;min-width:280px}
+.product-photo{width:52px;height:58px;flex:0 0 52px;display:flex;align-items:center;justify-content:center;border-radius:8px;background:#f6f8fa;border:1px solid #e5e9ef;overflow:hidden;text-decoration:none}
+.product-photo img{width:100%;height:100%;object-fit:contain;background:#fff}
+.product-photo .no-photo{font-size:22px;color:#9aa8b7}
+.product-text{display:flex;flex-direction:column;gap:5px;min-width:0}
+.product-name{font-weight:600;line-height:1.3}
+.pack-chip{display:inline-block;align-self:flex-start;font-size:12px;font-weight:700;color:#155e75;background:#e7f6fb;border-radius:6px;padding:3px 7px;white-space:nowrap}
+.unit-info{display:inline-block;font-size:11px;color:#64748b;white-space:nowrap}
+@media(max-width:800px){.product-photo{width:46px;height:52px;flex-basis:46px}.product-identity{min-width:250px}}
+
+td a{color:#1362b3;font-weight:700;text-decoration:none}td a:hover{text-decoration:underline}
 tr:hover{background:#fafbfd}.tag{display:inline-block;background:#eaf7ee;color:#177644;padding:4px 8px;border-radius:20px;font-size:11px;font-weight:700}
 .fav{background:#fff3d6;color:#865806}.conditional{background:#fff5e7;color:#935a08}.bad{color:#ae242b;font-weight:700}.good{color:#167448;font-weight:700}
 .note{font-size:12px;color:#6b7280;line-height:1.5}.error{background:#fff0f0;color:#a52c31;border:1px solid #ffcbcc;padding:10px;border-radius:8px;margin:8px 0}
@@ -71,12 +100,33 @@ function applyFilters(){if(!data)return;const b=$('brand').value,c=$('category')
  const visible=(data.offers||[]).filter(o=>(!b||o.brand===b)&&(!c||(o.category||'Ostatní')===c)&&(!s||o.shop===s)&&(!p||o.favorite)&&o.discount_pct>=m&&o.name.toLocaleLowerCase('cs-CZ').includes(q));
  const tbody=$('body');tbody.replaceChildren();
  for(const o of visible){let tr=document.createElement('tr');tr.appendChild(cell(o.favorite?'★ Oblíbené':'Značka',o.favorite?'tag fav':'tag'));
- tr.appendChild(cell(o.category||'Ostatní'));tr.appendChild(cell(o.brand));tr.appendChild(cell(o.name));tr.appendChild(cell(o.shop));tr.appendChild(cell(Kč(o.price)));
+ tr.appendChild(cell(o.category||'Ostatní'));tr.appendChild(cell(o.brand));tr.appendChild(productCell(o));tr.appendChild(cell(o.shop));tr.appendChild(cell(Kč(o.price)));
  tr.appendChild(cell('−'+o.discount_pct+' %','good'));tr.appendChild(cell(o.terms,o.terms.startsWith('množstevní')?'tag conditional':undefined));
  const comp=o.other_shop_price!=null?`${o.other_shop}: ${Kč(o.other_shop_price)} (${o.other_shop_price>o.price?'+':''}${(o.other_shop_price-o.price).toFixed(2)} Kč)`:'Bez ověřeného páru';tr.appendChild(cell(comp));
  const td=document.createElement('td');const a=node('a','Otevřít ↗');a.href=o.url;a.target='_blank';a.rel='noopener noreferrer';td.appendChild(a);tr.appendChild(td);tbody.appendChild(tr)}
  if(!visible.length){const tr=document.createElement('tr');const td=node('td','Žádné ověřené výsledky pro zadané filtry.');td.colSpan=10;tr.appendChild(td);tbody.appendChild(tr)}
 }
+function productCell(o){
+ const td=document.createElement('td');const wrap=node('div','','product-identity');
+ const link=document.createElement('a');link.href=o.url;link.target='_blank';link.rel='noopener noreferrer';
+ link.className='product-photo';link.title=o.name;
+ // Images are retailer-provided thumbnails, not guessed Google matches.
+ if(o.image_url && /^https:\/\//i.test(o.image_url)){
+   const im=document.createElement('img');im.src=o.image_url;im.alt='Náhled: '+o.name;
+   im.loading='lazy';im.decoding='async';im.referrerPolicy='no-referrer';
+   im.onerror=()=>{link.replaceChildren(node('span','▧','no-photo'))};
+   link.appendChild(im);
+ }else link.appendChild(node('span','▧','no-photo'));
+ const info=node('div','','product-text');info.appendChild(node('span',o.name,'product-name'));
+ if(o.quantity){
+   info.appendChild(node('span','Balení: '+o.quantity,'pack-chip'));
+   if(o.unit_price != null && o.unit_label){
+     info.appendChild(node('span',Kč(o.unit_price)+'/'+o.unit_label.replace(/^Kč\//,''),'unit-info'));
+   }
+ }else info.appendChild(node('span','Balení nezjištěno','unit-info'));
+ wrap.append(link,info);td.appendChild(wrap);return td;
+}
+
 function cell(str,css){let td=document.createElement('td');td.appendChild(node('span',str,css));return td}
 async function load(sel='latest'){try{const path=sel==='latest'?'data/latest.json':`data/history/${encodeURIComponent(sel)}.json`;const r=await fetch(path,{cache:'no-store'});if(!r.ok)throw Error('HTTP '+r.status);data=await r.json();refresh()}catch(e){showError('Nepodařilo se načíst report: '+e.message+'. Zkontroluj spuštění GitHub Actions a nastavení Pages.')}}
 (async()=>{try{const r=await fetch('data/index.json',{cache:'no-store'});if(r.ok){for(const d of await r.json()){const op=node('option',d);op.value=d;$('date').appendChild(op)}}}catch(e){}const q=new URLSearchParams(location.search).get('date');if(q && [...$('date').options].some(o=>o.value===q)){$('date').value=q;await load(q)}else{await load()}})();
