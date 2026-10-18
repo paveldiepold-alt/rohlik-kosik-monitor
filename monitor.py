@@ -87,6 +87,127 @@ def term_matches(n: str, expression: str) -> bool:
     return " " + term + " " in " " + n + " "
 
 
+
+# These groups contain only unprocessed, fresh whole fruit and vegetables.
+# Matching "banana" or "raspberry" anywhere in a title is NOT enough:
+# that would incorrectly classify yogurt, supplements, beverages and snacks.
+FRESH_PRODUCE_WORDS = {
+    "W037": ("avokado", "avokada"),
+    "W038": ("banan", "banany", "bananu"),
+    "W039": ("boruvka", "boruvky", "boruvek"),
+    "W040": ("malina", "maliny", "malin"),
+    "W041": ("citron", "citrony", "citronu"),
+    "W042": ("hrozny", "hroznu", "hroznove vino", "hroznoveho vina"),
+    "W043": ("okurka", "okurky", "okurek", "okurku"),
+    "W044": ("rajce", "rajcata", "rajcat"),
+    "W045": ("rajce", "rajcata", "rajcat"),
+    "W046": ("mrkev", "mrkve", "mrkvicka", "mrkvicky", "karotka", "karotky", "karotek"),
+    "W047": ("paprika", "papriky", "papriku", "paprik"),
+}
+
+# Legitimate descriptors before the commodity, such as "BIO mrkev",
+# "České čerstvé borůvky" or "Chiquita banány". This deliberately errs
+# on the side of omitting ambiguous listings rather than false alerts.
+FRESH_PRODUCE_PREFIX = frozenset("""
+    bio cerstve cerstva cerstvy cerstvych cerstvi ceske ceska cesky
+    ceskych farmarske farmarska farmarsky farmarskych vyberove vyberova
+    premium organic eko lokalni velke male sladke sladka sladka
+    spanelske spanelska italske italska belgicke peruanske
+    chiquita bonita dole del monte farm fresh nature cherry mini
+    koktejlova koktejlove baby volne balene balena baleny
+""".split())
+
+# Whole fresh produce only: never the fruit-flavoured version of another item,
+# juice, sweet, dairy product, ready meal, preserved/dried/frozen produce,
+# cosmetics, supplements, etc. Patterns are applied to complete word stems.
+NON_FRESH_PRODUCE = (
+    "actimel*", "magnesia", "dr max", "vitamin*", "tablet*", "horcik*",
+    "dopln*", "probiot*", "napoj*", "limonad*", "dzus*", "nektar*",
+    "smoothie", "sirup*", "stavy", "stava", "stavu", "stav", "caj", "caje",
+    "jogurt*", "kefir*", "mleko", "mlecny", "mlecna", "mlecne",
+    "mozzarella", "syr", "syry", "toast*", "sendvic*", "bageta",
+    "dezert*", "pudink*", "krem*", "koktejl", "koktejly", "zmrzlin*",
+    "pecivo", "kolac*", "buchta", "bucht*", "rohlik", "tycink*",
+    "susen*", "susenk*", "lyofiliz*", "mrazen*", "zmrazen*",
+    "chips*", "cokolad*", "polev*", "bonbon*", "cukrovink*", "cereali*",
+    "marmelad*", "dzem*", "protlak*", "kecup*", "kase", "kasi",
+    "pyre", "presnidavk*", "prichut*", "aroma*", "ochucen*", "esence",
+    "ravioli", "testovin*", "rizoto", "pizza", "omack*", "polevk*",
+    "hotove jidlo", "hotov*", "pomazank*", "koreni", "mlet*",
+    "konzerv*", "sterilovan*", "nakladan*", "zavaren*", "kysel*", "kandovan*", "plnen*",
+    "fermentovan*", "grilovan*", "pecen*", "marinovan*", "olej*",
+    "protein*", "kapsl*", "sampon*", "kosmetik*", "maska", "gel",
+    "cistic*", "mydlo", "vune", "sprej", "doplnek stravy",
+)
+
+
+def is_fresh_produce_name(name: str, rule: dict) -> bool:
+    """True only if the main product is fresh whole fruit/vegetables.
+
+    Without a reliable shop-category field, ambiguous offers are omitted.
+    Avoid inferring the commodity from an ingredient/flavour anywhere in name.
+    """
+    if rule.get("category") not in ("Ovoce", "Zelenina"):
+        return True
+    lexicon = FRESH_PRODUCE_WORDS.get(rule.get("id"), ())
+    if not lexicon:
+        return False  # Fail closed for new produce rules pending review.
+    n = normalized(name)
+    if any(term_matches(n, word) for word in NON_FRESH_PRODUCE):
+        return False
+    tokens = n.split()
+    # Require a whole-word produce noun. Banana-flavoured adjectives such as
+    # "banánové", "malinový" or "citronová" do not qualify.
+    for commodity in lexicon:
+        words = commodity.split()
+        for i in range(len(tokens) - len(words) + 1):
+            if tokens[i:i + len(words)] != words:
+                continue
+            # All words before the commodity must be known fresh-produce
+            # descriptors (not "Actimel Kids ..." or "Dr.Max ...").
+            if i <= 5 and all(w in FRESH_PRODUCE_PREFIX for w in tokens[:i]):
+                return True
+    return False
+
+
+def scrub_historical_produce(config: dict) -> int:
+    """Repair misleading fruit/vegetable entries from pre-v7 daily archives.
+
+    Preserve genuine prices/history, removing only incorrectly classified
+    produce rows. This is idempotent, so scheduled runs can invoke it safely.
+    """
+    history = DATA / "history"
+    rules_by_id = {r["id"]: r for r in config.get("watch_rules", [])}
+    removed_total = 0
+    for path in sorted(history.glob("*.json")) if history.exists() else []:
+        try:
+            snapshot = json.loads(path.read_text(encoding="utf-8"))
+        except (OSError, ValueError):
+            continue
+        offers = snapshot.get("offers")
+        if not isinstance(offers, list):
+            continue
+        kept = []
+        for offer in offers:
+            if offer.get("category") not in ("Ovoce", "Zelenina"):
+                kept.append(offer)
+                continue
+            rule = rules_by_id.get(offer.get("rule_id", ""))
+            if not rule:
+                rule = match_rules(offer.get("name", ""), config.get("watch_rules", []))
+            if rule and rule.get("category") in ("Ovoce", "Zelenina") and is_fresh_produce_name(offer.get("name", ""), rule):
+                kept.append(offer)
+        removed = len(offers) - len(kept)
+        if removed:
+            snapshot["offers"] = kept
+            kept_urls = {o["url"] for o in kept}
+            snapshot["changes"] = [c for c in snapshot.get("changes", []) if c.get("url") in kept_urls]
+            snapshot["produce_filter_repaired"] = True
+            path.write_text(json.dumps(snapshot, ensure_ascii=False, indent=2), encoding="utf-8")
+            removed_total += removed
+    return removed_total
+
+
 def match_rules(name: str, rules: list[dict]) -> dict | None:
     n = normalized(name)
     matched = []
@@ -103,6 +224,8 @@ def match_rules(name: str, rules: list[dict]) -> dict | None:
         if r.get("brand_aliases") and not any(term_matches(n, alias) for alias in r["brand_aliases"]):
             continue
         if has_brand and not r.get("brand_aliases") and r.get('category') in ('Ovoce', 'Zelenina'):
+            continue
+        if r.get("category") in ("Ovoce", "Zelenina") and not is_fresh_produce_name(name, r):
             continue
         if r.get("product_any") and not any(term_matches(n, term) for term in r["product_any"]):
             continue
@@ -418,6 +541,10 @@ def main() -> int:
     offers = []
     for shop, rows in rows_by_shop.items():
         offers.extend(classify_rows(shop, rows, cfg))
+    # Repair historical false positives as well, so past days do not keep
+    # listing juice/yogurt/sweets as fresh fruit or vegetables.
+    if not args.demo:
+        scrub_historical_produce(cfg)
     add_comparisons(offers, cfg.get("canonical_pairs", []))
     offers.sort(key=lambda o: (not o.favorite, -o.discount_pct, o.brand, o.name))
     snapshot = {"date": now.date().isoformat(), "checked_at": now.isoformat(timespec="minutes"),
