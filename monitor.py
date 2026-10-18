@@ -208,6 +208,95 @@ def scrub_historical_produce(config: dict) -> int:
     return removed_total
 
 
+# Beverage rules require bottle-size compliance, not a keyword-only match.
+# These constraints refer to the volume of ONE bottle, never the sum of a pack.
+# Czech listings often omit the packaging material from the title: for such
+# listings, PET is a plausible inference from the retail bottle size, not a
+# verified packaging claim. Explicitly non-PET packages are always rejected.
+BEVERAGE_SIZES = {
+    "Nápoje / limonády": (1.0, None),   # PET bottle of 1 l or more
+    "Nápoje / vody": (1.5, 1.5),      # PET bottle of precisely 1.5 l
+}
+BEVERAGE_VOLUME = re.compile(
+    r"(?<![\d.,])(?P<amount>\d{1,4}(?:[.,]\d{1,2})?)\s*"
+    r"(?P<unit>ml|mililitr(?:u|y|ů)?|l|litry?|litr(?:u|y|ů)?)\b",
+    flags=re.IGNORECASE,
+)
+# No glass bottles, cans, cartons, bag-in-box or disposable cups.
+NON_PET_BEVERAGE_PACKAGE = (
+    "sklo", "sklenene*", "sklenena*", "skleneny*",
+    "plechovk*", "plechov*", "plech", "cans", "can",
+    "tetrapak", "tetra pak", "karton*", "krabic*",
+    "bag in box", "sacek", "sack*", "kelimek*", "aluminiov*",
+)
+
+
+def beverage_volume_liters(name: str) -> list[float]:
+    """Read capacity per individual bottle (also in e.g. 6x1,5l packs)."""
+    volumes = []
+    for match in BEVERAGE_VOLUME.finditer(name):
+        amount = float(match.group('amount').replace(',', '.'))
+        unit = match.group('unit').casefold()
+        value = amount / 1000 if unit.startswith(('ml', 'mililitr')) else amount
+        if 0 < value <= 10:  # impossible 'bottle sizes' may be other metadata
+            volumes.append(value)
+    return volumes
+
+
+def is_allowed_beverage(name: str, rule: dict) -> bool:
+    """Reject undersized/oversized or explicitly non-PET beverage packaging."""
+    limits = BEVERAGE_SIZES.get(rule.get('category'))
+    if not limits:
+        return True
+    n = normalized(name)
+    if any(term_matches(n, expr) for expr in NON_PET_BEVERAGE_PACKAGE):
+        return False
+    lower, upper = limits
+    sizes = beverage_volume_liters(name)
+    # Product name must state a recognizable single-bottle size. For multiple
+    # capacities in one title, fail closed: '2l + 0.5l' is not a pure 2l pack.
+    if not sizes:
+        return False
+    return all(size >= lower - 0.001 and
+               (upper is None or size <= upper + 0.001) for size in sizes)
+
+
+def scrub_historical_beverages(config: dict) -> int:
+    """Remove old water/soda entries that violate the current bottle rules."""
+    history = DATA / "history"
+    rules_by_id = {r["id"]: r for r in config.get("watch_rules", [])}
+    removed_total = 0
+    for path in sorted(history.glob("*.json")) if history.exists() else []:
+        try:
+            snapshot = json.loads(path.read_text(encoding="utf-8"))
+        except (OSError, ValueError):
+            continue
+        offers = snapshot.get("offers")
+        if not isinstance(offers, list):
+            continue
+        kept = []
+        for offer in offers:
+            category = offer.get('category')
+            if category not in BEVERAGE_SIZES:
+                kept.append(offer)
+                continue
+            rule = rules_by_id.get(offer.get('rule_id', ''))
+            # Even old snapshots without a rule id must meet the bottle size.
+            # Category provides the exact requirements in that case.
+            check = rule if rule and rule.get('category') == category else {'category': category}
+            if is_allowed_beverage(offer.get('name', ''), check):
+                kept.append(offer)
+        removed = len(offers) - len(kept)
+        if removed:
+            snapshot['offers'] = kept
+            allowed = {o['url'] for o in kept}
+            snapshot['changes'] = [c for c in snapshot.get('changes', []) if c.get('url') in allowed]
+            snapshot['beverage_pack_filter_repaired'] = True
+            path.write_text(json.dumps(snapshot, ensure_ascii=False, indent=2), encoding='utf-8')
+            removed_total += removed
+    return removed_total
+
+
 def match_rules(name: str, rules: list[dict]) -> dict | None:
     n = normalized(name)
     matched = []
@@ -226,6 +315,8 @@ def match_rules(name: str, rules: list[dict]) -> dict | None:
         if has_brand and not r.get("brand_aliases") and r.get('category') in ('Ovoce', 'Zelenina'):
             continue
         if r.get("category") in ("Ovoce", "Zelenina") and not is_fresh_produce_name(name, r):
+            continue
+        if r.get("category") in BEVERAGE_SIZES and not is_allowed_beverage(name, r):
             continue
         if r.get("product_any") and not any(term_matches(n, term) for term in r["product_any"]):
             continue
@@ -321,10 +412,13 @@ def parse_card(shop: str, row: dict, config: dict) -> Offer | None:
             return None
     category = matched_rule.get("category", "") if matched_rule else ""
     label = matched_rule.get("label", "") if matched_rule else ""
+    note = matched_rule.get("note", "") if matched_rule else ""
+    if category in BEVERAGE_SIZES and not any(term_matches(normalized(name), term) for term in ("pet", "plastov*", "plast", "plastova*")):
+        note = (note + " ").strip() + " PET obal je podle velikosti pravděpodobný, ale z názvu neověřený."
     return Offer(shop, name, url, price, discount, old_price, brand or label or "Oblíbené", fav,
                  quantity_of(name, snippet), terms,
                  category=category, rule_id=matched_rule.get("id", "") if matched_rule else "",
-                 note=matched_rule.get("note", "") if matched_rule else "")
+                 note=note)
 
 
 def classify_rows(shop: str, rows: list[dict], config: dict) -> list[Offer]:
@@ -545,6 +639,7 @@ def main() -> int:
     # listing juice/yogurt/sweets as fresh fruit or vegetables.
     if not args.demo:
         scrub_historical_produce(cfg)
+        scrub_historical_beverages(cfg)
     add_comparisons(offers, cfg.get("canonical_pairs", []))
     offers.sort(key=lambda o: (not o.favorite, -o.discount_pct, o.brand, o.name))
     snapshot = {"date": now.date().isoformat(), "checked_at": now.isoformat(timespec="minutes"),
