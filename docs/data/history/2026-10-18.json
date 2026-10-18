@@ -1,10 +1,10 @@
 {
   "date": "2026-10-18",
-  "checked_at": "2026-10-18T15:54+02:00",
+  "checked_at": "2026-10-18T16:00+02:00",
   "sources": {
     "Rohlík": {
       "status": "ok",
-      "cards": 155
+      "cards": 157
     },
     "Košík": {
       "status": "ok",
@@ -282,23 +282,7 @@
       "detail_source": "listing"
     }
   ],
-  "changes": [
-    {
-      "url": "https://www.rohlik.cz/1478195-just-meat-kruti-prsa-s-peprem-a-soli",
-      "kind": "newly_observed",
-      "price": 699.0
-    },
-    {
-      "url": "https://www.rohlik.cz/1478194-just-meat-kureci-prsa-s-peprem-a-soli",
-      "kind": "newly_observed",
-      "price": 669.0
-    },
-    {
-      "url": "https://www.rohlik.cz/1291299-colgate-whitening-belici-zubni-pasta",
-      "kind": "newly_observed",
-      "price": 732.0
-    }
-  ],
+  "changes": [],
   "demo": false,
   "disclaimer": "Veřejný vzorek, ne úplný katalog; PSČ je zadáno pouze jako preference (neověřené lokální ceny a dostupnost); množstevní slevy podmíněné."
 }
