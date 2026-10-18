@@ -1,6 +1,6 @@
 {
   "date": "2026-10-18",
-  "checked_at": "2026-10-18T14:44+02:00",
+  "checked_at": "2026-10-18T15:16+02:00",
   "sources": {
     "Rohlík": {
       "status": "ok",
@@ -43,63 +43,6 @@
       "note": ""
     },
     {
-      "shop": "Košík",
-      "name": "Dr.Max Magnesium B6 citron 250 mg 20 šumivých tablet",
-      "url": "https://www.kosik.cz/p731364-dr-max-dr-max-magnesium-b6-citron-250-mg-20-sumivych-tablet",
-      "price": 62.0,
-      "discount_pct": 40,
-      "old_price": 104.0,
-      "brand": "Citrony",
-      "favorite": true,
-      "quantity": "20 ks",
-      "terms": "akce",
-      "comparable_group": "auto:dr max magnesium b6 citron 250 mg 20 sumivych tablet | 20 ks",
-      "other_shop_price": null,
-      "other_shop_url": "",
-      "other_shop": "",
-      "category": "Ovoce",
-      "rule_id": "W041",
-      "note": ""
-    },
-    {
-      "shop": "Košík",
-      "name": "Dr.Max Vitamin C 1000 mg citron 20 šumivých tablet",
-      "url": "https://www.kosik.cz/p729676-dr-max-dr-max-vitamin-c-1000-mg-citron-20-sumivych-tablet",
-      "price": 75.0,
-      "discount_pct": 40,
-      "old_price": 125.0,
-      "brand": "Citrony",
-      "favorite": true,
-      "quantity": "20 ks",
-      "terms": "akce",
-      "comparable_group": "auto:dr max vitamin c 1000 mg citron 20 sumivych tablet | 20 ks",
-      "other_shop_price": null,
-      "other_shop_url": "",
-      "other_shop": "",
-      "category": "Ovoce",
-      "rule_id": "W041",
-      "note": ""
-    },
-    {
-      "shop": "Košík",
-      "name": "Pekkos Žofík pečivo s banánovou náplní",
-      "url": "https://www.kosik.cz/p742620-pekkos-zofik-pecivo-s-bananovou-naplni",
-      "price": 7.9,
-      "discount_pct": 38,
-      "old_price": 12.9,
-      "brand": "Banány",
-      "favorite": true,
-      "quantity": "30 g",
-      "terms": "akce",
-      "comparable_group": "auto:pekkos zofik pecivo s bananovou naplni | 30 g",
-      "other_shop_price": null,
-      "other_shop_url": "",
-      "other_shop": "",
-      "category": "Ovoce",
-      "rule_id": "W038",
-      "note": ""
-    },
-    {
       "shop": "Rohlík",
       "name": "BIO Mrkev, balení",
       "url": "https://www.rohlik.cz/1411188-bio-mrkev-baleni",
@@ -116,25 +59,6 @@
       "other_shop": "",
       "category": "Zelenina",
       "rule_id": "W046",
-      "note": ""
-    },
-    {
-      "shop": "Rohlík",
-      "name": "Actimel Kids Probiotický nápoj banán a jahoda 8×100 g",
-      "url": "https://www.rohlik.cz/1374507-actimel-kids-probioticky-napoj-banan-a-jahoda-8-100-g",
-      "price": 127.9,
-      "discount_pct": 35,
-      "old_price": null,
-      "brand": "Banány",
-      "favorite": true,
-      "quantity": "100 g",
-      "terms": "akce",
-      "comparable_group": "auto:actimel kids probioticky napoj banan a jahoda 8x100 g | 100 g",
-      "other_shop_price": null,
-      "other_shop_url": "",
-      "other_shop": "",
-      "category": "Ovoce",
-      "rule_id": "W038",
       "note": ""
     },
     {
@@ -155,120 +79,6 @@
       "category": "Nápoje / limonády",
       "rule_id": "W036",
       "note": "Jen klasická Coca-Cola; ostatní příchutě a bezcukerné varianty vyloučeny."
-    },
-    {
-      "shop": "Rohlík",
-      "name": "Avokádo balené, síť",
-      "url": "https://www.rohlik.cz/1321589-avokado-balene-sit",
-      "price": 80.9,
-      "discount_pct": 32,
-      "old_price": null,
-      "brand": "Avokádo",
-      "favorite": true,
-      "quantity": "500 g",
-      "terms": "akce",
-      "comparable_group": "auto:avokado balene sit | 500 g",
-      "other_shop_price": null,
-      "other_shop_url": "",
-      "other_shop": "",
-      "category": "Ovoce",
-      "rule_id": "W037",
-      "note": ""
-    },
-    {
-      "shop": "Košík",
-      "name": "Dr.Max Zázvor s citrónem bylinný čaj 20x1,5 g",
-      "url": "https://www.kosik.cz/p729918-dr-max-dr-max-zazvor-s-citronem-bylinny-caj-20x1-5-g",
-      "price": 40.0,
-      "discount_pct": 31,
-      "old_price": 58.0,
-      "brand": "Citrony",
-      "favorite": true,
-      "quantity": "1.5 g",
-      "terms": "akce",
-      "comparable_group": "auto:dr max zazvor s citronem bylinny caj 20x1 5 g | 1 5 g",
-      "other_shop_price": null,
-      "other_shop_url": "",
-      "other_shop": "",
-      "category": "Ovoce",
-      "rule_id": "W041",
-      "note": ""
-    },
-    {
-      "shop": "Rohlík",
-      "name": "Magnesia Red Malina jemně perlivá",
-      "url": "https://www.rohlik.cz/1300127-magnesia-red-malina-jemne-perliva",
-      "price": 24.9,
-      "discount_pct": 28,
-      "old_price": null,
-      "brand": "Maliny",
-      "favorite": true,
-      "quantity": "1.5 l",
-      "terms": "akce",
-      "comparable_group": "auto:magnesia red malina jemne perliva | 1 5 l",
-      "other_shop_price": null,
-      "other_shop_url": "",
-      "other_shop": "",
-      "category": "Ovoce",
-      "rule_id": "W040",
-      "note": ""
-    },
-    {
-      "shop": "Rohlík",
-      "name": "Rana Ravioli s rajčaty a mozzarellou",
-      "url": "https://www.rohlik.cz/1479242-rana-ravioli-s-rajcaty-a-mozzarellou",
-      "price": 89.9,
-      "discount_pct": 22,
-      "old_price": null,
-      "brand": "Rajčata",
-      "favorite": true,
-      "quantity": "250 g",
-      "terms": "akce",
-      "comparable_group": "auto:rana ravioli s rajcaty a mozzarellou | 250 g",
-      "other_shop_price": null,
-      "other_shop_url": "",
-      "other_shop": "",
-      "category": "Zelenina",
-      "rule_id": "W044",
-      "note": ""
-    },
-    {
-      "shop": "Rohlík",
-      "name": "HiPP BIO Ovocná tyčinka jablko, banán a maliny",
-      "url": "https://www.rohlik.cz/1292225-hipp-bio-ovocna-tycinka-jablko-banan-a-maliny",
-      "price": 29.9,
-      "discount_pct": 20,
-      "old_price": null,
-      "brand": "Banány",
-      "favorite": true,
-      "quantity": "23 g",
-      "terms": "akce",
-      "comparable_group": "auto:hipp bio ovocna tycinka jablko banan a maliny | 23 g",
-      "other_shop_price": null,
-      "other_shop_url": "",
-      "other_shop": "",
-      "category": "Ovoce",
-      "rule_id": "W038",
-      "note": ""
-    },
-    {
-      "shop": "Rohlík",
-      "name": "Miamo Malina v bílé polevě",
-      "url": "https://www.rohlik.cz/1408788-miamo-malina-v-bile-poleve",
-      "price": 12.9,
-      "discount_pct": 15,
-      "old_price": null,
-      "brand": "Maliny",
-      "favorite": true,
-      "quantity": "50 ml",
-      "terms": "akce",
-      "comparable_group": "auto:miamo malina v bile poleve | 50 ml",
-      "other_shop_price": null,
-      "other_shop_url": "",
-      "other_shop": "",
-      "category": "Ovoce",
-      "rule_id": "W040",
-      "note": ""
     },
     {
       "shop": "Košík",
@@ -385,103 +195,7 @@
       "note": ""
     }
   ],
-  "changes": [
-    {
-      "url": "https://www.rohlik.cz/1356399-hrozny-tmave-volne-odr-red-globe-strapec",
-      "kind": "newly_observed",
-      "price": 111.92
-    },
-    {
-      "url": "https://www.kosik.cz/p731364-dr-max-dr-max-magnesium-b6-citron-250-mg-20-sumivych-tablet",
-      "kind": "newly_observed",
-      "price": 62.0
-    },
-    {
-      "url": "https://www.kosik.cz/p729676-dr-max-dr-max-vitamin-c-1000-mg-citron-20-sumivych-tablet",
-      "kind": "newly_observed",
-      "price": 75.0
-    },
-    {
-      "url": "https://www.kosik.cz/p742620-pekkos-zofik-pecivo-s-bananovou-naplni",
-      "kind": "newly_observed",
-      "price": 7.9
-    },
-    {
-      "url": "https://www.rohlik.cz/1411188-bio-mrkev-baleni",
-      "kind": "newly_observed",
-      "price": 39.95
-    },
-    {
-      "url": "https://www.rohlik.cz/1374507-actimel-kids-probioticky-napoj-banan-a-jahoda-8-100-g",
-      "kind": "newly_observed",
-      "price": 127.9
-    },
-    {
-      "url": "https://www.kosik.cz/p43747-coca-cola-multipack-plech-4x330ml",
-      "kind": "newly_observed",
-      "price": 54.9
-    },
-    {
-      "url": "https://www.rohlik.cz/1321589-avokado-balene-sit",
-      "kind": "newly_observed",
-      "price": 80.9
-    },
-    {
-      "url": "https://www.kosik.cz/p729918-dr-max-dr-max-zazvor-s-citronem-bylinny-caj-20x1-5-g",
-      "kind": "newly_observed",
-      "price": 40.0
-    },
-    {
-      "url": "https://www.rohlik.cz/1300127-magnesia-red-malina-jemne-perliva",
-      "kind": "newly_observed",
-      "price": 24.9
-    },
-    {
-      "url": "https://www.rohlik.cz/1479242-rana-ravioli-s-rajcaty-a-mozzarellou",
-      "kind": "newly_observed",
-      "price": 89.9
-    },
-    {
-      "url": "https://www.rohlik.cz/1292225-hipp-bio-ovocna-tycinka-jablko-banan-a-maliny",
-      "kind": "newly_observed",
-      "price": 29.9
-    },
-    {
-      "url": "https://www.rohlik.cz/1408788-miamo-malina-v-bile-poleve",
-      "kind": "newly_observed",
-      "price": 12.9
-    },
-    {
-      "url": "https://www.kosik.cz/p459240-hellmann-s-majoneza",
-      "kind": "newly_observed",
-      "price": 46.9
-    },
-    {
-      "url": "https://www.kosik.cz/p459210-hellmann-s-majoneza",
-      "kind": "newly_observed",
-      "price": 74.9
-    },
-    {
-      "url": "https://www.kosik.cz/p459230-hellmann-s-majoneza",
-      "kind": "newly_observed",
-      "price": 32.9
-    },
-    {
-      "url": "https://www.rohlik.cz/726425-flora-original",
-      "kind": "newly_observed",
-      "price": 82.4
-    },
-    {
-      "url": "https://www.rohlik.cz/761987-leerdammer-original-syr-platky",
-      "kind": "newly_observed",
-      "price": 52.4
-    },
-    {
-      "url": "https://www.rohlik.cz/1339945-domestos-ultra-white-and-shine-tekuty-dezinfekcni-a-cistici-pripravek",
-      "kind": "newly_observed",
-      "price": 59.9
-    }
-  ],
+  "changes": [],
   "demo": false,
   "disclaimer": "Veřejný vzorek, ne úplný katalog; PSČ je zadáno pouze jako preference (neověřené lokální ceny a dostupnost); množstevní slevy podmíněné."
 }
