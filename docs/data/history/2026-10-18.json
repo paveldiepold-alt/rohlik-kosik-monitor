@@ -1,10 +1,10 @@
 {
   "date": "2026-10-18",
-  "checked_at": "2026-10-18T17:15+02:00",
+  "checked_at": "2026-10-18T17:37+02:00",
   "sources": {
     "Rohlík": {
       "status": "ok",
-      "cards": 173
+      "cards": 171
     },
     "Košík": {
       "status": "ok",
@@ -16,10 +16,10 @@
     "Košík": "https://www.kosik.cz/s1-akce"
   },
   "product_details": {
-    "visited": 8,
-    "filled": 7,
+    "visited": 9,
+    "filled": 9,
     "errors": 0,
-    "photos_cached": 7
+    "photos_cached": 9
   },
   "delivery": {
     "postal_code": "149 00",
@@ -93,10 +93,10 @@
       "category": "Majonézy",
       "rule_id": "W027",
       "note": "",
-      "image_url": "",
+      "image_url": "data/images/86f93c853a679c8bb9c8c6.webp",
       "unit_price": 119.84,
       "unit_label": "Kč/l",
-      "detail_source": "listing"
+      "detail_source": "detail page"
     },
     {
       "shop": "Košík",
@@ -120,6 +120,29 @@
       "unit_price": 156.67,
       "unit_label": "Kč/l",
       "detail_source": "detail page"
+    },
+    {
+      "shop": "Košík",
+      "name": "Linteo Classic kuchyňské utěrky 2vrstvé, 2 role",
+      "url": "https://www.kosik.cz/p2967-linteo-classic-kuchynske-uterky-2vrstve-2-role",
+      "price": 19.9,
+      "discount_pct": 39,
+      "old_price": 32.9,
+      "brand": "Linteo",
+      "favorite": true,
+      "quantity": "",
+      "terms": "akce",
+      "comparable_group": "auto:linteo classic kuchynske uterky 2vrstve 2 role | ",
+      "other_shop_price": null,
+      "other_shop_url": "",
+      "other_shop": "",
+      "category": "Papírové utěrky",
+      "rule_id": "W074",
+      "note": "Jakákoliv značka; pouze jednorázové papírové kuchyňské utěrky/role, nikoli textilní, vlhčené nebo čisticí hadříky.",
+      "image_url": "data/images/60e9d814b68df5e5aebd76.webp",
+      "unit_price": null,
+      "unit_label": "",
+      "detail_source": ""
     },
     {
       "shop": "Rohlík",
@@ -214,7 +237,13 @@
       "detail_source": "detail page"
     }
   ],
-  "changes": [],
+  "changes": [
+    {
+      "url": "https://www.kosik.cz/p2967-linteo-classic-kuchynske-uterky-2vrstve-2-role",
+      "kind": "newly_observed",
+      "price": 19.9
+    }
+  ],
   "demo": false,
   "disclaimer": "Veřejný vzorek, ne úplný katalog; PSČ je zadáno pouze jako preference (neověřené lokální ceny a dostupnost); množstevní slevy podmíněné."
 }
