@@ -79,14 +79,16 @@ tr:hover{background:#fafbfd}.tag{display:inline-block;background:#eaf7ee;color:#
 <script>
 let data=null;
 const $=x=>document.getElementById(x);
+const isPreferred=o=>Boolean(o.favorite || /^W\d{3}$/.test(o.rule_id||''));
 const Kč=x=>typeof x==='number'?x.toLocaleString('cs-CZ',{minimumFractionDigits:2,maximumFractionDigits:2})+' Kč':'—';
 function node(tag,text,cls){const n=document.createElement(tag);n.textContent=text??'';if(cls)n.className=cls;return n}
 function showError(msg){const n=node('div',msg,'error');$('alerts').appendChild(n)}
 function refresh(){if(!data)return;const offers=data.offers||[];
- $('n').textContent=offers.length;$('fav').textContent=offers.filter(o=>o.favorite).length;
+ $('n').textContent=offers.length;$('fav').textContent=offers.filter(isPreferred).length;
  $('pairs').textContent=offers.filter(o=>o.other_shop_url).length/2;
  $('changes').textContent=(data.changes||[]).length;
- $('checked').textContent=`Datum: ${data.date} · Kontrola: ${data.checked_at} · PSČ: ${data.delivery?.postal_code||"neuvedeno"} · Pouze veřejné ceny, dostupnost pro PSČ neověřena`;
+ const photoCount=offers.filter(o=>/^data\/images\/[a-f0-9]{22}\.webp$/i.test(o.image_url||'')).length;
+ $('checked').textContent=`Datum: ${data.date} · Kontrola: ${data.checked_at} · PSČ: ${data.delivery?.postal_code||"neuvedeno"} · Pouze veřejné ceny, dostupnost pro PSČ neověřena · Ověřené miniatury: ${photoCount}/${offers.length}`;
  $('alerts').replaceChildren();if(data.demo)showError('DEMO DATA – uvedené ceny nejsou skutečné. Spusťte reálný sběr.');
  for(const [shop,info] of Object.entries(data.sources||{})){if(info.status!=='ok' && !data.demo)showError(`${shop}: ${info.status}. Nulový počet není potvrzením, že nejsou akce.`)}
  const allBrands=[...new Set(offers.map(o=>o.brand))].sort();const chosen=$('brand').value;$('brand').replaceChildren(node('option','Všechny značky'));
@@ -97,9 +99,9 @@ function refresh(){if(!data)return;const offers=data.offers||[];
  $('category').value=cats.includes(catOld)?catOld:'';
  applyFilters();}
 function applyFilters(){if(!data)return;const b=$('brand').value,c=$('category').value,s=$('shop').value,p=$('priority').value,m=Number($('min').value),q=$('search').value.toLocaleLowerCase('cs-CZ');
- const visible=(data.offers||[]).filter(o=>(!b||o.brand===b)&&(!c||(o.category||'Ostatní')===c)&&(!s||o.shop===s)&&(!p||o.favorite)&&o.discount_pct>=m&&o.name.toLocaleLowerCase('cs-CZ').includes(q));
+ const visible=(data.offers||[]).filter(o=>(!b||o.brand===b)&&(!c||(o.category||'Ostatní')===c)&&(!s||o.shop===s)&&(!p||isPreferred(o))&&o.discount_pct>=m&&o.name.toLocaleLowerCase('cs-CZ').includes(q));
  const tbody=$('body');tbody.replaceChildren();
- for(const o of visible){let tr=document.createElement('tr');tr.appendChild(cell(o.favorite?'★ Oblíbené':'Značka',o.favorite?'tag fav':'tag'));
+ for(const o of visible){let tr=document.createElement('tr');tr.appendChild(cell(isPreferred(o)?'★ Oblíbené':'Značka',isPreferred(o)?'tag fav':'tag'));
  tr.appendChild(cell(o.category||'Ostatní'));tr.appendChild(cell(o.brand));tr.appendChild(productCell(o));tr.appendChild(cell(o.shop));tr.appendChild(cell(Kč(o.price)));
  tr.appendChild(cell('−'+o.discount_pct+' %','good'));tr.appendChild(cell(o.terms,o.terms.startsWith('množstevní')?'tag conditional':undefined));
  const comp=o.other_shop_price!=null?`${o.other_shop}: ${Kč(o.other_shop_price)} (${o.other_shop_price>o.price?'+':''}${(o.other_shop_price-o.price).toFixed(2)} Kč)`:'Bez ověřeného páru';tr.appendChild(cell(comp));
@@ -112,8 +114,8 @@ function productCell(o){
  const td=document.createElement('td');const wrap=node('div','','product-identity');
  const link=document.createElement('a');link.href=o.url;link.target='_blank';link.rel='noopener noreferrer';
  link.className='product-photo';link.title=displayProductName(o.name);
- // Images are retailer-provided thumbnails, not guessed Google matches.
- if(o.image_url && /^https:\/\//i.test(o.image_url)){
+ // Locally cached / verified thumbnails (or original verified URLs from older data).
+ if(o.image_url && (/^https:\/\//i.test(o.image_url) || /^data\/images\/[a-f0-9]{22}\.webp$/i.test(o.image_url))){
    const im=document.createElement('img');im.src=o.image_url;im.alt='Náhled: '+displayProductName(o.name);
    im.loading='lazy';im.decoding='async';im.referrerPolicy='no-referrer';
    im.onerror=()=>{link.replaceChildren(node('span','▧','no-photo'))};

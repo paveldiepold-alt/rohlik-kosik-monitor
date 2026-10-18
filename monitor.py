@@ -9,6 +9,8 @@ from __future__ import annotations
 import argparse
 import datetime as dt
 import html
+import hashlib
+import io
 import json
 import re
 import sys
@@ -572,7 +574,12 @@ def parse_card(shop: str, row: dict, config: dict) -> Offer | None:
         return None
     if not config.get("watch_rules") and not brand and not fav:
         return None
-    if matched_rule and int(matched_rule.get("priority", 2)) == 1:
+    # A watch rule is part of the user's explicitly chosen shopping list.
+    # For this project ALL these rules are favorites, including Hellmann's,
+    # Leerdammer and Colgate; priority must not depend on prior P2 labels.
+    if matched_rule and config.get("monitoring", {}).get("interpret_watch_rules_as_favorites", True):
+        fav = True
+    elif matched_rule and int(matched_rule.get("priority", 2)) == 1:
         fav = True
     snippet = row.get("card", "")[:850]
     # A visible sale percentage in the same product card is mandatory.
@@ -789,7 +796,21 @@ DETAIL_JS = r"""() => {
   const link=document.querySelector('link[rel="image_src"]')?.href || '';
   const resolveImg=img=>img?.currentSrc || img?.getAttribute('data-src') || img?.getAttribute('src') ||
     img?.getAttribute('srcset')?.split(',')[0].trim().split(/\s+/)[0] || '';
-  return {heading, og_title:ogTitle, size, image_url:schemaImage || metaImage || resolveImg(relevant) || link};
+  // Candidates come from this product detail; the downloader checks actual
+  // image bytes rather than trusting a filename or hotlink.
+  const productImages=[...document.querySelectorAll('main picture img, main img, picture img, img')]
+    .filter(img => {
+      const alt=simplified(img.alt||'');
+      const title=simplified(heading);
+      const match=alt && title && (alt.includes(title)||title.includes(alt));
+      const hero=/product.*(image|photo|gallery)|image.*product/i.test(
+        String(img.closest('[data-testid], [class], [id]')?.className||'')+' '+
+        String(img.closest('[data-testid]')?.getAttribute('data-testid')||''));
+      return match || (hero && img.naturalWidth>120 && img.naturalHeight>100);
+    })
+    .map(resolveImg).filter(Boolean).slice(0,8);
+  const images=[schemaImage,metaImage,resolveImg(relevant),link,...productImages].filter(Boolean);
+  return {heading, og_title:ogTitle, size, image_url:images[0]||'', image_candidates:[...new Set(images)]};
 }"""
 
 
@@ -817,6 +838,143 @@ def apply_detail(offer: Offer, detail: dict) -> None:
     set_unit_price(offer)
 
 
+
+
+def _product_photo_path(offer: Offer) -> Path:
+    """Stable local asset path keyed by exact product URL, never fuzzy name."""
+    slug=hashlib.sha256(offer.url.encode('utf-8')).hexdigest()[:22]
+    return DATA / 'images' / f'{slug}.webp'
+
+
+def cache_product_photo(offer: Offer, page, detail: dict | None = None) -> bool:
+    """Store a small VERIFIED product thumbnail inside docs/data/images.
+
+    Browser direct image URLs from shops often fail on GitHub Pages due to
+    hotlink rules, expiring CDN signatures or referrer checks. The nightly
+    scan downloads/validates an image while on the shop site and creates a
+    same-origin WEBP thumbnail. No generic stock or guessed product image.
+    Failed image download -> empty image (neutral placeholder in frontend).
+    """
+    try:
+        from PIL import Image, UnidentifiedImageError
+    except ImportError:
+        return False
+    # Detail redirects or generic category pages must NEVER supply a photo.
+    if isinstance(detail,dict) and not detail_belongs_to_offer(detail.get('heading',''), offer.name):
+        offer.image_url=''
+        return False
+    path=_product_photo_path(offer)
+    path.parent.mkdir(parents=True,exist_ok=True)
+    # Reuse an image only when it belongs to the same EXACT product URL.
+    if path.exists() and path.stat().st_size>200:
+        try:
+            with Image.open(path) as im:
+                im.verify()
+            offer.image_url='data/images/'+path.name
+            return True
+        except (OSError,ValueError,UnidentifiedImageError):
+            path.unlink(missing_ok=True)
+    candidates=[]
+    if isinstance(detail,dict):
+        candidates+=detail.get('image_candidates',[]) or []
+        candidates.append(detail.get('image_url',''))
+    candidates.append(offer.image_url)
+    seen=set()
+    for raw in candidates:
+        url=safe_image_url(raw,offer.url)
+        if not url or url in seen:
+            continue
+        seen.add(url)
+        try:
+            response=page.request.get(url,headers={'Referer': offer.url,'Accept':'image/avif,image/webp,image/png,image/jpeg,image/*;q=0.8'},timeout=6500)
+            if not response.ok:
+                continue
+            mime=response.headers.get('content-type','').split(';')[0].strip().lower()
+            if mime not in ('image/jpeg','image/png','image/webp','image/avif'):
+                continue
+            content=response.body()
+            if not 256<len(content)<5_000_000:
+                continue
+            with Image.open(io.BytesIO(content)) as im:
+                if im.width<75 or im.height<75:
+                    continue
+                # Guard against banners and tiny placeholder icons.
+                if max(im.width,im.height)/max(1,min(im.width,im.height))>3.2:
+                    continue
+                im=im.convert('RGB')
+                im.thumbnail((144,160),Image.Resampling.LANCZOS)
+                im.save(path,format='WEBP',quality=76,method=4)
+            offer.image_url='data/images/'+path.name
+            return True
+        except Exception:
+            # Image failures never stop the price scan.
+            continue
+    # Image is visibly rendered in the product gallery but CDN download may
+    # be denied to the request client. In that case use a verified on-page
+    # product image element screenshot as thumbnail; never scrape a random ad.
+    try:
+        target=page.evaluate(r"""() => {
+          const h=document.querySelector('main h1')||document.querySelector('h1');
+          if(!h) return false;
+          const norm=s=>String(s||'').toLowerCase().normalize('NFD')
+            .replace(/[\u0300-\u036f]/g,'').replace(/[^a-z0-9]+/g,' ').trim();
+          const heading=norm(h.innerText);
+          const imgs=[...document.querySelectorAll('main img, picture img')];
+          for(const img of imgs){
+            if(!img.complete || img.naturalWidth<90 || img.naturalHeight<90)continue;
+            const r=img.getBoundingClientRect();
+            if(r.width<65||r.height<65||r.top>1200)continue;
+            const alt=norm(img.alt);
+            const classNames=(img.closest('[class], [data-testid]')?.className||'')+' '+
+              (img.closest('[data-testid]')?.getAttribute('data-testid')||'');
+            const isNamed=alt && (alt.includes(heading)||heading.includes(alt));
+            const isHero=/product.{0,16}(image|photo|gallery)|gallery.{0,12}(image|product)/i.test(classNames);
+            if(isNamed || isHero){img.setAttribute('data-rk-photo','1');return true;}
+          }
+          return false;
+        }""")
+        if target:
+            thumb=page.locator('img[data-rk-photo="1"]').first.screenshot(timeout=2300)
+            with Image.open(io.BytesIO(thumb)) as im:
+                if im.width>=65 and im.height>=65:
+                    im=im.convert('RGB');im.thumbnail((144,160),Image.Resampling.LANCZOS)
+                    im.save(path,format='WEBP',quality=76,method=4)
+                    offer.image_url='data/images/'+path.name
+                    return True
+    except Exception:
+        pass
+    # An uncacheable remote URL is not a working thumbnail on Pages.
+    # Expose a neutral icon rather than broken image or a wrong product.
+    offer.image_url=''
+    return False
+
+
+def scrub_historical_favorites(cfg: dict) -> int:
+    """Re-tag stored archival offers according to the full selected watchlist.
+
+    Does not change prices, discounts or dates. A previous snapshot may have
+    assigned selected brands to P2, even though they are all user favorites.
+    """
+    updated=0
+    history=DATA/'history'
+    if not history.exists():
+        return updated
+    for path in history.glob('*.json'):
+        try:
+            doc=json.loads(path.read_text(encoding='utf-8'))
+            changed=False
+            for offer in doc.get('offers',[]):
+                match=match_rules(clean_product_name(offer.get('name','')),cfg.get('watch_rules',[]))
+                if match and not offer.get('favorite'):
+                    offer['favorite']=True
+                    changed=True;updated+=1
+            if changed:
+                path.write_text(json.dumps(doc,ensure_ascii=False,indent=2),encoding='utf-8')
+        except (ValueError, OSError):
+            continue
+    return updated
+
+
 def enrich_from_product_pages(offers: list[Offer], cfg: dict) -> dict:
     """Best-effort pack sizes and picture URLs, never blocking the entire scan.
 
@@ -825,11 +983,11 @@ def enrich_from_product_pages(offers: list[Offer], cfg: dict) -> dict:
     changed from its sale-card value during enrichment.
     """
     max_pages = max(0, min(65, int(cfg.get("detail_max_per_run", 40))))
-    candidates = [o for o in offers if not o.quantity or not o.image_url]
+    candidates = [o for o in offers if not o.quantity or not (o.image_url.startswith('data/images/'))]
     candidates.sort(key=lambda o: (not o.favorite, bool(o.quantity), bool(o.image_url)))
-    count=0; filled=0; errors=0
+    count=0; filled=0; errors=0; photos=0
     if not candidates or not max_pages:
-        return {"visited": 0, "filled": 0, "errors": 0}
+        return {"visited": 0, "filled": 0, "errors": 0, "photos_cached": 0}
     from playwright.sync_api import sync_playwright
     with sync_playwright() as p:
         browser=p.chromium.launch(headless=True, args=["--no-sandbox"])
@@ -840,16 +998,20 @@ def enrich_from_product_pages(offers: list[Offer], cfg: dict) -> dict:
                 try:
                     resp=page.goto(offer.url, wait_until="domcontentloaded", timeout=13500)
                     if not resp or resp.status >= 400:
+                        offer.image_url=''
                         errors+=1;continue
                     page.wait_for_timeout(350)
                     before=(offer.quantity,offer.image_url)
-                    apply_detail(offer,page.evaluate(DETAIL_JS))
+                    detail=page.evaluate(DETAIL_JS)
+                    apply_detail(offer,detail)
+                    if cache_product_photo(offer,page,detail): photos+=1
                     if before != (offer.quantity, offer.image_url):filled+=1
                 except Exception:
+                    offer.image_url=''
                     errors+=1
         finally:
             browser.close()
-    return {"visited":count,"filled":filled,"errors":errors}
+    return {"visited":count,"filled":filled,"errors":errors,"photos_cached":photos}
 
 
 def comparison_key(name: str, quantity: str) -> str:
@@ -936,7 +1098,7 @@ def build_report(snapshot: dict) -> str:
              "Bez potvrzené volby oblasti v e-shopu: ceny a dostupnost se mohou lišit podle doručovací adresy / členství.",
              "STAV ZDROJŮ: " + "; ".join(f"{s}: {v['status']} ({v['cards']} karet)" for s, v in snapshot["sources"].items()),
              f"Nalezeno {len(offers)} sledovaných zlevněných položek; nově zaznamenané / zlevněné: {len(snapshot['changes'])}.",
-             "OBLÍBENÉ PRODUKTY A ZNAČKY:"]
+             "OBLÍBENÉ PRODUKTY A ZNAČKY (všechna zadaná pravidla = oblíbené):"]
     if not offers:
         lines.append("Žádná ověřená nabídka v dostupném vzorku; neznamená to, že žádná sleva neexistuje.")
     for o in offers[:80]:
@@ -1009,6 +1171,7 @@ def main() -> int:
         scrub_historical_produce(cfg)
         scrub_historical_beverages(cfg)
         scrub_historical_meat(cfg)
+        scrub_historical_favorites(cfg)
     add_comparisons(offers, cfg.get("canonical_pairs", []))
     offers.sort(key=lambda o: (not o.favorite, -o.discount_pct, o.brand, o.name))
     snapshot = {"date": now.date().isoformat(), "checked_at": now.isoformat(timespec="minutes"),

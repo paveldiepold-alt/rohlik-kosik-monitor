@@ -1,0 +1,65 @@
+ROHLÍK × KOŠÍK – OPRAVA v12 (OBLÍBENÉ + OBRÁZKY)
+==================================================
+
+PROBLÉM 1: Dříve bylo označeno jako oblíbené jen 26 ze 72 uživatelem
+vybraných pravidel. To neodpovídalo původnímu nákupnímu seznamu.
+
+ŘEŠENÍ: Všech 72 uživatelem zvolených sledovacích pravidel je nyní P1.
+Včetně Hellmann's Majonéza (W027), Leerdammer plátkové (W018),
+Colgate zubní pasta (W058), syrového masa a ostatních vybraných položek.
+Pokud je nabídka ve výsledcích sběru, bude označena ★ Oblíbené.
+
+PROBLÉM 2: Přímé URL fotografií z Rohlíku/Košíku mohou blokovat
+zobrazování na GitHub Pages (hotlinking, neplatné odkazy, ochrana CDN).
+
+ŘEŠENÍ: Monitor při sběru zkouší stáhnout ověřenou fotografii
+z detailu právě daného výrobku a uloží malou kopii jako WEBP pod
+"docs/data/images". Pokud je přímé stažení blokováno, zkusí použít
+snímek skutečně zobrazené produktové fotografie na DETAILU TÉHOŽ
+výrobku. Jakmile se podaří obrázek uložit, dashboard odkazuje přímo
+na svůj vlastní soubor, ne na externí server. Žádné odhadované fotky.
+Pokud retailer přístup k fotce úplně blokuje, zobrazí se neutrální
+symbol; neobjeví se fotografie nesprávného produktu.
+
+POZNÁMKA K COLGATE: Absence v aktuálních výsledcích nepotvrzuje
+konec slevy. Dashboard ukazuje pouze akční produkty, které sběrač
+našel při dané kontrole, nikoli kompletní katalog obchodů.
+
+CO JE V OPRAVNÉM ZIPu:
+  monitor.py           – nové oblíbené + načítání a lokální ukládání obrázků
+  config.json          – všech 72 sledovacích pravidel nastaveno jako P1
+  requirements.txt     – Pillow pro bezpečné miniatury WEBP
+  docs/index.html      – zobrazování lokálních miniatur a správné oblíbené,
+                          včetně starších výsledků s původním štítkem P2
+
+JEDNORÁZOVÁ AKTUALIZACE NA GITHUBU (BEZ RECONNECT):
+1. Stáhni soubor Rohlik_Kosik_v12_OPRAVA_Oblibene_Fotky.zip.
+2. Rozbal ZIP ve Windows do složky.
+3. Otevři: https://github.com/paveldiepold-alt/rohlik-kosik-monitor
+4. Na hlavní stránce klikni Add file -> Upload files.
+5. Z rozbalené složky PŘETÁHNI JEJÍ OBSAH:
+      monitor.py, config.json, requirements.txt a podsložku docs
+   (NE celý ZIP, NE vnější složku.)
+6. GitHub musí zobrazit: monitor.py, config.json, requirements.txt,
+   docs/index.html. Pokud GitHub hlásí přepsání existujících souborů,
+   potvrď nahrazení.
+7. Dole klikni na Commit changes. Ulož do větve main.
+8. Otevři Actions:
+      https://github.com/paveldiepold-alt/rohlik-kosik-monitor/actions
+   U workflow „Rohlík Košík – scan and publish“ lze použít Run workflow,
+   případně počkat na automatické spuštění po commitu.
+9. Po zeleném dokončení obnov stránku Ctrl+F5:
+      https://paveldiepold-alt.github.io/rohlik-kosik-monitor/
+
+NEPŘEPISUJ soubory v docs/data: obsahují živou historii cen.
+Opravný ZIP úmyslně neobsahuje žádné soubory docs/data.
+Neměň .github/workflows/prices.yml – aktuální workflow už
+přidává změny pod docs/data do commitu automatizace.
+
+DASHBOARD po úpravě ukáže „Ověřené miniatury: X/Y“.
+Na internetu ještě nebylo ověřeno, že Košík každé fotografii
+skutečně dovolí načtení. Po prvním novém běhu ověř číslo X/Y.
+
+LOKÁLNÍ TESTY: 47 úspěšných jednotkových testů, včetně testu
+ukládání lokální fotografie a klasifikace Hellmann/Leerdammer/Colgate.
+Ostrý webový sběr cen/fotografií v tomto prostředí není dostupný.
