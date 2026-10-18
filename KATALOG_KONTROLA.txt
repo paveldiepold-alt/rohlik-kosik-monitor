@@ -1,0 +1,74 @@
+DORUČOVACÍ OBLAST: PSČ 149 00 (vyžaduje ověření lokálních cen a dostupnosti).
+
+W001 | Maso | P1 | Drůbeží prsní řízky
+W002 | Maso | P1 | Drůbeží stehna
+W003 | Maso | P1 | Vepřová krkovice
+W004 | Maso | P1 | Vepřová panenka
+W005 | Maso | P1 | Hovězí svíčková (maso)
+W006 | Uzeniny / šunky | P2 | Šunky – LE & CO
+W007 | Uzeniny / šunky | P2 | Šunky – Chodura
+W008 | Uzeniny / šunky | P2 | Šunky – Wein
+W009 | Uzeniny / šunky | P2 | Šunky – Kostelecké uzeniny
+W010 | Uzeniny / salámy | P2 | Salámy – Kmotr
+W011 | Uzeniny / salámy | P2 | Salámy – Chodura
+W012 | Uzeniny / salámy | P2 | Salámy – Ponnath
+W013 | Uzeniny / salámy | P2 | Salámy – Krahulík
+W014 | Uzeniny / párky a klobásy | P2 | Párky a klobásy – Ponnath
+W015 | Uzeniny / párky a klobásy | P2 | Párky a klobásy – Chodura
+W016 | Uzeniny / párky a klobásy | P2 | Párky a klobásy – Kostelecké uzeniny
+W017 | Sýry / plátkové | P2 | Plátkové sýry – MADETA
+W018 | Sýry / plátkové | P2 | Plátkové sýry – Leerdammer
+W019 | Sýry / plátkové | P2 | Plátkové sýry – Président
+W020 | Sýry / tavené | P1 | Želetava Smetanito
+W021 | Sýry / tavené | P2 | Veselá kráva
+W022 | Sýry / tavené | P1 | Madeta Lipno
+W023 | Sýry / plísňové | P2 | Plísňové sýry – Král Sýrů
+W024 | Sýry / plísňové | P2 | Plísňové sýry – Sedlčanský
+W025 | Sýry / plísňové | P2 | Plísňové sýry – Président
+W026 | Sýry / mozzarella a salátové | P2 | Galbani – mozzarella / salátový sýr
+W027 | Majonézy | P2 | Hellmann’s – majonézy
+W028 | Másla a tuky | P1 | Madeta máslo
+W029 | Másla a tuky | P2 | Hera – tuky na pečení / roztírání
+W030 | Másla a tuky | P2 | Omega – tuky na pečení / roztírání
+W031 | Másla a tuky | P2 | Rama – tuky na pečení / roztírání
+W032 | Másla a tuky | P2 | Flora – tuky na pečení / roztírání
+W033 | Nápoje / vody | P2 | Aquila – neperlivá, jemně perlivá, kojenecká
+W034 | Nápoje / vody | P2 | Rajec – neperlivá, jemně perlivá, kojenecká
+W035 | Nápoje / vody | P2 | Dobrá voda – neperlivá, jemně perlivá, kojenecká
+W036 | Nápoje / limonády | P1 | Coca-Cola Original (bez Zero/Light)
+W037 | Ovoce | P1 | Avokádo
+W038 | Ovoce | P1 | Banány
+W039 | Ovoce | P1 | Borůvky
+W040 | Ovoce | P1 | Maliny
+W041 | Ovoce | P1 | Citrony
+W042 | Ovoce | P1 | Hroznové víno
+W043 | Zelenina | P1 | Okurky
+W044 | Zelenina | P1 | Rajčata
+W045 | Zelenina | P1 | Cherry rajčata
+W046 | Zelenina | P1 | Mrkev
+W047 | Zelenina | P1 | Papriky
+W048 | Sladké | P1 | Studentská pečeť – mléčná/hořká/hořko-mléčná
+W049 | Sladké | P1 | Miňonky – hořké
+W050 | Sladké | P1 | Fidorky – kokosové
+W051 | Sladké | P1 | Kokosky
+W052 | Těstoviny a rýže | P2 | Panzani – těstoviny a rýže
+W053 | Papír a hygiena | P2 | ★ Zewa Deluxe Standard kapesníky 3vrstvé 10 × 10 ks; Zewa – ostatní kapesníky / ubrousky / toaletní papír
+W054 | Papír a hygiena | P1 | Linteo – vlhčené ubrousky
+W055 | Kosmetika | P2 | AXE – sprchové gely, šampony, deodoranty
+W056 | Kosmetika | P2 | ★ Syoss MEN Intense Power šampon 440 ml
+W057 | Dentální hygiena | P2 | Signal – zubní pasty
+W058 | Dentální hygiena | P2 | Colgate – zubní pasty
+W059 | Dentální hygiena | P2 | Parodontax – zubní pasty
+W060 | Holení | P2 | Wilkinson – jednorázové žiletky
+W061 | Praní | P2 | Ariel – prací prostředky
+W062 | Praní | P2 | Persil – prací prostředky
+W063 | Praní | P2 | Lenor – aviváže
+W064 | Praní | P2 | Silan – aviváže
+W065 | Praní | P2 | Vanish – odstraňovače skvrn
+W066 | Úklid | P2 | Bref – čisticí prostředky
+W067 | Úklid | P2 | WC Net – čisticí prostředky
+W068 | Úklid | P2 | Domestos – čisticí prostředky
+W069 | Úklid | P2 | Savo – čisticí prostředky
+W070 | Úklid | P2 | Cif – čisticí prostředky
+W071 | Úklid | P2 | Clin – čisticí prostředky
+W072 | Úklid | P1 | Jar – citron
