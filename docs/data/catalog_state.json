@@ -1143,6 +1143,318 @@
       "other_shop": "",
       "other_shop_url": "",
       "comparable_group": ""
+    },
+    "https://www.rohlik.cz/1375355-aquila-neperliva-kojenecka-voda-6x1-5l": {
+      "shop": "Rohlík",
+      "name": "Aquila neperlivá kojenecká voda (6x1,5l)",
+      "url": "https://www.rohlik.cz/1375355-aquila-neperliva-kojenecka-voda-6x1-5l",
+      "price": null,
+      "discount_pct": 0,
+      "old_price": null,
+      "brand": "Aquila",
+      "favorite": true,
+      "quantity": "1,5 l",
+      "terms": "běžná nabídka",
+      "category": "Nápoje / vody",
+      "rule_id": "W033",
+      "note": "",
+      "image_url": "https://www.rohlik.cz/cdn-cgi/image/f=auto,onerror=redirect,w=240,h=240,q=75/https://cdn.rohlik.cz/images/grocery/products/1375355/1375355-1585061337.jpg",
+      "checked_at": "2026-10-18T18:48+02:00",
+      "price_verified": false,
+      "discount_verified": false,
+      "discount_candidate_pct": 0,
+      "unit_price": null,
+      "unit_label": "",
+      "other_shop_price": null,
+      "other_shop": "",
+      "other_shop_url": "",
+      "comparable_group": ""
+    },
+    "https://www.rohlik.cz/1440616-persil-color-praci-gel-4-5-l": {
+      "shop": "Rohlík",
+      "name": "Persil Color prací gel (4,5 l)",
+      "url": "https://www.rohlik.cz/1440616-persil-color-praci-gel-4-5-l",
+      "price": 559.9,
+      "discount_pct": 0,
+      "old_price": null,
+      "brand": "Persil",
+      "favorite": true,
+      "quantity": "4,5 l",
+      "terms": "běžná nabídka",
+      "category": "Praní",
+      "rule_id": "W062",
+      "note": "",
+      "image_url": "https://www.rohlik.cz/cdn-cgi/image/f=auto,onerror=redirect,w=240,h=240,q=75/https://cdn.rohlik.cz/images/grocery/products/1440616/1440616-1787303364815129444.jpg",
+      "checked_at": "2026-10-18T18:48+02:00",
+      "price_verified": true,
+      "discount_verified": false,
+      "discount_candidate_pct": 0,
+      "unit_price": null,
+      "unit_label": "",
+      "other_shop_price": null,
+      "other_shop": "",
+      "other_shop_url": "",
+      "comparable_group": ""
+    },
+    "https://www.rohlik.cz/1407649-aquila-jemne-perliva-voda-kojenecka-6x1-5l": {
+      "shop": "Rohlík",
+      "name": "Aquila Jemně perlivá voda kojenecká (6x1,5l)",
+      "url": "https://www.rohlik.cz/1407649-aquila-jemne-perliva-voda-kojenecka-6x1-5l",
+      "price": null,
+      "discount_pct": 0,
+      "old_price": null,
+      "brand": "Aquila",
+      "favorite": true,
+      "quantity": "1,5 l",
+      "terms": "běžná nabídka",
+      "category": "Nápoje / vody",
+      "rule_id": "W033",
+      "note": "",
+      "image_url": "https://www.rohlik.cz/cdn-cgi/image/f=auto,onerror=redirect,w=240,h=240,q=75/https://cdn.rohlik.cz/images/grocery/products/1407649/1407649-1713165475816.jpg",
+      "checked_at": "2026-10-18T18:48+02:00",
+      "price_verified": false,
+      "discount_verified": false,
+      "discount_candidate_pct": 0,
+      "unit_price": null,
+      "unit_label": "",
+      "other_shop_price": null,
+      "other_shop": "",
+      "other_shop_url": "",
+      "comparable_group": ""
+    },
+    "https://www.rohlik.cz/1375363-rajec-kojenecka-voda-6-1-5l": {
+      "shop": "Rohlík",
+      "name": "Rajec Kojenecká voda (6×1,5l)",
+      "url": "https://www.rohlik.cz/1375363-rajec-kojenecka-voda-6-1-5l",
+      "price": 119.9,
+      "discount_pct": 0,
+      "old_price": null,
+      "brand": "Rajec",
+      "favorite": true,
+      "quantity": "1,5 l",
+      "terms": "běžná nabídka",
+      "category": "Nápoje / vody",
+      "rule_id": "W034",
+      "note": "",
+      "image_url": "https://www.rohlik.cz/cdn-cgi/image/f=auto,onerror=redirect,w=240,h=240,q=75/https://cdn.rohlik.cz/images/grocery/products/1375363/1375363-1685137099597.jpg",
+      "checked_at": "2026-10-18T18:48+02:00",
+      "price_verified": true,
+      "discount_verified": false,
+      "discount_candidate_pct": 0,
+      "unit_price": null,
+      "unit_label": "",
+      "other_shop_price": null,
+      "other_shop": "",
+      "other_shop_url": "",
+      "comparable_group": ""
+    },
+    "https://www.rohlik.cz/1375365-rajec-neperliva-voda-6-1-5l": {
+      "shop": "Rohlík",
+      "name": "Rajec Neperlivá voda (6×1,5l)",
+      "url": "https://www.rohlik.cz/1375365-rajec-neperliva-voda-6-1-5l",
+      "price": 119.9,
+      "discount_pct": 0,
+      "old_price": null,
+      "brand": "Rajec",
+      "favorite": true,
+      "quantity": "1,5 l",
+      "terms": "běžná nabídka",
+      "category": "Nápoje / vody",
+      "rule_id": "W034",
+      "note": "",
+      "image_url": "https://www.rohlik.cz/cdn-cgi/image/f=auto,onerror=redirect,w=240,h=240,q=75/https://cdn.rohlik.cz/images/grocery/products/1375365/1375365-1585068096.jpg",
+      "checked_at": "2026-10-18T18:48+02:00",
+      "price_verified": true,
+      "discount_verified": false,
+      "discount_candidate_pct": 0,
+      "unit_price": null,
+      "unit_label": "",
+      "other_shop_price": null,
+      "other_shop": "",
+      "other_shop_url": "",
+      "comparable_group": ""
+    },
+    "https://www.rohlik.cz/1375359-rajec-jemne-perliva-voda-6-1-5l": {
+      "shop": "Rohlík",
+      "name": "Rajec Jemně perlivá voda (6×1,5l)",
+      "url": "https://www.rohlik.cz/1375359-rajec-jemne-perliva-voda-6-1-5l",
+      "price": 119.9,
+      "discount_pct": 0,
+      "old_price": null,
+      "brand": "Rajec",
+      "favorite": true,
+      "quantity": "1,5 l",
+      "terms": "běžná nabídka",
+      "category": "Nápoje / vody",
+      "rule_id": "W034",
+      "note": "",
+      "image_url": "https://www.rohlik.cz/cdn-cgi/image/f=auto,onerror=redirect,w=240,h=240,q=75/https://cdn.rohlik.cz/images/grocery/products/1375359/1375359-1585064954.jpg",
+      "checked_at": "2026-10-18T18:48+02:00",
+      "price_verified": true,
+      "discount_verified": false,
+      "discount_candidate_pct": 0,
+      "unit_price": null,
+      "unit_label": "",
+      "other_shop_price": null,
+      "other_shop": "",
+      "other_shop_url": "",
+      "comparable_group": ""
+    },
+    "https://www.rohlik.cz/1461411-dobra-voda-neperliva-jahoda-6-1-5-l": {
+      "shop": "Rohlík",
+      "name": "Dobrá voda Neperlivá jahoda 6×1,5 l",
+      "url": "https://www.rohlik.cz/1461411-dobra-voda-neperliva-jahoda-6-1-5-l",
+      "price": null,
+      "discount_pct": 0,
+      "old_price": null,
+      "brand": "Dobrá voda",
+      "favorite": true,
+      "quantity": "1,5 l",
+      "terms": "běžná nabídka",
+      "category": "Nápoje / vody",
+      "rule_id": "W035",
+      "note": "",
+      "image_url": "https://www.rohlik.cz/cdn-cgi/image/f=auto,onerror=redirect,w=240,h=240,q=75/https://cdn.rohlik.cz/images/grocery/products/1461411/1461411-1715641342309.jpg",
+      "checked_at": "2026-10-18T18:48+02:00",
+      "price_verified": false,
+      "discount_verified": false,
+      "discount_candidate_pct": 0,
+      "unit_price": null,
+      "unit_label": "",
+      "other_shop_price": null,
+      "other_shop": "",
+      "other_shop_url": "",
+      "comparable_group": ""
+    },
+    "https://www.rohlik.cz/1461414-dobra-voda-neperliva-malina-6-1-5-l": {
+      "shop": "Rohlík",
+      "name": "Dobrá voda Neperlivá malina 6×1,5 l",
+      "url": "https://www.rohlik.cz/1461414-dobra-voda-neperliva-malina-6-1-5-l",
+      "price": null,
+      "discount_pct": 0,
+      "old_price": null,
+      "brand": "Dobrá voda",
+      "favorite": true,
+      "quantity": "1,5 l",
+      "terms": "běžná nabídka",
+      "category": "Nápoje / vody",
+      "rule_id": "W035",
+      "note": "",
+      "image_url": "https://www.rohlik.cz/cdn-cgi/image/f=auto,onerror=redirect,w=240,h=240,q=75/https://cdn.rohlik.cz/images/grocery/products/1461414/1461414-1715641869446.jpg",
+      "checked_at": "2026-10-18T18:48+02:00",
+      "price_verified": false,
+      "discount_verified": false,
+      "discount_candidate_pct": 0,
+      "unit_price": null,
+      "unit_label": "",
+      "other_shop_price": null,
+      "other_shop": "",
+      "other_shop_url": "",
+      "comparable_group": ""
+    },
+    "https://www.rohlik.cz/1461410-dobra-voda-neperliva-bile-hrozny-6-1-5-l": {
+      "shop": "Rohlík",
+      "name": "Dobrá voda Neperlivá bílé hrozny 6×1,5 l",
+      "url": "https://www.rohlik.cz/1461410-dobra-voda-neperliva-bile-hrozny-6-1-5-l",
+      "price": null,
+      "discount_pct": 0,
+      "old_price": null,
+      "brand": "Dobrá voda",
+      "favorite": true,
+      "quantity": "1,5 l",
+      "terms": "běžná nabídka",
+      "category": "Nápoje / vody",
+      "rule_id": "W035",
+      "note": "",
+      "image_url": "https://www.rohlik.cz/cdn-cgi/image/f=auto,onerror=redirect,w=240,h=240,q=75/https://cdn.rohlik.cz/images/grocery/products/1461410/1461410-1715641110322.jpg",
+      "checked_at": "2026-10-18T18:48+02:00",
+      "price_verified": false,
+      "discount_verified": false,
+      "discount_candidate_pct": 0,
+      "unit_price": null,
+      "unit_label": "",
+      "other_shop_price": null,
+      "other_shop": "",
+      "other_shop_url": "",
+      "comparable_group": ""
+    },
+    "https://www.rohlik.cz/1437476-coca-cola-multipack-4-1-5-l": {
+      "shop": "Rohlík",
+      "name": "Coca-Cola multipack (4×1,5 l)",
+      "url": "https://www.rohlik.cz/1437476-coca-cola-multipack-4-1-5-l",
+      "price": null,
+      "discount_pct": 0,
+      "old_price": null,
+      "brand": "Coca-Cola",
+      "favorite": true,
+      "quantity": "1,5 l",
+      "terms": "běžná nabídka",
+      "category": "Nápoje / limonády",
+      "rule_id": "W036",
+      "note": "",
+      "image_url": "https://www.rohlik.cz/cdn-cgi/image/f=auto,onerror=redirect,w=240,h=240,q=75/https://cdn.rohlik.cz/images/grocery/products/1437476/1437476-1785354220712990931.png",
+      "checked_at": "2026-10-18T18:48+02:00",
+      "price_verified": false,
+      "discount_verified": false,
+      "discount_candidate_pct": 0,
+      "unit_price": null,
+      "unit_label": "",
+      "other_shop_price": null,
+      "other_shop": "",
+      "other_shop_url": "",
+      "comparable_group": ""
+    },
+    "https://www.rohlik.cz/1295127-biopekarna-zemanka-bio-coko-kokosky-s-kakaem": {
+      "shop": "Rohlík",
+      "name": "Biopekárna Zemanka BIO Čoko-kokosky s kakaem",
+      "url": "https://www.rohlik.cz/1295127-biopekarna-zemanka-bio-coko-kokosky-s-kakaem",
+      "price": 51.9,
+      "discount_pct": 10,
+      "old_price": null,
+      "brand": "Kokosky",
+      "favorite": true,
+      "quantity": "100 g",
+      "terms": "akce",
+      "category": "Sladké",
+      "rule_id": "W051",
+      "note": "",
+      "image_url": "data/images/6252bc799426592481c414.webp",
+      "checked_at": "2026-10-18T18:48+02:00",
+      "price_verified": true,
+      "discount_verified": true,
+      "discount_candidate_pct": 10,
+      "unit_price": null,
+      "unit_label": "",
+      "other_shop_price": null,
+      "other_shop": "",
+      "other_shop_url": "",
+      "comparable_group": ""
+    },
+    "https://www.rohlik.cz/1471900-mollers-omega-3-zele-rybicky-cola-tbl-45": {
+      "shop": "Rohlík",
+      "name": "Mollers Omega-3 želé rybičky Cola tbl.45",
+      "url": "https://www.rohlik.cz/1471900-mollers-omega-3-zele-rybicky-cola-tbl-45",
+      "price": null,
+      "discount_pct": 0,
+      "old_price": null,
+      "brand": "Omega",
+      "favorite": true,
+      "quantity": "45 ks",
+      "terms": "neověřená akce",
+      "category": "Másla a tuky",
+      "rule_id": "W030",
+      "note": "Slevu nelze cenově ověřit",
+      "image_url": "https://www.rohlik.cz/cdn-cgi/image/f=auto,onerror=redirect,w=240,h=240,q=75/https://cdn.rohlik.cz/images/grocery/products/1471900/1471900-413904.jpg",
+      "checked_at": "2026-10-18T18:48+02:00",
+      "price_verified": false,
+      "discount_verified": false,
+      "discount_candidate_pct": 20,
+      "unit_price": null,
+      "unit_label": "",
+      "other_shop_price": null,
+      "other_shop": "",
+      "other_shop_url": "",
+      "comparable_group": ""
     }
   },
   "queries": {
@@ -1807,8 +2119,656 @@
       "rule_ids": [
         "W033"
       ]
+    },
+    "Rohlík::aquila 1,5 l": {
+      "checked_at": "2026-10-18T18:48+02:00",
+      "status": "ok",
+      "cards": 46,
+      "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
+      "rule_ids": [
+        "W033"
+      ]
+    },
+    "Košík::aquila 1,5 l": {
+      "checked_at": "2026-10-18T18:48+02:00",
+      "status": "search_unavailable",
+      "cards": 0,
+      "detail": "Nenalezeno veřejné vyhledávací pole",
+      "rule_ids": [
+        "W033"
+      ]
+    },
+    "Rohlík::rajec": {
+      "checked_at": "2026-10-18T18:48+02:00",
+      "status": "ok",
+      "cards": 17,
+      "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
+      "rule_ids": [
+        "W034"
+      ]
+    },
+    "Košík::rajec": {
+      "checked_at": "2026-10-18T18:48+02:00",
+      "status": "search_unavailable",
+      "cards": 0,
+      "detail": "Nenalezeno veřejné vyhledávací pole",
+      "rule_ids": [
+        "W034"
+      ]
+    },
+    "Rohlík::rajec 1,5 l": {
+      "checked_at": "2026-10-18T18:48+02:00",
+      "status": "ok",
+      "cards": 63,
+      "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
+      "rule_ids": [
+        "W034"
+      ]
+    },
+    "Košík::rajec 1,5 l": {
+      "checked_at": "2026-10-18T18:48+02:00",
+      "status": "search_unavailable",
+      "cards": 0,
+      "detail": "Nenalezeno veřejné vyhledávací pole",
+      "rule_ids": [
+        "W034"
+      ]
+    },
+    "Rohlík::dobrá voda": {
+      "checked_at": "2026-10-18T18:48+02:00",
+      "status": "ok",
+      "cards": 26,
+      "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
+      "rule_ids": [
+        "W035"
+      ]
+    },
+    "Košík::dobrá voda": {
+      "checked_at": "2026-10-18T18:48+02:00",
+      "status": "search_unavailable",
+      "cards": 0,
+      "detail": "Nenalezeno veřejné vyhledávací pole",
+      "rule_ids": [
+        "W035"
+      ]
+    },
+    "Rohlík::dobrá voda 1,5 l": {
+      "checked_at": "2026-10-18T18:48+02:00",
+      "status": "ok",
+      "cards": 63,
+      "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
+      "rule_ids": [
+        "W035"
+      ]
+    },
+    "Košík::dobrá voda 1,5 l": {
+      "checked_at": "2026-10-18T18:48+02:00",
+      "status": "search_unavailable",
+      "cards": 0,
+      "detail": "Nenalezeno veřejné vyhledávací pole",
+      "rule_ids": [
+        "W035"
+      ]
+    },
+    "Rohlík::coca-cola": {
+      "checked_at": "2026-10-18T18:48+02:00",
+      "status": "ok",
+      "cards": 110,
+      "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
+      "rule_ids": [
+        "W036"
+      ]
+    },
+    "Košík::coca-cola": {
+      "checked_at": "2026-10-18T18:48+02:00",
+      "status": "search_unavailable",
+      "cards": 0,
+      "detail": "Nenalezeno veřejné vyhledávací pole",
+      "rule_ids": [
+        "W036"
+      ]
+    },
+    "Rohlík::coca-cola original 1,5 l": {
+      "checked_at": "2026-10-18T18:48+02:00",
+      "status": "ok",
+      "cards": 58,
+      "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
+      "rule_ids": [
+        "W036"
+      ]
+    },
+    "Košík::coca-cola original 1,5 l": {
+      "checked_at": "2026-10-18T18:48+02:00",
+      "status": "search_unavailable",
+      "cards": 0,
+      "detail": "Nenalezeno veřejné vyhledávací pole",
+      "rule_ids": [
+        "W036"
+      ]
+    },
+    "Rohlík::coca-cola original 2 l": {
+      "checked_at": "2026-10-18T18:48+02:00",
+      "status": "no_cards",
+      "cards": 0,
+      "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
+      "rule_ids": [
+        "W036"
+      ]
+    },
+    "Košík::coca-cola original 2 l": {
+      "checked_at": "2026-10-18T18:48+02:00",
+      "status": "search_unavailable",
+      "cards": 0,
+      "detail": "Nenalezeno veřejné vyhledávací pole",
+      "rule_ids": [
+        "W036"
+      ]
+    },
+    "Rohlík::avokádo": {
+      "checked_at": "2026-10-18T18:48+02:00",
+      "status": "rate_limited",
+      "cards": 0,
+      "detail": "HTTP 429",
+      "rule_ids": [
+        "W037"
+      ]
+    },
+    "Košík::avokádo": {
+      "checked_at": "2026-10-18T18:48+02:00",
+      "status": "search_unavailable",
+      "cards": 0,
+      "detail": "Nenalezeno veřejné vyhledávací pole",
+      "rule_ids": [
+        "W037"
+      ]
+    },
+    "Rohlík::banány": {
+      "checked_at": "2026-10-18T18:48+02:00",
+      "status": "skipped_rate_limit",
+      "cards": 0,
+      "detail": "Další dotazy pozastaveny",
+      "rule_ids": [
+        "W038"
+      ]
+    },
+    "Košík::banány": {
+      "checked_at": "2026-10-18T18:48+02:00",
+      "status": "search_unavailable",
+      "cards": 0,
+      "detail": "Nenalezeno veřejné vyhledávací pole",
+      "rule_ids": [
+        "W038"
+      ]
+    },
+    "Rohlík::borůvky": {
+      "checked_at": "2026-10-18T18:48+02:00",
+      "status": "skipped_rate_limit",
+      "cards": 0,
+      "detail": "Další dotazy pozastaveny",
+      "rule_ids": [
+        "W039"
+      ]
+    },
+    "Košík::borůvky": {
+      "checked_at": "2026-10-18T18:48+02:00",
+      "status": "search_unavailable",
+      "cards": 0,
+      "detail": "Nenalezeno veřejné vyhledávací pole",
+      "rule_ids": [
+        "W039"
+      ]
+    },
+    "Rohlík::maliny": {
+      "checked_at": "2026-10-18T18:48+02:00",
+      "status": "skipped_rate_limit",
+      "cards": 0,
+      "detail": "Další dotazy pozastaveny",
+      "rule_ids": [
+        "W040"
+      ]
+    },
+    "Košík::maliny": {
+      "checked_at": "2026-10-18T18:48+02:00",
+      "status": "search_unavailable",
+      "cards": 0,
+      "detail": "Nenalezeno veřejné vyhledávací pole",
+      "rule_ids": [
+        "W040"
+      ]
+    },
+    "Rohlík::citrony": {
+      "checked_at": "2026-10-18T18:48+02:00",
+      "status": "skipped_rate_limit",
+      "cards": 0,
+      "detail": "Další dotazy pozastaveny",
+      "rule_ids": [
+        "W041"
+      ]
+    },
+    "Košík::citrony": {
+      "checked_at": "2026-10-18T18:48+02:00",
+      "status": "search_unavailable",
+      "cards": 0,
+      "detail": "Nenalezeno veřejné vyhledávací pole",
+      "rule_ids": [
+        "W041"
+      ]
+    },
+    "Rohlík::hroznové víno": {
+      "checked_at": "2026-10-18T18:48+02:00",
+      "status": "skipped_rate_limit",
+      "cards": 0,
+      "detail": "Další dotazy pozastaveny",
+      "rule_ids": [
+        "W042"
+      ]
+    },
+    "Košík::hroznové víno": {
+      "checked_at": "2026-10-18T18:48+02:00",
+      "status": "search_unavailable",
+      "cards": 0,
+      "detail": "Nenalezeno veřejné vyhledávací pole",
+      "rule_ids": [
+        "W042"
+      ]
+    },
+    "Rohlík::hrozny": {
+      "checked_at": "2026-10-18T18:48+02:00",
+      "status": "skipped_rate_limit",
+      "cards": 0,
+      "detail": "Další dotazy pozastaveny",
+      "rule_ids": [
+        "W042"
+      ]
+    },
+    "Košík::hrozny": {
+      "checked_at": "2026-10-18T18:48+02:00",
+      "status": "search_unavailable",
+      "cards": 0,
+      "detail": "Nenalezeno veřejné vyhledávací pole",
+      "rule_ids": [
+        "W042"
+      ]
+    },
+    "Rohlík::okurky": {
+      "checked_at": "2026-10-18T18:48+02:00",
+      "status": "skipped_rate_limit",
+      "cards": 0,
+      "detail": "Další dotazy pozastaveny",
+      "rule_ids": [
+        "W043"
+      ]
+    },
+    "Košík::okurky": {
+      "checked_at": "2026-10-18T18:48+02:00",
+      "status": "search_unavailable",
+      "cards": 0,
+      "detail": "Nenalezeno veřejné vyhledávací pole",
+      "rule_ids": [
+        "W043"
+      ]
+    },
+    "Rohlík::rajčata": {
+      "checked_at": "2026-10-18T18:48+02:00",
+      "status": "skipped_rate_limit",
+      "cards": 0,
+      "detail": "Další dotazy pozastaveny",
+      "rule_ids": [
+        "W044"
+      ]
+    },
+    "Košík::rajčata": {
+      "checked_at": "2026-10-18T18:48+02:00",
+      "status": "search_unavailable",
+      "cards": 0,
+      "detail": "Nenalezeno veřejné vyhledávací pole",
+      "rule_ids": [
+        "W044"
+      ]
+    },
+    "Rohlík::cherry rajčata": {
+      "checked_at": "2026-10-18T18:48+02:00",
+      "status": "skipped_rate_limit",
+      "cards": 0,
+      "detail": "Další dotazy pozastaveny",
+      "rule_ids": [
+        "W045"
+      ]
+    },
+    "Košík::cherry rajčata": {
+      "checked_at": "2026-10-18T18:48+02:00",
+      "status": "search_unavailable",
+      "cards": 0,
+      "detail": "Nenalezeno veřejné vyhledávací pole",
+      "rule_ids": [
+        "W045"
+      ]
+    },
+    "Rohlík::mrkev": {
+      "checked_at": "2026-10-18T18:48+02:00",
+      "status": "skipped_rate_limit",
+      "cards": 0,
+      "detail": "Další dotazy pozastaveny",
+      "rule_ids": [
+        "W046"
+      ]
+    },
+    "Košík::mrkev": {
+      "checked_at": "2026-10-18T18:48+02:00",
+      "status": "search_unavailable",
+      "cards": 0,
+      "detail": "Nenalezeno veřejné vyhledávací pole",
+      "rule_ids": [
+        "W046"
+      ]
+    },
+    "Rohlík::papriky": {
+      "checked_at": "2026-10-18T18:48+02:00",
+      "status": "skipped_rate_limit",
+      "cards": 0,
+      "detail": "Další dotazy pozastaveny",
+      "rule_ids": [
+        "W047"
+      ]
+    },
+    "Košík::papriky": {
+      "checked_at": "2026-10-18T18:48+02:00",
+      "status": "search_unavailable",
+      "cards": 0,
+      "detail": "Nenalezeno veřejné vyhledávací pole",
+      "rule_ids": [
+        "W047"
+      ]
+    },
+    "Rohlík::studentská pečeť": {
+      "checked_at": "2026-10-18T18:48+02:00",
+      "status": "skipped_rate_limit",
+      "cards": 0,
+      "detail": "Další dotazy pozastaveny",
+      "rule_ids": [
+        "W048"
+      ]
+    },
+    "Košík::studentská pečeť": {
+      "checked_at": "2026-10-18T18:48+02:00",
+      "status": "search_unavailable",
+      "cards": 0,
+      "detail": "Nenalezeno veřejné vyhledávací pole",
+      "rule_ids": [
+        "W048"
+      ]
+    },
+    "Rohlík::miňonky": {
+      "checked_at": "2026-10-18T18:48+02:00",
+      "status": "skipped_rate_limit",
+      "cards": 0,
+      "detail": "Další dotazy pozastaveny",
+      "rule_ids": [
+        "W049"
+      ]
+    },
+    "Košík::miňonky": {
+      "checked_at": "2026-10-18T18:48+02:00",
+      "status": "search_unavailable",
+      "cards": 0,
+      "detail": "Nenalezeno veřejné vyhledávací pole",
+      "rule_ids": [
+        "W049"
+      ]
+    },
+    "Rohlík::fidorka": {
+      "checked_at": "2026-10-18T18:48+02:00",
+      "status": "skipped_rate_limit",
+      "cards": 0,
+      "detail": "Další dotazy pozastaveny",
+      "rule_ids": [
+        "W050"
+      ]
+    },
+    "Košík::fidorka": {
+      "checked_at": "2026-10-18T18:48+02:00",
+      "status": "search_unavailable",
+      "cards": 0,
+      "detail": "Nenalezeno veřejné vyhledávací pole",
+      "rule_ids": [
+        "W050"
+      ]
+    },
+    "Rohlík::kokosky": {
+      "checked_at": "2026-10-18T18:48+02:00",
+      "status": "skipped_rate_limit",
+      "cards": 0,
+      "detail": "Další dotazy pozastaveny",
+      "rule_ids": [
+        "W051"
+      ]
+    },
+    "Košík::kokosky": {
+      "checked_at": "2026-10-18T18:48+02:00",
+      "status": "search_unavailable",
+      "cards": 0,
+      "detail": "Nenalezeno veřejné vyhledávací pole",
+      "rule_ids": [
+        "W051"
+      ]
+    },
+    "Rohlík::panzani": {
+      "checked_at": "2026-10-18T18:48+02:00",
+      "status": "skipped_rate_limit",
+      "cards": 0,
+      "detail": "Další dotazy pozastaveny",
+      "rule_ids": [
+        "W052"
+      ]
+    },
+    "Košík::panzani": {
+      "checked_at": "2026-10-18T18:48+02:00",
+      "status": "search_unavailable",
+      "cards": 0,
+      "detail": "Nenalezeno veřejné vyhledávací pole",
+      "rule_ids": [
+        "W052"
+      ]
+    },
+    "Rohlík::panzani těstoviny": {
+      "checked_at": "2026-10-18T18:48+02:00",
+      "status": "skipped_rate_limit",
+      "cards": 0,
+      "detail": "Další dotazy pozastaveny",
+      "rule_ids": [
+        "W052"
+      ]
+    },
+    "Košík::panzani těstoviny": {
+      "checked_at": "2026-10-18T18:48+02:00",
+      "status": "search_unavailable",
+      "cards": 0,
+      "detail": "Nenalezeno veřejné vyhledávací pole",
+      "rule_ids": [
+        "W052"
+      ]
+    },
+    "Rohlík::panzani rýže": {
+      "checked_at": "2026-10-18T18:48+02:00",
+      "status": "skipped_rate_limit",
+      "cards": 0,
+      "detail": "Další dotazy pozastaveny",
+      "rule_ids": [
+        "W052"
+      ]
+    },
+    "Košík::panzani rýže": {
+      "checked_at": "2026-10-18T18:48+02:00",
+      "status": "search_unavailable",
+      "cards": 0,
+      "detail": "Nenalezeno veřejné vyhledávací pole",
+      "rule_ids": [
+        "W052"
+      ]
+    },
+    "Rohlík::zewa toaletní papír": {
+      "checked_at": "2026-10-18T18:48+02:00",
+      "status": "skipped_rate_limit",
+      "cards": 0,
+      "detail": "Další dotazy pozastaveny",
+      "rule_ids": [
+        "W053"
+      ]
+    },
+    "Košík::zewa toaletní papír": {
+      "checked_at": "2026-10-18T18:48+02:00",
+      "status": "search_unavailable",
+      "cards": 0,
+      "detail": "Nenalezeno veřejné vyhledávací pole",
+      "rule_ids": [
+        "W053"
+      ]
+    },
+    "Rohlík::zewa ubrousky": {
+      "checked_at": "2026-10-18T18:48+02:00",
+      "status": "skipped_rate_limit",
+      "cards": 0,
+      "detail": "Další dotazy pozastaveny",
+      "rule_ids": [
+        "W053"
+      ]
+    },
+    "Košík::zewa ubrousky": {
+      "checked_at": "2026-10-18T18:48+02:00",
+      "status": "search_unavailable",
+      "cards": 0,
+      "detail": "Nenalezeno veřejné vyhledávací pole",
+      "rule_ids": [
+        "W053"
+      ]
+    },
+    "Rohlík::linteo": {
+      "checked_at": "2026-10-18T18:48+02:00",
+      "status": "skipped_rate_limit",
+      "cards": 0,
+      "detail": "Další dotazy pozastaveny",
+      "rule_ids": [
+        "W054"
+      ]
+    },
+    "Košík::linteo": {
+      "checked_at": "2026-10-18T18:48+02:00",
+      "status": "search_unavailable",
+      "cards": 0,
+      "detail": "Nenalezeno veřejné vyhledávací pole",
+      "rule_ids": [
+        "W054"
+      ]
+    },
+    "Rohlík::axe": {
+      "checked_at": "2026-10-18T18:48+02:00",
+      "status": "skipped_rate_limit",
+      "cards": 0,
+      "detail": "Další dotazy pozastaveny",
+      "rule_ids": [
+        "W055"
+      ]
+    },
+    "Košík::axe": {
+      "checked_at": "2026-10-18T18:48+02:00",
+      "status": "search_unavailable",
+      "cards": 0,
+      "detail": "Nenalezeno veřejné vyhledávací pole",
+      "rule_ids": [
+        "W055"
+      ]
+    },
+    "Rohlík::axe deodorant": {
+      "checked_at": "2026-10-18T18:48+02:00",
+      "status": "skipped_rate_limit",
+      "cards": 0,
+      "detail": "Další dotazy pozastaveny",
+      "rule_ids": [
+        "W055"
+      ]
+    },
+    "Košík::axe deodorant": {
+      "checked_at": "2026-10-18T18:48+02:00",
+      "status": "search_unavailable",
+      "cards": 0,
+      "detail": "Nenalezeno veřejné vyhledávací pole",
+      "rule_ids": [
+        "W055"
+      ]
+    },
+    "Rohlík::axe sprchový gel": {
+      "checked_at": "2026-10-18T18:48+02:00",
+      "status": "skipped_rate_limit",
+      "cards": 0,
+      "detail": "Další dotazy pozastaveny",
+      "rule_ids": [
+        "W055"
+      ]
+    },
+    "Košík::axe sprchový gel": {
+      "checked_at": "2026-10-18T18:48+02:00",
+      "status": "search_unavailable",
+      "cards": 0,
+      "detail": "Nenalezeno veřejné vyhledávací pole",
+      "rule_ids": [
+        "W055"
+      ]
+    },
+    "Rohlík::syoss": {
+      "checked_at": "2026-10-18T18:48+02:00",
+      "status": "skipped_rate_limit",
+      "cards": 0,
+      "detail": "Další dotazy pozastaveny",
+      "rule_ids": [
+        "W056"
+      ]
+    },
+    "Košík::syoss": {
+      "checked_at": "2026-10-18T18:48+02:00",
+      "status": "search_unavailable",
+      "cards": 0,
+      "detail": "Nenalezeno veřejné vyhledávací pole",
+      "rule_ids": [
+        "W056"
+      ]
+    },
+    "Rohlík::syoss men intense power": {
+      "checked_at": "2026-10-18T18:48+02:00",
+      "status": "skipped_rate_limit",
+      "cards": 0,
+      "detail": "Další dotazy pozastaveny",
+      "rule_ids": [
+        "W056"
+      ]
+    },
+    "Košík::syoss men intense power": {
+      "checked_at": "2026-10-18T18:48+02:00",
+      "status": "search_unavailable",
+      "cards": 0,
+      "detail": "Nenalezeno veřejné vyhledávací pole",
+      "rule_ids": [
+        "W056"
+      ]
+    },
+    "Rohlík::signal": {
+      "checked_at": "2026-10-18T18:48+02:00",
+      "status": "skipped_rate_limit",
+      "cards": 0,
+      "detail": "Další dotazy pozastaveny",
+      "rule_ids": [
+        "W057"
+      ]
+    },
+    "Košík::signal": {
+      "checked_at": "2026-10-18T18:48+02:00",
+      "status": "search_unavailable",
+      "cards": 0,
+      "detail": "Nenalezeno veřejné vyhledávací pole",
+      "rule_ids": [
+        "W057"
+      ]
     }
   },
-  "last_scan": "2026-10-18T18:33+02:00",
-  "cursor": 72
+  "last_scan": "2026-10-18T18:48+02:00",
+  "cursor": 144
 }
