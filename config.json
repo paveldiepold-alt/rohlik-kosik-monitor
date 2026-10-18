@@ -1770,13 +1770,14 @@
   "catalog_search": {
     "enabled": true,
     "strategy": "Visible public shop search for every watch rule, all product categories, sale and regular prices.",
-    "max_queries_per_run": 72,
+    "max_queries_per_run": 8,
     "scrolls_per_query": 8,
     "max_cards_per_query": 260,
-    "cache_retention_hours": 72,
+    "cache_retention_hours": 240,
     "price_max_age_hours": 18,
-    "schedule_note": "Three scheduled runs of 72 searches attempt all targeted catalog queries at both stores once per day; coverage is recorded and failures are explicit.",
-    "fallback_to_sales_page": true
+    "schedule_note": "3 runs/day × at most 8 public searches = at most 24 queries/day, with approximately ten-day rolling coverage. Never promise full current-catalogue coverage. Stop on retailer rate limits; stale prices must not appear as current.",
+    "fallback_to_sales_page": true,
+    "coverage_window_hours": 240
   },
   "detail_max_per_run": 12
 }

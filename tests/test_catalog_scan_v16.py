@@ -24,11 +24,13 @@ class WholeCatalogueV16(unittest.TestCase):
         self.assertTrue(any(x['query']=='Aquila' for x in plans))
         self.assertTrue(any(x['query']=='kuchyňské papírové utěrky' for x in plans))
         self.assertTrue(any(x['query']=='Colgate' for x in plans))
-    def test_rotation_covers_every_job_in_three_scheduled_runs(self):
+    def test_rotation_covers_every_job_with_rate_limit_friendly_batches(self):
         jobs=plan_jobs(CFG)
+        batch_size=CFG['catalog_search']['max_queries_per_run']
+        self.assertLessEqual(batch_size,8)
         cursor=0;hit=[]
-        for _ in range(3):
-            batch,cursor=choose_batch(jobs,cursor,CFG['catalog_search']['max_queries_per_run'])
+        for _ in range((len(jobs)+batch_size-1)//batch_size):
+            batch,cursor=choose_batch(jobs,cursor,batch_size)
             hit+=list(map(job_key,batch))
         self.assertEqual(set(hit),set(map(job_key,jobs)))
     def test_regular_price_in_catalog(self):

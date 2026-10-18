@@ -191,7 +191,7 @@ function refresh(){
  $('changes').textContent=(data.changes||[]).length;
  const photos=offers.filter(o=>/^data\/images\/[a-f0-9]{22}\.webp$/i.test(o.image_url||'')||isHellmann625(o)).length;
  const cov=data.catalog_coverage;
- $('coverage').textContent=cov?`Pokrytí za posledních 24 h: ${cov.queries_responded_24h}/${cov.queries_planned} dotazů, ${cov.watch_rules_with_search_24h}/${cov.watch_rules_total} sledovaných pravidel; potíže u ${cov.failed_queries_24h||0} dotazů. Nalezeno ${data.catalog?.length||0} výrobků napříč sortimentem, ne všechny jsou ve slevě. Žádný výsledek ≠ produkt neexistuje.`:'Pokrytí katalogu pro tento report není dostupné (starší verze sběru).';
+ $('coverage').textContent=cov?`Vyhledávání s výsledky za 24 h: ${cov.queries_responded_24h}/${cov.queries_planned} dotazů. V období ${Math.round((cov.coverage_window_hours||24)/24)} dní: ${cov.queries_responded_window??cov.queries_responded_24h}/${cov.queries_planned} dotazů a ${cov.watch_rules_with_search_window??cov.watch_rules_with_search_24h}/${cov.watch_rules_total} pravidel. Potíže za 24 h: ${cov.failed_queries_24h||0}. Nalezeno ${data.catalog?.length||0} výrobků (jen část katalogu). Žádný výsledek ≠ produkt neexistuje; stará cena ≠ aktuální cena.`:'Pokrytí katalogu pro tento report není dostupné (starší verze sběru).';
  $('checked').textContent=`Datum: ${data.date||'—'} · Kontrola: ${data.checked_at||'—'} · PSČ: ${data.delivery?.postal_code||'149 00'} · Veřejné ceny · Fotografie: ${photos}/${offers.length} (včetně 625 ml z předlohy)`;
  $('alerts').replaceChildren();
  if(data.demo)showError('DEMO DATA – uvedené ceny nejsou skutečné.');

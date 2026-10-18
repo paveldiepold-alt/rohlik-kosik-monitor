@@ -138,16 +138,44 @@ SEARCH_EXTRACT_JS = r"""() => {
 
 
 def _get_search_field(page):
-    for selector in ('input[type="search"]', 'input[role="searchbox"]',
-                     'input[placeholder*="Hledat"]', 'input[placeholder*="Hledejte"]',
-                     'input[aria-label*="Hledat"]', 'input[aria-label*="Hledejte"]'):
-        loc = page.locator(selector).first
-        try:
-            if loc.count() and loc.is_visible():
-                return loc
-        except Exception:
-            continue
+    """Wait for site JS to render the *visible* public search input."""
+    import time
+    selectors = (
+        'input[type="search"]', 'input[role="searchbox"]',
+        'input[placeholder*="hledat" i]', 'input[placeholder*="hledejte" i]',
+        'input[aria-label*="hledat" i]', 'input[aria-label*="hledejte" i]',
+        'input[name*="search" i]', 'input[id*="search" i]',
+    )
+    for pass_no in range(5):
+        for selector in selectors:
+            try:
+                loc = page.locator(selector).first
+                if loc.count() and loc.is_visible(): return loc
+            except Exception:pass
+        # Some storefronts mount the search input only when the search icon is opened.
+        if pass_no == 1:
+            for sel in ('button[aria-label*="hledat" i]', '[role="button"][aria-label*="hledat" i]'):
+                try:
+                    loc=page.locator(sel).first
+                    if loc.count() and loc.is_visible():loc.click(timeout=1200);break
+                except Exception:pass
+        if pass_no < 4: page.wait_for_timeout(1200)
     return None
+
+
+def public_search_diagnostic(page) -> str:
+    """Only non-sensitive DOM metadata (no input values, cookies, browser storage)."""
+    try:
+        record=page.evaluate('''() => ({title:document.title.slice(0,70),
+          inputs:[...document.querySelectorAll('input')].slice(0,9).map(e=>({
+           type:e.type, placeholder:(e.getAttribute('placeholder')||'').slice(0,80),
+           aria:(e.getAttribute('aria-label')||'').slice(0,80), visible:!!e.getClientRects().length})),
+          buttons:[...document.querySelectorAll('button')].slice(0,12).map(e=>({
+            aria:(e.getAttribute('aria-label')||'').slice(0,40),
+            text:(e.innerText||'').trim().slice(0,32)}))})''')
+        return json.dumps(record,ensure_ascii=False)[:1000]
+    except Exception as e:
+        return f'DOM diagnostic unavailable: {type(e).__name__}'
 
 
 def scan_single_query(page, base_url: str, query: str, *, max_cards: int = 300,
@@ -161,7 +189,7 @@ def scan_single_query(page, base_url: str, query: str, *, max_cards: int = 300,
             return [], 'error', f'Úvodní stránka HTTP {landing.status}'
         field = _get_search_field(page)
         if field is None:
-            return [], 'search_unavailable', 'Nenalezeno veřejné vyhledávací pole'
+            return [], 'search_unavailable', 'Nenalezeno veřejné vyhledávací pole; ' + public_search_diagnostic(page)
         field.fill(query, timeout=4000)
         field.press('Enter', timeout=4000)
         page.wait_for_timeout(950)
@@ -213,11 +241,15 @@ def playwright_search_batch(batch: list[dict], cfg: dict) -> dict[str, dict]:
         browser=p.chromium.launch(headless=True,args=['--no-sandbox'])
         pages={}
         blocked=set()
+        unavailable_count={}
         try:
             for job in batch:
                 key=job_key(job);shop=job['shop']
                 if shop in blocked:
-                    results[key]={'status':'skipped_rate_limit','items':[],'detail':'Další dotazy pozastaveny'}
+                    reason=blocked[shop]
+                    status='skipped_rate_limit' if reason=='rate_limited' else 'skipped_search_unavailable'
+                    results[key]={'status':status,'items':[],
+                                  'detail':'Další dotazy daného obchodu pozastaveny: '+reason}
                     continue
                 if shop not in pages:
                     pages[shop]=browser.new_page(locale='cs-CZ',timezone_id='Europe/Prague',
@@ -227,7 +259,12 @@ def playwright_search_batch(batch: list[dict], cfg: dict) -> dict[str, dict]:
                     max_cards=int(search_cfg.get('max_cards_per_query',260)),
                     scrolls=int(search_cfg.get('scrolls_per_query',8)))
                 results[key]={'status':status,'items':rows,'detail':desc}
-                if status=='rate_limited':blocked.add(shop)
+                if status in ('rate_limited','blocked'):
+                    blocked.add(shop)
+                elif status=='search_unavailable':
+                    unavailable_count[shop]=unavailable_count.get(shop,0)+1
+                    if unavailable_count[shop]>=2:blocked.add(shop)
+                else:unavailable_count[shop]=0
         finally:
             browser.close()
     return results
@@ -282,7 +319,7 @@ def row_to_product(shop: str, row: dict, cfg: dict, lib, observed_at: str) -> di
         quantity=lib.size_from_listing(name,row)
         image=lib.safe_image_url(row.get('image_url',''),url)
         note='Slevu nelze cenově ověřit' if sale else ''
-        terms='neověřená akce' if sale else 'běžná nabídka'
+        terms='neověřená akce' if sale else ('běžná nabídka' if price is not None else 'cena nezjištěna')
     if isinstance(price,float) and not 0<price<100000:price=None
     return {
       'shop':shop, 'name':name,'url':url.split('?')[0],
@@ -335,12 +372,25 @@ def process_incremental(cfg: dict, now: dt.datetime, state: dict, jobs: list[dic
                 state['items'][key_item]=product
                 accepted+=1;seen_in_batch.add(key_item)
         state['queries'][key]={'checked_at':at,'status':status,'cards':len(rows),
-                               'detail':str(res.get('detail',''))[:200],
+                               'detail':str(res.get('detail',''))[:1400],
                                'rule_ids':job['rule_ids']}
     retention_hours=int(cfg.get('catalog_search',{}).get('cache_retention_hours',72))
-    state['items']={k:v for k,v in state['items'].items() if _recent(v.get('checked_at',''),now,retention_hours)}
+    # Revalidate every cached product against CURRENT watch rules, not just when scanned.
+    # This removes prior false positives (e.g. cat food falsely labelled chicken breast).
+    cleaned={}
+    for k,v in state['items'].items():
+        if not _recent(v.get('checked_at',''),now,retention_hours):continue
+        rule=lib.match_rules(v.get('name',''),cfg.get('watch_rules',[]))
+        if not rule and not lib.favorite_match(v.get('name',''),v.get('url',''),cfg.get('favorites',[])):
+            continue
+        v['rule_id']=(rule or {}).get('id','')
+        v['category']=(rule or {}).get('category','')
+        cleaned[k]=v
+    state['items']=cleaned
     states=state['queries']
     recent_queries={k:v for k,v in states.items() if _recent(v.get('checked_at',''),now,24)}
+    coverage_hours=float(cfg.get('catalog_search',{}).get('coverage_window_hours',240))
+    rolling_queries={k:v for k,v in states.items() if _recent(v.get('checked_at',''),now,coverage_hours)}
     valid_status=('ok','partial_limit')  # 'no_cards' may mean blocked extraction, not full results
     successful_jobs=[j for j in jobs if (q:=recent_queries.get(job_key(j))) and q['status'] in valid_status]
     by_store={shop:{'planned':len([j for j in jobs if j['shop']==shop]),
@@ -349,6 +399,8 @@ def process_incremental(cfg: dict, now: dt.datetime, state: dict, jobs: list[dic
               for shop in cfg.get('sources',{})}
     rule_ids={r['id'] for r in cfg.get('watch_rules',[]) if r.get('enabled') is not False}
     scanned_rule_ids=set(x for j in successful_jobs for x in j['rule_ids'])
+    rolling_success_jobs=[j for j in jobs if (q:=rolling_queries.get(job_key(j))) and q['status'] in valid_status]
+    rolling_rule_ids=set(x for j in rolling_success_jobs for x in j['rule_ids'])
     failed_recent=[{'query':j['query'],'shop':j['shop'], 'status':recent_queries[job_key(j)]['status']}
                    for j in jobs if job_key(j) in recent_queries and recent_queries[job_key(j)]['status'] not in valid_status]
     coverage={'failed_queries_24h':len(failed_recent),'failed_query_examples':failed_recent[:12],
@@ -356,6 +408,10 @@ def process_incremental(cfg: dict, now: dt.datetime, state: dict, jobs: list[dic
               'queries_responded_24h':len(successful_jobs),
               'watch_rules_total':len(rule_ids),
               'watch_rules_with_search_24h':len(rule_ids & scanned_rule_ids),
+              'coverage_window_hours':coverage_hours,
+              'queries_checked_window':len(rolling_queries),
+              'queries_responded_window':len(rolling_success_jobs),
+              'watch_rules_with_search_window':len(rule_ids & rolling_rule_ids),
               'by_store':by_store,'batch_queries':len(batch),
               'batch_product_rows_matched':accepted,'batch_errors':failures,
               'catalog_completeness_verified':False,
@@ -426,11 +482,6 @@ def run_catalog_monitor(cfg: dict, lib, *, demo: bool = False) -> int:
     lib.DATA.mkdir(parents=True,exist_ok=True)
     state_file.write_text(json.dumps(updated,ensure_ascii=False,indent=2),encoding='utf-8')
     previous=lib.read_previous()
-    # Add photo/size to actual discounted offers, not all catalog items.
-    enrich={'visited':0,'filled':0,'errors':0,'photos_cached':0}
-    if not demo and output['offers']:
-        try:enrich=lib.enrich_from_product_pages(output['offers'],cfg)
-        except Exception as exc:enrich['error']=f'{type(exc).__name__}: {str(exc)[:100]}'
     # Keep the original public *sale-page* scan only as an explicitly marked
     # safety fallback if storefront search gave no usable response for a shop.
     # It never counts towards the whole-catalog query coverage.
@@ -448,6 +499,13 @@ def run_catalog_monitor(cfg: dict, lib, *, demo: bool = False) -> int:
                     output['offers'].append(o);existing.add(o.url)
         except Exception as exc:
             fallback[shop]={'status':f'{type(exc).__name__}: {str(exc)[:110]}','cards':0}
+    # Critical v17 fix: In v16 enrichment ran BEFORE the sale-page fallback.
+    # All 8 Košík offers were therefore excluded from photo/pack-size processing.
+    # Enrich after assembling both primary and fallback offers.
+    enrich={'visited':0,'filled':0,'errors':0,'photos_cached':0}
+    if not demo and output['offers']:
+        try:enrich=lib.enrich_from_product_pages(output['offers'],cfg)
+        except Exception as exc:enrich['error']=f'{type(exc).__name__}: {str(exc)[:100]}'
     output['coverage']['sale_page_fallback']=fallback
     known_catalog_urls={c['url'] for c in output['catalog']}
     for offer in output['offers']:

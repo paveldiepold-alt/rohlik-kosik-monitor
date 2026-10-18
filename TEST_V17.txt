@@ -1,0 +1,10 @@
+V17 lokální ověření
+==================
+python -m unittest discover -s tests -q
+OK (69 tests)
+
+Nahraný latest.json (2026-10-18 18:33):
+52 katalogových položek; 12 původně nesprávně zařazených položek odebráno po nových pravidlech:
+9× kočičí krmivo Applaws Cat, 2× kuřecí prsa s kostí, 1× dětská kapsička s vepřovou panenkou.
+
+Živý sběr: netestován; nelze potvrdit odstranění omezení Košíku a HTTP 429 Rohlíku.

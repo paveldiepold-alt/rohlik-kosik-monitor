@@ -89,6 +89,10 @@ def clean_product_name(raw: str) -> str:
 # Do not assume every processed product discloses its treatment in its title:
 # ambiguous listings are omitted where a reliable raw-cut descriptor is absent.
 NON_RAW_MEAT = (
+    # Pet food and human baby food have been observed as false matches of "kuřecí prsa".
+    "applaws", "brit care", "granule", "kapsick*", "pro kocky",
+    "pro psy", "kocici", "psim", "krmivo", "cat kitten", "dog adult",
+    "pamlsk*", "zradlo", "konzerva pro psy", "konzerva pro kocky",
     "just meat", "jerky", "biltong", "snack*", "proteinov*", "tycink*",
     "susen*", "vysusen*", "dehydratovan*", "lyofilizovan*", "fermentovan*",
     "konzerv*", "plechov*", "plechovk*", "sklenic*", "sterilovan*", "zavaren*",
@@ -525,8 +529,12 @@ def match_rules(name: str, rules: list[dict]) -> dict | None:
             continue
         if r.get("paper_type") and not is_wanted_paper_goods_name(name, r["paper_type"]):
             continue
-        if r.get("category") == "Maso" and not is_raw_meat_name(name):
-            continue
+        if r.get("category") == "Maso":
+            if not is_raw_meat_name(name):
+                continue
+            # A breast fillet must not include bone. "Bez kosti" is acceptable.
+            if r.get('id') == 'W001' and re.search(r'\bs kosti\b', n):
+                continue
         if r.get("category") in BEVERAGE_SIZES and not is_allowed_beverage(name, r):
             continue
         if r.get("product_any") and not any(term_matches(n, term) for term in r["product_any"]):
