@@ -106,18 +106,20 @@ function applyFilters(){if(!data)return;const b=$('brand').value,c=$('category')
  const td=document.createElement('td');const a=node('a','Otevřít ↗');a.href=o.url;a.target='_blank';a.rel='noopener noreferrer';td.appendChild(a);tr.appendChild(td);tbody.appendChild(tr)}
  if(!visible.length){const tr=document.createElement('tr');const td=node('td','Žádné ověřené výsledky pro zadané filtry.');td.colSpan=10;tr.appendChild(td);tbody.appendChild(tr)}
 }
+// Existing history may contain the retailer's accessibility command as a title.
+function displayProductName(name){return String(name||'').replace(/^(?:(?:Zobrazit|Otevřít|Prohlédnout)\s+detail\s+produktu|(?:Zobrazit|Otevřít)\s+produkt)\s*[:\-–]?\s*/i,'').trim()}
 function productCell(o){
  const td=document.createElement('td');const wrap=node('div','','product-identity');
  const link=document.createElement('a');link.href=o.url;link.target='_blank';link.rel='noopener noreferrer';
- link.className='product-photo';link.title=o.name;
+ link.className='product-photo';link.title=displayProductName(o.name);
  // Images are retailer-provided thumbnails, not guessed Google matches.
  if(o.image_url && /^https:\/\//i.test(o.image_url)){
-   const im=document.createElement('img');im.src=o.image_url;im.alt='Náhled: '+o.name;
+   const im=document.createElement('img');im.src=o.image_url;im.alt='Náhled: '+displayProductName(o.name);
    im.loading='lazy';im.decoding='async';im.referrerPolicy='no-referrer';
    im.onerror=()=>{link.replaceChildren(node('span','▧','no-photo'))};
    link.appendChild(im);
  }else link.appendChild(node('span','▧','no-photo'));
- const info=node('div','','product-text');info.appendChild(node('span',o.name,'product-name'));
+ const info=node('div','','product-text');info.appendChild(node('span',displayProductName(o.name),'product-name'));
  if(o.quantity){
    info.appendChild(node('span','Balení: '+o.quantity,'pack-chip'));
    if(o.unit_price != null && o.unit_label){
