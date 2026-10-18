@@ -1,5 +1,5 @@
 {
-  "version": "16.0",
+  "version": "18.0",
   "timezone": "Europe/Prague",
   "monitoring": {
     "favorite_min_discount_pct": 5,
@@ -946,13 +946,14 @@
     {
       "id": "W049",
       "category": "Sladké",
-      "label": "Miňonky – hořké",
+      "label": "Miňonky – kakaové/hořké oplatky",
       "priority": 1,
       "brand_aliases": [
         "Miňonky",
         "Minonky"
       ],
       "product_any": [
+        "kakaov*",
         "hořk*"
       ]
     },
@@ -972,15 +973,19 @@
     {
       "id": "W051",
       "category": "Sladké",
-      "label": "Kokosky",
+      "label": "ORION KOKO – kokosová tyčinka",
       "priority": 1,
       "product_any": [
-        "kokosk*"
+        "koko"
       ],
       "exclude_any": [
-        "šampon",
-        "sprchový",
-        "kosmetika"
+        "sušenky",
+        "kokosky",
+        "pečivo",
+        "moučník"
+      ],
+      "brand_aliases": [
+        "Orion"
       ]
     },
     {
@@ -1377,6 +1382,38 @@
       "priority": 1,
       "min_discount_pct": 5,
       "note": "Papírové kuchyňské utěrky; sleduj i jiné značky."
+    },
+    {
+      "id": "F_ORION_KOKO_KOSIK",
+      "label": "ORION KOKO kokosová tyčinka",
+      "store": "Košík",
+      "url": "https://www.kosik.cz/p770680-orion-koko-kokosova-tycinka-macena-v-mlecne-poleve",
+      "priority": 1,
+      "min_discount_pct": 5
+    },
+    {
+      "id": "F_STUDENTSKA_PECET_KOSIK",
+      "label": "ORION Studentská pečeť mléčná",
+      "store": "Košík",
+      "url": "https://www.kosik.cz/p698853-orion-studentska-pecet-mlecna-cokolada-s-arasidy-rozinkami-a-zele",
+      "priority": 1,
+      "min_discount_pct": 5
+    },
+    {
+      "id": "F_FIDORKA_KOKOS_KOSIK",
+      "label": "Opavia Fidorka kokosová",
+      "store": "Košík",
+      "url": "https://www.kosik.cz/p21877-opavia-fidorka-mlecna-s-kokosem-modra",
+      "priority": 1,
+      "min_discount_pct": 5
+    },
+    {
+      "id": "F_MINONKY_KAKAO_KOSIK",
+      "label": "Opavia Miňonky kakaové",
+      "store": "Košík",
+      "url": "https://www.kosik.cz/p21907-opavia-minonky-kakaove-oplatky",
+      "priority": 1,
+      "min_discount_pct": 5
     }
   ],
   "brands": [
