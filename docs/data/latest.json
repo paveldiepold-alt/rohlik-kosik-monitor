@@ -1,6 +1,6 @@
 {
   "date": "2026-10-18",
-  "checked_at": "2026-10-18T15:16+02:00",
+  "checked_at": "2026-10-18T15:27+02:00",
   "sources": {
     "Rohlík": {
       "status": "ok",
@@ -60,25 +60,6 @@
       "category": "Zelenina",
       "rule_id": "W046",
       "note": ""
-    },
-    {
-      "shop": "Košík",
-      "name": "Coca-Cola Multipack, plech 4x330ml",
-      "url": "https://www.kosik.cz/p43747-coca-cola-multipack-plech-4x330ml",
-      "price": 54.9,
-      "discount_pct": 35,
-      "old_price": 84.9,
-      "brand": "Coca-Cola",
-      "favorite": true,
-      "quantity": "330 ml",
-      "terms": "akce",
-      "comparable_group": "auto:coca cola multipack plech 4x330ml | 330 ml",
-      "other_shop_price": null,
-      "other_shop_url": "",
-      "other_shop": "",
-      "category": "Nápoje / limonády",
-      "rule_id": "W036",
-      "note": "Jen klasická Coca-Cola; ostatní příchutě a bezcukerné varianty vyloučeny."
     },
     {
       "shop": "Košík",
