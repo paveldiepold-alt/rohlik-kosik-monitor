@@ -1,18 +1,11 @@
-ROHLÍK × KOŠÍK | 2026-10-18 | poslední kontrola: 2026-10-18T18:48+02:00
+ROHLÍK × KOŠÍK | 2026-10-18 | poslední kontrola: 2026-10-18T19:00+02:00
 VEŘEJNÉ VYHLEDÁVÁNÍ NAPŘÍČ SORTIMENTEM – pouze skutečně nalezené položky, nikoli úplný katalog.
 Doručovací oblast: PSČ 149 00 (referenční požadavek, nikoli automaticky ověřená lokální cena).
 Bez potvrzené volby oblasti v e-shopu: ceny a dostupnost se mohou lišit podle doručovací adresy / členství.
-STAV ZDROJŮ: Rohlík: ok (56 karet); Košík: fallback_action_page (7 karet)
-Nalezeno 11 sledovaných zlevněných položek; nově zaznamenané / zlevněné: 1.
+STAV ZDROJŮ: Rohlík: ok (64 karet); Košík: ok (34 karet)
+Nalezeno 4 sledovaných zlevněných položek; nově zaznamenané / zlevněné: 0.
 OBLÍBENÉ PRODUKTY A ZNAČKY (všechna zadaná pravidla = oblíbené):
-KATALOG: 63 nalezených výrobků (včetně nezlevněných); 24h pokrytí vyhledávacích dotazů 13/196 a nákupních pravidel 8/75. Neznamená úplný katalog.
-★ Majonézy | Košík | Hellmann's Majonéza | balení: 405 ml | 46.90 Kč | -47% | akce | bez ověřeného páru | https://www.kosik.cz/p459240-hellmann-s-majoneza
-★ Majonézy | Košík | Hellmann's Majonéza | balení: 625 ml | 74.90 Kč | -42% | akce | bez ověřeného páru | https://www.kosik.cz/p459210-hellmann-s-majoneza
-★ Majonézy | Košík | Hellmann's Majonéza | balení: 210 ml | 32.90 Kč | -40% | akce | bez ověřeného páru | https://www.kosik.cz/p459230-hellmann-s-majoneza
-★ Papírové utěrky | Košík | Linteo Classic kuchyňské utěrky 2vrstvé, 2 role | balení: neuvedeno | 19.90 Kč | -39% | akce | bez ověřeného páru | https://www.kosik.cz/p2967-linteo-classic-kuchynske-uterky-2vrstve-2-role | POZN.: Jakákoliv značka; pouze jednorázové papírové kuchyňské utěrky/role, nikoli textilní, vlhčené nebo čisticí hadříky.
-★ Zelenina | Košík | Mrkev s natí, svazek | balení: 500 g | 24.90 Kč | -37% | akce | bez ověřeného páru | https://www.kosik.cz/p296834-mrkev-s-nati-svazek
-★ Sýry / plísňové | Košík | Président Camembert | balení: 90 g | 29.90 Kč | -37% | akce | bez ověřeného páru | https://www.kosik.cz/p14827-president-camembert
-★ Ovoce | Košík | Avokádo Hass "ready to eat", 1 ks | balení: 1 ks | 42.90 Kč | -28% | akce | bez ověřeného páru | https://www.kosik.cz/p795666-avokado-hass-ready-to-eat-1-ks
+KATALOG: 98 nalezených výrobků (včetně nezlevněných); 24h pokrytí vyhledávacích dotazů 20/196 a nákupních pravidel 11/75. Neznamená úplný katalog.
 ★ Maso | Rohlík | Campese Kuřecí vykostěná stehna z volného chovu | balení: 290 g | 161.84 Kč | -27% | akce | bez ověřeného páru | https://www.rohlik.cz/1482633-campese-kureci-vykostena-stehna-z-volneho-chovu
 ★ Sladké | Rohlík | Biopekárna Zemanka BIO Čoko-kokosky s kakaem | balení: 100 g | 51.90 Kč | -10% | akce | bez ověřeného páru | https://www.rohlik.cz/1295127-biopekarna-zemanka-bio-coko-kokosky-s-kakaem
 ★ Maso | Rohlík | Amadori BIO Kuřecí stehno | balení: 350 g | 139.97 Kč | -10% | akce | bez ověřeného páru | https://www.rohlik.cz/1413890-amadori-bio-kureci-stehno
