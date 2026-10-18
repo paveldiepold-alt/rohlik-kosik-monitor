@@ -388,6 +388,107 @@ def scrub_historical_beverages(config: dict) -> int:
     return removed_total
 
 
+# Paper-goods watch groups deliberately describe the actual PRODUCT TYPE, not
+# any title containing "papír" or "kapesníky". Generic box tissues and kitchen
+# paper towels may be ANY brand; Zewa pocket packets require Deluxe.
+PAPER_GOODS_TYPES = {
+    "zewa_toilet_or_napkins", "zewa_deluxe_pocket",
+    "kitchen_paper_towels", "boxed_3ply_tissues",
+}
+
+
+def is_wanted_paper_goods_name(name: str, paper_type: str) -> bool:
+    n = normalized(clean_product_name(name))
+    has = lambda *phrases: any(term_matches(n, phrase) for phrase in phrases)
+    if not n or paper_type not in PAPER_GOODS_TYPES:
+        return False
+    # These are NOT dry disposable paper hygiene / kitchen rolls.
+    if has("vlhcen*", "vlhke", "vlhceny*", "mokr*", "textiln*", "latkov*",
+           "mikrovlak*", "had*", "hadr*", "houbick*", "houba", "cistic* ubrousk*",
+           "odlicovac*", "dezinfekcn*", "ubrousk* na uklid"):
+        return False
+    tissue = has("kapesnik*", "facial tissue*", "facial tissues")
+    boxed = has("krabic*", "krabick*", "krabicce", "box", "boxu", "boxik*",
+                "vytahovac*", "dispenzer*", "krabicov*", "krabicove")
+    three_ply = (re.search(r"(?<!\d)3\s*vrstv[a-z]*\b", n) is not None or
+                 has("tri vrstve", "tri vrstv*", "three ply", "3 ply"))
+    if paper_type == "zewa_toilet_or_napkins":
+        return has("zewa") and (
+            has("toaletni papir", "toaletni role", "toaletni papi*", "toilet paper")
+            or (has("papir*", "papirov*", "servitk*") and has("ubrousk*", "servitk*"))
+        )
+    if paper_type == "zewa_deluxe_pocket":
+        # Brand + Deluxe alone is insufficient: "Deluxe Family" is a 90-ct BOX.
+        pocket_variant = has("standard", "original", "10x10", "10 balick*", "balickove")
+        return (has("zewa") and tissue and has("deluxe") and pocket_variant
+                and not has("family") and not boxed
+                and not has("role", "ruli*", "toaletni"))
+    if paper_type == "kitchen_paper_towels":
+        return (has("papirove uterky", "papirova uterka", "papirove kuchynske uterky",
+                    "kuchynske uterky", "kuchynska uterka", "kuchynske papirove role",
+                    "kuchynske papirove rucniky", "papirove rucniky",
+                    "uterky na roli", "uterky v roli", "wisch weg", "paper towels")
+                and not tissue and not has("toaletni", "kapesnik*"))
+    if paper_type == "boxed_3ply_tissues":
+        # Košík names the known 90-piece "Zewa Deluxe Family" box without
+        # spelling out "box" in its listing title; manufacturer/retail listings
+        # confirm its pack type. Other ambiguous titles must disclose "box".
+        verified_family_box = has("zewa") and has("deluxe family") and three_ply
+        return (tissue and three_ply and (boxed or verified_family_box)
+                and not has("10x10", "balickove kapesniky"))
+    return False
+
+
+def scrub_historical_paper_goods(config: dict) -> int:
+    """Correct previous broad W053 classifications while preserving other products.
+
+    Removes old Zewa paper-goods false positives and recategorizes eligible
+    Zewa pocket packets / towels / boxed 3-ply tissues in archived snapshots.
+    """
+    history = DATA / "history"
+    adjusted = 0
+    for path in sorted(history.glob("*.json")) if history.exists() else []:
+        try:
+            snapshot = json.loads(path.read_text(encoding="utf-8"))
+        except (OSError, ValueError):
+            continue
+        rows = snapshot.get("offers")
+        if not isinstance(rows, list):
+            continue
+        revised = []
+        changed = False
+        for item in rows:
+            if not isinstance(item, dict):
+                revised.append(item)
+                continue
+            legacy_paper = (item.get("rule_id") in ("W053", "W073", "W074", "W075") or
+                            (item.get("category") == "Papír a hygiena" and
+                             term_matches(normalized(item.get("name", "")), "zewa")))
+            if not legacy_paper:
+                revised.append(item)
+                continue
+            correct = match_rules(item.get("name", ""), config["watch_rules"])
+            if not correct or correct.get("paper_type") not in PAPER_GOODS_TYPES:
+                changed = True
+                adjusted += 1
+                continue
+            if (item.get("rule_id") != correct["id"] or
+                item.get("category") != correct["category"] or not item.get("favorite")):
+                item.update(rule_id=correct["id"], category=correct["category"],
+                            favorite=True, note=correct.get("note", ""))
+                adjusted += 1
+                changed = True
+            revised.append(item)
+        if changed:
+            snapshot["offers"] = revised
+            allowed_urls = {x.get("url") for x in revised if isinstance(x, dict)}
+            snapshot["changes"] = [x for x in snapshot.get("changes", [])
+                                   if x.get("url") in allowed_urls]
+            snapshot["paper_rules_repaired_v14"] = True
+            path.write_text(json.dumps(snapshot, ensure_ascii=False, indent=2), encoding="utf-8")
+    return adjusted
+
+
 def match_rules(name: str, rules: list[dict]) -> dict | None:
     n = normalized(name)
     matched = []
@@ -406,6 +507,8 @@ def match_rules(name: str, rules: list[dict]) -> dict | None:
         if has_brand and not r.get("brand_aliases") and r.get('category') in ('Ovoce', 'Zelenina'):
             continue
         if r.get("category") in ("Ovoce", "Zelenina") and not is_fresh_produce_name(name, r):
+            continue
+        if r.get("paper_type") and not is_wanted_paper_goods_name(name, r["paper_type"]):
             continue
         if r.get("category") == "Maso" and not is_raw_meat_name(name):
             continue
@@ -1216,6 +1319,7 @@ def main() -> int:
         scrub_historical_beverages(cfg)
         scrub_historical_meat(cfg)
         scrub_historical_favorites(cfg)
+        scrub_historical_paper_goods(cfg)
     add_comparisons(offers, cfg.get("canonical_pairs", []))
     offers.sort(key=lambda o: (not o.favorite, -o.discount_pct, o.brand, o.name))
     snapshot = {"date": now.date().isoformat(), "checked_at": now.isoformat(timespec="minutes"),

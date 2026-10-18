@@ -1,0 +1,52 @@
+ROHLÍK × KOŠÍK – AKTIVACE / AKTUALIZACE DENNÍHO HLÍDAČE SLEV (v14)
+PŘENOS DO JINÉHO ÚČTU CHATGPT FREE (iPHONE / iOS)
+
+VYTVOŘ NYNÍ NA TOMTO ÚČTU JEDNU SKUTEČNOU OPAKOVANOU NAPLÁNOVANOU ÚLOHU. Neodpovídej pouze návodem ani neukládej tento text jako obecnou preferenci. Zkontroluj, zda již není aktivní úloha se stejným názvem; pokud ano, aktualizuj ji místo vytváření duplicity. Pokud plánování nebo čtení externích URL není dostupné, přiznej omezení a nevymýšlej potvrzení.
+
+NÁZEV ÚLOHY: Rohlík × Košík – denní hlídač slev
+OPAKOVÁNÍ: Každý den ráno, ideálně po 9. hodině místního času; flexibilní ranní časové okno pro účet Free (nepožaduji přesný čas).
+ČASOVÉ PÁSMO: Europe/Prague.
+ZAŘÍZENÍ: iPhone s aplikací ChatGPT; výstup jako zpráva v ChatGPT a standardní push/e-mailová oznámení podle nastavení tohoto účtu.
+DORUČOVACÍ OBLAST: PSČ 149 00, Praha. Pokud obchod nedokáže bez přihlášení potvrdit oblast, uváděj „veřejná cena, PSČ 149 00 neověřeno“.
+
+PODKLADY – POUŽÍVEJ AKTUÁLNÍ ONLINE MONITOR (NIKOLIV HISTORII TOHOTO CHATU):
+1) Čitelný denní report: https://paveldiepold-alt.github.io/rohlik-kosik-monitor/report.html
+2) Strukturovaná aktuální data: https://paveldiepold-alt.github.io/rohlik-kosik-monitor/data/latest.json
+3) Kompletní interaktivní dashboard: https://paveldiepold-alt.github.io/rohlik-kosik-monitor/
+
+Při každém běhu se pokus načíst nejprve aktuální data a report. Nespoléhej na starý náhled, výsledky minulého dne ani název odkazu. Jestliže některý zdroj není přístupný, zkus druhý. Pokud ani jeden nelze přečíst, pošli krátké upozornění „Report se nepodařilo načíst“ s odkazem na dashboard; nevymýšlej ceny, produkty ani stav slev. Nevyžaduj připojení GitHubu. Nic neupravuj na GitHubu a nic neobjednávej.
+
+PŘI KAŽDÉ KONTROLE PROVEĎ:
+1) Ověř datum/čas Europe/Prague a skutečný čas poslední aktualizace reportu (checked_at). Pokud jsou data starší než dnešní den, výrazně napiš „NEAKTUÁLNÍ DATA“. Zkontroluj zvlášť stav zdrojů Rohlík a Košík; chybějící data nejsou důkazem nulových slev. Pokud data označují demo, výslovně napiš DEMO a neprezentuj je jako reálné nabídky.
+2) Vyhodnoť jen nalezené relevantní nabídky. Priorita P1 = položky označené jako oblíbené/★; upozornění při slevě nejméně 5 %. Priorita P2 = další sledované značky a typy výrobků; upozornění při slevě nejméně 15 %. P1 vypiš před P2.
+3) Při dalším filtrování respektuj přísně tato pravidla:
+   - MASO: jen skutečné SYROVÉ čerstvé drůbeží prsní řízky/stehna, vepřová krkovice/panenka a hovězí svíčková. ŽÁDNÉ konzervy, sušené/kořeněné/uzené/marinované maso, šunky, hotová jídla ani jiné deriváty v kategorii syrového masa. Uzeniny sleduj samostatně dle značek.
+   - OVOCE/ZELENINA: jen skutečné čerstvé plody a zelenina, ne produkty s příchutí/obsahem banánu, maliny, citronu, rajčete apod.; ne pečivo, vitamíny, nápoje, omáčky, dezerty nebo hotová jídla. Ovoce: avokádo, banány, borůvky, maliny, citrony, hroznové víno. Zelenina: okurky, rajčata, cherry rajčata, mrkev, papriky.
+   - LIMONÁDY: jen Coca-Cola klasická Original v PET lahvi, objem JEDNOTLIVÉ LAHVE alespoň 1 l. Vyloučit Zero/Light, jiné varianty, plechovky a sklo.
+   - VODY: Aquila, Rajec a Dobrá voda jen neperlivá/jemně perlivá/kojenecká, neochucená, PET lahve JEDNOTLIVĚ přesně 1,5 l; multipack je možný, pokud obsahuje tyto lahve. Pokud nelze PET/objem potvrdit, nepředstírej shodu.
+   - PAPÍROVÁ HYGIENA: Zewa Deluxe Standard (modré) = PAPÍROVÉ KAPESNÍKY V MALÝCH BALÍČCÍCH (ne box); Zewa Deluxe Family 90 ks je naopak 3vrstvý BOX. PAPÍROVÉ KUCHYŇSKÉ UTĚRKY = všechny značky (ne vlhčené/textilní). 3VRSTVÉ PAPÍROVÉ KAPESNÍKY V KRABICI/BOXU = všechny značky (ne balíčky). Nadále také toaletní papír Zewa a papírové ubrousky Zewa; Linteo pouze vlhčené ubrousky. Nepovažuj kuchyňskou textilní utěrku, vlhčené ubrousky nebo kapesníky 2 vrstvy za vyhovující.
+   - BALENÍ: rozlišuj konkrétní variantu a gramáž/objem; například Hellmann's majonéza 625 ml není stejná jako 405 ml. Technické texty jako „Zobrazit detail produktu“ nejsou názvem zboží.
+4) Ostatní sledované skupiny v dashboardu: šunky LE & CO/Chodura/Wein/Kostelecké; salámy Kmotr/Chodura/Ponnath/Krahulík; párky a klobásy Ponnath/Chodura/Kostelecké; sýry Madeta/Leerdammer/Président/Želetava Smetanito/Veselá kráva/Lipno/Král Sýrů/Sedlčanský/Galbani; Hellmann's majonézy; másla/tuky Madeta/Hera/Omega/Rama/Flora; sladké Studentská pečeť (mléčná/hořká/hořko-mléčná), hořké Miňonky, kokosové Fidorky, Kokosky; Panzani těstoviny/rýže; Zewa Deluxe Standard kapesníky v balíčcích a Zewa Deluxe Family 3vrstvé kapesníky v krabici, Zewa toaletní papír a papírové ubrousky, papírové kuchyňské utěrky všech značek, 3vrstvé papírové kapesníky v krabici všech značek, Linteo vlhčené; AXE; Syoss Men Intense Power; Signal, Colgate, Parodontax; jednorázové Wilkinson; Ariel, Persil, Lenor, Silan, Vanish; Bref, WC Net, Domestos, Savo, Cif, Clin a Jar citron. Nešíř značky do nesouvisejících kategorií.
+5) Referenční prioritní produkty (bez marketingových parametrů):
+  Zewa Deluxe Standard balíčkové kapesníky 3 vrstvy – Rohlík https://www.rohlik.cz/1307969-zewa-deluxe-standard-papirove-kapesniky-3vrstve-10x10ks
+  Zewa Deluxe Standard balíčkové kapesníky – Košík https://www.kosik.cz/p82407-zewa-deluxe-standard-kapesniky-3-vrstve
+  Zewa Deluxe Family krabičkové kapesníky 3vrstvé 90 ks – Košík https://www.kosik.cz/p82477-zewa-deluxe-family-kapesniky-3vrstve
+  Zewa Wisch Weg Original papírové kuchyňské utěrky – Košík https://www.kosik.cz/p233874-zewa-wisch-weg-original-kuchynske-uterky-4-role
+  Syoss Men Intense Power šampon 440 ml – Košík https://www.kosik.cz/p304584-syoss-men-intense-power-sampon-pro-muze). Uvedené URL jsou pouze referenční produkty, nikoliv potvrzení dnešní ceny, slevy nebo aktuální dostupnosti.
+6) CENA: použij skutečnou prodejní cenu, nikdy nezaměňuj Kč/kg či Kč/l za cenu balení. U množstevních nebo věrnostních akcí vypiš podmínku (např. od 2 ks); nepovažuj ji za běžnou cenu jednoho kusu.
+7) POROVNÁNÍ: Rohlík × Košík srovnávej jen prokazatelně totožné produkty stejné značky, varianty a velikosti balení za srovnatelných podmínek. Není-li ověřený pár, uveď „Bez ověřeného páru“, neodhaduj cenu druhého obchodu ani úsporu.
+8) NOVINKY: když data obsahují pole changes, rozlišuj „nově pozorovaná nabídka“ od „další zlevnění“; nově pozorované neznamená automaticky nová akce. Pokud historie chybí, napiš to. Starší akce neznač jako nové.
+
+FORMÁT DENNÍ ZPRÁVY V ČEŠTINĚ:
+🛒 Rohlík × Košík | [datum]
+Stav dat: [čas posledního sběru]; Rohlík [stav], Košík [stav]; PSČ 149 00 [ověřeno/neověřeno].
+⭐ OBLÍBENÉ VE SLEVĚ: nejvýše 10 nejrelevantnějších položek P1; každá s přesným názvem + balením, obchodem, aktuální cenou v Kč, % slevy, podmínkou akce a PŘÍMÝM KLIKACÍM ODKAZEM na výrobek. Uveď počet dalších oblíbených, pokud se nevejdou.
+🏷️ DALŠÍ SLEVY ZNAČEK: přehled 5–10 relevantních P2 se stejnými údaji a přímými odkazy.
+⚖️ ROHLÍK VS. KOŠÍK: pouze ověřené shodné dvojice s cenami a rozdílem v Kč; když nejsou, uveď „Dnes bez ověřeného porovnání“.
+🆕 ZMĚNY: skutečně doložená další zlevnění/nově zaznamenané položky, nebo krátký status bez změn.
+📊 KOMPLETNÍ PŘEHLED: https://paveldiepold-alt.github.io/rohlik-kosik-monitor/
+📄 DENNÍ REPORT: https://paveldiepold-alt.github.io/rohlik-kosik-monitor/report.html
+
+Pošli zprávu KAŽDÝ DEN, I POKUD NENÍ NIC NOVÉHO. Pokud nic relevantního nebylo ověřeno, napiš „Dnes nebyla v dostupných datech potvrzena nová relevantní sleva“, uveď stav a stáří zdrojů a oba odkazy. Při nedostupných/neúplných datech nikdy netvrď, že nejsou žádné slevy. Neobjednávej zboží a nepoužívej vymyšlené odkazy.
+
+TEĎ PROVEĎ AKCI: Vytvoř/aktualizuj tuto JEDNU denní úlohu na současném ChatGPT účtu, pak ukaž skutečné potvrzení aktivní úlohy (název, opakování „každé ráno“, Europe/Prague). Pokud tvůj účet funkci neumí, uveď překážku, nevydávej pouhý text za aktivovanou automatizaci.

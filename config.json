@@ -1,5 +1,5 @@
 {
-  "version": "12.0",
+  "version": "14.0",
   "timezone": "Europe/Prague",
   "monitoring": {
     "favorite_min_discount_pct": 5,
@@ -7,7 +7,7 @@
     "notify_once_per_day": true,
     "free_plan_daypart": "morning",
     "interpret_watch_rules_as_favorites": true,
-    "description": "Všech 72 uživatelem vybraných pravidel (značka v konkrétní kategorii i produkty) = oblíbené. Budoucí nezadané značkové akce mohou být P2."
+    "description": "Všechna pravidla včetně nových papírových výrobků mají P1. Zewa balíčkové kapesníky jsou jen Deluxe Standard/Family; papírové kuchyňské utěrky a krabičkové 3vrstvé kapesníky mohou být jakékoli značky."
   },
   "favorite_min_discount_pct": 5,
   "max_items_per_store": 700,
@@ -996,21 +996,13 @@
     {
       "id": "W053",
       "category": "Papír a hygiena",
-      "label": "Zewa – kapesníky / ubrousky / toaletní papír",
+      "label": "Zewa – toaletní papír a papírové ubrousky",
       "priority": 1,
       "brand_aliases": [
         "Zewa"
       ],
-      "product_any": [
-        "kapesník*",
-        "ubrousk*",
-        "toaletní",
-        "classic soft",
-        "deluxe",
-        "exclusive",
-        "just 1"
-      ],
-      "note": "Celá značka Zewa: papírová hygiena P2. Prioritní P1 je přesně Zewa Deluxe Standard kapesníky 3 vrstvy 10×10 ks (Rohlík ID 1307969)."
+      "paper_type": "zewa_toilet_or_napkins",
+      "note": "Ponecháno z původního seznamu; nezaměňovat s vlhčenými ubrousky ani výrobky jiné značky."
     },
     {
       "id": "W054",
@@ -1286,6 +1278,33 @@
         "citron*",
         "lemon"
       ]
+    },
+    {
+      "id": "W073",
+      "category": "Kapesníky / balíčky",
+      "label": "Zewa Deluxe Standard – kapesníky v balíčcích",
+      "priority": 1,
+      "brand_aliases": [
+        "Zewa"
+      ],
+      "paper_type": "zewa_deluxe_pocket",
+      "note": "Modré Zewa Deluxe Standard / Original kapesníky v malých balíčcích; Zewa Deluxe Family je naopak 3vrstvý BOX 90 ks."
+    },
+    {
+      "id": "W074",
+      "category": "Papírové utěrky",
+      "label": "Papírové kuchyňské utěrky – všechny značky",
+      "priority": 1,
+      "paper_type": "kitchen_paper_towels",
+      "note": "Jakákoliv značka; pouze jednorázové papírové kuchyňské utěrky/role, nikoli textilní, vlhčené nebo čisticí hadříky."
+    },
+    {
+      "id": "W075",
+      "category": "Kapesníky / krabice",
+      "label": "Papírové kapesníky v krabici 3vrstvé – všechny značky",
+      "priority": 1,
+      "paper_type": "boxed_3ply_tissues",
+      "note": "Jakákoliv značka; papírové kapesníky 3 vrstvy v krabičce nebo boxu. Zewa Deluxe Family (90 ks) je BOX, i když to název Košíku výslovně neuvádí."
     }
   ],
   "favorites": [
@@ -1321,6 +1340,37 @@
       "min_discount_pct": 5,
       "pack": "440 ml",
       "note": "Odpovídající produkt pro ověření ceny ve druhém obchodě."
+    },
+    {
+      "id": "F_ZEWA_DELUXE_STANDARD_KOSIK",
+      "label": "Zewa Deluxe Standard – kapesníky 3vrstvé, balíčky",
+      "brand": "Zewa",
+      "store": "Košík",
+      "url": "https://www.kosik.cz/p82407-zewa-deluxe-standard-kapesniky-3-vrstve",
+      "priority": 1,
+      "min_discount_pct": 5,
+      "note": "Deluxe Standard je balíčkové balení; ne krabice."
+    },
+    {
+      "id": "F_ZEWA_DELUXE_FAMILY_KOSIK",
+      "label": "Zewa Deluxe Family – papírové kapesníky 3vrstvé BOX 90 ks",
+      "brand": "Zewa",
+      "store": "Košík",
+      "url": "https://www.kosik.cz/p82477-zewa-deluxe-family-kapesniky-3vrstve",
+      "priority": 1,
+      "min_discount_pct": 5,
+      "note": "Zewa Deluxe Family je krabičkové balení 90 ks, nikoli kapesní balíčky.",
+      "pack": "90 ks v krabici"
+    },
+    {
+      "id": "F_ZEWA_WISCH_WEG_KOSIK",
+      "label": "Zewa Wisch & Weg Original – kuchyňské utěrky 4 role",
+      "brand": "Zewa",
+      "store": "Košík",
+      "url": "https://www.kosik.cz/p233874-zewa-wisch-weg-original-kuchynske-uterky-4-role",
+      "priority": 1,
+      "min_discount_pct": 5,
+      "note": "Papírové kuchyňské utěrky; sleduj i jiné značky."
     }
   ],
   "brands": [

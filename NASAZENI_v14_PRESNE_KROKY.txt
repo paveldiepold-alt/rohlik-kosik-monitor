@@ -1,0 +1,21 @@
+Rohlík × Košík – v14, papírová hygiena – přesný postup aktualizace
+
+DŮLEŽITÉ: Neprováděj žádný GitHub Reconnect v ChatGPT. Projekt je již online. Jde pouze o úpravu 4 souborů v repozitáři, ne nové nasazení webu od začátku.
+
+KROK 1: Rozbal ZIP NA POČÍTAČI. NENAHRÁVEJ ZIP na GitHub.
+KROK 2: Otevři https://github.com/paveldiepold-alt/rohlik-kosik-monitor
+KROK 3: Nahraď soubory v přesně stejných cestách:
+  - monitor.py  (root)
+  - config.json (root)
+  - tests/test_v12_preferences_and_images.py
+  - tests/test_paper_goods_v14.py (NOVÝ soubor)
+KROK 4: Přes GitHub Add file → Upload files nahraj obě skupiny do správné složky (root a tests), nebo v editorech jednotlivé kódy nahraď podle samostatných TXT souborů. Potvrď Commit changes.
+KROK 5: Ve https://github.com/paveldiepold-alt/rohlik-kosik-monitor/actions
+        vyhledej Rohlík Košík – scan and publish; počkej na zelený dokončený běh. Pokud se nespustí, klikni na Run workflow, větev main.
+KROK 6: Obnov https://paveldiepold-alt.github.io/rohlik-kosik-monitor/ pomocí Ctrl+F5.
+
+Pokud chceš aktualizovat zvlášť druhý iOS účet ChatGPT Free, pošli mu jako přílohu PRENOS_CHATGPT_FREE_iPHONE_AKTUALIZACE_v14.txt a napiš 'Aktualizuj existující denní úlohu podle této přílohy, nevytvářej druhou.'
+
+Nemusíš měnit docs/index.html; nové kategorie se automaticky zobrazí na desktopu i v mobilních kartách. Historie ostatních kategorií zůstane zachována.
+
+Omezení: úprava není zatím nasazena do online repozitáře. Ceny se sbírají z veřejných akčních stránek, nikoliv z celého sortimentu; relevantní výrobek se objeví jen pokud se podaří získat veřejnou nabídku. Na dnešní ceny a aktuální skladovou dostupnost tato oprava nic netvrdí.
