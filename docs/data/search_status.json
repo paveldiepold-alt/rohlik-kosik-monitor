@@ -1,0 +1,760 @@
+{
+  "checked_at": "2026-10-18T18:33+02:00",
+  "coverage": {
+    "failed_queries_24h": 66,
+    "failed_query_examples": [
+      {
+        "query": "kuřecí prsní řízky",
+        "shop": "Košík",
+        "status": "search_unavailable"
+      },
+      {
+        "query": "kuřecí prsa",
+        "shop": "Košík",
+        "status": "search_unavailable"
+      },
+      {
+        "query": "kuřecí stehna",
+        "shop": "Košík",
+        "status": "search_unavailable"
+      },
+      {
+        "query": "kuřecí paličky",
+        "shop": "Košík",
+        "status": "search_unavailable"
+      },
+      {
+        "query": "vepřová krkovice",
+        "shop": "Košík",
+        "status": "search_unavailable"
+      },
+      {
+        "query": "vepřová panenka",
+        "shop": "Košík",
+        "status": "search_unavailable"
+      },
+      {
+        "query": "hovězí svíčková",
+        "shop": "Rohlík",
+        "status": "rate_limited"
+      },
+      {
+        "query": "hovězí svíčková",
+        "shop": "Košík",
+        "status": "search_unavailable"
+      },
+      {
+        "query": "LE & CO",
+        "shop": "Rohlík",
+        "status": "skipped_rate_limit"
+      },
+      {
+        "query": "LE & CO",
+        "shop": "Košík",
+        "status": "search_unavailable"
+      },
+      {
+        "query": "LE CO šunka",
+        "shop": "Rohlík",
+        "status": "skipped_rate_limit"
+      },
+      {
+        "query": "LE CO šunka",
+        "shop": "Košík",
+        "status": "search_unavailable"
+      }
+    ],
+    "queries_planned": 196,
+    "queries_checked_24h": 72,
+    "queries_responded_24h": 6,
+    "watch_rules_total": 75,
+    "watch_rules_with_search_24h": 4,
+    "by_store": {
+      "Rohlík": {
+        "planned": 98,
+        "attempted_24h": 36,
+        "responded_24h": 6
+      },
+      "Košík": {
+        "planned": 98,
+        "attempted_24h": 36,
+        "responded_24h": 0
+      }
+    },
+    "batch_queries": 72,
+    "batch_product_rows_matched": 76,
+    "batch_errors": 66,
+    "catalog_completeness_verified": false,
+    "warning": "Vyhledávací dotazy napříč katalogy, nikoli úplný export obou e-shopů. Neúplnost, blokace a změny cen jsou možné.",
+    "sale_page_fallback": {
+      "Košík": {
+        "status": "ok",
+        "cards": 473
+      }
+    }
+  },
+  "queries": {
+    "Rohlík::kuřecí prsní řízky": {
+      "checked_at": "2026-10-18T18:33+02:00",
+      "status": "ok",
+      "cards": 65,
+      "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
+      "rule_ids": [
+        "W001"
+      ]
+    },
+    "Košík::kuřecí prsní řízky": {
+      "checked_at": "2026-10-18T18:33+02:00",
+      "status": "search_unavailable",
+      "cards": 0,
+      "detail": "Nenalezeno veřejné vyhledávací pole",
+      "rule_ids": [
+        "W001"
+      ]
+    },
+    "Rohlík::kuřecí prsa": {
+      "checked_at": "2026-10-18T18:33+02:00",
+      "status": "ok",
+      "cards": 208,
+      "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
+      "rule_ids": [
+        "W001"
+      ]
+    },
+    "Košík::kuřecí prsa": {
+      "checked_at": "2026-10-18T18:33+02:00",
+      "status": "search_unavailable",
+      "cards": 0,
+      "detail": "Nenalezeno veřejné vyhledávací pole",
+      "rule_ids": [
+        "W001"
+      ]
+    },
+    "Rohlík::kuřecí stehna": {
+      "checked_at": "2026-10-18T18:33+02:00",
+      "status": "ok",
+      "cards": 29,
+      "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
+      "rule_ids": [
+        "W002"
+      ]
+    },
+    "Košík::kuřecí stehna": {
+      "checked_at": "2026-10-18T18:33+02:00",
+      "status": "search_unavailable",
+      "cards": 0,
+      "detail": "Nenalezeno veřejné vyhledávací pole",
+      "rule_ids": [
+        "W002"
+      ]
+    },
+    "Rohlík::kuřecí paličky": {
+      "checked_at": "2026-10-18T18:33+02:00",
+      "status": "ok",
+      "cards": 18,
+      "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
+      "rule_ids": [
+        "W002"
+      ]
+    },
+    "Košík::kuřecí paličky": {
+      "checked_at": "2026-10-18T18:33+02:00",
+      "status": "search_unavailable",
+      "cards": 0,
+      "detail": "Nenalezeno veřejné vyhledávací pole",
+      "rule_ids": [
+        "W002"
+      ]
+    },
+    "Rohlík::vepřová krkovice": {
+      "checked_at": "2026-10-18T18:33+02:00",
+      "status": "ok",
+      "cards": 25,
+      "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
+      "rule_ids": [
+        "W003"
+      ]
+    },
+    "Košík::vepřová krkovice": {
+      "checked_at": "2026-10-18T18:33+02:00",
+      "status": "search_unavailable",
+      "cards": 0,
+      "detail": "Nenalezeno veřejné vyhledávací pole",
+      "rule_ids": [
+        "W003"
+      ]
+    },
+    "Rohlík::vepřová panenka": {
+      "checked_at": "2026-10-18T18:33+02:00",
+      "status": "ok",
+      "cards": 120,
+      "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
+      "rule_ids": [
+        "W004"
+      ]
+    },
+    "Košík::vepřová panenka": {
+      "checked_at": "2026-10-18T18:33+02:00",
+      "status": "search_unavailable",
+      "cards": 0,
+      "detail": "Nenalezeno veřejné vyhledávací pole",
+      "rule_ids": [
+        "W004"
+      ]
+    },
+    "Rohlík::hovězí svíčková": {
+      "checked_at": "2026-10-18T18:33+02:00",
+      "status": "rate_limited",
+      "cards": 0,
+      "detail": "HTTP 429",
+      "rule_ids": [
+        "W005"
+      ]
+    },
+    "Košík::hovězí svíčková": {
+      "checked_at": "2026-10-18T18:33+02:00",
+      "status": "search_unavailable",
+      "cards": 0,
+      "detail": "Nenalezeno veřejné vyhledávací pole",
+      "rule_ids": [
+        "W005"
+      ]
+    },
+    "Rohlík::le & co": {
+      "checked_at": "2026-10-18T18:33+02:00",
+      "status": "skipped_rate_limit",
+      "cards": 0,
+      "detail": "Další dotazy pozastaveny",
+      "rule_ids": [
+        "W006"
+      ]
+    },
+    "Košík::le & co": {
+      "checked_at": "2026-10-18T18:33+02:00",
+      "status": "search_unavailable",
+      "cards": 0,
+      "detail": "Nenalezeno veřejné vyhledávací pole",
+      "rule_ids": [
+        "W006"
+      ]
+    },
+    "Rohlík::le co šunka": {
+      "checked_at": "2026-10-18T18:33+02:00",
+      "status": "skipped_rate_limit",
+      "cards": 0,
+      "detail": "Další dotazy pozastaveny",
+      "rule_ids": [
+        "W006"
+      ]
+    },
+    "Košík::le co šunka": {
+      "checked_at": "2026-10-18T18:33+02:00",
+      "status": "search_unavailable",
+      "cards": 0,
+      "detail": "Nenalezeno veřejné vyhledávací pole",
+      "rule_ids": [
+        "W006"
+      ]
+    },
+    "Rohlík::chodura": {
+      "checked_at": "2026-10-18T18:33+02:00",
+      "status": "skipped_rate_limit",
+      "cards": 0,
+      "detail": "Další dotazy pozastaveny",
+      "rule_ids": [
+        "W007",
+        "W011",
+        "W015"
+      ]
+    },
+    "Košík::chodura": {
+      "checked_at": "2026-10-18T18:33+02:00",
+      "status": "search_unavailable",
+      "cards": 0,
+      "detail": "Nenalezeno veřejné vyhledávací pole",
+      "rule_ids": [
+        "W007",
+        "W011",
+        "W015"
+      ]
+    },
+    "Rohlík::wein": {
+      "checked_at": "2026-10-18T18:33+02:00",
+      "status": "skipped_rate_limit",
+      "cards": 0,
+      "detail": "Další dotazy pozastaveny",
+      "rule_ids": [
+        "W008"
+      ]
+    },
+    "Košík::wein": {
+      "checked_at": "2026-10-18T18:33+02:00",
+      "status": "search_unavailable",
+      "cards": 0,
+      "detail": "Nenalezeno veřejné vyhledávací pole",
+      "rule_ids": [
+        "W008"
+      ]
+    },
+    "Rohlík::kostelecké": {
+      "checked_at": "2026-10-18T18:33+02:00",
+      "status": "skipped_rate_limit",
+      "cards": 0,
+      "detail": "Další dotazy pozastaveny",
+      "rule_ids": [
+        "W009",
+        "W016"
+      ]
+    },
+    "Košík::kostelecké": {
+      "checked_at": "2026-10-18T18:33+02:00",
+      "status": "search_unavailable",
+      "cards": 0,
+      "detail": "Nenalezeno veřejné vyhledávací pole",
+      "rule_ids": [
+        "W009",
+        "W016"
+      ]
+    },
+    "Rohlík::kmotr": {
+      "checked_at": "2026-10-18T18:33+02:00",
+      "status": "skipped_rate_limit",
+      "cards": 0,
+      "detail": "Další dotazy pozastaveny",
+      "rule_ids": [
+        "W010"
+      ]
+    },
+    "Košík::kmotr": {
+      "checked_at": "2026-10-18T18:33+02:00",
+      "status": "search_unavailable",
+      "cards": 0,
+      "detail": "Nenalezeno veřejné vyhledávací pole",
+      "rule_ids": [
+        "W010"
+      ]
+    },
+    "Rohlík::ponnath": {
+      "checked_at": "2026-10-18T18:33+02:00",
+      "status": "skipped_rate_limit",
+      "cards": 0,
+      "detail": "Další dotazy pozastaveny",
+      "rule_ids": [
+        "W012",
+        "W014"
+      ]
+    },
+    "Košík::ponnath": {
+      "checked_at": "2026-10-18T18:33+02:00",
+      "status": "search_unavailable",
+      "cards": 0,
+      "detail": "Nenalezeno veřejné vyhledávací pole",
+      "rule_ids": [
+        "W012",
+        "W014"
+      ]
+    },
+    "Rohlík::krahulík": {
+      "checked_at": "2026-10-18T18:33+02:00",
+      "status": "skipped_rate_limit",
+      "cards": 0,
+      "detail": "Další dotazy pozastaveny",
+      "rule_ids": [
+        "W013"
+      ]
+    },
+    "Košík::krahulík": {
+      "checked_at": "2026-10-18T18:33+02:00",
+      "status": "search_unavailable",
+      "cards": 0,
+      "detail": "Nenalezeno veřejné vyhledávací pole",
+      "rule_ids": [
+        "W013"
+      ]
+    },
+    "Rohlík::madeta": {
+      "checked_at": "2026-10-18T18:33+02:00",
+      "status": "skipped_rate_limit",
+      "cards": 0,
+      "detail": "Další dotazy pozastaveny",
+      "rule_ids": [
+        "W017",
+        "W022",
+        "W028"
+      ]
+    },
+    "Košík::madeta": {
+      "checked_at": "2026-10-18T18:33+02:00",
+      "status": "search_unavailable",
+      "cards": 0,
+      "detail": "Nenalezeno veřejné vyhledávací pole",
+      "rule_ids": [
+        "W017",
+        "W022",
+        "W028"
+      ]
+    },
+    "Rohlík::leerdammer": {
+      "checked_at": "2026-10-18T18:33+02:00",
+      "status": "skipped_rate_limit",
+      "cards": 0,
+      "detail": "Další dotazy pozastaveny",
+      "rule_ids": [
+        "W018"
+      ]
+    },
+    "Košík::leerdammer": {
+      "checked_at": "2026-10-18T18:33+02:00",
+      "status": "search_unavailable",
+      "cards": 0,
+      "detail": "Nenalezeno veřejné vyhledávací pole",
+      "rule_ids": [
+        "W018"
+      ]
+    },
+    "Rohlík::président": {
+      "checked_at": "2026-10-18T18:33+02:00",
+      "status": "skipped_rate_limit",
+      "cards": 0,
+      "detail": "Další dotazy pozastaveny",
+      "rule_ids": [
+        "W019",
+        "W025"
+      ]
+    },
+    "Košík::président": {
+      "checked_at": "2026-10-18T18:33+02:00",
+      "status": "search_unavailable",
+      "cards": 0,
+      "detail": "Nenalezeno veřejné vyhledávací pole",
+      "rule_ids": [
+        "W019",
+        "W025"
+      ]
+    },
+    "Rohlík::president plátkový sýr": {
+      "checked_at": "2026-10-18T18:33+02:00",
+      "status": "skipped_rate_limit",
+      "cards": 0,
+      "detail": "Další dotazy pozastaveny",
+      "rule_ids": [
+        "W019"
+      ]
+    },
+    "Košík::president plátkový sýr": {
+      "checked_at": "2026-10-18T18:33+02:00",
+      "status": "search_unavailable",
+      "cards": 0,
+      "detail": "Nenalezeno veřejné vyhledávací pole",
+      "rule_ids": [
+        "W019"
+      ]
+    },
+    "Rohlík::želetava": {
+      "checked_at": "2026-10-18T18:33+02:00",
+      "status": "skipped_rate_limit",
+      "cards": 0,
+      "detail": "Další dotazy pozastaveny",
+      "rule_ids": [
+        "W020"
+      ]
+    },
+    "Košík::želetava": {
+      "checked_at": "2026-10-18T18:33+02:00",
+      "status": "search_unavailable",
+      "cards": 0,
+      "detail": "Nenalezeno veřejné vyhledávací pole",
+      "rule_ids": [
+        "W020"
+      ]
+    },
+    "Rohlík::smetanito": {
+      "checked_at": "2026-10-18T18:33+02:00",
+      "status": "skipped_rate_limit",
+      "cards": 0,
+      "detail": "Další dotazy pozastaveny",
+      "rule_ids": [
+        "W020"
+      ]
+    },
+    "Košík::smetanito": {
+      "checked_at": "2026-10-18T18:33+02:00",
+      "status": "search_unavailable",
+      "cards": 0,
+      "detail": "Nenalezeno veřejné vyhledávací pole",
+      "rule_ids": [
+        "W020"
+      ]
+    },
+    "Rohlík::veselá kráva": {
+      "checked_at": "2026-10-18T18:33+02:00",
+      "status": "skipped_rate_limit",
+      "cards": 0,
+      "detail": "Další dotazy pozastaveny",
+      "rule_ids": [
+        "W021"
+      ]
+    },
+    "Košík::veselá kráva": {
+      "checked_at": "2026-10-18T18:33+02:00",
+      "status": "search_unavailable",
+      "cards": 0,
+      "detail": "Nenalezeno veřejné vyhledávací pole",
+      "rule_ids": [
+        "W021"
+      ]
+    },
+    "Rohlík::lipno tavený sýr": {
+      "checked_at": "2026-10-18T18:33+02:00",
+      "status": "skipped_rate_limit",
+      "cards": 0,
+      "detail": "Další dotazy pozastaveny",
+      "rule_ids": [
+        "W022"
+      ]
+    },
+    "Košík::lipno tavený sýr": {
+      "checked_at": "2026-10-18T18:33+02:00",
+      "status": "search_unavailable",
+      "cards": 0,
+      "detail": "Nenalezeno veřejné vyhledávací pole",
+      "rule_ids": [
+        "W022"
+      ]
+    },
+    "Rohlík::král sýrů": {
+      "checked_at": "2026-10-18T18:33+02:00",
+      "status": "skipped_rate_limit",
+      "cards": 0,
+      "detail": "Další dotazy pozastaveny",
+      "rule_ids": [
+        "W023"
+      ]
+    },
+    "Košík::král sýrů": {
+      "checked_at": "2026-10-18T18:33+02:00",
+      "status": "search_unavailable",
+      "cards": 0,
+      "detail": "Nenalezeno veřejné vyhledávací pole",
+      "rule_ids": [
+        "W023"
+      ]
+    },
+    "Rohlík::král sýrů hermelín": {
+      "checked_at": "2026-10-18T18:33+02:00",
+      "status": "skipped_rate_limit",
+      "cards": 0,
+      "detail": "Další dotazy pozastaveny",
+      "rule_ids": [
+        "W023"
+      ]
+    },
+    "Košík::král sýrů hermelín": {
+      "checked_at": "2026-10-18T18:33+02:00",
+      "status": "search_unavailable",
+      "cards": 0,
+      "detail": "Nenalezeno veřejné vyhledávací pole",
+      "rule_ids": [
+        "W023"
+      ]
+    },
+    "Rohlík::sedlčanský": {
+      "checked_at": "2026-10-18T18:33+02:00",
+      "status": "skipped_rate_limit",
+      "cards": 0,
+      "detail": "Další dotazy pozastaveny",
+      "rule_ids": [
+        "W024"
+      ]
+    },
+    "Košík::sedlčanský": {
+      "checked_at": "2026-10-18T18:33+02:00",
+      "status": "search_unavailable",
+      "cards": 0,
+      "detail": "Nenalezeno veřejné vyhledávací pole",
+      "rule_ids": [
+        "W024"
+      ]
+    },
+    "Rohlík::galbani": {
+      "checked_at": "2026-10-18T18:33+02:00",
+      "status": "skipped_rate_limit",
+      "cards": 0,
+      "detail": "Další dotazy pozastaveny",
+      "rule_ids": [
+        "W026"
+      ]
+    },
+    "Košík::galbani": {
+      "checked_at": "2026-10-18T18:33+02:00",
+      "status": "search_unavailable",
+      "cards": 0,
+      "detail": "Nenalezeno veřejné vyhledávací pole",
+      "rule_ids": [
+        "W026"
+      ]
+    },
+    "Rohlík::galbani mozzarella": {
+      "checked_at": "2026-10-18T18:33+02:00",
+      "status": "skipped_rate_limit",
+      "cards": 0,
+      "detail": "Další dotazy pozastaveny",
+      "rule_ids": [
+        "W026"
+      ]
+    },
+    "Košík::galbani mozzarella": {
+      "checked_at": "2026-10-18T18:33+02:00",
+      "status": "search_unavailable",
+      "cards": 0,
+      "detail": "Nenalezeno veřejné vyhledávací pole",
+      "rule_ids": [
+        "W026"
+      ]
+    },
+    "Rohlík::hellmann": {
+      "checked_at": "2026-10-18T18:33+02:00",
+      "status": "skipped_rate_limit",
+      "cards": 0,
+      "detail": "Další dotazy pozastaveny",
+      "rule_ids": [
+        "W027"
+      ]
+    },
+    "Košík::hellmann": {
+      "checked_at": "2026-10-18T18:33+02:00",
+      "status": "search_unavailable",
+      "cards": 0,
+      "detail": "Nenalezeno veřejné vyhledávací pole",
+      "rule_ids": [
+        "W027"
+      ]
+    },
+    "Rohlík::hellmann majonéza": {
+      "checked_at": "2026-10-18T18:33+02:00",
+      "status": "skipped_rate_limit",
+      "cards": 0,
+      "detail": "Další dotazy pozastaveny",
+      "rule_ids": [
+        "W027"
+      ]
+    },
+    "Košík::hellmann majonéza": {
+      "checked_at": "2026-10-18T18:33+02:00",
+      "status": "search_unavailable",
+      "cards": 0,
+      "detail": "Nenalezeno veřejné vyhledávací pole",
+      "rule_ids": [
+        "W027"
+      ]
+    },
+    "Rohlík::madeta máslo": {
+      "checked_at": "2026-10-18T18:33+02:00",
+      "status": "skipped_rate_limit",
+      "cards": 0,
+      "detail": "Další dotazy pozastaveny",
+      "rule_ids": [
+        "W028"
+      ]
+    },
+    "Košík::madeta máslo": {
+      "checked_at": "2026-10-18T18:33+02:00",
+      "status": "search_unavailable",
+      "cards": 0,
+      "detail": "Nenalezeno veřejné vyhledávací pole",
+      "rule_ids": [
+        "W028"
+      ]
+    },
+    "Rohlík::hera": {
+      "checked_at": "2026-10-18T18:33+02:00",
+      "status": "skipped_rate_limit",
+      "cards": 0,
+      "detail": "Další dotazy pozastaveny",
+      "rule_ids": [
+        "W029"
+      ]
+    },
+    "Košík::hera": {
+      "checked_at": "2026-10-18T18:33+02:00",
+      "status": "search_unavailable",
+      "cards": 0,
+      "detail": "Nenalezeno veřejné vyhledávací pole",
+      "rule_ids": [
+        "W029"
+      ]
+    },
+    "Rohlík::omega": {
+      "checked_at": "2026-10-18T18:33+02:00",
+      "status": "skipped_rate_limit",
+      "cards": 0,
+      "detail": "Další dotazy pozastaveny",
+      "rule_ids": [
+        "W030"
+      ]
+    },
+    "Košík::omega": {
+      "checked_at": "2026-10-18T18:33+02:00",
+      "status": "search_unavailable",
+      "cards": 0,
+      "detail": "Nenalezeno veřejné vyhledávací pole",
+      "rule_ids": [
+        "W030"
+      ]
+    },
+    "Rohlík::rama": {
+      "checked_at": "2026-10-18T18:33+02:00",
+      "status": "skipped_rate_limit",
+      "cards": 0,
+      "detail": "Další dotazy pozastaveny",
+      "rule_ids": [
+        "W031"
+      ]
+    },
+    "Košík::rama": {
+      "checked_at": "2026-10-18T18:33+02:00",
+      "status": "search_unavailable",
+      "cards": 0,
+      "detail": "Nenalezeno veřejné vyhledávací pole",
+      "rule_ids": [
+        "W031"
+      ]
+    },
+    "Rohlík::flora": {
+      "checked_at": "2026-10-18T18:33+02:00",
+      "status": "skipped_rate_limit",
+      "cards": 0,
+      "detail": "Další dotazy pozastaveny",
+      "rule_ids": [
+        "W032"
+      ]
+    },
+    "Košík::flora": {
+      "checked_at": "2026-10-18T18:33+02:00",
+      "status": "search_unavailable",
+      "cards": 0,
+      "detail": "Nenalezeno veřejné vyhledávací pole",
+      "rule_ids": [
+        "W032"
+      ]
+    },
+    "Rohlík::aquila": {
+      "checked_at": "2026-10-18T18:33+02:00",
+      "status": "skipped_rate_limit",
+      "cards": 0,
+      "detail": "Další dotazy pozastaveny",
+      "rule_ids": [
+        "W033"
+      ]
+    },
+    "Košík::aquila": {
+      "checked_at": "2026-10-18T18:33+02:00",
+      "status": "search_unavailable",
+      "cards": 0,
+      "detail": "Nenalezeno veřejné vyhledávací pole",
+      "rule_ids": [
+        "W033"
+      ]
+    }
+  }
+}
