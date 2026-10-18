@@ -1,14 +1,24 @@
 {
   "date": "2026-10-18",
-  "checked_at": "2026-10-18T17:37+02:00",
+  "checked_at": "2026-10-18T18:02+02:00",
   "sources": {
     "Rohlík": {
       "status": "ok",
-      "cards": 171
+      "cards": 473,
+      "scroll_rounds": 52,
+      "load_more_clicks": 44,
+      "sample_is_complete": false,
+      "reason": "Další nové karty se již nenačítají; úplnost není prokázána",
+      "cards_found": 473
     },
     "Košík": {
       "status": "ok",
-      "cards": 126
+      "cards": 126,
+      "scroll_rounds": 16,
+      "load_more_clicks": 0,
+      "sample_is_complete": false,
+      "reason": "Další nové karty se již nenačítají; úplnost není prokázána",
+      "cards_found": 126
     }
   },
   "source_urls": {
@@ -16,10 +26,10 @@
     "Košík": "https://www.kosik.cz/s1-akce"
   },
   "product_details": {
-    "visited": 9,
-    "filled": 9,
+    "visited": 15,
+    "filled": 13,
     "errors": 0,
-    "photos_cached": 9
+    "photos_cached": 13
   },
   "delivery": {
     "postal_code": "149 00",
@@ -116,10 +126,10 @@
       "category": "Majonézy",
       "rule_id": "W027",
       "note": "",
-      "image_url": "data/images/3dd7edd6e573fef96f48b0.webp",
+      "image_url": "",
       "unit_price": 156.67,
       "unit_label": "Kč/l",
-      "detail_source": "detail page"
+      "detail_source": "listing"
     },
     {
       "shop": "Košík",
@@ -139,10 +149,56 @@
       "category": "Papírové utěrky",
       "rule_id": "W074",
       "note": "Jakákoliv značka; pouze jednorázové papírové kuchyňské utěrky/role, nikoli textilní, vlhčené nebo čisticí hadříky.",
-      "image_url": "data/images/60e9d814b68df5e5aebd76.webp",
+      "image_url": "",
       "unit_price": null,
       "unit_label": "",
       "detail_source": ""
+    },
+    {
+      "shop": "Rohlík",
+      "name": "Leerdammer Caractére plátky, 125 g, -38 % do 19. 10., , 39,90 Kč, 319,20 Kč/kg",
+      "url": "https://www.rohlik.cz/1474651-leerdammer-caractere-platky",
+      "price": 64.9,
+      "discount_pct": 38,
+      "old_price": null,
+      "brand": "Leerdammer",
+      "favorite": true,
+      "quantity": "125 g",
+      "terms": "akce",
+      "comparable_group": "auto:leerdammer caractere platky 125 g 38 do 19 10 39 90 kc 319 20 kc kg | 125 g",
+      "other_shop_price": null,
+      "other_shop_url": "",
+      "other_shop": "",
+      "category": "Sýry / plátkové",
+      "rule_id": "W018",
+      "note": "",
+      "image_url": "data/images/4955808ca4feae831e4dd3.webp",
+      "unit_price": 519.2,
+      "unit_label": "Kč/kg",
+      "detail_source": "detail page"
+    },
+    {
+      "shop": "Rohlík",
+      "name": "Leerdammer Delacréme plátky, 125 g, -38 % do 19. 10., , 39,90 Kč, 319,20 Kč/kg",
+      "url": "https://www.rohlik.cz/1474650-leerdammer-delacreme-platky",
+      "price": 64.9,
+      "discount_pct": 38,
+      "old_price": null,
+      "brand": "Leerdammer",
+      "favorite": true,
+      "quantity": "125 g",
+      "terms": "akce",
+      "comparable_group": "auto:leerdammer delacreme platky 125 g 38 do 19 10 39 90 kc 319 20 kc kg | 125 g",
+      "other_shop_price": null,
+      "other_shop_url": "",
+      "other_shop": "",
+      "category": "Sýry / plátkové",
+      "rule_id": "W018",
+      "note": "",
+      "image_url": "data/images/a05c7442b118e352ca3099.webp",
+      "unit_price": 519.2,
+      "unit_label": "Kč/kg",
+      "detail_source": "detail page"
     },
     {
       "shop": "Rohlík",
@@ -169,6 +225,29 @@
     },
     {
       "shop": "Rohlík",
+      "name": "Flora Light, 400 g, -33 % do 19. 10., , 54,90 Kč, 137,25 Kč/kg",
+      "url": "https://www.rohlik.cz/761833-flora-light",
+      "price": 82.4,
+      "discount_pct": 33,
+      "old_price": null,
+      "brand": "Flora",
+      "favorite": true,
+      "quantity": "400 g",
+      "terms": "akce",
+      "comparable_group": "auto:flora light 400 g 33 do 19 10 54 90 kc 137 25 kc kg | 400 g",
+      "other_shop_price": null,
+      "other_shop_url": "",
+      "other_shop": "",
+      "category": "Másla a tuky",
+      "rule_id": "W032",
+      "note": "Rostlinný/ztužený tuk, není klasické máslo.",
+      "image_url": "data/images/370d38a516520ce474f983.webp",
+      "unit_price": 206.0,
+      "unit_label": "Kč/kg",
+      "detail_source": "detail page"
+    },
+    {
+      "shop": "Rohlík",
       "name": "Flora Original, 400 g, -33 % do 19. 10., , 54,90 Kč, 137,25 Kč/kg",
       "url": "https://www.rohlik.cz/726425-flora-original",
       "price": 82.4,
@@ -187,6 +266,75 @@
       "note": "Rostlinný/ztužený tuk, není klasické máslo.",
       "image_url": "data/images/0b218afcd700b384efa366.webp",
       "unit_price": 206.0,
+      "unit_label": "Kč/kg",
+      "detail_source": "detail page"
+    },
+    {
+      "shop": "Rohlík",
+      "name": "Avokádo Pepř barevný celý, 20 g, -28 % do 19. 10., , 19,90 Kč, 995,00 Kč/kg",
+      "url": "https://www.rohlik.cz/1404241-avokado-pepr-barevny-cely",
+      "price": 27.9,
+      "discount_pct": 28,
+      "old_price": null,
+      "brand": "Avokádo",
+      "favorite": true,
+      "quantity": "20 g",
+      "terms": "akce",
+      "comparable_group": "auto:avokado pepr barevny cely 20 g 28 do 19 10 19 90 kc 995 00 kc kg | 20 g",
+      "other_shop_price": null,
+      "other_shop_url": "",
+      "other_shop": "",
+      "category": "Ovoce",
+      "rule_id": "W037",
+      "note": "",
+      "image_url": "data/images/b12f8f12dc421faa77a1ae.webp",
+      "unit_price": 1395.0,
+      "unit_label": "Kč/kg",
+      "detail_source": "detail page"
+    },
+    {
+      "shop": "Rohlík",
+      "name": "Campese Kuřecí vykostěná stehna z volného chovu, cca 290 g, -27 % pro vás, , 117,69 Kč, 399,90 Kč/kg",
+      "url": "https://www.rohlik.cz/1482633-campese-kureci-vykostena-stehna-z-volneho-chovu",
+      "price": 161.84,
+      "discount_pct": 27,
+      "old_price": null,
+      "brand": "Kuřecí stehna (syrová)",
+      "favorite": true,
+      "quantity": "290 g",
+      "terms": "akce",
+      "comparable_group": "auto:campese kureci vykostena stehna z volneho chovu cca 290 g 27 pro vas 117 69 kc 399 90 kc kg | 290 g",
+      "other_shop_price": null,
+      "other_shop_url": "",
+      "other_shop": "",
+      "category": "Maso",
+      "rule_id": "W002",
+      "note": "",
+      "image_url": "data/images/a660a6c2f0534c51ae3c94.webp",
+      "unit_price": 558.07,
+      "unit_label": "Kč/kg",
+      "detail_source": "listing"
+    },
+    {
+      "shop": "Rohlík",
+      "name": "Leerdammer Lightlife sýr plátky, 100 g, -27 % do 19. 10., , 37,90 Kč, 379,00 Kč/kg",
+      "url": "https://www.rohlik.cz/1289779-leerdammer-lightlife-syr-platky",
+      "price": 52.4,
+      "discount_pct": 27,
+      "old_price": null,
+      "brand": "Leerdammer",
+      "favorite": true,
+      "quantity": "100 g",
+      "terms": "akce",
+      "comparable_group": "auto:leerdammer lightlife syr platky 100 g 27 do 19 10 37 90 kc 379 00 kc kg | 100 g",
+      "other_shop_price": null,
+      "other_shop_url": "",
+      "other_shop": "",
+      "category": "Sýry / plátkové",
+      "rule_id": "W018",
+      "note": "",
+      "image_url": "data/images/9997dc7789059e9fbdd273.webp",
+      "unit_price": 524.0,
       "unit_label": "Kč/kg",
       "detail_source": "detail page"
     },
@@ -239,11 +387,36 @@
   ],
   "changes": [
     {
-      "url": "https://www.kosik.cz/p2967-linteo-classic-kuchynske-uterky-2vrstve-2-role",
+      "url": "https://www.rohlik.cz/1474651-leerdammer-caractere-platky",
       "kind": "newly_observed",
-      "price": 19.9
+      "price": 64.9
+    },
+    {
+      "url": "https://www.rohlik.cz/1474650-leerdammer-delacreme-platky",
+      "kind": "newly_observed",
+      "price": 64.9
+    },
+    {
+      "url": "https://www.rohlik.cz/761833-flora-light",
+      "kind": "newly_observed",
+      "price": 82.4
+    },
+    {
+      "url": "https://www.rohlik.cz/1404241-avokado-pepr-barevny-cely",
+      "kind": "newly_observed",
+      "price": 27.9
+    },
+    {
+      "url": "https://www.rohlik.cz/1482633-campese-kureci-vykostena-stehna-z-volneho-chovu",
+      "kind": "newly_observed",
+      "price": 161.84
+    },
+    {
+      "url": "https://www.rohlik.cz/1289779-leerdammer-lightlife-syr-platky",
+      "kind": "newly_observed",
+      "price": 52.4
     }
   ],
   "demo": false,
-  "disclaimer": "Veřejný vzorek, ne úplný katalog; PSČ je zadáno pouze jako preference (neověřené lokální ceny a dostupnost); množstevní slevy podmíněné."
+  "disclaimer": "Veřejný NEÚPLNÝ vzorek; ne úplný katalog; PSČ je zadáno pouze jako preference (neověřené lokální ceny a dostupnost); množstevní slevy podmíněné."
 }
