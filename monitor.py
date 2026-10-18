@@ -50,6 +50,11 @@ class Offer:
     category: str = ""
     rule_id: str = ""
     note: str = ""
+    # Additional product metadata. Missing values are never guessed.
+    image_url: str = ""
+    unit_price: float | None = None
+    unit_label: str = ""   # Kč/l or Kč/kg, only when pack volume is certain
+    detail_source: str = ""   # listing / product page
 
 
 def normalized(s: str) -> str:
@@ -355,6 +360,98 @@ def quantity_of(name: str, context: str) -> str:
     return (m.group(1).replace(",", ".") + " " + m.group(2).lower()) if m else ""
 
 
+def safe_image_url(raw: str, base: str = "") -> str:
+    """Only HTTPS product image URL; ignore placeholders and data blobs."""
+    if not isinstance(raw, str) or not raw:
+        return ""
+    try:
+        url = urljoin(base, raw.strip())
+        parsed = urlparse(url)
+        if parsed.scheme != "https" or not parsed.hostname or len(url) > 1300:
+            return ""
+        if parsed.path.lower().endswith((".svg", ".gif")):
+            return ""
+        return url
+    except ValueError:
+        return ""
+
+
+def precise_pack(text: str) -> str:
+    """Find one explicit, defensible capacity/weight; no guesses from product type.
+
+    A near-title snippet (or a product-detail field) must be passed instead of
+    arbitrary page text which might contain related products' capacities.
+    """
+    if not isinstance(text, str):
+        return ""
+    text = text.replace("\xa0", " ").replace("\u202f", " ")
+    # Avoid treating unit prices as the item size: 119,84 Kč/l.
+    text = re.sub(r"\d+(?:[.,]\d+)?\s*Kč\s*/\s*(?:l|kg|100\s*g)", "", text, flags=re.I)
+    m = SIZE_PATTERN.search(text)
+    if not m:
+        return ""
+    amount = m.group(1).replace(",", ".")
+    unit = m.group(2).lower()
+    try:
+        v = float(amount)
+    except ValueError:
+        return ""
+    if v <= 0 or (unit == "ks" and v > 10000):
+        return ""
+    return f"{v:g} {unit}".replace(".", ",")
+
+
+def size_from_listing(name: str, row: dict) -> str:
+    """Prefer the name or product-specific size over cart count / price labels."""
+    explicit = precise_pack(name)
+    if explicit:
+        return explicit
+    direct = precise_pack(row.get("size", ""))
+    if direct:
+        return direct
+    text = row.get("card", "")
+    # Size usually follows product name in the card. Other numbers or sizes
+    # elsewhere in multi-product page must never become its packaging size.
+    pos = text.casefold().find(name.casefold())
+    if pos >= 0:
+        tail = text[pos+len(name):pos+len(name)+85]
+        return precise_pack(tail.split("\n", 3)[0]) or precise_pack(tail[:35])
+    return ""
+
+
+def quantity_base(quantity: str) -> tuple[float, str] | None:
+    """Only SINGLE units; multi-packs cannot use single-bottle denominators."""
+    if re.search(r"\d\s*[x×]\s*\d", quantity, flags=re.I):
+        return None
+    m = SIZE_PATTERN.fullmatch(quantity.strip())
+    if not m:
+        return None
+    amount = float(m.group(1).replace(",", "."))
+    unit = m.group(2).lower()
+    if unit == "ml": return (amount/1000, "l")
+    if unit == "l": return (amount, "l")
+    if unit == "g": return (amount/1000, "kg")
+    if unit == "kg": return (amount, "kg")
+    return None
+
+
+def set_unit_price(offer: Offer) -> None:
+    if not offer.quantity:
+        return
+    # Do not confuse multi-packs with individual units: include the only
+    # reliably known packaging quantity when computing a unit price.
+    source = offer.name
+    if re.search(r"\d\s*[x×]\s*\d+(?:[,.]\d+)?\s*(?:ml|l|kg|g)\b", source, re.I):
+        offer.unit_price, offer.unit_label = None, ""
+        return
+    sized = quantity_base(offer.quantity)
+    if sized:
+        number, unit = sized
+        if number > 0:
+            offer.unit_price = round(offer.price/number, 2)
+            offer.unit_label = "Kč/"+unit
+
+
 def parse_card(shop: str, row: dict, config: dict) -> Offer | None:
     url = row.get("url", "")
     if urlparse(url).netloc not in ("www.rohlik.cz", "rohlik.cz", "www.kosik.cz", "kosik.cz"):
@@ -415,10 +512,13 @@ def parse_card(shop: str, row: dict, config: dict) -> Offer | None:
     note = matched_rule.get("note", "") if matched_rule else ""
     if category in BEVERAGE_SIZES and not any(term_matches(normalized(name), term) for term in ("pet", "plastov*", "plast", "plastova*")):
         note = (note + " ").strip() + " PET obal je podle velikosti pravděpodobný, ale z názvu neověřený."
-    return Offer(shop, name, url, price, discount, old_price, brand or label or "Oblíbené", fav,
-                 quantity_of(name, snippet), terms,
-                 category=category, rule_id=matched_rule.get("id", "") if matched_rule else "",
-                 note=note)
+    qty = size_from_listing(name, row)
+    offer = Offer(shop, name, url, price, discount, old_price, brand or label or "Oblíbené", fav,
+                  qty, terms, category=category, rule_id=matched_rule.get("id", "") if matched_rule else "",
+                  note=note, image_url=safe_image_url(row.get("image_url", ""), url),
+                  detail_source="listing" if qty else "")
+    set_unit_price(offer)
+    return offer
 
 
 def classify_rows(shop: str, rows: list[dict], config: dict) -> list[Offer]:
@@ -447,7 +547,19 @@ EXTRACT_JS = r"""() => {
     }
     if (!selected) continue;
     const card=(selected.innerText||'').trim();
-    const imgAlt=(a.querySelector('img')?.alt || selected.querySelector('img')?.alt || '').trim();
+    const cardAnchors=[...selected.querySelectorAll('a[href]')].filter(link=>{
+      try{return rx.test(new URL(link.href).pathname);}catch{return false;}
+    });
+    // Image must belong to THIS anchor: don't use neighbour's image in
+    // a broader discount panel with several different products.
+    const photo=a.querySelector('img') || (cardAnchors.length===1 ? selected.querySelector('img') : null);
+    const imgAlt=(photo?.alt || '').trim();
+    let imageUrl='';
+    if(photo){
+      const candidates=[photo.currentSrc, photo.getAttribute('data-src'), photo.getAttribute('src'),
+                        (photo.getAttribute('srcset')||'').split(',')[0].trim().split(/\s+/)[0]];
+      imageUrl=candidates.find(u=>u && /^https?:|^\//i.test(u)) || '';
+    }
     const title=(a.getAttribute('title')||a.getAttribute('aria-label')||'').trim();
     const raw=(a.innerText||'').trim();
     // Prefer image alt / semantic label. Anchor text may contain price and a
@@ -466,7 +578,7 @@ EXTRACT_JS = r"""() => {
     let current='';
     const priceElt=selected.querySelector('[data-testid*="price"], [class*="currentPrice"], [class*="Price_current"], [class*="salePrice"]');
     if (priceElt) current=(priceElt.innerText||'').trim().slice(0,35);
-    items.push({url:a.href,name,card,current_price:current,old_price:(old?.innerText||'').trim()});
+    items.push({url:a.href,name,card,current_price:current,old_price:(old?.innerText||'').trim(),image_url:imageUrl});
   }
   return items;
 }"""
@@ -503,6 +615,92 @@ def fetch_shop(shop: str, url: str, max_items: int) -> tuple[list[dict], str]:
             browser.close()
 
 
+# Read *visible product detail page* when listing omits packaging or photo.
+# Never use a free-text page-wide regex: related items might have other sizes.
+DETAIL_JS = r"""() => {
+  const h=document.querySelector('h1');
+  const heading=(h?.innerText||'').trim();
+  const near=(h?.parentElement?.innerText||'').trim().slice(0,240);
+  const meta=document.querySelector('meta[property="og:image"]')?.content || '';
+  const ogTitle=document.querySelector('meta[property="og:title"]')?.content || '';
+  // First capacity right next to the main product heading, not in a gallery.
+  const sizePattern=/(?<!\d)(\d+(?:[.,]\d+)?)\s*(ml|l|kg|g|ks)\b/i;
+  let size='';
+  if(heading){
+    const inHeading=heading.match(sizePattern);
+    if(inHeading) size=inHeading[0];
+    if(!size && near.toLocaleLowerCase('cs').startsWith(heading.toLocaleLowerCase('cs'))){
+      const tail=near.slice(heading.length).trim().slice(0,80);
+      const firstLine=tail.split('\n').map(x=>x.trim()).filter(Boolean)[0] || '';
+      const m=firstLine.match(sizePattern);
+      if(m && m.index <= 10) size=m[0];
+    }
+  }
+  // Detail image is taken from the product's meta image or main product photo.
+  const img=(document.querySelector('main img[alt]') || document.querySelector('img[alt]'));
+  return {heading, og_title:ogTitle, size, image_url:meta || img?.currentSrc || img?.src || ''};
+}"""
+
+
+def detail_belongs_to_offer(heading: str, offer_name: str) -> bool:
+    """Guard against redirect to generic landing pages and wrong variants."""
+    a, b = normalized(heading), normalized(offer_name)
+    # A product title may add/remove "Original" or a pack suffix, so check
+    # meaningful product tokens instead of exact string equality.
+    wa = set(a.split()); wb = set(b.split());
+    return bool(wa and wb and len(wa & wb) >= max(1, min(2, len(wb))))
+
+
+def apply_detail(offer: Offer, detail: dict) -> None:
+    """Attach only metadata that is provably from the right product page."""
+    if not isinstance(detail, dict):
+        return
+    if not detail_belongs_to_offer(detail.get("heading", ""), offer.name):
+        return
+    size = precise_pack(detail.get("size", ""))
+    if size:
+        offer.quantity = size
+        offer.detail_source = "detail page"
+    if not offer.image_url:
+        offer.image_url = safe_image_url(detail.get("image_url", ""), offer.url)
+    set_unit_price(offer)
+
+
+def enrich_from_product_pages(offers: list[Offer], cfg: dict) -> dict:
+    """Best-effort pack sizes and picture URLs, never blocking the entire scan.
+
+    Browser detail requests are capped. If a shop blocks access, preserve
+    verified listing data and leave uncertain fields blank. Price is NEVER
+    changed from its sale-card value during enrichment.
+    """
+    max_pages = max(0, min(65, int(cfg.get("detail_max_per_run", 40))))
+    candidates = [o for o in offers if not o.quantity or not o.image_url]
+    candidates.sort(key=lambda o: (not o.favorite, bool(o.quantity), bool(o.image_url)))
+    count=0; filled=0; errors=0
+    if not candidates or not max_pages:
+        return {"visited": 0, "filled": 0, "errors": 0}
+    from playwright.sync_api import sync_playwright
+    with sync_playwright() as p:
+        browser=p.chromium.launch(headless=True, args=["--no-sandbox"])
+        page=browser.new_page(locale="cs-CZ", timezone_id="Europe/Prague", viewport={"width":1280,"height":920})
+        try:
+            for offer in candidates[:max_pages]:
+                count+=1
+                try:
+                    resp=page.goto(offer.url, wait_until="domcontentloaded", timeout=13500)
+                    if not resp or resp.status >= 400:
+                        errors+=1;continue
+                    page.wait_for_timeout(350)
+                    before=(offer.quantity,offer.image_url)
+                    apply_detail(offer,page.evaluate(DETAIL_JS))
+                    if before != (offer.quantity, offer.image_url):filled+=1
+                except Exception:
+                    errors+=1
+        finally:
+            browser.close()
+    return {"visited":count,"filled":filled,"errors":errors}
+
+
 def comparison_key(name: str, quantity: str) -> str:
     """Conservative match; manual aliases override automatically."""
     n = normalized(name)
@@ -527,6 +725,17 @@ def add_comparisons(offers: list[Offer], pairs: list[dict]) -> None:
         if len(group) != 2 or len(shops) != 2:
             continue  # Never compare ambiguous or non-identical items.
         a, b = group
+        if a.quantity and b.quantity:
+            sa, sb = quantity_base(a.quantity), quantity_base(b.quantity)
+            if sa and sb and (sa[1] != sb[1] or abs(sa[0] - sb[0]) > 0.00001):
+                continue  # Never compare different pack sizes (e.g. 405 vs 625 ml).
+            if (not sa or not sb) and normalized(a.quantity) != normalized(b.quantity):
+                continue
+        elif a.quantity != b.quantity:
+            continue
+        # Auto-matching same generic title without an explicit volume is unsafe.
+        if a.comparable_group.startswith('auto:') and not a.quantity:
+            continue
         if a.terms != b.terms:
             continue  # Conditional prices not equivalent to ordinary discounts.
         a.other_shop_price, a.other_shop_url, a.other_shop = b.price, b.url, b.shop
@@ -581,7 +790,7 @@ def build_report(snapshot: dict) -> str:
         lines.append("Žádná ověřená nabídka v dostupném vzorku; neznamená to, že žádná sleva neexistuje.")
     for o in offers[:80]:
         comp = f" | druhý obchod: {o.other_shop} {o.other_shop_price:.2f} Kč" if o.other_shop_price is not None else " | bez ověřeného páru"
-        lines.append(f"{'★ ' if o.favorite else ''}{o.category or o.brand} | {o.shop} | {o.name} | {o.price:.2f} Kč | -{o.discount_pct}% | {o.terms}{comp} | {o.url}" + (f" | POZN.: {o.note}" if o.note else ""))
+        lines.append(f"{'★ ' if o.favorite else ''}{o.category or o.brand} | {o.shop} | {o.name}" + (f" | balení: {o.quantity}" if o.quantity else " | balení: neuvedeno") + f" | {o.price:.2f} Kč | -{o.discount_pct}% | {o.terms}{comp} | {o.url}" + (f" | POZN.: {o.note}" if o.note else ""))
     if len(offers) > 80:
         lines.append(f"Dalších {len(offers) - 80} položek pouze na webovém dashboardu.")
     lines.extend(["Zdroje:"] + [f"{k}: {v}" for k, v in snapshot["source_urls"].items()])
@@ -635,6 +844,14 @@ def main() -> int:
     offers = []
     for shop, rows in rows_by_shop.items():
         offers.extend(classify_rows(shop, rows, cfg))
+    # Product cards often omit capacity from the short title (e.g. 625 ml
+    # Hellmann's Mayonnaise). Read the detail page for offers lacking size/photo.
+    enrich_status = {"visited": 0, "filled": 0, "errors": 0}
+    if not args.demo and offers:
+        try:
+            enrich_status = enrich_from_product_pages(offers, cfg)
+        except Exception as exc:
+            enrich_status["note"] = f"Detail pages unavailable: {type(exc).__name__}"
     # Repair historical false positives as well, so past days do not keep
     # listing juice/yogurt/sweets as fresh fruit or vegetables.
     if not args.demo:
@@ -643,7 +860,7 @@ def main() -> int:
     add_comparisons(offers, cfg.get("canonical_pairs", []))
     offers.sort(key=lambda o: (not o.favorite, -o.discount_pct, o.brand, o.name))
     snapshot = {"date": now.date().isoformat(), "checked_at": now.isoformat(timespec="minutes"),
-                "sources": statuses, "source_urls": cfg["sources"],
+                "sources": statuses, "source_urls": cfg["sources"], "product_details": enrich_status,
                 "delivery": cfg.get("delivery", {}), "postcode_specific_prices_verified": False,
                 "offers": [asdict(o) for o in offers],
                 "changes": compare_changes(offers, previous),
