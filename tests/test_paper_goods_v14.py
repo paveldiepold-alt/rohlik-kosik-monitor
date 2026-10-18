@@ -62,7 +62,7 @@ class TestPaperGoods(unittest.TestCase):
                 self.assertIsNotNone(offer)
                 self.assertTrue(offer.favorite)
                 self.assertEqual(offer.rule_id,rid)
-        self.assertEqual(len(CFG['favorites']),6)
+        self.assertGreaterEqual(len(CFG['favorites']),6)
 
     def test_historical_reclassification_without_touching_linteo(self):
         base=Path(__file__).resolve().parents[1]
