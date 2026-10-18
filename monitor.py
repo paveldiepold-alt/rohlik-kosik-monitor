@@ -943,6 +943,50 @@ def cache_product_photo(offer: Offer, page, detail: dict | None = None) -> bool:
                     return True
     except Exception:
         pass
+    # Košík sometimes paints its hero picture as a CSS background or a
+    # <picture> wrapper, rather than a plain <img>. Screenshot only a strong
+    # image/gallery candidate on the EXACT product detail page. Avoid carousels
+    # and cross-sells outside the main product section.
+    try:
+        chosen=page.evaluate(r"""() => {
+          const h=document.querySelector('main h1') || document.querySelector('h1');
+          const main=document.querySelector('main');
+          if(!h || !main) return false;
+          const title=h.getBoundingClientRect();
+          const nodes=[...main.querySelectorAll('picture, [class*="gallery"], [class*="Gallery"], [class*="productImage"], [class*="ProductImage"], [style*="background-image"]')];
+          const viable=[];
+          for(const el of nodes){
+            const r=el.getBoundingClientRect();
+            if(r.width<135 || r.height<125 || r.width>1050 || r.height>900 || r.top < -15 || r.top>1000) continue;
+            if(r.left>title.left+40 || r.bottom<title.top-380 || r.top>title.bottom+320) continue;
+            const type=(String(el.className||'')+' '+String(el.id||'')).toLowerCase();
+            const bg=getComputedStyle(el).backgroundImage;
+            const imageLike=bg && bg!=='none' || el.querySelector('img, source') || /gallery|product.?image|product.?photo/.test(type);
+            if(!imageLike)continue;
+            let score=(r.width*r.height)/2000 - Math.abs(r.top-title.top)/8;
+            if(/gallery|product.?image/.test(type))score+=75;
+            if(r.right<=title.left+40)score+=35;
+            viable.push({el,score});
+          }
+          viable.sort((a,b)=>b.score-a.score);
+          if(!viable.length)return false;
+          viable[0].el.setAttribute('data-rk-css-photo','1');
+          return true;
+        }""")
+        if chosen:
+            thumb=page.locator('[data-rk-css-photo="1"]').first.screenshot(timeout=3400)
+            from PIL import ImageStat
+            with Image.open(io.BytesIO(thumb)) as im:
+                im=im.convert('RGB')
+                std=ImageStat.Stat(im.resize((30,30))).stddev
+                # Reject plain white/grey boxes and empty skeleton loaders.
+                if im.width>=135 and im.height>=125 and max(std)>15:
+                    im.thumbnail((144,160),Image.Resampling.LANCZOS)
+                    im.save(path,format='WEBP',quality=76,method=4)
+                    offer.image_url='data/images/'+path.name
+                    return True
+    except Exception:
+        pass
     # An uncacheable remote URL is not a working thumbnail on Pages.
     # Expose a neutral icon rather than broken image or a wrong product.
     offer.image_url=''
@@ -1000,7 +1044,7 @@ def enrich_from_product_pages(offers: list[Offer], cfg: dict) -> dict:
                     if not resp or resp.status >= 400:
                         offer.image_url=''
                         errors+=1;continue
-                    page.wait_for_timeout(350)
+                    page.wait_for_timeout(1000)
                     before=(offer.quantity,offer.image_url)
                     detail=page.evaluate(DETAIL_JS)
                     apply_detail(offer,detail)
