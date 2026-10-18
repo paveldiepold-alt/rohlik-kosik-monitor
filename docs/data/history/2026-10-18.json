@@ -1,10 +1,10 @@
 {
   "date": "2026-10-18",
-  "checked_at": "2026-10-18T16:00+02:00",
+  "checked_at": "2026-10-18T16:15+02:00",
   "sources": {
     "Rohlík": {
       "status": "ok",
-      "cards": 157
+      "cards": 156
     },
     "Košík": {
       "status": "ok",
@@ -16,8 +16,8 @@
     "Košík": "https://www.kosik.cz/s1-akce"
   },
   "product_details": {
-    "visited": 11,
-    "filled": 8,
+    "visited": 8,
+    "filled": 5,
     "errors": 0
   },
   "delivery": {
@@ -46,10 +46,10 @@
       "category": "Ovoce",
       "rule_id": "W042",
       "note": "",
-      "image_url": "https://www.rohlik.cz/cdn-cgi/image/f=auto,onerror=redirect,w=1200,h=630,fit=pad,background=white,q=90/https://cdn.rohlik.cz/images/grocery/products/1356399/1356399-1573481015.jpg",
+      "image_url": "https://www.rohlik.cz/cdn-cgi/image/f=auto,onerror=redirect,w=1200,h=1200,fit=pad,background=white,q=90/https://cdn.rohlik.cz/images/grocery/products/1356399/1356399-1573481015.jpg",
       "unit_price": 139.9,
       "unit_label": "Kč/kg",
-      "detail_source": "detail page"
+      "detail_source": "listing"
     },
     {
       "shop": "Rohlík",
@@ -69,69 +69,23 @@
       "category": "Zelenina",
       "rule_id": "W046",
       "note": "",
-      "image_url": "https://www.rohlik.cz/cdn-cgi/image/f=auto,onerror=redirect,w=1200,h=630,fit=pad,background=white,q=90/https://cdn.rohlik.cz/images/grocery/products/1411188/1411188-1625163539097.jpg",
+      "image_url": "https://www.rohlik.cz/cdn-cgi/image/f=auto,onerror=redirect,w=1200,h=1200,fit=pad,background=white,q=90/https://cdn.rohlik.cz/images/grocery/products/1411188/1411188-1625163539097.jpg",
       "unit_price": 79.9,
-      "unit_label": "Kč/kg",
-      "detail_source": "detail page"
-    },
-    {
-      "shop": "Rohlík",
-      "name": "Just Meat Krůtí prsa s pepřem a solí, 100 g, -15 % od 6 ks, , 69,90 Kč, 699,00 Kč/kg",
-      "url": "https://www.rohlik.cz/1478195-just-meat-kruti-prsa-s-peprem-a-soli",
-      "price": 699.0,
-      "discount_pct": 15,
-      "old_price": null,
-      "brand": "Drůbeží prsní řízky",
-      "favorite": true,
-      "quantity": "100 g",
-      "terms": "množstevní akce (od 6 ks)",
-      "comparable_group": "auto:just meat kruti prsa s peprem a soli 100 g 15 od 6 ks 69 90 kc 699 00 kc kg | 100 g",
-      "other_shop_price": null,
-      "other_shop_url": "",
-      "other_shop": "",
-      "category": "Maso",
-      "rule_id": "W001",
-      "note": "",
-      "image_url": "https://www.rohlik.cz/cdn-cgi/image/f=auto,onerror=redirect,w=1200,h=630,fit=pad,background=white,q=90/https://cdn.rohlik.cz/images/grocery/products/1478195/1478195-1779959949361924831.png",
-      "unit_price": 6990.0,
-      "unit_label": "Kč/kg",
-      "detail_source": "listing"
-    },
-    {
-      "shop": "Rohlík",
-      "name": "Just Meat Kuřecí prsa s pepřem a solí, 100 g, -15 % od 6 ks, , 66,90 Kč, 669,00 Kč/kg",
-      "url": "https://www.rohlik.cz/1478194-just-meat-kureci-prsa-s-peprem-a-soli",
-      "price": 669.0,
-      "discount_pct": 15,
-      "old_price": null,
-      "brand": "Drůbeží prsní řízky",
-      "favorite": true,
-      "quantity": "100 g",
-      "terms": "množstevní akce (od 6 ks)",
-      "comparable_group": "auto:just meat kureci prsa s peprem a soli 100 g 15 od 6 ks 66 90 kc 669 00 kc kg | 100 g",
-      "other_shop_price": null,
-      "other_shop_url": "",
-      "other_shop": "",
-      "category": "Maso",
-      "rule_id": "W001",
-      "note": "",
-      "image_url": "https://www.rohlik.cz/cdn-cgi/image/f=auto,onerror=redirect,w=1200,h=630,fit=pad,background=white,q=90/https://cdn.rohlik.cz/images/grocery/products/1478194/1478194-1779959918966951462.png",
-      "unit_price": 6690.0,
       "unit_label": "Kč/kg",
       "detail_source": "listing"
     },
     {
       "shop": "Košík",
-      "name": "Zobrazit detail produktu Hellmann's Majonéza",
+      "name": "Hellmann's Majonéza",
       "url": "https://www.kosik.cz/p459240-hellmann-s-majoneza",
       "price": 46.9,
       "discount_pct": 47,
       "old_price": 89.9,
       "brand": "Hellmann",
       "favorite": false,
-      "quantity": "",
+      "quantity": "405 ml",
       "terms": "akce",
-      "comparable_group": "auto:zobrazit detail produktu hellmann s majoneza | ",
+      "comparable_group": "auto:hellmann s majoneza | 405 ml",
       "other_shop_price": null,
       "other_shop_url": "",
       "other_shop": "",
@@ -139,22 +93,22 @@
       "rule_id": "W027",
       "note": "",
       "image_url": "",
-      "unit_price": null,
-      "unit_label": "",
-      "detail_source": ""
+      "unit_price": 115.8,
+      "unit_label": "Kč/l",
+      "detail_source": "listing"
     },
     {
       "shop": "Košík",
-      "name": "Zobrazit detail produktu Hellmann's Majonéza",
+      "name": "Hellmann's Majonéza",
       "url": "https://www.kosik.cz/p459210-hellmann-s-majoneza",
       "price": 74.9,
       "discount_pct": 42,
       "old_price": 129.9,
       "brand": "Hellmann",
       "favorite": false,
-      "quantity": "",
+      "quantity": "625 ml",
       "terms": "akce",
-      "comparable_group": "auto:zobrazit detail produktu hellmann s majoneza | ",
+      "comparable_group": "auto:hellmann s majoneza | 625 ml",
       "other_shop_price": null,
       "other_shop_url": "",
       "other_shop": "",
@@ -162,22 +116,22 @@
       "rule_id": "W027",
       "note": "",
       "image_url": "",
-      "unit_price": null,
-      "unit_label": "",
-      "detail_source": ""
+      "unit_price": 119.84,
+      "unit_label": "Kč/l",
+      "detail_source": "listing"
     },
     {
       "shop": "Košík",
-      "name": "Zobrazit detail produktu Hellmann's Majonéza",
+      "name": "Hellmann's Majonéza",
       "url": "https://www.kosik.cz/p459230-hellmann-s-majoneza",
       "price": 32.9,
       "discount_pct": 40,
       "old_price": 54.9,
       "brand": "Hellmann",
       "favorite": false,
-      "quantity": "",
+      "quantity": "210 ml",
       "terms": "akce",
-      "comparable_group": "auto:zobrazit detail produktu hellmann s majoneza | ",
+      "comparable_group": "auto:hellmann s majoneza | 210 ml",
       "other_shop_price": null,
       "other_shop_url": "",
       "other_shop": "",
@@ -185,9 +139,9 @@
       "rule_id": "W027",
       "note": "",
       "image_url": "",
-      "unit_price": null,
-      "unit_label": "",
-      "detail_source": ""
+      "unit_price": 156.67,
+      "unit_label": "Kč/l",
+      "detail_source": "listing"
     },
     {
       "shop": "Rohlík",
@@ -207,10 +161,10 @@
       "category": "Másla a tuky",
       "rule_id": "W032",
       "note": "Rostlinný/ztužený tuk, není klasické máslo.",
-      "image_url": "https://www.rohlik.cz/cdn-cgi/image/f=auto,onerror=redirect,w=1200,h=630,fit=pad,background=white,q=90/https://cdn.rohlik.cz/images/grocery/products/726425/726425-1695374801152.jpg",
+      "image_url": "https://www.rohlik.cz/cdn-cgi/image/f=auto,onerror=redirect,w=1200,h=1200,fit=pad,background=white,q=90/https://cdn.rohlik.cz/images/grocery/products/726425/726425-1695374801152.jpg",
       "unit_price": 206.0,
       "unit_label": "Kč/kg",
-      "detail_source": "listing"
+      "detail_source": "detail page"
     },
     {
       "shop": "Rohlík",
@@ -230,33 +184,10 @@
       "category": "Sýry / plátkové",
       "rule_id": "W018",
       "note": "",
-      "image_url": "https://www.rohlik.cz/cdn-cgi/image/f=auto,onerror=redirect,w=1200,h=630,fit=pad,background=white,q=90/https://cdn.rohlik.cz/images/grocery/products/761987/761987-1558078935.jpg",
+      "image_url": "https://www.rohlik.cz/cdn-cgi/image/f=auto,onerror=redirect,w=1200,h=1200,fit=pad,background=white,q=90/https://cdn.rohlik.cz/images/grocery/products/761987/761987-1558078935.jpg",
       "unit_price": 524.0,
       "unit_label": "Kč/kg",
-      "detail_source": "listing"
-    },
-    {
-      "shop": "Rohlík",
-      "name": "Colgate Whitening bělicí zubní pasta, 75 ml, -21 % od 2 ks, , 54,90 Kč, 732,00 Kč/l",
-      "url": "https://www.rohlik.cz/1291299-colgate-whitening-belici-zubni-pasta",
-      "price": 732.0,
-      "discount_pct": 21,
-      "old_price": null,
-      "brand": "Colgate",
-      "favorite": false,
-      "quantity": "75 ml",
-      "terms": "množstevní akce (od 2 ks)",
-      "comparable_group": "auto:colgate whitening belici zubni pasta 75 ml 21 od 2 ks 54 90 kc 732 00 kc l | 75 ml",
-      "other_shop_price": null,
-      "other_shop_url": "",
-      "other_shop": "",
-      "category": "Dentální hygiena",
-      "rule_id": "W058",
-      "note": "",
-      "image_url": "https://www.rohlik.cz/cdn-cgi/image/f=auto,onerror=redirect,w=1200,h=630,fit=pad,background=white,q=90/https://cdn.rohlik.cz/images/grocery/products/1291299/1291299-1777540114599094355.png",
-      "unit_price": 9760.0,
-      "unit_label": "Kč/l",
-      "detail_source": "listing"
+      "detail_source": "detail page"
     },
     {
       "shop": "Rohlík",
@@ -276,10 +207,10 @@
       "category": "Úklid",
       "rule_id": "W068",
       "note": "",
-      "image_url": "https://www.rohlik.cz/cdn-cgi/image/f=auto,onerror=redirect,w=1200,h=630,fit=pad,background=white,q=90/https://cdn.rohlik.cz/images/grocery/products/1339945/1339945-1684409633246.jpg",
+      "image_url": "https://www.rohlik.cz/cdn-cgi/image/f=auto,onerror=redirect,w=1200,h=1200,fit=pad,background=white,q=90/https://cdn.rohlik.cz/images/grocery/products/1339945/1339945-1684409633246.jpg",
       "unit_price": 79.87,
       "unit_label": "Kč/l",
-      "detail_source": "listing"
+      "detail_source": "detail page"
     }
   ],
   "changes": [],
