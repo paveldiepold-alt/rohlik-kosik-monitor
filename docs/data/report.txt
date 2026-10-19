@@ -1,11 +1,11 @@
-ROHLÍK × KOŠÍK | 2026-10-18 | poslední kontrola: 2026-10-18T19:54+02:00
+ROHLÍK × KOŠÍK | 2026-10-19 | poslední kontrola: 2026-10-19T06:55+02:00
 VEŘEJNÉ VYHLEDÁVÁNÍ NAPŘÍČ SORTIMENTEM – pouze skutečně nalezené položky, nikoli úplný katalog.
 Doručovací oblast: PSČ 149 00 (referenční požadavek, nikoli automaticky ověřená lokální cena).
 Bez potvrzené volby oblasti v e-shopu: ceny a dostupnost se mohou lišit podle doručovací adresy / členství.
-STAV ZDROJŮ: Rohlík: ok (237 karet); Košík: ok (206 karet)
-Nalezeno 100 sledovaných zlevněných položek; nově zaznamenané / zlevněné: 7.
+STAV ZDROJŮ: Rohlík: ok (267 karet); Košík: ok (235 karet)
+Nalezeno 111 sledovaných zlevněných položek; nově zaznamenané / zlevněné: 11.
 OBLÍBENÉ PRODUKTY A ZNAČKY (všechna zadaná pravidla = oblíbené):
-KATALOG: 443 nalezených výrobků (včetně nezlevněných); 24h pokrytí vyhledávacích dotazů 44/196 a nákupních pravidel 23/75. Neznamená úplný katalog.
+KATALOG: 502 nalezených výrobků (včetně nezlevněných); 24h pokrytí vyhledávacích dotazů 52/196 a nákupních pravidel 25/75. Neznamená úplný katalog.
 ★ Úklid | Rohlík | Jar Platinum Lemon tablety do myčky | balení: neuvedeno | 729.90 Kč | -65% | akce | bez ověřeného páru | https://www.rohlik.cz/1478904-jar-platinum-lemon-tablety-do-mycky
 ★ Praní | Rohlík | Lenor Unstoppables Scent of Ariel vonné perličky | balení: 270 g | 349.90 Kč | -57% | akce | bez ověřeného páru | https://www.rohlik.cz/1480058-lenor-unstoppables-scent-of-ariel-vonne-perlicky
 ★ Praní | Košík | Ariel Gel Color (1,8 l) | balení: 1,8 l | 199.90 Kč | -55% | akce | bez ověřeného páru | https://www.kosik.cz/p798826-ariel-gel-color-1-8-l
@@ -22,10 +22,13 @@ KATALOG: 443 nalezených výrobků (včetně nezlevněných); 24h pokrytí vyhle
 ★ Úklid | Rohlík | Jar Platinum Plus Lemon tablety do myčky | balení: neuvedeno | 499.90 Kč | -48% | akce | bez ověřeného páru | https://www.rohlik.cz/1478901-jar-platinum-plus-lemon-tablety-do-mycky
 ★ Praní | Rohlík | Lenor Gold Orchid & Vanilla vonné perličky do praní | balení: 0,74 kg | 839.90 Kč | -48% | akce | bez ověřeného páru | https://www.rohlik.cz/1474632-lenor-gold-orchid-vanilla-vonne-perlicky-do-prani
 ★ Praní | Rohlík | Persil Sensitive Ultra koncentrovaný prací gel (2×1,24 l) | balení: 1,24 l | 807.90 Kč | -45% | akce | bez ověřeného páru | https://www.rohlik.cz/1470356-persil-sensitive-ultra-koncentrovany-praci-gel-2-1-24-l
+★ Papírové utěrky | Košík | Tento Kitchen Innovations kuchyňské utěrky, 2 role | balení: neuvedeno | 49.90 Kč | -41% | akce | bez ověřeného páru | https://www.kosik.cz/p6047-tento-kitchen-innovations-kuchynske-uterky-2-role | POZN.: Jakákoliv značka; pouze jednorázové papírové kuchyňské utěrky/role, nikoli textilní, vlhčené nebo čisticí hadříky.
+★ Papírové utěrky | Košík | Tento Papírové utěrky Strong 3vrstvé, 2 role | balení: neuvedeno | 49.90 Kč | -41% | akce | bez ověřeného páru | https://www.kosik.cz/p6017-tento-papirove-uterky-strong-3vrstve-2-role | POZN.: Jakákoliv značka; pouze jednorázové papírové kuchyňské utěrky/role, nikoli textilní, vlhčené nebo čisticí hadříky.
 ★ Úklid | Rohlík | Cif Infinite Clean Lime & lemongrass náhradní náplň do spreje | balení: 0,59 l | 199.90 Kč | -40% | akce | bez ověřeného páru | https://www.rohlik.cz/1483708-cif-infinite-clean-lime-lemongrass-nahradni-napln-do-spreje
 ★ Úklid | Rohlík | Cif Infinite Clean Lime & lemongrass univerzální čisticí sprej s probiotiky | balení: 280 ml | 199.90 Kč | -40% | akce | bez ověřeného páru | https://www.rohlik.cz/1483706-cif-infinite-clean-lime-lemongrass-univerzalni-cistici-sprej-s-probiotiky
 ★ Úklid | Rohlík | Cif Infinite Clean Lotus mineral salt náhradní náplň do spreje | balení: 0,59 l | 199.90 Kč | -40% | akce | bez ověřeného páru | https://www.rohlik.cz/1483707-cif-infinite-clean-lotus-mineral-salt-nahradni-napln-do-spreje
 ★ Úklid | Rohlík | Cif Infinite Clean Lotus mineral salt univerzální čisticí sprej s probiotiky | balení: 280 ml | 199.90 Kč | -40% | akce | bez ověřeného páru | https://www.rohlik.cz/1483705-cif-infinite-clean-lotus-mineral-salt-univerzalni-cistici-sprej-s-probiotiky
+★ Papírové utěrky | Košík | Tento Complex 3v1 papírové utěrky, 1 role | balení: neuvedeno | 89.90 Kč | -40% | akce | bez ověřeného páru | https://www.kosik.cz/p6147-tento-complex-3v1-papirove-uterky-1-role | POZN.: Jakákoliv značka; pouze jednorázové papírové kuchyňské utěrky/role, nikoli textilní, vlhčené nebo čisticí hadříky.
 ★ Praní | Košík | Ariel Gel Color (2,7 l) | balení: 2,7 l | 299.90 Kč | -39% | akce | bez ověřeného páru | https://www.kosik.cz/p800490-ariel-gel-color-2-7-l
 ★ Praní | Košík | Ariel Gel Mountain Spring (2,7 l) | balení: 2,7 l | 299.90 Kč | -39% | akce | bez ověřeného páru | https://www.kosik.cz/p798838-ariel-gel-mountain-spring-2-7-l
 ★ Praní | Košík | Ariel Kapsle Color, sáček | balení: neuvedeno | 299.90 Kč | -39% | akce | bez ověřeného páru | https://www.kosik.cz/p795236-ariel-kapsle-color-sacek
@@ -34,10 +37,12 @@ KATALOG: 443 nalezených výrobků (včetně nezlevněných); 24h pokrytí vyhle
 ★ Praní | Košík | Ariel Plus Gel Gold Orchid, 2,25 l | balení: 2,25 l | 299.90 Kč | -39% | akce | bez ověřeného páru | https://www.kosik.cz/p812430-ariel-plus-gel-gold-orchid-2-25-l
 ★ Praní | Košík | Ariel Plus Kapsle Extra Clean, sáček | balení: neuvedeno | 299.90 Kč | -39% | akce | bez ověřeného páru | https://www.kosik.cz/p795264-ariel-plus-kapsle-extra-clean-sacek
 ★ Praní | Košík | Ariel Plus Kapsle Fresh Air, sáček | balení: neuvedeno | 299.90 Kč | -39% | akce | bez ověřeného páru | https://www.kosik.cz/p795266-ariel-plus-kapsle-fresh-air-sacek
+★ Papírové utěrky | Košík | Linteo Classic kuchyňské utěrky 2vrstvé, 2 role | balení: neuvedeno | 19.90 Kč | -39% | akce | bez ověřeného páru | https://www.kosik.cz/p2967-linteo-classic-kuchynske-uterky-2vrstve-2-role | POZN.: Jakákoliv značka; pouze jednorázové papírové kuchyňské utěrky/role, nikoli textilní, vlhčené nebo čisticí hadříky.
 ★ Praní | Košík | Ariel Kapsle Color, krabice | balení: neuvedeno | 249.00 Kč | -37% | akce | bez ověřeného páru | https://www.kosik.cz/p795250-ariel-kapsle-color-krabice
 ★ Praní | Košík | Ariel Plus Kapsle Extra Clean, krabice | balení: neuvedeno | 249.00 Kč | -37% | akce | bez ověřeného páru | https://www.kosik.cz/p795248-ariel-plus-kapsle-extra-clean-krabice
 ★ Praní | Košík | Ariel Prášek Color BOX, 2,75 kg | balení: 2,75 kg | 299.00 Kč | -37% | akce | bez ověřeného páru | https://www.kosik.cz/p795254-ariel-prasek-color-box-2-75-kg
 ★ Praní | Košík | Ariel Prášek Mountain Spring BOX, 2,75 kg | balení: 2,75 kg | 299.00 Kč | -37% | akce | bez ověřeného páru | https://www.kosik.cz/p795256-ariel-prasek-mountain-spring-box-2-75-kg
+★ Papírové utěrky | Košík | Tento Family Super Aqua Papírové utěrky 2vrstvé, 2 role | balení: neuvedeno | 24.90 Kč | -37% | akce | bez ověřeného páru | https://www.kosik.cz/p5977-tento-family-super-aqua-papirove-uterky-2vrstve-2-role | POZN.: Jakákoliv značka; pouze jednorázové papírové kuchyňské utěrky/role, nikoli textilní, vlhčené nebo čisticí hadříky.
 ★ Praní | Košík | Vanish Oxi Action Odstraňovač skvrn před praním | balení: 500 ml | 129.90 Kč | -35% | akce | bez ověřeného páru | https://www.kosik.cz/p57967-vanish-oxi-action-odstranovac-skvrn-pred-pranim
 ★ Praní | Rohlík | Ariel Color prací gel (3,15 l) | balení: 3,15 l | 799.90 Kč | -34% | akce | bez ověřeného páru | https://www.rohlik.cz/1424111-ariel-color-praci-gel-3-15-l
 ★ Praní | Košík | Ariel Gel Color 4,5 l | balení: 4,5 l | 469.00 Kč | -32% | akce | bez ověřeného páru | https://www.kosik.cz/p795242-ariel-gel-color-4-5-l
@@ -81,12 +86,7 @@ KATALOG: 443 nalezených výrobků (včetně nezlevněných); 24h pokrytí vyhle
 ★ Úklid | Košík | Bref ProNature Mint & Eucalyptus tuhý WC blok 3x50g | balení: 50 g | 89.90 Kč | -18% | akce | bez ověřeného páru | https://www.kosik.cz/p113457-bref-pronature-mint-eucalyptus-tuhy-wc-blok-3x50g
 ★ Praní | Košík | Persil Color prací prášek | balení: neuvedeno | 599.90 Kč | -18% | akce | bez ověřeného páru | https://www.kosik.cz/p813464-persil-color-praci-prasek
 ★ Praní | Košík | Persil Expert Freshness by Silan prací prášek | balení: neuvedeno | 599.90 Kč | -18% | akce | bez ověřeného páru | https://www.kosik.cz/p813462-persil-expert-freshness-by-silan-praci-prasek
-★ Praní | Košík | Persil Universal prací prášek | balení: neuvedeno | 289.90 Kč | -18% | akce | bez ověřeného páru | https://www.kosik.cz/p770578-persil-universal-praci-prasek
-★ Praní | Košík | Persil Color prací gel na barevné prádlo | balení: neuvedeno | 459.90 Kč | -17% | akce | bez ověřeného páru | https://www.kosik.cz/p741410-persil-color-praci-gel-na-barevne-pradlo
-★ Praní | Košík | Persil Expert Sensitive prací prášek pro citlivou pokožku | balení: neuvedeno | 289.90 Kč | -16% | akce | bez ověřeného páru | https://www.kosik.cz/p770574-persil-expert-sensitive-praci-prasek-pro-citlivou-pokozku
-★ Praní | Košík | Silan Aviváž Aromatherapy Dreamy Lotus 2,772l | balení: 2,772 l | 169.90 Kč | -15% | akce | bez ověřeného páru | https://www.kosik.cz/p735976-silan-avivaz-aromatherapy-dreamy-lotus-2-772l
-★ Praní | Košík | Silan Aviváž Aromatherapy Fascinating Frangipani 2,7l | balení: 2,7 l | 169.90 Kč | -15% | akce | bez ověřeného páru | https://www.kosik.cz/p735980-silan-avivaz-aromatherapy-fascinating-frangipani-2-7l
-Dalších 20 položek pouze na webovém dashboardu.
+Dalších 31 položek pouze na webovém dashboardu.
 Zdroje:
 Rohlík: https://www.rohlik.cz/
 Košík: https://www.kosik.cz/

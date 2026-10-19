@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-10-18T19:54+02:00",
+  "checked_at": "2026-10-19T06:55+02:00",
   "coverage": {
     "failed_queries_24h": 132,
     "failed_query_examples": [
@@ -65,28 +65,28 @@
       }
     ],
     "queries_planned": 196,
-    "queries_checked_24h": 176,
-    "queries_responded_24h": 44,
+    "queries_checked_24h": 184,
+    "queries_responded_24h": 52,
     "watch_rules_total": 75,
-    "watch_rules_with_search_24h": 23,
+    "watch_rules_with_search_24h": 25,
     "coverage_window_hours": 240.0,
-    "queries_checked_window": 176,
-    "queries_responded_window": 44,
-    "watch_rules_with_search_window": 23,
+    "queries_checked_window": 184,
+    "queries_responded_window": 52,
+    "watch_rules_with_search_window": 25,
     "by_store": {
       "Rohlík": {
         "planned": 98,
-        "attempted_24h": 88,
-        "responded_24h": 28
+        "attempted_24h": 92,
+        "responded_24h": 32
       },
       "Košík": {
         "planned": 98,
-        "attempted_24h": 88,
-        "responded_24h": 16
+        "attempted_24h": 92,
+        "responded_24h": 20
       }
     },
     "batch_queries": 8,
-    "batch_product_rows_matched": 86,
+    "batch_product_rows_matched": 105,
     "batch_errors": 0,
     "catalog_completeness_verified": false,
     "warning": "Vyhledávací dotazy napříč katalogy, nikoli úplný export obou e-shopů. Neúplnost, blokace a změny cen jsou možné.",
@@ -1689,6 +1689,78 @@
       "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
       "rule_ids": [
         "W072"
+      ]
+    },
+    "Rohlík::jar citron": {
+      "checked_at": "2026-10-19T06:55+02:00",
+      "status": "ok",
+      "cards": 22,
+      "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
+      "rule_ids": [
+        "W072"
+      ]
+    },
+    "Košík::jar citron": {
+      "checked_at": "2026-10-19T06:55+02:00",
+      "status": "ok",
+      "cards": 8,
+      "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
+      "rule_ids": [
+        "W072"
+      ]
+    },
+    "Rohlík::zewa": {
+      "checked_at": "2026-10-19T06:55+02:00",
+      "status": "ok",
+      "cards": 20,
+      "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
+      "rule_ids": [
+        "W073"
+      ]
+    },
+    "Košík::zewa": {
+      "checked_at": "2026-10-19T06:55+02:00",
+      "status": "ok",
+      "cards": 21,
+      "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
+      "rule_ids": [
+        "W073"
+      ]
+    },
+    "Rohlík::zewa deluxe standard kapesníky": {
+      "checked_at": "2026-10-19T06:55+02:00",
+      "status": "ok",
+      "cards": 18,
+      "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
+      "rule_ids": [
+        "W073"
+      ]
+    },
+    "Košík::zewa deluxe standard kapesníky": {
+      "checked_at": "2026-10-19T06:55+02:00",
+      "status": "ok",
+      "cards": 13,
+      "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
+      "rule_ids": [
+        "W073"
+      ]
+    },
+    "Rohlík::kuchyňské papírové utěrky": {
+      "checked_at": "2026-10-19T06:55+02:00",
+      "status": "ok",
+      "cards": 28,
+      "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
+      "rule_ids": [
+        "W074"
+      ]
+    },
+    "Košík::kuchyňské papírové utěrky": {
+      "checked_at": "2026-10-19T06:55+02:00",
+      "status": "ok",
+      "cards": 38,
+      "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
+      "rule_ids": [
+        "W074"
       ]
     }
   }
