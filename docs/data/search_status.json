@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-10-19T06:55+02:00",
+  "checked_at": "2026-10-19T12:52+02:00",
   "coverage": {
     "failed_queries_24h": 132,
     "failed_query_examples": [
@@ -65,28 +65,28 @@
       }
     ],
     "queries_planned": 196,
-    "queries_checked_24h": 184,
-    "queries_responded_24h": 52,
+    "queries_checked_24h": 192,
+    "queries_responded_24h": 60,
     "watch_rules_total": 75,
-    "watch_rules_with_search_24h": 25,
+    "watch_rules_with_search_24h": 26,
     "coverage_window_hours": 240.0,
-    "queries_checked_window": 184,
-    "queries_responded_window": 52,
-    "watch_rules_with_search_window": 25,
+    "queries_checked_window": 192,
+    "queries_responded_window": 60,
+    "watch_rules_with_search_window": 26,
     "by_store": {
       "Rohlík": {
         "planned": 98,
-        "attempted_24h": 92,
-        "responded_24h": 32
+        "attempted_24h": 96,
+        "responded_24h": 36
       },
       "Košík": {
         "planned": 98,
-        "attempted_24h": 92,
-        "responded_24h": 20
+        "attempted_24h": 96,
+        "responded_24h": 24
       }
     },
     "batch_queries": 8,
-    "batch_product_rows_matched": 105,
+    "batch_product_rows_matched": 84,
     "batch_errors": 0,
     "catalog_completeness_verified": false,
     "warning": "Vyhledávací dotazy napříč katalogy, nikoli úplný export obou e-shopů. Neúplnost, blokace a změny cen jsou možné.",
@@ -1761,6 +1761,78 @@
       "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
       "rule_ids": [
         "W074"
+      ]
+    },
+    "Rohlík::papírové utěrky": {
+      "checked_at": "2026-10-19T12:52+02:00",
+      "status": "ok",
+      "cards": 30,
+      "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
+      "rule_ids": [
+        "W074"
+      ]
+    },
+    "Košík::papírové utěrky": {
+      "checked_at": "2026-10-19T12:52+02:00",
+      "status": "ok",
+      "cards": 53,
+      "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
+      "rule_ids": [
+        "W074"
+      ]
+    },
+    "Rohlík::zewa papírové utěrky": {
+      "checked_at": "2026-10-19T12:52+02:00",
+      "status": "ok",
+      "cards": 26,
+      "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
+      "rule_ids": [
+        "W074"
+      ]
+    },
+    "Košík::zewa papírové utěrky": {
+      "checked_at": "2026-10-19T12:52+02:00",
+      "status": "ok",
+      "cards": 14,
+      "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
+      "rule_ids": [
+        "W074"
+      ]
+    },
+    "Rohlík::kapesníky box 3vrstvé": {
+      "checked_at": "2026-10-19T12:52+02:00",
+      "status": "ok",
+      "cards": 25,
+      "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
+      "rule_ids": [
+        "W075"
+      ]
+    },
+    "Košík::kapesníky box 3vrstvé": {
+      "checked_at": "2026-10-19T12:52+02:00",
+      "status": "ok",
+      "cards": 13,
+      "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
+      "rule_ids": [
+        "W075"
+      ]
+    },
+    "Rohlík::kapesníky v krabici": {
+      "checked_at": "2026-10-19T12:52+02:00",
+      "status": "ok",
+      "cards": 25,
+      "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
+      "rule_ids": [
+        "W075"
+      ]
+    },
+    "Košík::kapesníky v krabici": {
+      "checked_at": "2026-10-19T12:52+02:00",
+      "status": "ok",
+      "cards": 19,
+      "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
+      "rule_ids": [
+        "W075"
       ]
     }
   }
