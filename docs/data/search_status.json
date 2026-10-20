@@ -1,37 +1,31 @@
 {
-  "checked_at": "2026-10-19T18:56+02:00",
+  "checked_at": "2026-10-20T06:52+02:00",
   "coverage": {
-    "failed_queries_24h": 1,
-    "failed_query_examples": [
-      {
-        "query": "Wilkinson",
-        "shop": "Rohlík",
-        "status": "no_cards"
-      }
-    ],
+    "failed_queries_24h": 0,
+    "failed_query_examples": [],
     "queries_planned": 196,
-    "queries_checked_24h": 56,
-    "queries_responded_24h": 55,
+    "queries_checked_24h": 32,
+    "queries_responded_24h": 32,
     "watch_rules_total": 75,
-    "watch_rules_with_search_24h": 19,
+    "watch_rules_with_search_24h": 8,
     "coverage_window_hours": 240.0,
     "queries_checked_window": 196,
-    "queries_responded_window": 66,
+    "queries_responded_window": 70,
     "watch_rules_with_search_window": 26,
     "by_store": {
       "Rohlík": {
         "planned": 98,
-        "attempted_24h": 28,
-        "responded_24h": 27
+        "attempted_24h": 16,
+        "responded_24h": 16
       },
       "Košík": {
         "planned": 98,
-        "attempted_24h": 28,
-        "responded_24h": 28
+        "attempted_24h": 16,
+        "responded_24h": 16
       }
     },
     "batch_queries": 8,
-    "batch_product_rows_matched": 56,
+    "batch_product_rows_matched": 74,
     "batch_errors": 0,
     "catalog_completeness_verified": false,
     "warning": "Vyhledávací dotazy napříč katalogy, nikoli úplný export obou e-shopů. Neúplnost, blokace a změny cen jsou možné.",
@@ -75,43 +69,43 @@
       ]
     },
     "Rohlík::kuřecí stehna": {
-      "checked_at": "2026-10-18T18:33+02:00",
+      "checked_at": "2026-10-20T06:52+02:00",
       "status": "ok",
-      "cards": 29,
+      "cards": 28,
       "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
       "rule_ids": [
         "W002"
       ]
     },
     "Košík::kuřecí stehna": {
-      "checked_at": "2026-10-18T18:33+02:00",
-      "status": "search_unavailable",
-      "cards": 0,
-      "detail": "Nenalezeno veřejné vyhledávací pole",
+      "checked_at": "2026-10-20T06:52+02:00",
+      "status": "ok",
+      "cards": 28,
+      "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
       "rule_ids": [
         "W002"
       ]
     },
     "Rohlík::kuřecí paličky": {
-      "checked_at": "2026-10-18T18:33+02:00",
+      "checked_at": "2026-10-20T06:52+02:00",
       "status": "ok",
-      "cards": 18,
+      "cards": 17,
       "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
       "rule_ids": [
         "W002"
       ]
     },
     "Košík::kuřecí paličky": {
-      "checked_at": "2026-10-18T18:33+02:00",
-      "status": "search_unavailable",
-      "cards": 0,
-      "detail": "Nenalezeno veřejné vyhledávací pole",
+      "checked_at": "2026-10-20T06:52+02:00",
+      "status": "ok",
+      "cards": 14,
+      "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
       "rule_ids": [
         "W002"
       ]
     },
     "Rohlík::vepřová krkovice": {
-      "checked_at": "2026-10-18T18:33+02:00",
+      "checked_at": "2026-10-20T06:52+02:00",
       "status": "ok",
       "cards": 25,
       "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
@@ -120,28 +114,28 @@
       ]
     },
     "Košík::vepřová krkovice": {
-      "checked_at": "2026-10-18T18:33+02:00",
-      "status": "search_unavailable",
-      "cards": 0,
-      "detail": "Nenalezeno veřejné vyhledávací pole",
+      "checked_at": "2026-10-20T06:52+02:00",
+      "status": "ok",
+      "cards": 18,
+      "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
       "rule_ids": [
         "W003"
       ]
     },
     "Rohlík::vepřová panenka": {
-      "checked_at": "2026-10-18T18:33+02:00",
+      "checked_at": "2026-10-20T06:52+02:00",
       "status": "ok",
-      "cards": 120,
+      "cards": 148,
       "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
       "rule_ids": [
         "W004"
       ]
     },
     "Košík::vepřová panenka": {
-      "checked_at": "2026-10-18T18:33+02:00",
-      "status": "search_unavailable",
-      "cards": 0,
-      "detail": "Nenalezeno veřejné vyhledávací pole",
+      "checked_at": "2026-10-20T06:52+02:00",
+      "status": "ok",
+      "cards": 11,
+      "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
       "rule_ids": [
         "W004"
       ]
