@@ -1,31 +1,31 @@
 {
-  "checked_at": "2026-10-20T18:53+02:00",
+  "checked_at": "2026-10-21T06:53+02:00",
   "coverage": {
     "failed_queries_24h": 0,
     "failed_query_examples": [],
     "queries_planned": 196,
-    "queries_checked_24h": 32,
-    "queries_responded_24h": 32,
+    "queries_checked_24h": 24,
+    "queries_responded_24h": 24,
     "watch_rules_total": 75,
-    "watch_rules_with_search_24h": 16,
+    "watch_rules_with_search_24h": 18,
     "coverage_window_hours": 240.0,
     "queries_checked_window": 196,
-    "queries_responded_window": 86,
-    "watch_rules_with_search_window": 37,
+    "queries_responded_window": 94,
+    "watch_rules_with_search_window": 44,
     "by_store": {
       "Rohlík": {
         "planned": 98,
-        "attempted_24h": 16,
-        "responded_24h": 16
+        "attempted_24h": 12,
+        "responded_24h": 12
       },
       "Košík": {
         "planned": 98,
-        "attempted_24h": 16,
-        "responded_24h": 16
+        "attempted_24h": 12,
+        "responded_24h": 12
       }
     },
     "batch_queries": 8,
-    "batch_product_rows_matched": 34,
+    "batch_product_rows_matched": 80,
     "batch_errors": 0,
     "catalog_completeness_verified": false,
     "warning": "Vyhledávací dotazy napříč katalogy, nikoli úplný export obou e-shopů. Neúplnost, blokace a změny cen jsou možné.",
@@ -293,28 +293,28 @@
       ]
     },
     "Rohlík::krahulík": {
-      "checked_at": "2026-10-18T18:33+02:00",
-      "status": "skipped_rate_limit",
-      "cards": 0,
-      "detail": "Další dotazy pozastaveny",
+      "checked_at": "2026-10-21T06:53+02:00",
+      "status": "ok",
+      "cards": 1,
+      "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
       "rule_ids": [
         "W013"
       ]
     },
     "Košík::krahulík": {
-      "checked_at": "2026-10-18T18:33+02:00",
-      "status": "search_unavailable",
-      "cards": 0,
-      "detail": "Nenalezeno veřejné vyhledávací pole",
+      "checked_at": "2026-10-21T06:53+02:00",
+      "status": "ok",
+      "cards": 11,
+      "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
       "rule_ids": [
         "W013"
       ]
     },
     "Rohlík::madeta": {
-      "checked_at": "2026-10-18T18:33+02:00",
-      "status": "skipped_rate_limit",
-      "cards": 0,
-      "detail": "Další dotazy pozastaveny",
+      "checked_at": "2026-10-21T06:53+02:00",
+      "status": "ok",
+      "cards": 66,
+      "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
       "rule_ids": [
         "W017",
         "W022",
@@ -322,10 +322,10 @@
       ]
     },
     "Košík::madeta": {
-      "checked_at": "2026-10-18T18:33+02:00",
-      "status": "search_unavailable",
-      "cards": 0,
-      "detail": "Nenalezeno veřejné vyhledávací pole",
+      "checked_at": "2026-10-21T06:53+02:00",
+      "status": "ok",
+      "cards": 66,
+      "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
       "rule_ids": [
         "W017",
         "W022",
@@ -333,38 +333,38 @@
       ]
     },
     "Rohlík::leerdammer": {
-      "checked_at": "2026-10-18T18:33+02:00",
-      "status": "skipped_rate_limit",
-      "cards": 0,
-      "detail": "Další dotazy pozastaveny",
+      "checked_at": "2026-10-21T06:53+02:00",
+      "status": "ok",
+      "cards": 11,
+      "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
       "rule_ids": [
         "W018"
       ]
     },
     "Košík::leerdammer": {
-      "checked_at": "2026-10-18T18:33+02:00",
-      "status": "search_unavailable",
-      "cards": 0,
-      "detail": "Nenalezeno veřejné vyhledávací pole",
+      "checked_at": "2026-10-21T06:53+02:00",
+      "status": "ok",
+      "cards": 7,
+      "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
       "rule_ids": [
         "W018"
       ]
     },
     "Rohlík::président": {
-      "checked_at": "2026-10-18T18:33+02:00",
-      "status": "skipped_rate_limit",
-      "cards": 0,
-      "detail": "Další dotazy pozastaveny",
+      "checked_at": "2026-10-21T06:53+02:00",
+      "status": "ok",
+      "cards": 43,
+      "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
       "rule_ids": [
         "W019",
         "W025"
       ]
     },
     "Košík::président": {
-      "checked_at": "2026-10-18T18:33+02:00",
-      "status": "search_unavailable",
-      "cards": 0,
-      "detail": "Nenalezeno veřejné vyhledávací pole",
+      "checked_at": "2026-10-21T06:53+02:00",
+      "status": "ok",
+      "cards": 38,
+      "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
       "rule_ids": [
         "W019",
         "W025"
