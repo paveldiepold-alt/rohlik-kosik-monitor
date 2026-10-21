@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-10-21T06:53+02:00",
+  "checked_at": "2026-10-21T12:54+02:00",
   "coverage": {
     "failed_queries_24h": 0,
     "failed_query_examples": [],
@@ -7,11 +7,11 @@
     "queries_checked_24h": 24,
     "queries_responded_24h": 24,
     "watch_rules_total": 75,
-    "watch_rules_with_search_24h": 18,
+    "watch_rules_with_search_24h": 15,
     "coverage_window_hours": 240.0,
     "queries_checked_window": 196,
-    "queries_responded_window": 94,
-    "watch_rules_with_search_window": 44,
+    "queries_responded_window": 102,
+    "watch_rules_with_search_window": 46,
     "by_store": {
       "Rohlík": {
         "planned": 98,
@@ -25,7 +25,7 @@
       }
     },
     "batch_queries": 8,
-    "batch_product_rows_matched": 80,
+    "batch_product_rows_matched": 73,
     "batch_errors": 0,
     "catalog_completeness_verified": false,
     "warning": "Vyhledávací dotazy napříč katalogy, nikoli úplný export obou e-shopů. Neúplnost, blokace a změny cen jsou možné.",
@@ -371,73 +371,73 @@
       ]
     },
     "Rohlík::president plátkový sýr": {
-      "checked_at": "2026-10-18T18:33+02:00",
-      "status": "skipped_rate_limit",
-      "cards": 0,
-      "detail": "Další dotazy pozastaveny",
+      "checked_at": "2026-10-21T12:54+02:00",
+      "status": "ok",
+      "cards": 27,
+      "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
       "rule_ids": [
         "W019"
       ]
     },
     "Košík::president plátkový sýr": {
-      "checked_at": "2026-10-18T18:33+02:00",
-      "status": "search_unavailable",
-      "cards": 0,
-      "detail": "Nenalezeno veřejné vyhledávací pole",
+      "checked_at": "2026-10-21T12:54+02:00",
+      "status": "ok",
+      "cards": 15,
+      "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
       "rule_ids": [
         "W019"
       ]
     },
     "Rohlík::želetava": {
-      "checked_at": "2026-10-18T18:33+02:00",
-      "status": "skipped_rate_limit",
-      "cards": 0,
-      "detail": "Další dotazy pozastaveny",
+      "checked_at": "2026-10-21T12:54+02:00",
+      "status": "ok",
+      "cards": 2,
+      "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
       "rule_ids": [
         "W020"
       ]
     },
     "Košík::želetava": {
-      "checked_at": "2026-10-18T18:33+02:00",
-      "status": "search_unavailable",
-      "cards": 0,
-      "detail": "Nenalezeno veřejné vyhledávací pole",
+      "checked_at": "2026-10-21T12:54+02:00",
+      "status": "ok",
+      "cards": 14,
+      "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
       "rule_ids": [
         "W020"
       ]
     },
     "Rohlík::smetanito": {
-      "checked_at": "2026-10-18T18:33+02:00",
-      "status": "skipped_rate_limit",
-      "cards": 0,
-      "detail": "Další dotazy pozastaveny",
+      "checked_at": "2026-10-21T12:54+02:00",
+      "status": "ok",
+      "cards": 11,
+      "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
       "rule_ids": [
         "W020"
       ]
     },
     "Košík::smetanito": {
-      "checked_at": "2026-10-18T18:33+02:00",
-      "status": "search_unavailable",
-      "cards": 0,
-      "detail": "Nenalezeno veřejné vyhledávací pole",
+      "checked_at": "2026-10-21T12:54+02:00",
+      "status": "ok",
+      "cards": 14,
+      "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
       "rule_ids": [
         "W020"
       ]
     },
     "Rohlík::veselá kráva": {
-      "checked_at": "2026-10-18T18:33+02:00",
-      "status": "skipped_rate_limit",
-      "cards": 0,
-      "detail": "Další dotazy pozastaveny",
+      "checked_at": "2026-10-21T12:54+02:00",
+      "status": "ok",
+      "cards": 8,
+      "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
       "rule_ids": [
         "W021"
       ]
     },
     "Košík::veselá kráva": {
-      "checked_at": "2026-10-18T18:33+02:00",
-      "status": "search_unavailable",
-      "cards": 0,
-      "detail": "Nenalezeno veřejné vyhledávací pole",
+      "checked_at": "2026-10-21T12:54+02:00",
+      "status": "ok",
+      "cards": 10,
+      "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
       "rule_ids": [
         "W021"
       ]
