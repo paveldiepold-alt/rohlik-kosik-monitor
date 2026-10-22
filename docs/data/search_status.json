@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-10-21T18:55+02:00",
+  "checked_at": "2026-10-22T06:54+02:00",
   "coverage": {
     "failed_queries_24h": 0,
     "failed_query_examples": [],
@@ -7,11 +7,11 @@
     "queries_checked_24h": 24,
     "queries_responded_24h": 24,
     "watch_rules_total": 75,
-    "watch_rules_with_search_24h": 11,
+    "watch_rules_with_search_24h": 8,
     "coverage_window_hours": 240.0,
     "queries_checked_window": 196,
-    "queries_responded_window": 110,
-    "watch_rules_with_search_window": 48,
+    "queries_responded_window": 118,
+    "watch_rules_with_search_window": 50,
     "by_store": {
       "Rohlík": {
         "planned": 98,
@@ -25,7 +25,7 @@
       }
     },
     "batch_queries": 8,
-    "batch_product_rows_matched": 75,
+    "batch_product_rows_matched": 46,
     "batch_errors": 0,
     "catalog_completeness_verified": false,
     "warning": "Vyhledávací dotazy napříč katalogy, nikoli úplný export obou e-shopů. Neúplnost, blokace a změny cen jsou možné.",
@@ -515,73 +515,73 @@
       ]
     },
     "Rohlík::galbani": {
-      "checked_at": "2026-10-18T18:33+02:00",
-      "status": "skipped_rate_limit",
-      "cards": 0,
-      "detail": "Další dotazy pozastaveny",
+      "checked_at": "2026-10-22T06:54+02:00",
+      "status": "ok",
+      "cards": 17,
+      "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
       "rule_ids": [
         "W026"
       ]
     },
     "Košík::galbani": {
-      "checked_at": "2026-10-18T18:33+02:00",
-      "status": "search_unavailable",
-      "cards": 0,
-      "detail": "Nenalezeno veřejné vyhledávací pole",
+      "checked_at": "2026-10-22T06:54+02:00",
+      "status": "ok",
+      "cards": 10,
+      "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
       "rule_ids": [
         "W026"
       ]
     },
     "Rohlík::galbani mozzarella": {
-      "checked_at": "2026-10-18T18:33+02:00",
-      "status": "skipped_rate_limit",
-      "cards": 0,
-      "detail": "Další dotazy pozastaveny",
+      "checked_at": "2026-10-22T06:54+02:00",
+      "status": "ok",
+      "cards": 16,
+      "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
       "rule_ids": [
         "W026"
       ]
     },
     "Košík::galbani mozzarella": {
-      "checked_at": "2026-10-18T18:33+02:00",
-      "status": "search_unavailable",
-      "cards": 0,
-      "detail": "Nenalezeno veřejné vyhledávací pole",
+      "checked_at": "2026-10-22T06:54+02:00",
+      "status": "ok",
+      "cards": 8,
+      "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
       "rule_ids": [
         "W026"
       ]
     },
     "Rohlík::hellmann": {
-      "checked_at": "2026-10-18T18:33+02:00",
-      "status": "skipped_rate_limit",
-      "cards": 0,
-      "detail": "Další dotazy pozastaveny",
+      "checked_at": "2026-10-22T06:54+02:00",
+      "status": "ok",
+      "cards": 26,
+      "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
       "rule_ids": [
         "W027"
       ]
     },
     "Košík::hellmann": {
-      "checked_at": "2026-10-18T18:33+02:00",
-      "status": "search_unavailable",
-      "cards": 0,
-      "detail": "Nenalezeno veřejné vyhledávací pole",
+      "checked_at": "2026-10-22T06:54+02:00",
+      "status": "ok",
+      "cards": 13,
+      "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
       "rule_ids": [
         "W027"
       ]
     },
     "Rohlík::hellmann majonéza": {
-      "checked_at": "2026-10-18T18:33+02:00",
-      "status": "skipped_rate_limit",
-      "cards": 0,
-      "detail": "Další dotazy pozastaveny",
+      "checked_at": "2026-10-22T06:54+02:00",
+      "status": "ok",
+      "cards": 24,
+      "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
       "rule_ids": [
         "W027"
       ]
     },
     "Košík::hellmann majonéza": {
-      "checked_at": "2026-10-18T18:33+02:00",
-      "status": "search_unavailable",
-      "cards": 0,
-      "detail": "Nenalezeno veřejné vyhledávací pole",
+      "checked_at": "2026-10-22T06:54+02:00",
+      "status": "ok",
+      "cards": 15,
+      "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
       "rule_ids": [
         "W027"
       ]
