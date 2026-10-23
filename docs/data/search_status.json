@@ -1,42 +1,31 @@
 {
-  "checked_at": "2026-10-23T12:51+02:00",
+  "checked_at": "2026-10-23T18:55+02:00",
   "coverage": {
-    "failed_queries_24h": 2,
-    "failed_query_examples": [
-      {
-        "query": "Madeta máslo",
-        "shop": "Košík",
-        "status": "no_cards"
-      },
-      {
-        "query": "Flora",
-        "shop": "Košík",
-        "status": "no_cards"
-      }
-    ],
+    "failed_queries_24h": 0,
+    "failed_query_examples": [],
     "queries_planned": 196,
-    "queries_checked_24h": 32,
-    "queries_responded_24h": 30,
+    "queries_checked_24h": 24,
+    "queries_responded_24h": 24,
     "watch_rules_total": 75,
-    "watch_rules_with_search_24h": 11,
+    "watch_rules_with_search_24h": 9,
     "coverage_window_hours": 240.0,
     "queries_checked_window": 196,
-    "queries_responded_window": 141,
-    "watch_rules_with_search_window": 56,
+    "queries_responded_window": 149,
+    "watch_rules_with_search_window": 60,
     "by_store": {
       "Rohlík": {
         "planned": 98,
-        "attempted_24h": 16,
-        "responded_24h": 16
+        "attempted_24h": 12,
+        "responded_24h": 12
       },
       "Košík": {
         "planned": 98,
-        "attempted_24h": 16,
-        "responded_24h": 14
+        "attempted_24h": 12,
+        "responded_24h": 12
       }
     },
     "batch_queries": 8,
-    "batch_product_rows_matched": 47,
+    "batch_product_rows_matched": 54,
     "batch_errors": 0,
     "catalog_completeness_verified": false,
     "warning": "Vyhledávací dotazy napříč katalogy, nikoli úplný export obou e-shopů. Neúplnost, blokace a změny cen jsou možné.",
@@ -886,73 +875,73 @@
       ]
     },
     "Rohlík::borůvky": {
-      "checked_at": "2026-10-18T18:48+02:00",
-      "status": "skipped_rate_limit",
-      "cards": 0,
-      "detail": "Další dotazy pozastaveny",
+      "checked_at": "2026-10-23T18:55+02:00",
+      "status": "ok",
+      "cards": 165,
+      "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
       "rule_ids": [
         "W039"
       ]
     },
     "Košík::borůvky": {
-      "checked_at": "2026-10-18T18:48+02:00",
-      "status": "search_unavailable",
-      "cards": 0,
-      "detail": "Nenalezeno veřejné vyhledávací pole",
+      "checked_at": "2026-10-23T18:55+02:00",
+      "status": "ok",
+      "cards": 120,
+      "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
       "rule_ids": [
         "W039"
       ]
     },
     "Rohlík::maliny": {
-      "checked_at": "2026-10-18T18:48+02:00",
-      "status": "skipped_rate_limit",
-      "cards": 0,
-      "detail": "Další dotazy pozastaveny",
+      "checked_at": "2026-10-23T18:55+02:00",
+      "status": "ok",
+      "cards": 207,
+      "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
       "rule_ids": [
         "W040"
       ]
     },
     "Košík::maliny": {
-      "checked_at": "2026-10-18T18:48+02:00",
-      "status": "search_unavailable",
-      "cards": 0,
-      "detail": "Nenalezeno veřejné vyhledávací pole",
+      "checked_at": "2026-10-23T18:55+02:00",
+      "status": "ok",
+      "cards": 26,
+      "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
       "rule_ids": [
         "W040"
       ]
     },
     "Rohlík::citrony": {
-      "checked_at": "2026-10-18T18:48+02:00",
-      "status": "skipped_rate_limit",
-      "cards": 0,
-      "detail": "Další dotazy pozastaveny",
+      "checked_at": "2026-10-23T18:55+02:00",
+      "status": "ok",
+      "cards": 206,
+      "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
       "rule_ids": [
         "W041"
       ]
     },
     "Košík::citrony": {
-      "checked_at": "2026-10-18T18:48+02:00",
-      "status": "search_unavailable",
-      "cards": 0,
-      "detail": "Nenalezeno veřejné vyhledávací pole",
+      "checked_at": "2026-10-23T18:55+02:00",
+      "status": "ok",
+      "cards": 118,
+      "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
       "rule_ids": [
         "W041"
       ]
     },
     "Rohlík::hroznové víno": {
-      "checked_at": "2026-10-18T18:48+02:00",
-      "status": "skipped_rate_limit",
-      "cards": 0,
-      "detail": "Další dotazy pozastaveny",
+      "checked_at": "2026-10-23T18:55+02:00",
+      "status": "ok",
+      "cards": 36,
+      "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
       "rule_ids": [
         "W042"
       ]
     },
     "Košík::hroznové víno": {
-      "checked_at": "2026-10-18T18:48+02:00",
-      "status": "search_unavailable",
-      "cards": 0,
-      "detail": "Nenalezeno veřejné vyhledávací pole",
+      "checked_at": "2026-10-23T18:55+02:00",
+      "status": "ok",
+      "cards": 48,
+      "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
       "rule_ids": [
         "W042"
       ]
