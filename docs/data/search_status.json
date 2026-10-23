@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-10-23T06:53+02:00",
+  "checked_at": "2026-10-23T12:51+02:00",
   "coverage": {
     "failed_queries_24h": 2,
     "failed_query_examples": [
@@ -21,8 +21,8 @@
     "watch_rules_with_search_24h": 11,
     "coverage_window_hours": 240.0,
     "queries_checked_window": 196,
-    "queries_responded_window": 134,
-    "watch_rules_with_search_window": 54,
+    "queries_responded_window": 141,
+    "watch_rules_with_search_window": 56,
     "by_store": {
       "Rohlík": {
         "planned": 98,
@@ -36,7 +36,7 @@
       }
     },
     "batch_queries": 8,
-    "batch_product_rows_matched": 43,
+    "batch_product_rows_matched": 47,
     "batch_errors": 0,
     "catalog_completeness_verified": false,
     "warning": "Vyhledávací dotazy napříč katalogy, nikoli úplný export obou e-shopů. Neúplnost, blokace a změny cen jsou možné.",
@@ -814,73 +814,73 @@
       ]
     },
     "Rohlík::coca-cola original 1,5 l": {
-      "checked_at": "2026-10-18T18:48+02:00",
+      "checked_at": "2026-10-23T12:51+02:00",
       "status": "ok",
-      "cards": 58,
+      "cards": 57,
       "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
       "rule_ids": [
         "W036"
       ]
     },
     "Košík::coca-cola original 1,5 l": {
-      "checked_at": "2026-10-18T18:48+02:00",
-      "status": "search_unavailable",
-      "cards": 0,
-      "detail": "Nenalezeno veřejné vyhledávací pole",
+      "checked_at": "2026-10-23T12:51+02:00",
+      "status": "ok",
+      "cards": 19,
+      "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
       "rule_ids": [
         "W036"
       ]
     },
     "Rohlík::coca-cola original 2 l": {
-      "checked_at": "2026-10-18T18:48+02:00",
-      "status": "no_cards",
-      "cards": 0,
+      "checked_at": "2026-10-23T12:51+02:00",
+      "status": "ok",
+      "cards": 14,
       "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
       "rule_ids": [
         "W036"
       ]
     },
     "Košík::coca-cola original 2 l": {
-      "checked_at": "2026-10-18T18:48+02:00",
-      "status": "search_unavailable",
-      "cards": 0,
-      "detail": "Nenalezeno veřejné vyhledávací pole",
+      "checked_at": "2026-10-23T12:51+02:00",
+      "status": "ok",
+      "cards": 19,
+      "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
       "rule_ids": [
         "W036"
       ]
     },
     "Rohlík::avokádo": {
-      "checked_at": "2026-10-18T18:48+02:00",
-      "status": "rate_limited",
-      "cards": 0,
-      "detail": "HTTP 429",
+      "checked_at": "2026-10-23T12:51+02:00",
+      "status": "ok",
+      "cards": 45,
+      "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
       "rule_ids": [
         "W037"
       ]
     },
     "Košík::avokádo": {
-      "checked_at": "2026-10-18T18:48+02:00",
-      "status": "search_unavailable",
-      "cards": 0,
-      "detail": "Nenalezeno veřejné vyhledávací pole",
+      "checked_at": "2026-10-23T12:51+02:00",
+      "status": "ok",
+      "cards": 16,
+      "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
       "rule_ids": [
         "W037"
       ]
     },
     "Rohlík::banány": {
-      "checked_at": "2026-10-18T18:48+02:00",
-      "status": "skipped_rate_limit",
-      "cards": 0,
-      "detail": "Další dotazy pozastaveny",
+      "checked_at": "2026-10-23T12:51+02:00",
+      "status": "ok",
+      "cards": 206,
+      "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
       "rule_ids": [
         "W038"
       ]
     },
     "Košík::banány": {
-      "checked_at": "2026-10-18T18:48+02:00",
-      "status": "search_unavailable",
-      "cards": 0,
-      "detail": "Nenalezeno veřejné vyhledávací pole",
+      "checked_at": "2026-10-23T12:51+02:00",
+      "status": "ok",
+      "cards": 120,
+      "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
       "rule_ids": [
         "W038"
       ]
