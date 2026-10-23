@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-10-22T18:55+02:00",
+  "checked_at": "2026-10-23T06:53+02:00",
   "coverage": {
     "failed_queries_24h": 2,
     "failed_query_examples": [
@@ -15,28 +15,28 @@
       }
     ],
     "queries_planned": 196,
-    "queries_checked_24h": 24,
-    "queries_responded_24h": 22,
+    "queries_checked_24h": 32,
+    "queries_responded_24h": 30,
     "watch_rules_total": 75,
-    "watch_rules_with_search_24h": 9,
+    "watch_rules_with_search_24h": 11,
     "coverage_window_hours": 240.0,
     "queries_checked_window": 196,
-    "queries_responded_window": 130,
+    "queries_responded_window": 134,
     "watch_rules_with_search_window": 54,
     "by_store": {
       "Rohlík": {
         "planned": 98,
-        "attempted_24h": 12,
-        "responded_24h": 12
+        "attempted_24h": 16,
+        "responded_24h": 16
       },
       "Košík": {
         "planned": 98,
-        "attempted_24h": 12,
-        "responded_24h": 10
+        "attempted_24h": 16,
+        "responded_24h": 14
       }
     },
     "batch_queries": 8,
-    "batch_product_rows_matched": 37,
+    "batch_product_rows_matched": 43,
     "batch_errors": 0,
     "catalog_completeness_verified": false,
     "warning": "Vyhledávací dotazy napříč katalogy, nikoli úplný export obou e-shopů. Neúplnost, blokace a změny cen jsou možné.",
@@ -742,25 +742,25 @@
       ]
     },
     "Rohlík::rajec 1,5 l": {
-      "checked_at": "2026-10-18T18:48+02:00",
+      "checked_at": "2026-10-23T06:53+02:00",
       "status": "ok",
-      "cards": 63,
+      "cards": 61,
       "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
       "rule_ids": [
         "W034"
       ]
     },
     "Košík::rajec 1,5 l": {
-      "checked_at": "2026-10-18T18:48+02:00",
-      "status": "search_unavailable",
-      "cards": 0,
-      "detail": "Nenalezeno veřejné vyhledávací pole",
+      "checked_at": "2026-10-23T06:53+02:00",
+      "status": "ok",
+      "cards": 11,
+      "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
       "rule_ids": [
         "W034"
       ]
     },
     "Rohlík::dobrá voda": {
-      "checked_at": "2026-10-18T18:48+02:00",
+      "checked_at": "2026-10-23T06:53+02:00",
       "status": "ok",
       "cards": 26,
       "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
@@ -769,16 +769,16 @@
       ]
     },
     "Košík::dobrá voda": {
-      "checked_at": "2026-10-18T18:48+02:00",
-      "status": "search_unavailable",
-      "cards": 0,
-      "detail": "Nenalezeno veřejné vyhledávací pole",
+      "checked_at": "2026-10-23T06:53+02:00",
+      "status": "ok",
+      "cards": 9,
+      "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
       "rule_ids": [
         "W035"
       ]
     },
     "Rohlík::dobrá voda 1,5 l": {
-      "checked_at": "2026-10-18T18:48+02:00",
+      "checked_at": "2026-10-23T06:53+02:00",
       "status": "ok",
       "cards": 63,
       "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
@@ -787,28 +787,28 @@
       ]
     },
     "Košík::dobrá voda 1,5 l": {
-      "checked_at": "2026-10-18T18:48+02:00",
-      "status": "search_unavailable",
-      "cards": 0,
-      "detail": "Nenalezeno veřejné vyhledávací pole",
+      "checked_at": "2026-10-23T06:53+02:00",
+      "status": "ok",
+      "cards": 6,
+      "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
       "rule_ids": [
         "W035"
       ]
     },
     "Rohlík::coca-cola": {
-      "checked_at": "2026-10-18T18:48+02:00",
+      "checked_at": "2026-10-23T06:53+02:00",
       "status": "ok",
-      "cards": 110,
+      "cards": 109,
       "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
       "rule_ids": [
         "W036"
       ]
     },
     "Košík::coca-cola": {
-      "checked_at": "2026-10-18T18:48+02:00",
-      "status": "search_unavailable",
-      "cards": 0,
-      "detail": "Nenalezeno veřejné vyhledávací pole",
+      "checked_at": "2026-10-23T06:53+02:00",
+      "status": "ok",
+      "cards": 88,
+      "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
       "rule_ids": [
         "W036"
       ]
