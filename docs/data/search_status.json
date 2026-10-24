@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-10-24T06:51+02:00",
+  "checked_at": "2026-10-24T12:49+02:00",
   "coverage": {
     "failed_queries_24h": 0,
     "failed_query_examples": [],
@@ -7,11 +7,11 @@
     "queries_checked_24h": 32,
     "queries_responded_24h": 32,
     "watch_rules_total": 75,
-    "watch_rules_with_search_24h": 12,
+    "watch_rules_with_search_24h": 14,
     "coverage_window_hours": 240.0,
     "queries_checked_window": 196,
-    "queries_responded_window": 157,
-    "watch_rules_with_search_window": 63,
+    "queries_responded_window": 165,
+    "watch_rules_with_search_window": 67,
     "by_store": {
       "Rohlík": {
         "planned": 98,
@@ -25,7 +25,7 @@
       }
     },
     "batch_queries": 8,
-    "batch_product_rows_matched": 56,
+    "batch_product_rows_matched": 65,
     "batch_errors": 0,
     "catalog_completeness_verified": false,
     "warning": "Vyhledávací dotazy napříč katalogy, nikoli úplný export obou e-shopů. Neúplnost, blokace a změny cen jsou možné.",
@@ -1019,73 +1019,73 @@
       ]
     },
     "Rohlík::mrkev": {
-      "checked_at": "2026-10-18T18:48+02:00",
-      "status": "skipped_rate_limit",
-      "cards": 0,
-      "detail": "Další dotazy pozastaveny",
+      "checked_at": "2026-10-24T12:49+02:00",
+      "status": "ok",
+      "cards": 109,
+      "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
       "rule_ids": [
         "W046"
       ]
     },
     "Košík::mrkev": {
-      "checked_at": "2026-10-18T18:48+02:00",
-      "status": "search_unavailable",
-      "cards": 0,
-      "detail": "Nenalezeno veřejné vyhledávací pole",
+      "checked_at": "2026-10-24T12:49+02:00",
+      "status": "ok",
+      "cards": 71,
+      "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
       "rule_ids": [
         "W046"
       ]
     },
     "Rohlík::papriky": {
-      "checked_at": "2026-10-18T18:48+02:00",
-      "status": "skipped_rate_limit",
-      "cards": 0,
-      "detail": "Další dotazy pozastaveny",
+      "checked_at": "2026-10-24T12:49+02:00",
+      "status": "ok",
+      "cards": 119,
+      "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
       "rule_ids": [
         "W047"
       ]
     },
     "Košík::papriky": {
-      "checked_at": "2026-10-18T18:48+02:00",
-      "status": "search_unavailable",
-      "cards": 0,
-      "detail": "Nenalezeno veřejné vyhledávací pole",
+      "checked_at": "2026-10-24T12:49+02:00",
+      "status": "ok",
+      "cards": 110,
+      "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
       "rule_ids": [
         "W047"
       ]
     },
     "Rohlík::studentská pečeť": {
-      "checked_at": "2026-10-18T18:48+02:00",
-      "status": "skipped_rate_limit",
-      "cards": 0,
-      "detail": "Další dotazy pozastaveny",
+      "checked_at": "2026-10-24T12:49+02:00",
+      "status": "ok",
+      "cards": 6,
+      "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
       "rule_ids": [
         "W048"
       ]
     },
     "Košík::studentská pečeť": {
-      "checked_at": "2026-10-18T18:48+02:00",
-      "status": "search_unavailable",
-      "cards": 0,
-      "detail": "Nenalezeno veřejné vyhledávací pole",
+      "checked_at": "2026-10-24T12:49+02:00",
+      "status": "ok",
+      "cards": 15,
+      "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
       "rule_ids": [
         "W048"
       ]
     },
     "Rohlík::miňonky": {
-      "checked_at": "2026-10-18T18:48+02:00",
-      "status": "skipped_rate_limit",
-      "cards": 0,
-      "detail": "Další dotazy pozastaveny",
+      "checked_at": "2026-10-24T12:49+02:00",
+      "status": "ok",
+      "cards": 3,
+      "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
       "rule_ids": [
         "W049"
       ]
     },
     "Košík::miňonky": {
-      "checked_at": "2026-10-18T18:48+02:00",
-      "status": "search_unavailable",
-      "cards": 0,
-      "detail": "Nenalezeno veřejné vyhledávací pole",
+      "checked_at": "2026-10-24T12:49+02:00",
+      "status": "ok",
+      "cards": 19,
+      "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
       "rule_ids": [
         "W049"
       ]
