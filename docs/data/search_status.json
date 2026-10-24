@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-10-24T12:49+02:00",
+  "checked_at": "2026-10-24T18:50+02:00",
   "coverage": {
     "failed_queries_24h": 0,
     "failed_query_examples": [],
@@ -10,8 +10,8 @@
     "watch_rules_with_search_24h": 14,
     "coverage_window_hours": 240.0,
     "queries_checked_window": 196,
-    "queries_responded_window": 165,
-    "watch_rules_with_search_window": 67,
+    "queries_responded_window": 173,
+    "watch_rules_with_search_window": 70,
     "by_store": {
       "Rohlík": {
         "planned": 98,
@@ -25,7 +25,7 @@
       }
     },
     "batch_queries": 8,
-    "batch_product_rows_matched": 65,
+    "batch_product_rows_matched": 68,
     "batch_errors": 0,
     "catalog_completeness_verified": false,
     "warning": "Vyhledávací dotazy napříč katalogy, nikoli úplný export obou e-shopů. Neúplnost, blokace a změny cen jsou možné.",
@@ -1091,73 +1091,73 @@
       ]
     },
     "Rohlík::fidorka": {
-      "checked_at": "2026-10-18T18:48+02:00",
-      "status": "skipped_rate_limit",
-      "cards": 0,
-      "detail": "Další dotazy pozastaveny",
+      "checked_at": "2026-10-24T18:50+02:00",
+      "status": "ok",
+      "cards": 6,
+      "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
       "rule_ids": [
         "W050"
       ]
     },
     "Košík::fidorka": {
-      "checked_at": "2026-10-18T18:48+02:00",
-      "status": "search_unavailable",
-      "cards": 0,
-      "detail": "Nenalezeno veřejné vyhledávací pole",
+      "checked_at": "2026-10-24T18:50+02:00",
+      "status": "ok",
+      "cards": 19,
+      "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
       "rule_ids": [
         "W050"
       ]
     },
     "Rohlík::kokosky": {
-      "checked_at": "2026-10-18T18:48+02:00",
-      "status": "skipped_rate_limit",
-      "cards": 0,
-      "detail": "Další dotazy pozastaveny",
+      "checked_at": "2026-10-24T18:50+02:00",
+      "status": "ok",
+      "cards": 4,
+      "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
       "rule_ids": [
         "W051"
       ]
     },
     "Košík::kokosky": {
-      "checked_at": "2026-10-18T18:48+02:00",
-      "status": "search_unavailable",
-      "cards": 0,
-      "detail": "Nenalezeno veřejné vyhledávací pole",
+      "checked_at": "2026-10-24T18:50+02:00",
+      "status": "ok",
+      "cards": 19,
+      "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
       "rule_ids": [
         "W051"
       ]
     },
     "Rohlík::panzani": {
-      "checked_at": "2026-10-18T18:48+02:00",
-      "status": "skipped_rate_limit",
-      "cards": 0,
-      "detail": "Další dotazy pozastaveny",
+      "checked_at": "2026-10-24T18:50+02:00",
+      "status": "ok",
+      "cards": 26,
+      "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
       "rule_ids": [
         "W052"
       ]
     },
     "Košík::panzani": {
-      "checked_at": "2026-10-18T18:48+02:00",
-      "status": "search_unavailable",
-      "cards": 0,
-      "detail": "Nenalezeno veřejné vyhledávací pole",
+      "checked_at": "2026-10-24T18:50+02:00",
+      "status": "ok",
+      "cards": 20,
+      "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
       "rule_ids": [
         "W052"
       ]
     },
     "Rohlík::panzani těstoviny": {
-      "checked_at": "2026-10-18T18:48+02:00",
-      "status": "skipped_rate_limit",
-      "cards": 0,
-      "detail": "Další dotazy pozastaveny",
+      "checked_at": "2026-10-24T18:50+02:00",
+      "status": "ok",
+      "cards": 30,
+      "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
       "rule_ids": [
         "W052"
       ]
     },
     "Košík::panzani těstoviny": {
-      "checked_at": "2026-10-18T18:48+02:00",
-      "status": "search_unavailable",
-      "cards": 0,
-      "detail": "Nenalezeno veřejné vyhledávací pole",
+      "checked_at": "2026-10-24T18:50+02:00",
+      "status": "ok",
+      "cards": 18,
+      "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
       "rule_ids": [
         "W052"
       ]
