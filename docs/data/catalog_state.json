@@ -11584,8 +11584,8 @@
       "category": "Papír a hygiena",
       "rule_id": "W053",
       "note": "Ponecháno z původního seznamu; nezaměňovat s vlhčenými ubrousky ani výrobky jiné značky.",
-      "image_url": "https://www.rohlik.cz/cdn-cgi/image/f=auto,onerror=redirect,w=240,h=240,q=75/https://cdn.rohlik.cz/images/grocery/products/1307943/1307943-1790257821299550337.jpg",
-      "checked_at": "2026-10-27T11:57+01:00",
+      "image_url": "data/images/f47eb1ce3787fa7cac6f81.webp",
+      "checked_at": "2026-10-27T18:03+01:00",
       "price_verified": true,
       "discount_verified": true,
       "discount_candidate_pct": 23,
@@ -11611,7 +11611,7 @@
       "rule_id": "W053",
       "note": "",
       "image_url": "https://www.rohlik.cz/cdn-cgi/image/f=auto,onerror=redirect,w=240,h=240,q=75/https://cdn.rohlik.cz/images/grocery/products/1307941/1307941-1790257820804638092.jpg",
-      "checked_at": "2026-10-27T11:57+01:00",
+      "checked_at": "2026-10-27T18:03+01:00",
       "price_verified": true,
       "discount_verified": false,
       "discount_candidate_pct": 0,
@@ -11637,7 +11637,7 @@
       "rule_id": "W053",
       "note": "",
       "image_url": "https://www.rohlik.cz/cdn-cgi/image/f=auto,onerror=redirect,w=240,h=240,q=75/https://cdn.rohlik.cz/images/grocery/products/1307939/1307939-1782399416192.jpg",
-      "checked_at": "2026-10-27T11:57+01:00",
+      "checked_at": "2026-10-27T18:03+01:00",
       "price_verified": true,
       "discount_verified": false,
       "discount_candidate_pct": 0,
@@ -11663,7 +11663,7 @@
       "rule_id": "W053",
       "note": "Ponecháno z původního seznamu; nezaměňovat s vlhčenými ubrousky ani výrobky jiné značky.",
       "image_url": "https://www.rohlik.cz/cdn-cgi/image/f=auto,onerror=redirect,w=240,h=240,q=75/https://cdn.rohlik.cz/images/grocery/products/1459116/1459116-1782399457868.jpg",
-      "checked_at": "2026-10-27T11:57+01:00",
+      "checked_at": "2026-10-27T18:03+01:00",
       "price_verified": true,
       "discount_verified": true,
       "discount_candidate_pct": 23,
@@ -11741,7 +11741,7 @@
       "rule_id": "W074",
       "note": "",
       "image_url": "https://www.rohlik.cz/cdn-cgi/image/f=auto,onerror=redirect,w=240,h=240,q=75/https://cdn.rohlik.cz/images/grocery/products/1307951/1307951-1755424410456.jpg",
-      "checked_at": "2026-10-27T11:57+01:00",
+      "checked_at": "2026-10-27T18:03+01:00",
       "price_verified": false,
       "discount_verified": false,
       "discount_candidate_pct": 0,
@@ -11767,7 +11767,7 @@
       "rule_id": "W053",
       "note": "",
       "image_url": "https://www.rohlik.cz/cdn-cgi/image/f=auto,onerror=redirect,w=240,h=240,q=75/https://cdn.rohlik.cz/images/grocery/products/1307927/1307927-1790257830278597242.jpg",
-      "checked_at": "2026-10-27T11:57+01:00",
+      "checked_at": "2026-10-27T18:03+01:00",
       "price_verified": false,
       "discount_verified": false,
       "discount_candidate_pct": 0,
@@ -11793,7 +11793,7 @@
       "rule_id": "W075",
       "note": "",
       "image_url": "https://www.rohlik.cz/cdn-cgi/image/f=auto,onerror=redirect,w=240,h=240,q=75/https://cdn.rohlik.cz/images/grocery/products/1307977/1307977-1790257820831388622.jpg",
-      "checked_at": "2026-10-27T11:57+01:00",
+      "checked_at": "2026-10-27T18:03+01:00",
       "price_verified": false,
       "discount_verified": false,
       "discount_candidate_pct": 0,
@@ -11819,7 +11819,7 @@
       "rule_id": "W074",
       "note": "",
       "image_url": "https://www.rohlik.cz/cdn-cgi/image/f=auto,onerror=redirect,w=240,h=240,q=75/https://cdn.rohlik.cz/images/grocery/products/1375577/1375577-1755425150410.jpg",
-      "checked_at": "2026-10-27T11:57+01:00",
+      "checked_at": "2026-10-27T18:03+01:00",
       "price_verified": false,
       "discount_verified": false,
       "discount_candidate_pct": 0,
@@ -11845,7 +11845,7 @@
       "rule_id": "W073",
       "note": "",
       "image_url": "https://www.rohlik.cz/cdn-cgi/image/f=auto,onerror=redirect,w=240,h=240,q=75/https://cdn.rohlik.cz/images/grocery/products/1307969/1307969-1790257820163300789.jpg",
-      "checked_at": "2026-10-27T11:57+01:00",
+      "checked_at": "2026-10-27T18:03+01:00",
       "price_verified": false,
       "discount_verified": false,
       "discount_candidate_pct": 0,
@@ -11871,7 +11871,7 @@
       "rule_id": "W074",
       "note": "",
       "image_url": "https://www.rohlik.cz/cdn-cgi/image/f=auto,onerror=redirect,w=240,h=240,q=75/https://cdn.rohlik.cz/images/grocery/products/1307957/1307957-1755425000237.jpg",
-      "checked_at": "2026-10-27T11:57+01:00",
+      "checked_at": "2026-10-27T18:03+01:00",
       "price_verified": false,
       "discount_verified": false,
       "discount_candidate_pct": 0,
@@ -11897,7 +11897,7 @@
       "rule_id": "W075",
       "note": "",
       "image_url": "https://www.rohlik.cz/cdn-cgi/image/f=auto,onerror=redirect,w=240,h=240,q=75/https://cdn.rohlik.cz/images/grocery/products/1307979/1307979-179025782482795957.jpg",
-      "checked_at": "2026-10-27T11:57+01:00",
+      "checked_at": "2026-10-27T18:03+01:00",
       "price_verified": false,
       "discount_verified": false,
       "discount_candidate_pct": 0,
@@ -11923,7 +11923,7 @@
       "rule_id": "W075",
       "note": "",
       "image_url": "https://www.rohlik.cz/cdn-cgi/image/f=auto,onerror=redirect,w=240,h=240,q=75/https://cdn.rohlik.cz/images/grocery/products/1422379/1422379-179025783332658992.jpg",
-      "checked_at": "2026-10-27T11:57+01:00",
+      "checked_at": "2026-10-27T18:03+01:00",
       "price_verified": false,
       "discount_verified": false,
       "discount_candidate_pct": 0,
@@ -12001,7 +12001,7 @@
       "rule_id": "W073",
       "note": "",
       "image_url": "https://static-new.kosik.cz/k3wCdnContainerk3w-static-ne-cz-prod/images/thumbs/4c/185x185x1_4cespclod274.jpg",
-      "checked_at": "2026-10-27T11:57+01:00",
+      "checked_at": "2026-10-27T18:03+01:00",
       "price_verified": true,
       "discount_verified": false,
       "discount_candidate_pct": 0,
@@ -12027,7 +12027,7 @@
       "rule_id": "W075",
       "note": "",
       "image_url": "https://static-new.kosik.cz/k3wCdnContainerk3w-static-ne-cz-prod/images/thumbs/im/185x185x1_im044yt6ad6g.jpg",
-      "checked_at": "2026-10-27T11:57+01:00",
+      "checked_at": "2026-10-27T18:03+01:00",
       "price_verified": true,
       "discount_verified": false,
       "discount_candidate_pct": 0,
@@ -12443,7 +12443,7 @@
       "rule_id": "W074",
       "note": "",
       "image_url": "https://www.rohlik.cz/cdn-cgi/image/f=auto,onerror=redirect,w=240,h=240,q=75/https://cdn.rohlik.cz/images/grocery/products/1482738/1482738-1783672482197.jpg",
-      "checked_at": "2026-10-27T11:57+01:00",
+      "checked_at": "2026-10-27T18:03+01:00",
       "price_verified": false,
       "discount_verified": false,
       "discount_candidate_pct": 0,
@@ -13093,7 +13093,7 @@
       "rule_id": "W075",
       "note": "",
       "image_url": "https://www.rohlik.cz/cdn-cgi/image/f=auto,onerror=redirect,w=240,h=240,q=75/https://cdn.rohlik.cz/images/grocery/products/1314019/1314019-1717159644775.jpg",
-      "checked_at": "2026-10-25T05:53+01:00",
+      "checked_at": "2026-10-27T18:03+01:00",
       "price_verified": false,
       "discount_verified": false,
       "discount_candidate_pct": 0,
@@ -13119,7 +13119,7 @@
       "rule_id": "W075",
       "note": "",
       "image_url": "https://www.rohlik.cz/cdn-cgi/image/f=auto,onerror=redirect,w=240,h=240,q=75/https://cdn.rohlik.cz/images/grocery/products/1409530/1409530-1762265886855.jpg",
-      "checked_at": "2026-10-25T05:53+01:00",
+      "checked_at": "2026-10-27T18:03+01:00",
       "price_verified": false,
       "discount_verified": false,
       "discount_candidate_pct": 0,
@@ -32701,7 +32701,7 @@
       ]
     },
     "Rohlík::kapesníky box 3vrstvé": {
-      "checked_at": "2026-10-19T12:52+02:00",
+      "checked_at": "2026-10-27T18:03+01:00",
       "status": "ok",
       "cards": 25,
       "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
@@ -32710,16 +32710,16 @@
       ]
     },
     "Košík::kapesníky box 3vrstvé": {
-      "checked_at": "2026-10-19T12:52+02:00",
+      "checked_at": "2026-10-27T18:03+01:00",
       "status": "ok",
-      "cards": 13,
+      "cards": 15,
       "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
       "rule_ids": [
         "W075"
       ]
     },
     "Rohlík::kapesníky v krabici": {
-      "checked_at": "2026-10-19T12:52+02:00",
+      "checked_at": "2026-10-27T18:03+01:00",
       "status": "ok",
       "cards": 25,
       "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
@@ -32728,7 +32728,7 @@
       ]
     },
     "Košík::kapesníky v krabici": {
-      "checked_at": "2026-10-19T12:52+02:00",
+      "checked_at": "2026-10-27T18:03+01:00",
       "status": "ok",
       "cards": 19,
       "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
@@ -32737,7 +32737,7 @@
       ]
     },
     "Rohlík::zewa kapesníky box": {
-      "checked_at": "2026-10-19T18:56+02:00",
+      "checked_at": "2026-10-27T18:03+01:00",
       "status": "ok",
       "cards": 25,
       "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
@@ -32746,16 +32746,16 @@
       ]
     },
     "Košík::zewa kapesníky box": {
-      "checked_at": "2026-10-19T18:56+02:00",
+      "checked_at": "2026-10-27T18:03+01:00",
       "status": "ok",
-      "cards": 14,
+      "cards": 13,
       "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
       "rule_ids": [
         "W075"
       ]
     },
     "Rohlík::papírové kapesníky box": {
-      "checked_at": "2026-10-19T18:56+02:00",
+      "checked_at": "2026-10-27T18:03+01:00",
       "status": "ok",
       "cards": 25,
       "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
@@ -32764,15 +32764,15 @@
       ]
     },
     "Košík::papírové kapesníky box": {
-      "checked_at": "2026-10-19T18:56+02:00",
+      "checked_at": "2026-10-27T18:03+01:00",
       "status": "ok",
-      "cards": 15,
+      "cards": 16,
       "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
       "rule_ids": [
         "W075"
       ]
     }
   },
-  "last_scan": "2026-10-27T11:57+01:00",
-  "cursor": 188
+  "last_scan": "2026-10-27T18:03+01:00",
+  "cursor": 0
 }
