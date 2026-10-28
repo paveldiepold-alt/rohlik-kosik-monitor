@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-10-27T18:03+01:00",
+  "checked_at": "2026-10-28T06:03+01:00",
   "coverage": {
     "failed_queries_24h": 0,
     "failed_query_examples": [],
@@ -25,7 +25,7 @@
       }
     },
     "batch_queries": 8,
-    "batch_product_rows_matched": 39,
+    "batch_product_rows_matched": 69,
     "batch_errors": 0,
     "catalog_completeness_verified": false,
     "warning": "Vyhledávací dotazy napříč katalogy, nikoli úplný export obou e-shopů. Neúplnost, blokace a změny cen jsou možné.",
@@ -33,16 +33,16 @@
   },
   "queries": {
     "Rohlík::kuřecí prsní řízky": {
-      "checked_at": "2026-10-19T18:56+02:00",
+      "checked_at": "2026-10-28T06:03+01:00",
       "status": "ok",
-      "cards": 66,
+      "cards": 67,
       "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
       "rule_ids": [
         "W001"
       ]
     },
     "Košík::kuřecí prsní řízky": {
-      "checked_at": "2026-10-19T18:56+02:00",
+      "checked_at": "2026-10-28T06:03+01:00",
       "status": "ok",
       "cards": 10,
       "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
@@ -51,16 +51,16 @@
       ]
     },
     "Rohlík::kuřecí prsa": {
-      "checked_at": "2026-10-19T18:56+02:00",
+      "checked_at": "2026-10-28T06:03+01:00",
       "status": "ok",
-      "cards": 208,
+      "cards": 150,
       "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
       "rule_ids": [
         "W001"
       ]
     },
     "Košík::kuřecí prsa": {
-      "checked_at": "2026-10-19T18:56+02:00",
+      "checked_at": "2026-10-28T06:03+01:00",
       "status": "ok",
       "cards": 15,
       "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
@@ -69,16 +69,16 @@
       ]
     },
     "Rohlík::kuřecí stehna": {
-      "checked_at": "2026-10-20T06:52+02:00",
+      "checked_at": "2026-10-28T06:03+01:00",
       "status": "ok",
-      "cards": 28,
+      "cards": 29,
       "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
       "rule_ids": [
         "W002"
       ]
     },
     "Košík::kuřecí stehna": {
-      "checked_at": "2026-10-20T06:52+02:00",
+      "checked_at": "2026-10-28T06:03+01:00",
       "status": "ok",
       "cards": 28,
       "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
@@ -87,18 +87,18 @@
       ]
     },
     "Rohlík::kuřecí paličky": {
-      "checked_at": "2026-10-20T06:52+02:00",
+      "checked_at": "2026-10-28T06:03+01:00",
       "status": "ok",
-      "cards": 17,
+      "cards": 19,
       "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
       "rule_ids": [
         "W002"
       ]
     },
     "Košík::kuřecí paličky": {
-      "checked_at": "2026-10-20T06:52+02:00",
+      "checked_at": "2026-10-28T06:03+01:00",
       "status": "ok",
-      "cards": 14,
+      "cards": 13,
       "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
       "rule_ids": [
         "W002"
