@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-10-29T12:04+01:00",
+  "checked_at": "2026-10-29T18:12+01:00",
   "coverage": {
     "failed_queries_24h": 1,
     "failed_query_examples": [
@@ -13,7 +13,7 @@
     "queries_checked_24h": 24,
     "queries_responded_24h": 23,
     "watch_rules_total": 75,
-    "watch_rules_with_search_24h": 18,
+    "watch_rules_with_search_24h": 13,
     "coverage_window_hours": 240.0,
     "queries_checked_window": 196,
     "queries_responded_window": 192,
@@ -31,7 +31,7 @@
       }
     },
     "batch_queries": 8,
-    "batch_product_rows_matched": 80,
+    "batch_product_rows_matched": 64,
     "batch_errors": 0,
     "catalog_completeness_verified": false,
     "warning": "Vyhledávací dotazy napříč katalogy, nikoli úplný export obou e-shopů. Neúplnost, blokace a změny cen jsou možné.",
@@ -413,7 +413,7 @@
       ]
     },
     "Rohlík::smetanito": {
-      "checked_at": "2026-10-21T12:54+02:00",
+      "checked_at": "2026-10-29T18:12+01:00",
       "status": "ok",
       "cards": 11,
       "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
@@ -422,7 +422,7 @@
       ]
     },
     "Košík::smetanito": {
-      "checked_at": "2026-10-21T12:54+02:00",
+      "checked_at": "2026-10-29T18:12+01:00",
       "status": "ok",
       "cards": 14,
       "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
@@ -431,7 +431,7 @@
       ]
     },
     "Rohlík::veselá kráva": {
-      "checked_at": "2026-10-21T12:54+02:00",
+      "checked_at": "2026-10-29T18:12+01:00",
       "status": "ok",
       "cards": 8,
       "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
@@ -440,7 +440,7 @@
       ]
     },
     "Košík::veselá kráva": {
-      "checked_at": "2026-10-21T12:54+02:00",
+      "checked_at": "2026-10-29T18:12+01:00",
       "status": "ok",
       "cards": 10,
       "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
@@ -449,7 +449,7 @@
       ]
     },
     "Rohlík::lipno tavený sýr": {
-      "checked_at": "2026-10-21T18:55+02:00",
+      "checked_at": "2026-10-29T18:12+01:00",
       "status": "ok",
       "cards": 25,
       "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
@@ -458,16 +458,16 @@
       ]
     },
     "Košík::lipno tavený sýr": {
-      "checked_at": "2026-10-21T18:55+02:00",
+      "checked_at": "2026-10-29T18:12+01:00",
       "status": "ok",
-      "cards": 11,
+      "cards": 10,
       "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
       "rule_ids": [
         "W022"
       ]
     },
     "Rohlík::král sýrů": {
-      "checked_at": "2026-10-21T18:55+02:00",
+      "checked_at": "2026-10-29T18:12+01:00",
       "status": "ok",
       "cards": 26,
       "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
@@ -476,9 +476,9 @@
       ]
     },
     "Košík::král sýrů": {
-      "checked_at": "2026-10-21T18:55+02:00",
+      "checked_at": "2026-10-29T18:12+01:00",
       "status": "ok",
-      "cards": 17,
+      "cards": 16,
       "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
       "rule_ids": [
         "W023"
