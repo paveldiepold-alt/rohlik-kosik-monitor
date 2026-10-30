@@ -1,19 +1,13 @@
 {
-  "checked_at": "2026-10-29T18:12+01:00",
+  "checked_at": "2026-10-30T06:05+01:00",
   "coverage": {
-    "failed_queries_24h": 1,
-    "failed_query_examples": [
-      {
-        "query": "Kmotr",
-        "shop": "Košík",
-        "status": "no_cards"
-      }
-    ],
+    "failed_queries_24h": 0,
+    "failed_query_examples": [],
     "queries_planned": 196,
     "queries_checked_24h": 24,
-    "queries_responded_24h": 23,
+    "queries_responded_24h": 24,
     "watch_rules_total": 75,
-    "watch_rules_with_search_24h": 13,
+    "watch_rules_with_search_24h": 9,
     "coverage_window_hours": 240.0,
     "queries_checked_window": 196,
     "queries_responded_window": 192,
@@ -27,11 +21,11 @@
       "Košík": {
         "planned": 98,
         "attempted_24h": 12,
-        "responded_24h": 11
+        "responded_24h": 12
       }
     },
     "batch_queries": 8,
-    "batch_product_rows_matched": 64,
+    "batch_product_rows_matched": 80,
     "batch_errors": 0,
     "catalog_completeness_verified": false,
     "warning": "Vyhledávací dotazy napříč katalogy, nikoli úplný export obou e-shopů. Neúplnost, blokace a změny cen jsou možné.",
@@ -485,7 +479,7 @@
       ]
     },
     "Rohlík::král sýrů hermelín": {
-      "checked_at": "2026-10-21T18:55+02:00",
+      "checked_at": "2026-10-30T06:05+01:00",
       "status": "ok",
       "cards": 24,
       "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
@@ -494,25 +488,25 @@
       ]
     },
     "Košík::král sýrů hermelín": {
-      "checked_at": "2026-10-21T18:55+02:00",
+      "checked_at": "2026-10-30T06:05+01:00",
       "status": "ok",
-      "cards": 19,
+      "cards": 17,
       "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
       "rule_ids": [
         "W023"
       ]
     },
     "Rohlík::sedlčanský": {
-      "checked_at": "2026-10-21T18:55+02:00",
+      "checked_at": "2026-10-30T06:05+01:00",
       "status": "ok",
-      "cards": 7,
+      "cards": 8,
       "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
       "rule_ids": [
         "W024"
       ]
     },
     "Košík::sedlčanský": {
-      "checked_at": "2026-10-21T18:55+02:00",
+      "checked_at": "2026-10-30T06:05+01:00",
       "status": "ok",
       "cards": 8,
       "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
@@ -521,7 +515,7 @@
       ]
     },
     "Rohlík::galbani": {
-      "checked_at": "2026-10-22T06:54+02:00",
+      "checked_at": "2026-10-30T06:05+01:00",
       "status": "ok",
       "cards": 17,
       "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
@@ -530,7 +524,7 @@
       ]
     },
     "Košík::galbani": {
-      "checked_at": "2026-10-22T06:54+02:00",
+      "checked_at": "2026-10-30T06:05+01:00",
       "status": "ok",
       "cards": 10,
       "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
@@ -539,16 +533,16 @@
       ]
     },
     "Rohlík::galbani mozzarella": {
-      "checked_at": "2026-10-22T06:54+02:00",
+      "checked_at": "2026-10-30T06:05+01:00",
       "status": "ok",
-      "cards": 16,
+      "cards": 15,
       "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
       "rule_ids": [
         "W026"
       ]
     },
     "Košík::galbani mozzarella": {
-      "checked_at": "2026-10-22T06:54+02:00",
+      "checked_at": "2026-10-30T06:05+01:00",
       "status": "ok",
       "cards": 8,
       "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
