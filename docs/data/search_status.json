@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-10-31T11:53+01:00",
+  "checked_at": "2026-10-31T17:55+01:00",
   "coverage": {
     "failed_queries_24h": 0,
     "failed_query_examples": [],
@@ -7,7 +7,7 @@
     "queries_checked_24h": 32,
     "queries_responded_24h": 32,
     "watch_rules_total": 75,
-    "watch_rules_with_search_24h": 10,
+    "watch_rules_with_search_24h": 11,
     "coverage_window_hours": 240.0,
     "queries_checked_window": 196,
     "queries_responded_window": 194,
@@ -25,7 +25,7 @@
       }
     },
     "batch_queries": 8,
-    "batch_product_rows_matched": 21,
+    "batch_product_rows_matched": 49,
     "batch_errors": 0,
     "catalog_completeness_verified": false,
     "warning": "Vyhledávací dotazy napříč katalogy, nikoli úplný export obou e-shopů. Neúplnost, blokace a změny cen jsou možné.",
@@ -839,7 +839,7 @@
       ]
     },
     "Rohlík::avokádo": {
-      "checked_at": "2026-10-23T12:51+02:00",
+      "checked_at": "2026-10-31T17:55+01:00",
       "status": "ok",
       "cards": 45,
       "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
@@ -848,16 +848,16 @@
       ]
     },
     "Košík::avokádo": {
-      "checked_at": "2026-10-23T12:51+02:00",
+      "checked_at": "2026-10-31T17:55+01:00",
       "status": "ok",
-      "cards": 16,
+      "cards": 15,
       "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
       "rule_ids": [
         "W037"
       ]
     },
     "Rohlík::banány": {
-      "checked_at": "2026-10-23T12:51+02:00",
+      "checked_at": "2026-10-31T17:55+01:00",
       "status": "ok",
       "cards": 206,
       "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
@@ -866,7 +866,7 @@
       ]
     },
     "Košík::banány": {
-      "checked_at": "2026-10-23T12:51+02:00",
+      "checked_at": "2026-10-31T17:55+01:00",
       "status": "ok",
       "cards": 120,
       "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
@@ -875,16 +875,16 @@
       ]
     },
     "Rohlík::borůvky": {
-      "checked_at": "2026-10-23T18:55+02:00",
+      "checked_at": "2026-10-31T17:55+01:00",
       "status": "ok",
-      "cards": 165,
+      "cards": 163,
       "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
       "rule_ids": [
         "W039"
       ]
     },
     "Košík::borůvky": {
-      "checked_at": "2026-10-23T18:55+02:00",
+      "checked_at": "2026-10-31T17:55+01:00",
       "status": "ok",
       "cards": 120,
       "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
@@ -893,16 +893,16 @@
       ]
     },
     "Rohlík::maliny": {
-      "checked_at": "2026-10-23T18:55+02:00",
+      "checked_at": "2026-10-31T17:55+01:00",
       "status": "ok",
-      "cards": 207,
+      "cards": 88,
       "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
       "rule_ids": [
         "W040"
       ]
     },
     "Košík::maliny": {
-      "checked_at": "2026-10-23T18:55+02:00",
+      "checked_at": "2026-10-31T17:55+01:00",
       "status": "ok",
       "cards": 26,
       "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
