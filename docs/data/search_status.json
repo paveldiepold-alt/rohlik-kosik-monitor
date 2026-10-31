@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-10-30T18:02+01:00",
+  "checked_at": "2026-10-31T06:00+01:00",
   "coverage": {
     "failed_queries_24h": 0,
     "failed_query_examples": [],
@@ -7,7 +7,7 @@
     "queries_checked_24h": 32,
     "queries_responded_24h": 32,
     "watch_rules_total": 75,
-    "watch_rules_with_search_24h": 13,
+    "watch_rules_with_search_24h": 12,
     "coverage_window_hours": 240.0,
     "queries_checked_window": 196,
     "queries_responded_window": 194,
@@ -25,7 +25,7 @@
       }
     },
     "batch_queries": 8,
-    "batch_product_rows_matched": 108,
+    "batch_product_rows_matched": 45,
     "batch_errors": 0,
     "catalog_completeness_verified": false,
     "warning": "Vyhledávací dotazy napříč katalogy, nikoli úplný export obou e-shopů. Neúplnost, blokace a změny cen jsou možné.",
@@ -695,7 +695,7 @@
       ]
     },
     "Rohlík::aquila 1,5 l": {
-      "checked_at": "2026-10-22T18:55+02:00",
+      "checked_at": "2026-10-31T06:00+01:00",
       "status": "ok",
       "cards": 46,
       "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
@@ -704,25 +704,25 @@
       ]
     },
     "Košík::aquila 1,5 l": {
-      "checked_at": "2026-10-22T18:55+02:00",
+      "checked_at": "2026-10-31T06:00+01:00",
       "status": "ok",
-      "cards": 13,
+      "cards": 12,
       "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
       "rule_ids": [
         "W033"
       ]
     },
     "Rohlík::rajec": {
-      "checked_at": "2026-10-22T18:55+02:00",
+      "checked_at": "2026-10-31T06:00+01:00",
       "status": "ok",
-      "cards": 17,
+      "cards": 16,
       "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
       "rule_ids": [
         "W034"
       ]
     },
     "Košík::rajec": {
-      "checked_at": "2026-10-22T18:55+02:00",
+      "checked_at": "2026-10-31T06:00+01:00",
       "status": "ok",
       "cards": 21,
       "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
@@ -731,16 +731,16 @@
       ]
     },
     "Rohlík::rajec 1,5 l": {
-      "checked_at": "2026-10-23T06:53+02:00",
+      "checked_at": "2026-10-31T06:00+01:00",
       "status": "ok",
-      "cards": 61,
+      "cards": 62,
       "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
       "rule_ids": [
         "W034"
       ]
     },
     "Košík::rajec 1,5 l": {
-      "checked_at": "2026-10-23T06:53+02:00",
+      "checked_at": "2026-10-31T06:00+01:00",
       "status": "ok",
       "cards": 11,
       "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
@@ -749,16 +749,16 @@
       ]
     },
     "Rohlík::dobrá voda": {
-      "checked_at": "2026-10-23T06:53+02:00",
+      "checked_at": "2026-10-31T06:00+01:00",
       "status": "ok",
-      "cards": 26,
+      "cards": 28,
       "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
       "rule_ids": [
         "W035"
       ]
     },
     "Košík::dobrá voda": {
-      "checked_at": "2026-10-23T06:53+02:00",
+      "checked_at": "2026-10-31T06:00+01:00",
       "status": "ok",
       "cards": 9,
       "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
