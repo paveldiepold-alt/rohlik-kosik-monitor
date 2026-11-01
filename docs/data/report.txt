@@ -1,22 +1,29 @@
-ROHLÍK × KOŠÍK | 2026-11-01 | poslední kontrola: 2026-11-01T06:08+01:00
+ROHLÍK × KOŠÍK | 2026-11-01 | poslední kontrola: 2026-11-01T11:56+01:00
 VEŘEJNÉ VYHLEDÁVÁNÍ NAPŘÍČ SORTIMENTEM – pouze skutečně nalezené položky, nikoli úplný katalog.
 Doručovací oblast: PSČ 149 00 (referenční požadavek, nikoli automaticky ověřená lokální cena).
 Bez potvrzené volby oblasti v e-shopu: ceny a dostupnost se mohou lišit podle doručovací adresy / členství.
-STAV ZDROJŮ: Rohlík: ok (67 karet); Košík: ok (32 karet)
-Nalezeno 12 sledovaných zlevněných položek; nově zaznamenané / zlevněné: 8.
+STAV ZDROJŮ: Rohlík: ok (64 karet); Košík: ok (59 karet)
+Nalezeno 19 sledovaných zlevněných položek; nově zaznamenané / zlevněné: 11.
 OBLÍBENÉ PRODUKTY A ZNAČKY (všechna zadaná pravidla = oblíbené):
-KATALOG: 99 nalezených výrobků (včetně nezlevněných); 24h pokrytí vyhledávacích dotazů 24/196 a nákupních pravidel 9/75. Neznamená úplný katalog.
+KATALOG: 123 nalezených výrobků (včetně nezlevněných); 24h pokrytí vyhledávacích dotazů 24/196 a nákupních pravidel 11/75. Neznamená úplný katalog.
+★ Zelenina | Košík | Paprika zelená, 1 ks | balení: 1 ks | 10.78 Kč | -45% | akce | bez ověřeného páru | https://www.kosik.cz/p803198-paprika-zelena-1-ks
 ★ Ovoce | Košík | Citron, 1 ks | balení: 1 ks | 5.98 Kč | -42% | akce | bez ověřeného páru | https://www.kosik.cz/p805142-citron-1-ks
-★ Ovoce | Košík | Avokádo Hass "ready to eat", 1 ks | balení: 1 ks | 39.90 Kč | -33% | akce | bez ověřeného páru | https://www.kosik.cz/p795666-avokado-hass-ready-to-eat-1-ks
+★ Zelenina | Košík | Mrkev s natí, svazek | balení: 500 g | 22.90 Kč | -42% | akce | bez ověřeného páru | https://www.kosik.cz/p296834-mrkev-s-nati-svazek
+★ Zelenina | Rohlík | Papriky Padrone na gril, balení | balení: 200 g | 70.90 Kč | -29% | akce | bez ověřeného páru | https://www.rohlik.cz/1325731-papriky-padrone-na-gril-baleni
+★ Zelenina | Rohlík | Rajčata oválná, balení | balení: 500 g | 59.95 Kč | -25% | akce | bez ověřeného páru | https://www.rohlik.cz/1422038-rajcata-ovalna-baleni
+★ Zelenina | Rohlík | Rajčata cherry, vanička | balení: 250 g | 44.90 Kč | -22% | akce | bez ověřeného páru | https://www.rohlik.cz/1322665-rajcata-cherry-vanicka
 ★ Zelenina | Rohlík | Okurka polní 1 ks | balení: 1 ks | 32.40 Kč | -21% | akce | bez ověřeného páru | https://www.rohlik.cz/1354613-okurka-polni-1-ks
 ★ Zelenina | Rohlík | Mini okurky, balení | balení: 250 g | 59.90 Kč | -20% | akce | bez ověřeného páru | https://www.rohlik.cz/1340323-mini-okurky-baleni
 ★ Úklid | Košík | Bref Power Aktiv Lemon tuhý WC blok 3x50g | balení: 50 g | 79.90 Kč | -11% | akce | bez ověřeného páru | https://www.kosik.cz/p90377-bref-power-aktiv-lemon-tuhy-wc-blok-3x50g
-★ Ovoce | Rohlík | BIO Avokádo k dozrání 1 ks | balení: 1 ks | 49.90 Kč | -10% | akce | bez ověřeného páru | https://www.rohlik.cz/1316435-bio-avokado-k-dozrani-1-ks
-★ Ovoce | Rohlík | BIO banán 1 ks | balení: 1 ks | 12.45 Kč | -10% | akce | bez ověřeného páru | https://www.rohlik.cz/1349775-bio-banan-1-ks
-★ Ovoce | Rohlík | BIO borůvky, vanička | balení: 125 g | 99.90 Kč | -10% | akce | bez ověřeného páru | https://www.rohlik.cz/1368467-bio-boruvky-vanicka
+★ Zelenina | Rohlík | BIO Cherry rajčata, vanička | balení: 250 g | 73.90 Kč | -10% | akce | bez ověřeného páru | https://www.rohlik.cz/1325193-bio-cherry-rajcata-vanicka
 ★ Ovoce | Rohlík | BIO Citrony, balení | balení: 500 g | 77.45 Kč | -10% | akce | bez ověřeného páru | https://www.rohlik.cz/1411174-bio-citrony-baleni
 ★ Úklid | Rohlík | Jar Platinum Lemon tablety do myčky | balení: neuvedeno | 289.90 Kč | -10% | akce | bez ověřeného páru | https://www.rohlik.cz/1478904-jar-platinum-lemon-tablety-do-mycky
+★ Zelenina | Rohlík | BIO Mrkev, balení | balení: 500 g | 39.95 Kč | -10% | akce | bez ověřeného páru | https://www.rohlik.cz/1411188-bio-mrkev-baleni
 ★ Zelenina | Rohlík | BIO Okurka hadovka 1 ks (cca 300 g) | balení: 1 ks | 49.90 Kč | -10% | akce | bez ověřeného páru | https://www.rohlik.cz/1294911-bio-okurka-hadovka-1-ks-cca-300-g
+★ Zelenina | Rohlík | BIO Paprika červená 1 ks | balení: 1 ks | 45.80 Kč | -10% | akce | bez ověřeného páru | https://www.rohlik.cz/1410463-bio-paprika-cervena-1-ks
+★ Zelenina | Rohlík | BIO Paprika špičatá červená, balení | balení: 180 g | 96.90 Kč | -10% | akce | bez ověřeného páru | https://www.rohlik.cz/1337837-bio-paprika-spicata-cervena-baleni
+★ Zelenina | Rohlík | BIO Paprika žlutá | balení: 180 g | 58.97 Kč | -10% | akce | bez ověřeného páru | https://www.rohlik.cz/1418544-bio-paprika-zluta
+★ Zelenina | Rohlík | BIO Rajčata cherry divoký mix, bedýnka | balení: 2 kg | 479.90 Kč | -10% | akce | bez ověřeného páru | https://www.rohlik.cz/1455447-bio-rajcata-cherry-divoky-mix-bedynka
 ★ Úklid | Rohlík | Jar Platinum Plus Lemon kapsle do myčky | balení: neuvedeno | 709.90 Kč | -7% | akce | bez ověřeného páru | https://www.rohlik.cz/1483690-jar-platinum-plus-lemon-kapsle-do-mycky
 Zdroje:
 Rohlík: https://www.rohlik.cz/

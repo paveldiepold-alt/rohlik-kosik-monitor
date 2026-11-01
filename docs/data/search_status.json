@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-11-01T06:08+01:00",
+  "checked_at": "2026-11-01T11:56+01:00",
   "coverage": {
     "failed_queries_24h": 0,
     "failed_query_examples": [],
@@ -7,7 +7,7 @@
     "queries_checked_24h": 24,
     "queries_responded_24h": 24,
     "watch_rules_total": 75,
-    "watch_rules_with_search_24h": 9,
+    "watch_rules_with_search_24h": 11,
     "coverage_window_hours": 240.0,
     "queries_checked_window": 196,
     "queries_responded_window": 194,
@@ -25,7 +25,7 @@
       }
     },
     "batch_queries": 8,
-    "batch_product_rows_matched": 62,
+    "batch_product_rows_matched": 86,
     "batch_errors": 0,
     "catalog_completeness_verified": false,
     "warning": "Vyhledávací dotazy napříč katalogy, nikoli úplný export obou e-shopů. Neúplnost, blokace a změny cen jsou možné.",
@@ -983,16 +983,16 @@
       ]
     },
     "Rohlík::rajčata": {
-      "checked_at": "2026-10-24T06:51+02:00",
+      "checked_at": "2026-11-01T11:56+01:00",
       "status": "ok",
-      "cards": 169,
+      "cards": 168,
       "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
       "rule_ids": [
         "W044"
       ]
     },
     "Košík::rajčata": {
-      "checked_at": "2026-10-24T06:51+02:00",
+      "checked_at": "2026-11-01T11:56+01:00",
       "status": "ok",
       "cards": 120,
       "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
@@ -1001,7 +1001,7 @@
       ]
     },
     "Rohlík::cherry rajčata": {
-      "checked_at": "2026-10-24T06:51+02:00",
+      "checked_at": "2026-11-01T11:56+01:00",
       "status": "ok",
       "cards": 28,
       "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
@@ -1010,7 +1010,7 @@
       ]
     },
     "Košík::cherry rajčata": {
-      "checked_at": "2026-10-24T06:51+02:00",
+      "checked_at": "2026-11-01T11:56+01:00",
       "status": "ok",
       "cards": 15,
       "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
@@ -1019,36 +1019,36 @@
       ]
     },
     "Rohlík::mrkev": {
-      "checked_at": "2026-10-24T12:49+02:00",
+      "checked_at": "2026-11-01T11:56+01:00",
       "status": "ok",
-      "cards": 109,
+      "cards": 108,
       "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
       "rule_ids": [
         "W046"
       ]
     },
     "Košík::mrkev": {
-      "checked_at": "2026-10-24T12:49+02:00",
+      "checked_at": "2026-11-01T11:56+01:00",
       "status": "ok",
-      "cards": 71,
+      "cards": 72,
       "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
       "rule_ids": [
         "W046"
       ]
     },
     "Rohlík::papriky": {
-      "checked_at": "2026-10-24T12:49+02:00",
+      "checked_at": "2026-11-01T11:56+01:00",
       "status": "ok",
-      "cards": 119,
+      "cards": 115,
       "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
       "rule_ids": [
         "W047"
       ]
     },
     "Košík::papriky": {
-      "checked_at": "2026-10-24T12:49+02:00",
+      "checked_at": "2026-11-01T11:56+01:00",
       "status": "ok",
-      "cards": 110,
+      "cards": 109,
       "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
       "rule_ids": [
         "W047"
