@@ -1,13 +1,8 @@
 {
-  "checked_at": "2026-11-02T12:16+01:00",
+  "checked_at": "2026-11-02T18:18+01:00",
   "coverage": {
-    "failed_queries_24h": 2,
+    "failed_queries_24h": 1,
     "failed_query_examples": [
-      {
-        "query": "Studentská pečeť",
-        "shop": "Rohlík",
-        "status": "search_unconfirmed"
-      },
       {
         "query": "Panzani rýže",
         "shop": "Rohlík",
@@ -16,9 +11,9 @@
     ],
     "queries_planned": 196,
     "queries_checked_24h": 24,
-    "queries_responded_24h": 22,
+    "queries_responded_24h": 23,
     "watch_rules_total": 75,
-    "watch_rules_with_search_24h": 8,
+    "watch_rules_with_search_24h": 6,
     "coverage_window_hours": 240.0,
     "queries_checked_window": 196,
     "queries_responded_window": 192,
@@ -27,7 +22,7 @@
       "Rohlík": {
         "planned": 98,
         "attempted_24h": 12,
-        "responded_24h": 10
+        "responded_24h": 11
       },
       "Košík": {
         "planned": 98,
@@ -36,7 +31,7 @@
       }
     },
     "batch_queries": 8,
-    "batch_product_rows_matched": 107,
+    "batch_product_rows_matched": 32,
     "batch_errors": 0,
     "catalog_completeness_verified": false,
     "warning": "Vyhledávací dotazy napříč katalogy, nikoli úplný export obou e-shopů. Neúplnost, blokace a změny cen jsou možné.",
@@ -1282,25 +1277,25 @@
       ]
     },
     "Rohlík::axe sprchový gel": {
-      "checked_at": "2026-10-25T11:49+01:00",
+      "checked_at": "2026-11-02T18:18+01:00",
       "status": "ok",
-      "cards": 26,
+      "cards": 25,
       "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
       "rule_ids": [
         "W055"
       ]
     },
     "Košík::axe sprchový gel": {
-      "checked_at": "2026-10-25T11:49+01:00",
+      "checked_at": "2026-11-02T18:18+01:00",
       "status": "ok",
-      "cards": 18,
+      "cards": 17,
       "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
       "rule_ids": [
         "W055"
       ]
     },
     "Rohlík::syoss": {
-      "checked_at": "2026-10-25T11:49+01:00",
+      "checked_at": "2026-11-02T18:18+01:00",
       "status": "ok",
       "cards": 27,
       "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
@@ -1309,7 +1304,7 @@
       ]
     },
     "Košík::syoss": {
-      "checked_at": "2026-10-25T11:49+01:00",
+      "checked_at": "2026-11-02T18:18+01:00",
       "status": "ok",
       "cards": 42,
       "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
@@ -1318,16 +1313,16 @@
       ]
     },
     "Rohlík::syoss men intense power": {
-      "checked_at": "2026-10-25T17:51+01:00",
+      "checked_at": "2026-11-02T18:18+01:00",
       "status": "ok",
-      "cards": 18,
+      "cards": 19,
       "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
       "rule_ids": [
         "W056"
       ]
     },
     "Košík::syoss men intense power": {
-      "checked_at": "2026-10-25T17:51+01:00",
+      "checked_at": "2026-11-02T18:18+01:00",
       "status": "ok",
       "cards": 18,
       "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
@@ -1336,7 +1331,7 @@
       ]
     },
     "Rohlík::signal": {
-      "checked_at": "2026-10-25T17:51+01:00",
+      "checked_at": "2026-11-02T18:18+01:00",
       "status": "ok",
       "cards": 8,
       "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
@@ -1345,9 +1340,9 @@
       ]
     },
     "Košík::signal": {
-      "checked_at": "2026-10-25T17:51+01:00",
+      "checked_at": "2026-11-02T18:18+01:00",
       "status": "ok",
-      "cards": 11,
+      "cards": 12,
       "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
       "rule_ids": [
         "W057"
