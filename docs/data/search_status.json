@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-11-02T06:20+01:00",
+  "checked_at": "2026-11-02T12:16+01:00",
   "coverage": {
     "failed_queries_24h": 2,
     "failed_query_examples": [
@@ -18,7 +18,7 @@
     "queries_checked_24h": 24,
     "queries_responded_24h": 22,
     "watch_rules_total": 75,
-    "watch_rules_with_search_24h": 10,
+    "watch_rules_with_search_24h": 8,
     "coverage_window_hours": 240.0,
     "queries_checked_window": 196,
     "queries_responded_window": 192,
@@ -36,8 +36,8 @@
       }
     },
     "batch_queries": 8,
-    "batch_product_rows_matched": 96,
-    "batch_errors": 1,
+    "batch_product_rows_matched": 107,
+    "batch_errors": 0,
     "catalog_completeness_verified": false,
     "warning": "Vyhledávací dotazy napříč katalogy, nikoli úplný export obou e-shopů. Neúplnost, blokace a změny cen jsou možné.",
     "sale_page_fallback": {}
@@ -1210,34 +1210,34 @@
       ]
     },
     "Rohlík::zewa ubrousky": {
-      "checked_at": "2026-10-25T05:53+01:00",
+      "checked_at": "2026-11-02T12:16+01:00",
       "status": "ok",
-      "cards": 22,
+      "cards": 20,
       "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
       "rule_ids": [
         "W053"
       ]
     },
     "Košík::zewa ubrousky": {
-      "checked_at": "2026-10-25T05:53+01:00",
+      "checked_at": "2026-11-02T12:16+01:00",
       "status": "ok",
-      "cards": 17,
+      "cards": 16,
       "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
       "rule_ids": [
         "W053"
       ]
     },
     "Rohlík::linteo": {
-      "checked_at": "2026-10-25T05:53+01:00",
+      "checked_at": "2026-11-02T12:16+01:00",
       "status": "ok",
-      "cards": 51,
+      "cards": 50,
       "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
       "rule_ids": [
         "W054"
       ]
     },
     "Košík::linteo": {
-      "checked_at": "2026-10-25T05:53+01:00",
+      "checked_at": "2026-11-02T12:16+01:00",
       "status": "ok",
       "cards": 56,
       "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
@@ -1246,16 +1246,16 @@
       ]
     },
     "Rohlík::axe": {
-      "checked_at": "2026-10-25T11:49+01:00",
+      "checked_at": "2026-11-02T12:16+01:00",
       "status": "ok",
-      "cards": 15,
+      "cards": 16,
       "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
       "rule_ids": [
         "W055"
       ]
     },
     "Košík::axe": {
-      "checked_at": "2026-10-25T11:49+01:00",
+      "checked_at": "2026-11-02T12:16+01:00",
       "status": "ok",
       "cards": 11,
       "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
@@ -1264,16 +1264,16 @@
       ]
     },
     "Rohlík::axe deodorant": {
-      "checked_at": "2026-10-25T11:49+01:00",
+      "checked_at": "2026-11-02T12:16+01:00",
       "status": "ok",
-      "cards": 12,
+      "cards": 15,
       "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
       "rule_ids": [
         "W055"
       ]
     },
     "Košík::axe deodorant": {
-      "checked_at": "2026-10-25T11:49+01:00",
+      "checked_at": "2026-11-02T12:16+01:00",
       "status": "ok",
       "cards": 16,
       "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
