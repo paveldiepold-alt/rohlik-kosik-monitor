@@ -1,28 +1,33 @@
 {
-  "checked_at": "2026-11-07T11:59+01:00",
+  "checked_at": "2026-11-07T17:57+01:00",
   "coverage": {
-    "failed_queries_24h": 1,
+    "failed_queries_24h": 2,
     "failed_query_examples": [
       {
         "query": "Galbani mozzarella",
+        "shop": "Rohlík",
+        "status": "search_unconfirmed"
+      },
+      {
+        "query": "Hera",
         "shop": "Rohlík",
         "status": "search_unconfirmed"
       }
     ],
     "queries_planned": 196,
     "queries_checked_24h": 32,
-    "queries_responded_24h": 31,
+    "queries_responded_24h": 30,
     "watch_rules_total": 75,
-    "watch_rules_with_search_24h": 13,
+    "watch_rules_with_search_24h": 12,
     "coverage_window_hours": 240.0,
     "queries_checked_window": 196,
-    "queries_responded_window": 191,
+    "queries_responded_window": 190,
     "watch_rules_with_search_window": 75,
     "by_store": {
       "Rohlík": {
         "planned": 98,
         "attempted_24h": 16,
-        "responded_24h": 15
+        "responded_24h": 14
       },
       "Košík": {
         "planned": 98,
@@ -31,7 +36,7 @@
       }
     },
     "batch_queries": 8,
-    "batch_product_rows_matched": 37,
+    "batch_product_rows_matched": 104,
     "batch_errors": 1,
     "catalog_completeness_verified": false,
     "warning": "Vyhledávací dotazy napříč katalogy, nikoli úplný export obou e-shopů. Neúplnost, blokace a změny cen jsou možné.",
@@ -593,7 +598,7 @@
       ]
     },
     "Rohlík::madeta máslo": {
-      "checked_at": "2026-10-30T12:00+01:00",
+      "checked_at": "2026-11-07T17:57+01:00",
       "status": "ok",
       "cards": 26,
       "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
@@ -602,43 +607,43 @@
       ]
     },
     "Košík::madeta máslo": {
-      "checked_at": "2026-10-30T12:00+01:00",
+      "checked_at": "2026-11-07T17:57+01:00",
       "status": "ok",
-      "cards": 9,
+      "cards": 12,
       "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
       "rule_ids": [
         "W028"
       ]
     },
     "Rohlík::hera": {
-      "checked_at": "2026-10-30T12:00+01:00",
-      "status": "ok",
-      "cards": 41,
-      "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
+      "checked_at": "2026-11-07T17:57+01:00",
+      "status": "search_unconfirmed",
+      "cards": 0,
+      "detail": "Vyhledávání nepotvrdilo zadaný dotaz",
       "rule_ids": [
         "W029"
       ]
     },
     "Košík::hera": {
-      "checked_at": "2026-10-30T12:00+01:00",
+      "checked_at": "2026-11-07T17:57+01:00",
       "status": "ok",
-      "cards": 22,
+      "cards": 21,
       "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
       "rule_ids": [
         "W029"
       ]
     },
     "Rohlík::omega": {
-      "checked_at": "2026-10-30T18:02+01:00",
+      "checked_at": "2026-11-07T17:57+01:00",
       "status": "ok",
-      "cards": 59,
+      "cards": 57,
       "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
       "rule_ids": [
         "W030"
       ]
     },
     "Košík::omega": {
-      "checked_at": "2026-10-30T18:02+01:00",
+      "checked_at": "2026-11-07T17:57+01:00",
       "status": "ok",
       "cards": 35,
       "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
@@ -647,7 +652,7 @@
       ]
     },
     "Rohlík::rama": {
-      "checked_at": "2026-10-30T18:02+01:00",
+      "checked_at": "2026-11-07T17:57+01:00",
       "status": "ok",
       "cards": 12,
       "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
@@ -656,9 +661,9 @@
       ]
     },
     "Košík::rama": {
-      "checked_at": "2026-10-30T18:02+01:00",
+      "checked_at": "2026-11-07T17:57+01:00",
       "status": "ok",
-      "cards": 7,
+      "cards": 9,
       "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
       "rule_ids": [
         "W031"
