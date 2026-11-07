@@ -1,22 +1,28 @@
 {
-  "checked_at": "2026-11-07T06:09+01:00",
+  "checked_at": "2026-11-07T11:59+01:00",
   "coverage": {
-    "failed_queries_24h": 0,
-    "failed_query_examples": [],
+    "failed_queries_24h": 1,
+    "failed_query_examples": [
+      {
+        "query": "Galbani mozzarella",
+        "shop": "Rohlík",
+        "status": "search_unconfirmed"
+      }
+    ],
     "queries_planned": 196,
     "queries_checked_24h": 32,
-    "queries_responded_24h": 32,
+    "queries_responded_24h": 31,
     "watch_rules_total": 75,
-    "watch_rules_with_search_24h": 17,
+    "watch_rules_with_search_24h": 13,
     "coverage_window_hours": 240.0,
     "queries_checked_window": 196,
-    "queries_responded_window": 192,
+    "queries_responded_window": 191,
     "watch_rules_with_search_window": 75,
     "by_store": {
       "Rohlík": {
         "planned": 98,
         "attempted_24h": 16,
-        "responded_24h": 16
+        "responded_24h": 15
       },
       "Košík": {
         "planned": 98,
@@ -25,8 +31,8 @@
       }
     },
     "batch_queries": 8,
-    "batch_product_rows_matched": 78,
-    "batch_errors": 0,
+    "batch_product_rows_matched": 37,
+    "batch_errors": 1,
     "catalog_completeness_verified": false,
     "warning": "Vyhledávací dotazy napříč katalogy, nikoli úplný export obou e-shopů. Neúplnost, blokace a změny cen jsou možné.",
     "sale_page_fallback": {}
@@ -515,7 +521,7 @@
       ]
     },
     "Rohlík::galbani": {
-      "checked_at": "2026-10-30T06:05+01:00",
+      "checked_at": "2026-11-07T11:59+01:00",
       "status": "ok",
       "cards": 17,
       "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
@@ -524,7 +530,7 @@
       ]
     },
     "Košík::galbani": {
-      "checked_at": "2026-10-30T06:05+01:00",
+      "checked_at": "2026-11-07T11:59+01:00",
       "status": "ok",
       "cards": 10,
       "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
@@ -533,16 +539,16 @@
       ]
     },
     "Rohlík::galbani mozzarella": {
-      "checked_at": "2026-10-30T06:05+01:00",
-      "status": "ok",
-      "cards": 15,
-      "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
+      "checked_at": "2026-11-07T11:59+01:00",
+      "status": "search_unconfirmed",
+      "cards": 0,
+      "detail": "Vyhledávání nepotvrdilo zadaný dotaz",
       "rule_ids": [
         "W026"
       ]
     },
     "Košík::galbani mozzarella": {
-      "checked_at": "2026-10-30T06:05+01:00",
+      "checked_at": "2026-11-07T11:59+01:00",
       "status": "ok",
       "cards": 8,
       "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
@@ -551,16 +557,16 @@
       ]
     },
     "Rohlík::hellmann": {
-      "checked_at": "2026-10-30T12:00+01:00",
+      "checked_at": "2026-11-07T11:59+01:00",
       "status": "ok",
-      "cards": 26,
+      "cards": 25,
       "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
       "rule_ids": [
         "W027"
       ]
     },
     "Košík::hellmann": {
-      "checked_at": "2026-10-30T12:00+01:00",
+      "checked_at": "2026-11-07T11:59+01:00",
       "status": "ok",
       "cards": 14,
       "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
@@ -569,18 +575,18 @@
       ]
     },
     "Rohlík::hellmann majonéza": {
-      "checked_at": "2026-10-30T12:00+01:00",
+      "checked_at": "2026-11-07T11:59+01:00",
       "status": "ok",
-      "cards": 26,
+      "cards": 25,
       "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
       "rule_ids": [
         "W027"
       ]
     },
     "Košík::hellmann majonéza": {
-      "checked_at": "2026-10-30T12:00+01:00",
+      "checked_at": "2026-11-07T11:59+01:00",
       "status": "ok",
-      "cards": 14,
+      "cards": 15,
       "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
       "rule_ids": [
         "W027"
