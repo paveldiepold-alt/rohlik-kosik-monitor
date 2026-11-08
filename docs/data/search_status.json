@@ -1,13 +1,8 @@
 {
-  "checked_at": "2026-11-08T06:10+01:00",
+  "checked_at": "2026-11-08T12:00+01:00",
   "coverage": {
-    "failed_queries_24h": 2,
+    "failed_queries_24h": 1,
     "failed_query_examples": [
-      {
-        "query": "Galbani mozzarella",
-        "shop": "Rohlík",
-        "status": "search_unconfirmed"
-      },
       {
         "query": "Hera",
         "shop": "Rohlík",
@@ -16,7 +11,7 @@
     ],
     "queries_planned": 196,
     "queries_checked_24h": 24,
-    "queries_responded_24h": 22,
+    "queries_responded_24h": 23,
     "watch_rules_total": 75,
     "watch_rules_with_search_24h": 9,
     "coverage_window_hours": 240.0,
@@ -27,7 +22,7 @@
       "Rohlík": {
         "planned": 98,
         "attempted_24h": 12,
-        "responded_24h": 10
+        "responded_24h": 11
       },
       "Košík": {
         "planned": 98,
@@ -36,7 +31,7 @@
       }
     },
     "batch_queries": 8,
-    "batch_product_rows_matched": 46,
+    "batch_product_rows_matched": 42,
     "batch_errors": 0,
     "catalog_completeness_verified": false,
     "warning": "Vyhledávací dotazy napříč katalogy, nikoli úplný export obou e-shopů. Neúplnost, blokace a změny cen jsou možné.",
@@ -742,16 +737,16 @@
       ]
     },
     "Rohlík::rajec 1,5 l": {
-      "checked_at": "2026-10-31T06:00+01:00",
+      "checked_at": "2026-11-08T12:00+01:00",
       "status": "ok",
-      "cards": 62,
+      "cards": 65,
       "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
       "rule_ids": [
         "W034"
       ]
     },
     "Košík::rajec 1,5 l": {
-      "checked_at": "2026-10-31T06:00+01:00",
+      "checked_at": "2026-11-08T12:00+01:00",
       "status": "ok",
       "cards": 11,
       "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
@@ -760,7 +755,7 @@
       ]
     },
     "Rohlík::dobrá voda": {
-      "checked_at": "2026-10-31T06:00+01:00",
+      "checked_at": "2026-11-08T12:00+01:00",
       "status": "ok",
       "cards": 28,
       "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
@@ -769,7 +764,7 @@
       ]
     },
     "Košík::dobrá voda": {
-      "checked_at": "2026-10-31T06:00+01:00",
+      "checked_at": "2026-11-08T12:00+01:00",
       "status": "ok",
       "cards": 9,
       "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
@@ -778,16 +773,16 @@
       ]
     },
     "Rohlík::dobrá voda 1,5 l": {
-      "checked_at": "2026-10-31T11:53+01:00",
+      "checked_at": "2026-11-08T12:00+01:00",
       "status": "ok",
-      "cards": 63,
+      "cards": 67,
       "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
       "rule_ids": [
         "W035"
       ]
     },
     "Košík::dobrá voda 1,5 l": {
-      "checked_at": "2026-10-31T11:53+01:00",
+      "checked_at": "2026-11-08T12:00+01:00",
       "status": "ok",
       "cards": 6,
       "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
@@ -796,7 +791,7 @@
       ]
     },
     "Rohlík::coca-cola": {
-      "checked_at": "2026-10-31T11:53+01:00",
+      "checked_at": "2026-11-08T12:00+01:00",
       "status": "ok",
       "cards": 109,
       "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
@@ -805,7 +800,7 @@
       ]
     },
     "Košík::coca-cola": {
-      "checked_at": "2026-10-31T11:53+01:00",
+      "checked_at": "2026-11-08T12:00+01:00",
       "status": "ok",
       "cards": 90,
       "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
