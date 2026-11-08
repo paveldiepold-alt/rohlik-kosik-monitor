@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-11-07T17:57+01:00",
+  "checked_at": "2026-11-08T06:10+01:00",
   "coverage": {
     "failed_queries_24h": 2,
     "failed_query_examples": [
@@ -15,10 +15,10 @@
       }
     ],
     "queries_planned": 196,
-    "queries_checked_24h": 32,
-    "queries_responded_24h": 30,
+    "queries_checked_24h": 24,
+    "queries_responded_24h": 22,
     "watch_rules_total": 75,
-    "watch_rules_with_search_24h": 12,
+    "watch_rules_with_search_24h": 9,
     "coverage_window_hours": 240.0,
     "queries_checked_window": 196,
     "queries_responded_window": 190,
@@ -26,18 +26,18 @@
     "by_store": {
       "Rohlík": {
         "planned": 98,
-        "attempted_24h": 16,
-        "responded_24h": 14
+        "attempted_24h": 12,
+        "responded_24h": 10
       },
       "Košík": {
         "planned": 98,
-        "attempted_24h": 16,
-        "responded_24h": 16
+        "attempted_24h": 12,
+        "responded_24h": 12
       }
     },
     "batch_queries": 8,
-    "batch_product_rows_matched": 104,
-    "batch_errors": 1,
+    "batch_product_rows_matched": 46,
+    "batch_errors": 0,
     "catalog_completeness_verified": false,
     "warning": "Vyhledávací dotazy napříč katalogy, nikoli úplný export obou e-shopů. Neúplnost, blokace a změny cen jsou možné.",
     "sale_page_fallback": {}
@@ -670,16 +670,16 @@
       ]
     },
     "Rohlík::flora": {
-      "checked_at": "2026-10-30T18:02+01:00",
+      "checked_at": "2026-11-08T06:10+01:00",
       "status": "ok",
-      "cards": 33,
+      "cards": 36,
       "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
       "rule_ids": [
         "W032"
       ]
     },
     "Košík::flora": {
-      "checked_at": "2026-10-30T18:02+01:00",
+      "checked_at": "2026-11-08T06:10+01:00",
       "status": "ok",
       "cards": 15,
       "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
@@ -688,7 +688,7 @@
       ]
     },
     "Rohlík::aquila": {
-      "checked_at": "2026-10-30T18:02+01:00",
+      "checked_at": "2026-11-08T06:10+01:00",
       "status": "ok",
       "cards": 8,
       "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
@@ -697,7 +697,7 @@
       ]
     },
     "Košík::aquila": {
-      "checked_at": "2026-10-30T18:02+01:00",
+      "checked_at": "2026-11-08T06:10+01:00",
       "status": "ok",
       "cards": 5,
       "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
@@ -706,16 +706,16 @@
       ]
     },
     "Rohlík::aquila 1,5 l": {
-      "checked_at": "2026-10-31T06:00+01:00",
+      "checked_at": "2026-11-08T06:10+01:00",
       "status": "ok",
-      "cards": 46,
+      "cards": 48,
       "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
       "rule_ids": [
         "W033"
       ]
     },
     "Košík::aquila 1,5 l": {
-      "checked_at": "2026-10-31T06:00+01:00",
+      "checked_at": "2026-11-08T06:10+01:00",
       "status": "ok",
       "cards": 12,
       "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
@@ -724,7 +724,7 @@
       ]
     },
     "Rohlík::rajec": {
-      "checked_at": "2026-10-31T06:00+01:00",
+      "checked_at": "2026-11-08T06:10+01:00",
       "status": "ok",
       "cards": 16,
       "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
@@ -733,7 +733,7 @@
       ]
     },
     "Košík::rajec": {
-      "checked_at": "2026-10-31T06:00+01:00",
+      "checked_at": "2026-11-08T06:10+01:00",
       "status": "ok",
       "cards": 21,
       "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
