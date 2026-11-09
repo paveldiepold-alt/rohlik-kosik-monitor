@@ -1,38 +1,38 @@
 {
-  "checked_at": "2026-11-08T17:56+01:00",
+  "checked_at": "2026-11-09T06:26+01:00",
   "coverage": {
     "failed_queries_24h": 1,
     "failed_query_examples": [
       {
-        "query": "Hera",
+        "query": "hroznové víno",
         "shop": "Rohlík",
-        "status": "search_unconfirmed"
+        "status": "rate_limited"
       }
     ],
     "queries_planned": 196,
-    "queries_checked_24h": 32,
-    "queries_responded_24h": 31,
+    "queries_checked_24h": 24,
+    "queries_responded_24h": 23,
     "watch_rules_total": 75,
-    "watch_rules_with_search_24h": 11,
+    "watch_rules_with_search_24h": 9,
     "coverage_window_hours": 240.0,
     "queries_checked_window": 196,
-    "queries_responded_window": 190,
+    "queries_responded_window": 189,
     "watch_rules_with_search_window": 75,
     "by_store": {
       "Rohlík": {
         "planned": 98,
-        "attempted_24h": 16,
-        "responded_24h": 15
+        "attempted_24h": 12,
+        "responded_24h": 11
       },
       "Košík": {
         "planned": 98,
-        "attempted_24h": 16,
-        "responded_24h": 16
+        "attempted_24h": 12,
+        "responded_24h": 12
       }
     },
     "batch_queries": 8,
-    "batch_product_rows_matched": 45,
-    "batch_errors": 0,
+    "batch_product_rows_matched": 48,
+    "batch_errors": 1,
     "catalog_completeness_verified": false,
     "warning": "Vyhledávací dotazy napříč katalogy, nikoli úplný export obou e-shopů. Neúplnost, blokace a změny cen jsou možné.",
     "sale_page_fallback": {}
@@ -881,16 +881,16 @@
       ]
     },
     "Rohlík::borůvky": {
-      "checked_at": "2026-10-31T17:55+01:00",
+      "checked_at": "2026-11-09T06:26+01:00",
       "status": "ok",
-      "cards": 163,
+      "cards": 201,
       "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
       "rule_ids": [
         "W039"
       ]
     },
     "Košík::borůvky": {
-      "checked_at": "2026-10-31T17:55+01:00",
+      "checked_at": "2026-11-09T06:26+01:00",
       "status": "ok",
       "cards": 120,
       "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
@@ -899,54 +899,54 @@
       ]
     },
     "Rohlík::maliny": {
-      "checked_at": "2026-10-31T17:55+01:00",
+      "checked_at": "2026-11-09T06:26+01:00",
       "status": "ok",
-      "cards": 88,
+      "cards": 177,
       "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
       "rule_ids": [
         "W040"
       ]
     },
     "Košík::maliny": {
-      "checked_at": "2026-10-31T17:55+01:00",
+      "checked_at": "2026-11-09T06:26+01:00",
       "status": "ok",
-      "cards": 26,
+      "cards": 29,
       "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
       "rule_ids": [
         "W040"
       ]
     },
     "Rohlík::citrony": {
-      "checked_at": "2026-11-01T06:08+01:00",
+      "checked_at": "2026-11-09T06:26+01:00",
       "status": "ok",
-      "cards": 205,
+      "cards": 118,
       "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
       "rule_ids": [
         "W041"
       ]
     },
     "Košík::citrony": {
-      "checked_at": "2026-11-01T06:08+01:00",
+      "checked_at": "2026-11-09T06:26+01:00",
       "status": "ok",
-      "cards": 120,
+      "cards": 119,
       "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
       "rule_ids": [
         "W041"
       ]
     },
     "Rohlík::hroznové víno": {
-      "checked_at": "2026-11-01T06:08+01:00",
-      "status": "ok",
-      "cards": 32,
-      "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
+      "checked_at": "2026-11-09T06:26+01:00",
+      "status": "rate_limited",
+      "cards": 0,
+      "detail": "HTTP 429",
       "rule_ids": [
         "W042"
       ]
     },
     "Košík::hroznové víno": {
-      "checked_at": "2026-11-01T06:08+01:00",
+      "checked_at": "2026-11-09T06:26+01:00",
       "status": "ok",
-      "cards": 47,
+      "cards": 50,
       "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
       "rule_ids": [
         "W042"
