@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-11-09T12:15+01:00",
+  "checked_at": "2026-11-09T18:25+01:00",
   "coverage": {
     "failed_queries_24h": 1,
     "failed_query_examples": [
@@ -13,10 +13,10 @@
     "queries_checked_24h": 24,
     "queries_responded_24h": 23,
     "watch_rules_total": 75,
-    "watch_rules_with_search_24h": 10,
+    "watch_rules_with_search_24h": 11,
     "coverage_window_hours": 240.0,
     "queries_checked_window": 196,
-    "queries_responded_window": 189,
+    "queries_responded_window": 190,
     "watch_rules_with_search_window": 75,
     "by_store": {
       "Rohlík": {
@@ -31,7 +31,7 @@
       }
     },
     "batch_queries": 8,
-    "batch_product_rows_matched": 59,
+    "batch_product_rows_matched": 66,
     "batch_errors": 0,
     "catalog_completeness_verified": false,
     "warning": "Vyhledávací dotazy napříč katalogy, nikoli úplný export obou e-shopů. Neúplnost, blokace a změny cen jsou možné.",
@@ -1025,16 +1025,16 @@
       ]
     },
     "Rohlík::mrkev": {
-      "checked_at": "2026-11-01T11:56+01:00",
+      "checked_at": "2026-11-09T18:25+01:00",
       "status": "ok",
-      "cards": 108,
+      "cards": 111,
       "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
       "rule_ids": [
         "W046"
       ]
     },
     "Košík::mrkev": {
-      "checked_at": "2026-11-01T11:56+01:00",
+      "checked_at": "2026-11-09T18:25+01:00",
       "status": "ok",
       "cards": 72,
       "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
@@ -1043,7 +1043,7 @@
       ]
     },
     "Rohlík::papriky": {
-      "checked_at": "2026-11-01T11:56+01:00",
+      "checked_at": "2026-11-09T18:25+01:00",
       "status": "ok",
       "cards": 115,
       "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
@@ -1052,7 +1052,7 @@
       ]
     },
     "Košík::papriky": {
-      "checked_at": "2026-11-01T11:56+01:00",
+      "checked_at": "2026-11-09T18:25+01:00",
       "status": "ok",
       "cards": 109,
       "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
@@ -1061,16 +1061,16 @@
       ]
     },
     "Rohlík::studentská pečeť": {
-      "checked_at": "2026-11-01T17:54+01:00",
-      "status": "search_unconfirmed",
-      "cards": 0,
-      "detail": "Vyhledávání nepotvrdilo zadaný dotaz",
+      "checked_at": "2026-11-09T18:25+01:00",
+      "status": "ok",
+      "cards": 6,
+      "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
       "rule_ids": [
         "W048"
       ]
     },
     "Košík::studentská pečeť": {
-      "checked_at": "2026-11-01T17:54+01:00",
+      "checked_at": "2026-11-09T18:25+01:00",
       "status": "ok",
       "cards": 14,
       "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
@@ -1079,7 +1079,7 @@
       ]
     },
     "Rohlík::miňonky": {
-      "checked_at": "2026-11-01T17:54+01:00",
+      "checked_at": "2026-11-09T18:25+01:00",
       "status": "ok",
       "cards": 3,
       "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
@@ -1088,7 +1088,7 @@
       ]
     },
     "Košík::miňonky": {
-      "checked_at": "2026-11-01T17:54+01:00",
+      "checked_at": "2026-11-09T18:25+01:00",
       "status": "ok",
       "cards": 19,
       "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
