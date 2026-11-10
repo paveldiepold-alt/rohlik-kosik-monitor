@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-11-10T12:09+01:00",
+  "checked_at": "2026-11-10T18:12+01:00",
   "coverage": {
     "failed_queries_24h": 0,
     "failed_query_examples": [],
@@ -7,7 +7,7 @@
     "queries_checked_24h": 32,
     "queries_responded_24h": 32,
     "watch_rules_total": 75,
-    "watch_rules_with_search_24h": 13,
+    "watch_rules_with_search_24h": 11,
     "coverage_window_hours": 240.0,
     "queries_checked_window": 196,
     "queries_responded_window": 191,
@@ -25,7 +25,7 @@
       }
     },
     "batch_queries": 8,
-    "batch_product_rows_matched": 114,
+    "batch_product_rows_matched": 59,
     "batch_errors": 0,
     "catalog_completeness_verified": false,
     "warning": "Vyhledávací dotazy napříč katalogy, nikoli úplný export obou e-shopů. Neúplnost, blokace a změny cen jsou možné.",
@@ -1235,7 +1235,7 @@
       ]
     },
     "Rohlík::axe": {
-      "checked_at": "2026-11-02T12:16+01:00",
+      "checked_at": "2026-11-10T18:12+01:00",
       "status": "ok",
       "cards": 16,
       "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
@@ -1244,16 +1244,25 @@
       ]
     },
     "Košík::axe": {
-      "checked_at": "2026-11-02T12:16+01:00",
+      "checked_at": "2026-11-10T18:12+01:00",
       "status": "ok",
-      "cards": 11,
+      "cards": 12,
       "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
       "rule_ids": [
         "W055"
       ]
     },
     "Rohlík::axe deodorant": {
-      "checked_at": "2026-11-02T12:16+01:00",
+      "checked_at": "2026-11-10T18:12+01:00",
+      "status": "ok",
+      "cards": 12,
+      "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
+      "rule_ids": [
+        "W055"
+      ]
+    },
+    "Košík::axe deodorant": {
+      "checked_at": "2026-11-10T18:12+01:00",
       "status": "ok",
       "cards": 15,
       "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
@@ -1261,8 +1270,17 @@
         "W055"
       ]
     },
-    "Košík::axe deodorant": {
-      "checked_at": "2026-11-02T12:16+01:00",
+    "Rohlík::axe sprchový gel": {
+      "checked_at": "2026-11-10T18:12+01:00",
+      "status": "ok",
+      "cards": 26,
+      "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
+      "rule_ids": [
+        "W055"
+      ]
+    },
+    "Košík::axe sprchový gel": {
+      "checked_at": "2026-11-10T18:12+01:00",
       "status": "ok",
       "cards": 16,
       "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
@@ -1270,26 +1288,8 @@
         "W055"
       ]
     },
-    "Rohlík::axe sprchový gel": {
-      "checked_at": "2026-11-02T18:18+01:00",
-      "status": "ok",
-      "cards": 25,
-      "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
-      "rule_ids": [
-        "W055"
-      ]
-    },
-    "Košík::axe sprchový gel": {
-      "checked_at": "2026-11-02T18:18+01:00",
-      "status": "ok",
-      "cards": 17,
-      "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
-      "rule_ids": [
-        "W055"
-      ]
-    },
     "Rohlík::syoss": {
-      "checked_at": "2026-11-02T18:18+01:00",
+      "checked_at": "2026-11-10T18:12+01:00",
       "status": "ok",
       "cards": 27,
       "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
@@ -1298,7 +1298,7 @@
       ]
     },
     "Košík::syoss": {
-      "checked_at": "2026-11-02T18:18+01:00",
+      "checked_at": "2026-11-10T18:12+01:00",
       "status": "ok",
       "cards": 42,
       "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
