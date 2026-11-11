@@ -1,17 +1,22 @@
 {
-  "checked_at": "2026-11-11T06:19+01:00",
+  "checked_at": "2026-11-11T12:16+01:00",
   "coverage": {
-    "failed_queries_24h": 1,
+    "failed_queries_24h": 2,
     "failed_query_examples": [
       {
         "query": "Syoss Men Intense Power",
         "shop": "Košík",
         "status": "search_unconfirmed"
+      },
+      {
+        "query": "Wilkinson",
+        "shop": "Rohlík",
+        "status": "no_cards"
       }
     ],
     "queries_planned": 196,
     "queries_checked_24h": 24,
-    "queries_responded_24h": 23,
+    "queries_responded_24h": 22,
     "watch_rules_total": 75,
     "watch_rules_with_search_24h": 8,
     "coverage_window_hours": 240.0,
@@ -22,7 +27,7 @@
       "Rohlík": {
         "planned": 98,
         "attempted_24h": 12,
-        "responded_24h": 12
+        "responded_24h": 11
       },
       "Košík": {
         "planned": 98,
@@ -31,8 +36,8 @@
       }
     },
     "batch_queries": 8,
-    "batch_product_rows_matched": 61,
-    "batch_errors": 1,
+    "batch_product_rows_matched": 129,
+    "batch_errors": 0,
     "catalog_completeness_verified": false,
     "warning": "Vyhledávací dotazy napříč katalogy, nikoli úplný export obou e-shopů. Neúplnost, blokace a změny cen jsou možné.",
     "sale_page_fallback": {}
@@ -1385,7 +1390,7 @@
       ]
     },
     "Rohlík::wilkinson": {
-      "checked_at": "2026-11-03T06:15+01:00",
+      "checked_at": "2026-11-11T12:16+01:00",
       "status": "no_cards",
       "cards": 0,
       "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
@@ -1394,7 +1399,7 @@
       ]
     },
     "Košík::wilkinson": {
-      "checked_at": "2026-11-03T06:15+01:00",
+      "checked_at": "2026-11-11T12:16+01:00",
       "status": "ok",
       "cards": 13,
       "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
@@ -1403,7 +1408,7 @@
       ]
     },
     "Rohlík::wilkinson jednorázová holítka": {
-      "checked_at": "2026-11-03T06:15+01:00",
+      "checked_at": "2026-11-11T12:16+01:00",
       "status": "ok",
       "cards": 21,
       "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
@@ -1412,7 +1417,7 @@
       ]
     },
     "Košík::wilkinson jednorázová holítka": {
-      "checked_at": "2026-11-03T06:15+01:00",
+      "checked_at": "2026-11-11T12:16+01:00",
       "status": "ok",
       "cards": 14,
       "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
@@ -1421,25 +1426,25 @@
       ]
     },
     "Rohlík::ariel": {
-      "checked_at": "2026-11-03T12:13+01:00",
+      "checked_at": "2026-11-11T12:16+01:00",
       "status": "ok",
-      "cards": 35,
+      "cards": 34,
       "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
       "rule_ids": [
         "W061"
       ]
     },
     "Košík::ariel": {
-      "checked_at": "2026-11-03T12:13+01:00",
+      "checked_at": "2026-11-11T12:16+01:00",
       "status": "ok",
-      "cards": 37,
+      "cards": 36,
       "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
       "rule_ids": [
         "W061"
       ]
     },
     "Rohlík::persil": {
-      "checked_at": "2026-11-03T12:13+01:00",
+      "checked_at": "2026-11-11T12:16+01:00",
       "status": "ok",
       "cards": 26,
       "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
@@ -1448,7 +1453,7 @@
       ]
     },
     "Košík::persil": {
-      "checked_at": "2026-11-03T12:13+01:00",
+      "checked_at": "2026-11-11T12:16+01:00",
       "status": "ok",
       "cards": 31,
       "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
