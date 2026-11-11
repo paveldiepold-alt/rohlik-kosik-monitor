@@ -1,13 +1,19 @@
 {
-  "checked_at": "2026-11-10T18:12+01:00",
+  "checked_at": "2026-11-11T06:19+01:00",
   "coverage": {
-    "failed_queries_24h": 0,
-    "failed_query_examples": [],
+    "failed_queries_24h": 1,
+    "failed_query_examples": [
+      {
+        "query": "Syoss Men Intense Power",
+        "shop": "Košík",
+        "status": "search_unconfirmed"
+      }
+    ],
     "queries_planned": 196,
-    "queries_checked_24h": 32,
-    "queries_responded_24h": 32,
+    "queries_checked_24h": 24,
+    "queries_responded_24h": 23,
     "watch_rules_total": 75,
-    "watch_rules_with_search_24h": 11,
+    "watch_rules_with_search_24h": 8,
     "coverage_window_hours": 240.0,
     "queries_checked_window": 196,
     "queries_responded_window": 191,
@@ -15,18 +21,18 @@
     "by_store": {
       "Rohlík": {
         "planned": 98,
-        "attempted_24h": 16,
-        "responded_24h": 16
+        "attempted_24h": 12,
+        "responded_24h": 12
       },
       "Košík": {
         "planned": 98,
-        "attempted_24h": 16,
-        "responded_24h": 16
+        "attempted_24h": 12,
+        "responded_24h": 11
       }
     },
     "batch_queries": 8,
-    "batch_product_rows_matched": 59,
-    "batch_errors": 0,
+    "batch_product_rows_matched": 61,
+    "batch_errors": 1,
     "catalog_completeness_verified": false,
     "warning": "Vyhledávací dotazy napříč katalogy, nikoli úplný export obou e-shopů. Neúplnost, blokace a změny cen jsou možné.",
     "sale_page_fallback": {}
@@ -1307,25 +1313,25 @@
       ]
     },
     "Rohlík::syoss men intense power": {
-      "checked_at": "2026-11-02T18:18+01:00",
+      "checked_at": "2026-11-11T06:19+01:00",
       "status": "ok",
-      "cards": 19,
+      "cards": 17,
       "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
       "rule_ids": [
         "W056"
       ]
     },
     "Košík::syoss men intense power": {
-      "checked_at": "2026-11-02T18:18+01:00",
-      "status": "ok",
-      "cards": 18,
-      "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
+      "checked_at": "2026-11-11T06:19+01:00",
+      "status": "search_unconfirmed",
+      "cards": 0,
+      "detail": "Enter nepřešel na výsledky; nelze použít domácí nabídku",
       "rule_ids": [
         "W056"
       ]
     },
     "Rohlík::signal": {
-      "checked_at": "2026-11-02T18:18+01:00",
+      "checked_at": "2026-11-11T06:19+01:00",
       "status": "ok",
       "cards": 8,
       "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
@@ -1334,16 +1340,16 @@
       ]
     },
     "Košík::signal": {
-      "checked_at": "2026-11-02T18:18+01:00",
+      "checked_at": "2026-11-11T06:19+01:00",
       "status": "ok",
-      "cards": 12,
+      "cards": 11,
       "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
       "rule_ids": [
         "W057"
       ]
     },
     "Rohlík::colgate": {
-      "checked_at": "2026-11-03T06:15+01:00",
+      "checked_at": "2026-11-11T06:19+01:00",
       "status": "ok",
       "cards": 22,
       "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
@@ -1352,16 +1358,16 @@
       ]
     },
     "Košík::colgate": {
-      "checked_at": "2026-11-03T06:15+01:00",
-      "status": "search_unconfirmed",
-      "cards": 0,
-      "detail": "Enter nepřešel na výsledky; nelze použít domácí nabídku",
+      "checked_at": "2026-11-11T06:19+01:00",
+      "status": "ok",
+      "cards": 36,
+      "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
       "rule_ids": [
         "W058"
       ]
     },
     "Rohlík::parodontax": {
-      "checked_at": "2026-11-03T06:15+01:00",
+      "checked_at": "2026-11-11T06:19+01:00",
       "status": "ok",
       "cards": 9,
       "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
@@ -1370,7 +1376,7 @@
       ]
     },
     "Košík::parodontax": {
-      "checked_at": "2026-11-03T06:15+01:00",
+      "checked_at": "2026-11-11T06:19+01:00",
       "status": "ok",
       "cards": 11,
       "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
