@@ -1,13 +1,8 @@
 {
-  "checked_at": "2026-11-11T18:18+01:00",
+  "checked_at": "2026-11-12T06:20+01:00",
   "coverage": {
-    "failed_queries_24h": 2,
+    "failed_queries_24h": 1,
     "failed_query_examples": [
-      {
-        "query": "Syoss Men Intense Power",
-        "shop": "Košík",
-        "status": "search_unconfirmed"
-      },
       {
         "query": "Wilkinson",
         "shop": "Rohlík",
@@ -16,7 +11,7 @@
     ],
     "queries_planned": 196,
     "queries_checked_24h": 24,
-    "queries_responded_24h": 22,
+    "queries_responded_24h": 23,
     "watch_rules_total": 75,
     "watch_rules_with_search_24h": 11,
     "coverage_window_hours": 240.0,
@@ -32,11 +27,11 @@
       "Košík": {
         "planned": 98,
         "attempted_24h": 12,
-        "responded_24h": 11
+        "responded_24h": 12
       }
     },
     "batch_queries": 8,
-    "batch_product_rows_matched": 129,
+    "batch_product_rows_matched": 67,
     "batch_errors": 0,
     "catalog_completeness_verified": false,
     "warning": "Vyhledávací dotazy napříč katalogy, nikoli úplný export obou e-shopů. Neúplnost, blokace a změny cen jsou možné.",
@@ -1534,7 +1529,7 @@
       ]
     },
     "Rohlík::wc net": {
-      "checked_at": "2026-11-03T18:17+01:00",
+      "checked_at": "2026-11-12T06:20+01:00",
       "status": "ok",
       "cards": 2,
       "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
@@ -1543,7 +1538,7 @@
       ]
     },
     "Košík::wc net": {
-      "checked_at": "2026-11-03T18:17+01:00",
+      "checked_at": "2026-11-12T06:20+01:00",
       "status": "ok",
       "cards": 14,
       "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
@@ -1552,43 +1547,43 @@
       ]
     },
     "Rohlík::domestos": {
-      "checked_at": "2026-11-03T18:17+01:00",
+      "checked_at": "2026-11-12T06:20+01:00",
       "status": "ok",
-      "cards": 9,
+      "cards": 8,
       "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
       "rule_ids": [
         "W068"
       ]
     },
     "Košík::domestos": {
-      "checked_at": "2026-11-03T18:17+01:00",
+      "checked_at": "2026-11-12T06:20+01:00",
       "status": "ok",
-      "cards": 3,
+      "cards": 4,
       "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
       "rule_ids": [
         "W068"
       ]
     },
     "Rohlík::savo": {
-      "checked_at": "2026-11-04T06:17+01:00",
+      "checked_at": "2026-11-12T06:20+01:00",
       "status": "ok",
-      "cards": 62,
+      "cards": 66,
       "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
       "rule_ids": [
         "W069"
       ]
     },
     "Košík::savo": {
-      "checked_at": "2026-11-04T06:17+01:00",
+      "checked_at": "2026-11-12T06:20+01:00",
       "status": "ok",
-      "cards": 27,
+      "cards": 25,
       "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
       "rule_ids": [
         "W069"
       ]
     },
     "Rohlík::cif": {
-      "checked_at": "2026-11-04T06:17+01:00",
+      "checked_at": "2026-11-12T06:20+01:00",
       "status": "ok",
       "cards": 14,
       "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
@@ -1597,7 +1592,7 @@
       ]
     },
     "Košík::cif": {
-      "checked_at": "2026-11-04T06:17+01:00",
+      "checked_at": "2026-11-12T06:20+01:00",
       "status": "ok",
       "cards": 4,
       "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
