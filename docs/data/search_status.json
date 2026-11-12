@@ -1,17 +1,11 @@
 {
-  "checked_at": "2026-11-12T06:20+01:00",
+  "checked_at": "2026-11-12T12:21+01:00",
   "coverage": {
-    "failed_queries_24h": 1,
-    "failed_query_examples": [
-      {
-        "query": "Wilkinson",
-        "shop": "Rohlík",
-        "status": "no_cards"
-      }
-    ],
+    "failed_queries_24h": 0,
+    "failed_query_examples": [],
     "queries_planned": 196,
     "queries_checked_24h": 24,
-    "queries_responded_24h": 23,
+    "queries_responded_24h": 24,
     "watch_rules_total": 75,
     "watch_rules_with_search_24h": 11,
     "coverage_window_hours": 240.0,
@@ -22,7 +16,7 @@
       "Rohlík": {
         "planned": 98,
         "attempted_24h": 12,
-        "responded_24h": 11
+        "responded_24h": 12
       },
       "Košík": {
         "planned": 98,
@@ -31,7 +25,7 @@
       }
     },
     "batch_queries": 8,
-    "batch_product_rows_matched": 67,
+    "batch_product_rows_matched": 93,
     "batch_errors": 0,
     "catalog_completeness_verified": false,
     "warning": "Vyhledávací dotazy napříč katalogy, nikoli úplný export obou e-shopů. Neúplnost, blokace a změny cen jsou možné.",
@@ -1601,34 +1595,34 @@
       ]
     },
     "Rohlík::clin": {
-      "checked_at": "2026-11-04T06:17+01:00",
+      "checked_at": "2026-11-12T12:21+01:00",
       "status": "ok",
-      "cards": 31,
+      "cards": 30,
       "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
       "rule_ids": [
         "W071"
       ]
     },
     "Košík::clin": {
-      "checked_at": "2026-11-04T06:17+01:00",
+      "checked_at": "2026-11-12T12:21+01:00",
       "status": "ok",
-      "cards": 17,
+      "cards": 15,
       "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
       "rule_ids": [
         "W071"
       ]
     },
     "Rohlík::jar": {
-      "checked_at": "2026-11-04T06:17+01:00",
+      "checked_at": "2026-11-12T12:21+01:00",
       "status": "ok",
-      "cards": 150,
+      "cards": 176,
       "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
       "rule_ids": [
         "W072"
       ]
     },
     "Košík::jar": {
-      "checked_at": "2026-11-04T06:17+01:00",
+      "checked_at": "2026-11-12T12:21+01:00",
       "status": "ok",
       "cards": 28,
       "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
@@ -1637,16 +1631,16 @@
       ]
     },
     "Rohlík::jar citron": {
-      "checked_at": "2026-11-04T12:27+01:00",
+      "checked_at": "2026-11-12T12:21+01:00",
       "status": "ok",
-      "cards": 23,
+      "cards": 22,
       "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
       "rule_ids": [
         "W072"
       ]
     },
     "Košík::jar citron": {
-      "checked_at": "2026-11-04T12:27+01:00",
+      "checked_at": "2026-11-12T12:21+01:00",
       "status": "ok",
       "cards": 8,
       "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
@@ -1655,7 +1649,7 @@
       ]
     },
     "Rohlík::zewa": {
-      "checked_at": "2026-11-04T12:27+01:00",
+      "checked_at": "2026-11-12T12:21+01:00",
       "status": "ok",
       "cards": 20,
       "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
@@ -1664,7 +1658,7 @@
       ]
     },
     "Košík::zewa": {
-      "checked_at": "2026-11-04T12:27+01:00",
+      "checked_at": "2026-11-12T12:21+01:00",
       "status": "ok",
       "cards": 21,
       "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
