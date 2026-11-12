@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-11-12T12:21+01:00",
+  "checked_at": "2026-11-12T18:19+01:00",
   "coverage": {
     "failed_queries_24h": 0,
     "failed_query_examples": [],
@@ -7,7 +7,7 @@
     "queries_checked_24h": 24,
     "queries_responded_24h": 24,
     "watch_rules_total": 75,
-    "watch_rules_with_search_24h": 11,
+    "watch_rules_with_search_24h": 8,
     "coverage_window_hours": 240.0,
     "queries_checked_window": 196,
     "queries_responded_window": 191,
@@ -25,7 +25,7 @@
       }
     },
     "batch_queries": 8,
-    "batch_product_rows_matched": 93,
+    "batch_product_rows_matched": 128,
     "batch_errors": 0,
     "catalog_completeness_verified": false,
     "warning": "Vyhledávací dotazy napříč katalogy, nikoli úplný export obou e-shopů. Neúplnost, blokace a změny cen jsou možné.",
@@ -1667,7 +1667,7 @@
       ]
     },
     "Rohlík::zewa deluxe standard kapesníky": {
-      "checked_at": "2026-11-04T12:27+01:00",
+      "checked_at": "2026-11-12T18:19+01:00",
       "status": "ok",
       "cards": 18,
       "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
@@ -1676,7 +1676,7 @@
       ]
     },
     "Košík::zewa deluxe standard kapesníky": {
-      "checked_at": "2026-11-04T12:27+01:00",
+      "checked_at": "2026-11-12T18:19+01:00",
       "status": "ok",
       "cards": 14,
       "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
@@ -1685,43 +1685,43 @@
       ]
     },
     "Rohlík::kuchyňské papírové utěrky": {
-      "checked_at": "2026-11-04T12:27+01:00",
+      "checked_at": "2026-11-12T18:19+01:00",
       "status": "ok",
-      "cards": 26,
+      "cards": 27,
       "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
       "rule_ids": [
         "W074"
       ]
     },
     "Košík::kuchyňské papírové utěrky": {
-      "checked_at": "2026-11-04T12:27+01:00",
+      "checked_at": "2026-11-12T18:19+01:00",
       "status": "ok",
-      "cards": 35,
+      "cards": 34,
       "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
       "rule_ids": [
         "W074"
       ]
     },
     "Rohlík::papírové utěrky": {
-      "checked_at": "2026-11-04T18:15+01:00",
+      "checked_at": "2026-11-12T18:19+01:00",
       "status": "ok",
-      "cards": 30,
+      "cards": 31,
       "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
       "rule_ids": [
         "W074"
       ]
     },
     "Košík::papírové utěrky": {
-      "checked_at": "2026-11-04T18:15+01:00",
+      "checked_at": "2026-11-12T18:19+01:00",
       "status": "ok",
-      "cards": 55,
+      "cards": 49,
       "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
       "rule_ids": [
         "W074"
       ]
     },
     "Rohlík::zewa papírové utěrky": {
-      "checked_at": "2026-11-04T18:15+01:00",
+      "checked_at": "2026-11-12T18:19+01:00",
       "status": "ok",
       "cards": 26,
       "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
@@ -1730,9 +1730,9 @@
       ]
     },
     "Košík::zewa papírové utěrky": {
-      "checked_at": "2026-11-04T18:15+01:00",
+      "checked_at": "2026-11-12T18:19+01:00",
       "status": "ok",
-      "cards": 14,
+      "cards": 17,
       "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
       "rule_ids": [
         "W074"
