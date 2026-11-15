@@ -1,14 +1,21 @@
-ROHLÍK × KOŠÍK | 2026-11-15 | poslední kontrola: 2026-11-15T06:14+01:00
+ROHLÍK × KOŠÍK | 2026-11-15 | poslední kontrola: 2026-11-15T12:01+01:00
 VEŘEJNÉ VYHLEDÁVÁNÍ NAPŘÍČ SORTIMENTEM – pouze skutečně nalezené položky, nikoli úplný katalog.
 Doručovací oblast: PSČ 149 00 (referenční požadavek, nikoli automaticky ověřená lokální cena).
 Bez potvrzené volby oblasti v e-shopu: ceny a dostupnost se mohou lišit podle doručovací adresy / členství.
-STAV ZDROJŮ: Rohlík: ok (26 karet); Košík: ok (32 karet)
-Nalezeno 3 sledovaných zlevněných položek; nově zaznamenané / zlevněné: 3.
+STAV ZDROJŮ: Rohlík: ok (45 karet); Košík: ok (61 karet)
+Nalezeno 10 sledovaných zlevněných položek; nově zaznamenané / zlevněné: 7.
 OBLÍBENÉ PRODUKTY A ZNAČKY (všechna zadaná pravidla = oblíbené):
-KATALOG: 58 nalezených výrobků (včetně nezlevněných); 24h pokrytí vyhledávacích dotazů 16/196 a nákupních pravidel 11/75. Neznamená úplný katalog.
+KATALOG: 106 nalezených výrobků (včetně nezlevněných); 24h pokrytí vyhledávacích dotazů 16/196 a nákupních pravidel 7/75. Neznamená úplný katalog.
 ★ Sýry / plátkové | Rohlík | Président Gouda plátky | balení: 100 g | 51.90 Kč | -42% | akce | bez ověřeného páru | https://www.rohlik.cz/712935-president-gouda-platky
 ★ Sýry / plátkové | Rohlík | Président Maasdamer plátkový sýr | balení: 100 g | 52.40 Kč | -42% | akce | druhý obchod: Košík 52.90 Kč | https://www.rohlik.cz/1385663-president-maasdamer-platkovy-syr
 ★ Sýry / plátkové | Rohlík | Président Emmental plátkový sýr | balení: 100 g | 42.90 Kč | -30% | akce | druhý obchod: Košík 52.90 Kč | https://www.rohlik.cz/1294923-president-emmental-platkovy-syr
+★ Sýry / tavené | Rohlík | Smetanito High protein tavený sýr | balení: 150 g | 49.90 Kč | -30% | akce | bez ověřeného páru | https://www.rohlik.cz/1478479-smetanito-high-protein-taveny-syr | POZN.: Správný název řady je Smetanito (nikoliv Smetanino).
+★ Sýry / tavené | Rohlík | Smetanito Smetanové tavený sýr | balení: 150 g | 49.90 Kč | -30% | akce | bez ověřeného páru | https://www.rohlik.cz/1317575-smetanito-smetanove-taveny-syr | POZN.: Správný název řady je Smetanito (nikoliv Smetanino).
+★ Sýry / tavené | Košík | Veselá Kráva Bez laktózy Tavený sýr (8 ks) | balení: 8 ks | 39.90 Kč | -24% | akce | bez ověřeného páru | https://www.kosik.cz/p85637-vesela-krava-bez-laktozy-taveny-syr-8-ks
+★ Sýry / tavené | Košík | Veselá Kráva Lahodná Tavený sýr (8 ks) | balení: 8 ks | 39.90 Kč | -24% | akce | bez ověřeného páru | https://www.kosik.cz/p85557-vesela-krava-lahodna-taveny-syr-8-ks
+★ Sýry / tavené | Košík | Veselá Kráva Tavený sýr s ementálem (8 ks) | balení: 8 ks | 39.90 Kč | -24% | akce | bez ověřeného páru | https://www.kosik.cz/p236414-vesela-krava-taveny-syr-s-ementalem-8-ks
+★ Sýry / tavené | Košík | Veselá Kráva Tavený sýr se Šunkou (8 ks) | balení: 8 ks | 39.90 Kč | -24% | akce | bez ověřeného páru | https://www.kosik.cz/p85567-vesela-krava-taveny-syr-se-sunkou-8-ks
+★ Sýry / tavené | Košík | Veselá Kráva Sýr a Křup s šunkovou příchutí 35g snack | balení: 35 g | 15.90 Kč | -20% | akce | bez ověřeného páru | https://www.kosik.cz/p793098-vesela-krava-syr-a-krup-s-sunkovou-prichuti-35g-snack
 Zdroje:
 Rohlík: https://www.rohlik.cz/
 Košík: https://www.kosik.cz/
