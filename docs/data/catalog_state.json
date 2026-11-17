@@ -821,7 +821,7 @@
       "rule_id": "W033",
       "note": "Slevu nelze cenově ověřit",
       "image_url": "https://www.rohlik.cz/cdn-cgi/image/f=auto,onerror=redirect,w=240,h=240,q=75/https://cdn.rohlik.cz/images/grocery/products/1375355/1375355-1585061337.jpg",
-      "checked_at": "2026-11-16T18:34+01:00",
+      "checked_at": "2026-11-17T06:18+01:00",
       "price_verified": false,
       "discount_verified": false,
       "discount_candidate_pct": 25,
@@ -847,7 +847,7 @@
       "rule_id": "W062",
       "note": "",
       "image_url": "https://www.rohlik.cz/cdn-cgi/image/f=auto,onerror=redirect,w=240,h=240,q=75/https://cdn.rohlik.cz/images/grocery/products/1440616/1440616-1787303364815129444.jpg",
-      "checked_at": "2026-11-16T18:34+01:00",
+      "checked_at": "2026-11-17T06:18+01:00",
       "price_verified": true,
       "discount_verified": false,
       "discount_candidate_pct": 0,
@@ -873,7 +873,7 @@
       "rule_id": "W033",
       "note": "Slevu nelze cenově ověřit",
       "image_url": "https://www.rohlik.cz/cdn-cgi/image/f=auto,onerror=redirect,w=240,h=240,q=75/https://cdn.rohlik.cz/images/grocery/products/1407649/1407649-1713165475816.jpg",
-      "checked_at": "2026-11-16T18:34+01:00",
+      "checked_at": "2026-11-17T06:18+01:00",
       "price_verified": false,
       "discount_verified": false,
       "discount_candidate_pct": 25,
@@ -925,7 +925,7 @@
       "rule_id": "W034",
       "note": "",
       "image_url": "https://www.rohlik.cz/cdn-cgi/image/f=auto,onerror=redirect,w=240,h=240,q=75/https://cdn.rohlik.cz/images/grocery/products/1375365/1375365-1585068096.jpg",
-      "checked_at": "2026-11-16T18:34+01:00",
+      "checked_at": "2026-11-17T06:18+01:00",
       "price_verified": true,
       "discount_verified": false,
       "discount_candidate_pct": 0,
@@ -951,7 +951,7 @@
       "rule_id": "W034",
       "note": "",
       "image_url": "https://www.rohlik.cz/cdn-cgi/image/f=auto,onerror=redirect,w=240,h=240,q=75/https://cdn.rohlik.cz/images/grocery/products/1375359/1375359-1585064954.jpg",
-      "checked_at": "2026-11-16T18:34+01:00",
+      "checked_at": "2026-11-17T06:18+01:00",
       "price_verified": true,
       "discount_verified": false,
       "discount_candidate_pct": 0,
@@ -977,7 +977,7 @@
       "rule_id": "W035",
       "note": "",
       "image_url": "https://www.rohlik.cz/cdn-cgi/image/f=auto,onerror=redirect,w=240,h=240,q=75/https://cdn.rohlik.cz/images/grocery/products/1461411/1461411-1715641342309.jpg",
-      "checked_at": "2026-11-16T18:34+01:00",
+      "checked_at": "2026-11-17T06:18+01:00",
       "price_verified": false,
       "discount_verified": false,
       "discount_candidate_pct": 0,
@@ -1003,7 +1003,7 @@
       "rule_id": "W035",
       "note": "",
       "image_url": "https://www.rohlik.cz/cdn-cgi/image/f=auto,onerror=redirect,w=240,h=240,q=75/https://cdn.rohlik.cz/images/grocery/products/1461414/1461414-1715641869446.jpg",
-      "checked_at": "2026-11-16T18:34+01:00",
+      "checked_at": "2026-11-17T06:18+01:00",
       "price_verified": false,
       "discount_verified": false,
       "discount_candidate_pct": 0,
@@ -1029,7 +1029,7 @@
       "rule_id": "W035",
       "note": "",
       "image_url": "https://www.rohlik.cz/cdn-cgi/image/f=auto,onerror=redirect,w=240,h=240,q=75/https://cdn.rohlik.cz/images/grocery/products/1461410/1461410-1715641110322.jpg",
-      "checked_at": "2026-11-16T18:34+01:00",
+      "checked_at": "2026-11-17T06:18+01:00",
       "price_verified": false,
       "discount_verified": false,
       "discount_candidate_pct": 0,
@@ -1055,7 +1055,7 @@
       "rule_id": "W036",
       "note": "",
       "image_url": "https://www.rohlik.cz/cdn-cgi/image/f=auto,onerror=redirect,w=240,h=240,q=75/https://cdn.rohlik.cz/images/grocery/products/1437476/1437476-1785354220712990931.png",
-      "checked_at": "2026-11-08T17:56+01:00",
+      "checked_at": "2026-11-17T06:18+01:00",
       "price_verified": false,
       "discount_verified": false,
       "discount_candidate_pct": 0,
@@ -1081,7 +1081,7 @@
       "rule_id": "W030",
       "note": "Rostlinný/ztužený tuk, není klasické máslo.",
       "image_url": "data/images/91cd94022f32811b502e74.webp",
-      "checked_at": "2026-11-16T12:39+01:00",
+      "checked_at": "2026-11-17T06:18+01:00",
       "price_verified": true,
       "discount_verified": true,
       "discount_candidate_pct": 9,
@@ -22582,7 +22582,7 @@
       "category": "Másla a tuky",
       "rule_id": "W032",
       "note": "Rostlinný/ztužený tuk, není klasické máslo.",
-      "image_url": "https://www.rohlik.cz/cdn-cgi/image/f=auto,onerror=redirect,w=240,h=240,q=75/https://cdn.rohlik.cz/images/grocery/products/1481748/1481748-177979908164801791.jpg",
+      "image_url": "data/images/87e31d986809d6ca4c49c7.webp",
       "checked_at": "2026-11-16T12:39+01:00",
       "price_verified": true,
       "discount_verified": true,
@@ -22895,7 +22895,7 @@
       "rule_id": "W035",
       "note": "",
       "image_url": "https://static-new.kosik.cz/k3wCdnContainerk3w-static-ne-cz-prod/images/thumbs/nn/185x185x1_nn7ly7uyvmya.png",
-      "checked_at": "2026-11-16T18:34+01:00",
+      "checked_at": "2026-11-17T06:18+01:00",
       "price_verified": true,
       "discount_verified": false,
       "discount_candidate_pct": 0,
@@ -22921,7 +22921,7 @@
       "rule_id": "W035",
       "note": "",
       "image_url": "https://static-new.kosik.cz/k3wCdnContainerk3w-static-ne-cz-prod/images/thumbs/ei/185x185x1_eii26tdymrrn.png",
-      "checked_at": "2026-11-16T18:34+01:00",
+      "checked_at": "2026-11-17T06:18+01:00",
       "price_verified": true,
       "discount_verified": false,
       "discount_candidate_pct": 0,
@@ -22947,7 +22947,7 @@
       "rule_id": "W035",
       "note": "",
       "image_url": "https://static-new.kosik.cz/k3wCdnContainerk3w-static-ne-cz-prod/images/thumbs/e3/185x185x1_e3ysvp72ntcl.jpg",
-      "checked_at": "2026-11-16T18:34+01:00",
+      "checked_at": "2026-11-17T06:18+01:00",
       "price_verified": true,
       "discount_verified": false,
       "discount_candidate_pct": 0,
@@ -22973,7 +22973,7 @@
       "rule_id": "W035",
       "note": "",
       "image_url": "https://static-new.kosik.cz/k3wCdnContainerk3w-static-ne-cz-prod/images/thumbs/q9/185x185x1_q99cjsp3e4ez.png",
-      "checked_at": "2026-11-16T18:34+01:00",
+      "checked_at": "2026-11-17T06:18+01:00",
       "price_verified": true,
       "discount_verified": false,
       "discount_candidate_pct": 0,
@@ -22999,7 +22999,7 @@
       "rule_id": "W035",
       "note": "",
       "image_url": "https://static-new.kosik.cz/k3wCdnContainerk3w-static-ne-cz-prod/images/thumbs/iu/185x185x1_iug3fzdqhdp8.png",
-      "checked_at": "2026-11-16T18:34+01:00",
+      "checked_at": "2026-11-17T06:18+01:00",
       "price_verified": true,
       "discount_verified": false,
       "discount_candidate_pct": 0,
@@ -23025,7 +23025,7 @@
       "rule_id": "W035",
       "note": "",
       "image_url": "https://static-new.kosik.cz/k3wCdnContainerk3w-static-ne-cz-prod/images/thumbs/1n/185x185x1_1npxokl2p3cr.jpg",
-      "checked_at": "2026-11-16T18:34+01:00",
+      "checked_at": "2026-11-17T06:18+01:00",
       "price_verified": true,
       "discount_verified": false,
       "discount_candidate_pct": 0,
@@ -23040,7 +23040,7 @@
       "shop": "Košík",
       "name": "Coca-Cola 4x1,5l",
       "url": "https://www.kosik.cz/p719200-coca-cola-4x1-5l",
-      "price": 144.9,
+      "price": 149.9,
       "discount_pct": 0,
       "old_price": null,
       "brand": "Coca-Cola",
@@ -23050,8 +23050,8 @@
       "category": "Nápoje / limonády",
       "rule_id": "W036",
       "note": "",
-      "image_url": "https://static-new.kosik.cz/k3wCdnContainerk3w-static-ne-cz-prod/images/thumbs/4q/185x185x1_4q9k4qhygz10.png",
-      "checked_at": "2026-11-08T17:56+01:00",
+      "image_url": "https://static-new.kosik.cz/k3wCdnContainerk3w-static-ne-cz-prod/images/thumbs/bz/185x185x1_bzl1aosyqte9.png",
+      "checked_at": "2026-11-17T06:18+01:00",
       "price_verified": true,
       "discount_verified": false,
       "discount_candidate_pct": 0,
@@ -31443,16 +31443,16 @@
       ]
     },
     "Rohlík::dobrá voda 1,5 l": {
-      "checked_at": "2026-11-08T12:00+01:00",
+      "checked_at": "2026-11-17T06:18+01:00",
       "status": "ok",
-      "cards": 67,
+      "cards": 63,
       "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
       "rule_ids": [
         "W035"
       ]
     },
     "Košík::dobrá voda 1,5 l": {
-      "checked_at": "2026-11-08T12:00+01:00",
+      "checked_at": "2026-11-17T06:18+01:00",
       "status": "ok",
       "cards": 6,
       "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
@@ -31461,34 +31461,34 @@
       ]
     },
     "Rohlík::coca-cola": {
-      "checked_at": "2026-11-08T12:00+01:00",
+      "checked_at": "2026-11-17T06:18+01:00",
       "status": "ok",
-      "cards": 109,
+      "cards": 110,
       "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
       "rule_ids": [
         "W036"
       ]
     },
     "Košík::coca-cola": {
-      "checked_at": "2026-11-08T12:00+01:00",
+      "checked_at": "2026-11-17T06:18+01:00",
       "status": "ok",
-      "cards": 90,
+      "cards": 91,
       "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
       "rule_ids": [
         "W036"
       ]
     },
     "Rohlík::coca-cola original 1,5 l": {
-      "checked_at": "2026-11-08T17:56+01:00",
+      "checked_at": "2026-11-17T06:18+01:00",
       "status": "ok",
-      "cards": 93,
+      "cards": 60,
       "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
       "rule_ids": [
         "W036"
       ]
     },
     "Košík::coca-cola original 1,5 l": {
-      "checked_at": "2026-11-08T17:56+01:00",
+      "checked_at": "2026-11-17T06:18+01:00",
       "status": "ok",
       "cards": 19,
       "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
@@ -31497,18 +31497,18 @@
       ]
     },
     "Rohlík::coca-cola original 2 l": {
-      "checked_at": "2026-11-08T17:56+01:00",
+      "checked_at": "2026-11-17T06:18+01:00",
       "status": "ok",
-      "cards": 15,
+      "cards": 16,
       "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
       "rule_ids": [
         "W036"
       ]
     },
     "Košík::coca-cola original 2 l": {
-      "checked_at": "2026-11-08T17:56+01:00",
+      "checked_at": "2026-11-17T06:18+01:00",
       "status": "ok",
-      "cards": 19,
+      "cards": 18,
       "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
       "rule_ids": [
         "W036"
@@ -32487,6 +32487,6 @@
       ]
     }
   },
-  "last_scan": "2026-11-16T18:34+01:00",
-  "cursor": 80
+  "last_scan": "2026-11-17T06:18+01:00",
+  "cursor": 88
 }

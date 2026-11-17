@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-11-16T18:34+01:00",
+  "checked_at": "2026-11-17T06:18+01:00",
   "coverage": {
     "failed_queries_24h": 1,
     "failed_query_examples": [
@@ -10,10 +10,10 @@
       }
     ],
     "queries_planned": 196,
-    "queries_checked_24h": 24,
-    "queries_responded_24h": 23,
+    "queries_checked_24h": 32,
+    "queries_responded_24h": 31,
     "watch_rules_total": 75,
-    "watch_rules_with_search_24h": 9,
+    "watch_rules_with_search_24h": 10,
     "coverage_window_hours": 240.0,
     "queries_checked_window": 196,
     "queries_responded_window": 191,
@@ -21,17 +21,17 @@
     "by_store": {
       "Rohlík": {
         "planned": 98,
-        "attempted_24h": 12,
-        "responded_24h": 12
+        "attempted_24h": 16,
+        "responded_24h": 16
       },
       "Košík": {
         "planned": 98,
-        "attempted_24h": 12,
-        "responded_24h": 11
+        "attempted_24h": 16,
+        "responded_24h": 15
       }
     },
     "batch_queries": 8,
-    "batch_product_rows_matched": 45,
+    "batch_product_rows_matched": 22,
     "batch_errors": 0,
     "catalog_completeness_verified": false,
     "warning": "Vyhledávací dotazy napříč katalogy, nikoli úplný export obou e-shopů. Neúplnost, blokace a změny cen jsou možné.",
@@ -773,16 +773,16 @@
       ]
     },
     "Rohlík::dobrá voda 1,5 l": {
-      "checked_at": "2026-11-08T12:00+01:00",
+      "checked_at": "2026-11-17T06:18+01:00",
       "status": "ok",
-      "cards": 67,
+      "cards": 63,
       "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
       "rule_ids": [
         "W035"
       ]
     },
     "Košík::dobrá voda 1,5 l": {
-      "checked_at": "2026-11-08T12:00+01:00",
+      "checked_at": "2026-11-17T06:18+01:00",
       "status": "ok",
       "cards": 6,
       "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
@@ -791,34 +791,34 @@
       ]
     },
     "Rohlík::coca-cola": {
-      "checked_at": "2026-11-08T12:00+01:00",
+      "checked_at": "2026-11-17T06:18+01:00",
       "status": "ok",
-      "cards": 109,
+      "cards": 110,
       "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
       "rule_ids": [
         "W036"
       ]
     },
     "Košík::coca-cola": {
-      "checked_at": "2026-11-08T12:00+01:00",
+      "checked_at": "2026-11-17T06:18+01:00",
       "status": "ok",
-      "cards": 90,
+      "cards": 91,
       "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
       "rule_ids": [
         "W036"
       ]
     },
     "Rohlík::coca-cola original 1,5 l": {
-      "checked_at": "2026-11-08T17:56+01:00",
+      "checked_at": "2026-11-17T06:18+01:00",
       "status": "ok",
-      "cards": 93,
+      "cards": 60,
       "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
       "rule_ids": [
         "W036"
       ]
     },
     "Košík::coca-cola original 1,5 l": {
-      "checked_at": "2026-11-08T17:56+01:00",
+      "checked_at": "2026-11-17T06:18+01:00",
       "status": "ok",
       "cards": 19,
       "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
@@ -827,18 +827,18 @@
       ]
     },
     "Rohlík::coca-cola original 2 l": {
-      "checked_at": "2026-11-08T17:56+01:00",
+      "checked_at": "2026-11-17T06:18+01:00",
       "status": "ok",
-      "cards": 15,
+      "cards": 16,
       "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
       "rule_ids": [
         "W036"
       ]
     },
     "Košík::coca-cola original 2 l": {
-      "checked_at": "2026-11-08T17:56+01:00",
+      "checked_at": "2026-11-17T06:18+01:00",
       "status": "ok",
-      "cards": 19,
+      "cards": 18,
       "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
       "rule_ids": [
         "W036"
