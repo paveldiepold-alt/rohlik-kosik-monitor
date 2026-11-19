@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-11-18T23:58+01:00",
+  "checked_at": "2026-11-19T14:28+01:00",
   "coverage": {
     "failed_queries_24h": 0,
     "failed_query_examples": [],
@@ -7,7 +7,7 @@
     "queries_checked_24h": 16,
     "queries_responded_24h": 16,
     "watch_rules_total": 75,
-    "watch_rules_with_search_24h": 8,
+    "watch_rules_with_search_24h": 6,
     "coverage_window_hours": 240.0,
     "queries_checked_window": 196,
     "queries_responded_window": 192,
@@ -25,7 +25,7 @@
       }
     },
     "batch_queries": 8,
-    "batch_product_rows_matched": 21,
+    "batch_product_rows_matched": 107,
     "batch_errors": 0,
     "catalog_completeness_verified": false,
     "warning": "Vyhledávací dotazy napříč katalogy, nikoli úplný export obou e-shopů. Neúplnost, blokace a změny cen jsou možné.",
@@ -1127,7 +1127,7 @@
       ]
     },
     "Rohlík::panzani": {
-      "checked_at": "2026-11-10T06:14+01:00",
+      "checked_at": "2026-11-19T14:28+01:00",
       "status": "ok",
       "cards": 26,
       "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
@@ -1136,16 +1136,16 @@
       ]
     },
     "Košík::panzani": {
-      "checked_at": "2026-11-10T06:14+01:00",
+      "checked_at": "2026-11-19T14:28+01:00",
       "status": "ok",
-      "cards": 19,
+      "cards": 18,
       "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
       "rule_ids": [
         "W052"
       ]
     },
     "Rohlík::panzani těstoviny": {
-      "checked_at": "2026-11-10T06:14+01:00",
+      "checked_at": "2026-11-19T14:28+01:00",
       "status": "ok",
       "cards": 31,
       "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
@@ -1154,16 +1154,16 @@
       ]
     },
     "Košík::panzani těstoviny": {
-      "checked_at": "2026-11-10T06:14+01:00",
+      "checked_at": "2026-11-19T14:28+01:00",
       "status": "ok",
-      "cards": 17,
+      "cards": 16,
       "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
       "rule_ids": [
         "W052"
       ]
     },
     "Rohlík::panzani rýže": {
-      "checked_at": "2026-11-10T12:09+01:00",
+      "checked_at": "2026-11-19T14:28+01:00",
       "status": "ok",
       "cards": 26,
       "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
@@ -1172,27 +1172,27 @@
       ]
     },
     "Košík::panzani rýže": {
-      "checked_at": "2026-11-10T12:09+01:00",
+      "checked_at": "2026-11-19T14:28+01:00",
       "status": "ok",
-      "cards": 15,
+      "cards": 14,
       "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
       "rule_ids": [
         "W052"
       ]
     },
     "Rohlík::zewa toaletní papír": {
-      "checked_at": "2026-11-10T12:09+01:00",
+      "checked_at": "2026-11-19T14:28+01:00",
       "status": "ok",
-      "cards": 26,
+      "cards": 27,
       "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
       "rule_ids": [
         "W053"
       ]
     },
     "Košík::zewa toaletní papír": {
-      "checked_at": "2026-11-10T12:09+01:00",
+      "checked_at": "2026-11-19T14:28+01:00",
       "status": "ok",
-      "cards": 10,
+      "cards": 8,
       "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
       "rule_ids": [
         "W053"
