@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-11-21T13:48+01:00",
+  "checked_at": "2026-11-21T22:43+01:00",
   "coverage": {
     "failed_queries_24h": 1,
     "failed_query_examples": [
@@ -13,7 +13,7 @@
     "queries_checked_24h": 24,
     "queries_responded_24h": 23,
     "watch_rules_total": 75,
-    "watch_rules_with_search_24h": 10,
+    "watch_rules_with_search_24h": 11,
     "coverage_window_hours": 240.0,
     "queries_checked_window": 196,
     "queries_responded_window": 193,
@@ -31,7 +31,7 @@
       }
     },
     "batch_queries": 8,
-    "batch_product_rows_matched": 194,
+    "batch_product_rows_matched": 69,
     "batch_errors": 0,
     "catalog_completeness_verified": false,
     "warning": "Vyhledávací dotazy napříč katalogy, nikoli úplný export obou e-shopů. Neúplnost, blokace a změny cen jsou možné.",
@@ -1493,7 +1493,7 @@
       ]
     },
     "Rohlík::vanish": {
-      "checked_at": "2026-11-11T18:18+01:00",
+      "checked_at": "2026-11-21T22:43+01:00",
       "status": "ok",
       "cards": 9,
       "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
@@ -1502,16 +1502,16 @@
       ]
     },
     "Košík::vanish": {
-      "checked_at": "2026-11-11T18:18+01:00",
+      "checked_at": "2026-11-21T22:43+01:00",
       "status": "ok",
-      "cards": 19,
+      "cards": 8,
       "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
       "rule_ids": [
         "W065"
       ]
     },
     "Rohlík::bref": {
-      "checked_at": "2026-11-11T18:18+01:00",
+      "checked_at": "2026-11-21T22:43+01:00",
       "status": "ok",
       "cards": 17,
       "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
@@ -1520,16 +1520,16 @@
       ]
     },
     "Košík::bref": {
-      "checked_at": "2026-11-11T18:18+01:00",
+      "checked_at": "2026-11-21T22:43+01:00",
       "status": "ok",
-      "cards": 21,
+      "cards": 20,
       "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
       "rule_ids": [
         "W066"
       ]
     },
     "Rohlík::wc net": {
-      "checked_at": "2026-11-12T06:20+01:00",
+      "checked_at": "2026-11-21T22:43+01:00",
       "status": "ok",
       "cards": 2,
       "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
@@ -1538,16 +1538,16 @@
       ]
     },
     "Košík::wc net": {
-      "checked_at": "2026-11-12T06:20+01:00",
+      "checked_at": "2026-11-21T22:43+01:00",
       "status": "ok",
-      "cards": 14,
+      "cards": 13,
       "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
       "rule_ids": [
         "W067"
       ]
     },
     "Rohlík::domestos": {
-      "checked_at": "2026-11-12T06:20+01:00",
+      "checked_at": "2026-11-21T22:43+01:00",
       "status": "ok",
       "cards": 8,
       "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
@@ -1556,9 +1556,9 @@
       ]
     },
     "Košík::domestos": {
-      "checked_at": "2026-11-12T06:20+01:00",
+      "checked_at": "2026-11-21T22:43+01:00",
       "status": "ok",
-      "cards": 4,
+      "cards": 7,
       "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
       "rule_ids": [
         "W068"
