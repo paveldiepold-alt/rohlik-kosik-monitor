@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-11-22T22:54+01:00",
+  "checked_at": "2026-11-23T15:54+01:00",
   "coverage": {
     "failed_queries_24h": 0,
     "failed_query_examples": [],
@@ -7,11 +7,11 @@
     "queries_checked_24h": 16,
     "queries_responded_24h": 16,
     "watch_rules_total": 75,
-    "watch_rules_with_search_24h": 6,
+    "watch_rules_with_search_24h": 4,
     "coverage_window_hours": 240.0,
-    "queries_checked_window": 192,
-    "queries_responded_window": 189,
-    "watch_rules_with_search_window": 75,
+    "queries_checked_window": 184,
+    "queries_responded_window": 182,
+    "watch_rules_with_search_window": 73,
     "by_store": {
       "Rohlík": {
         "planned": 98,
@@ -25,7 +25,7 @@
       }
     },
     "batch_queries": 8,
-    "batch_product_rows_matched": 103,
+    "batch_product_rows_matched": 85,
     "batch_errors": 0,
     "catalog_completeness_verified": false,
     "warning": "Vyhledávací dotazy napříč katalogy, nikoli úplný export obou e-shopů. Neúplnost, blokace a změny cen jsou možné.",
@@ -1703,43 +1703,43 @@
       ]
     },
     "Rohlík::papírové utěrky": {
-      "checked_at": "2026-11-12T18:19+01:00",
+      "checked_at": "2026-11-23T15:54+01:00",
       "status": "ok",
-      "cards": 31,
+      "cards": 30,
       "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
       "rule_ids": [
         "W074"
       ]
     },
     "Košík::papírové utěrky": {
-      "checked_at": "2026-11-12T18:19+01:00",
+      "checked_at": "2026-11-23T15:54+01:00",
       "status": "ok",
-      "cards": 49,
+      "cards": 47,
       "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
       "rule_ids": [
         "W074"
       ]
     },
     "Rohlík::zewa papírové utěrky": {
-      "checked_at": "2026-11-12T18:19+01:00",
+      "checked_at": "2026-11-23T15:54+01:00",
       "status": "ok",
-      "cards": 26,
+      "cards": 27,
       "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
       "rule_ids": [
         "W074"
       ]
     },
     "Košík::zewa papírové utěrky": {
-      "checked_at": "2026-11-12T18:19+01:00",
+      "checked_at": "2026-11-23T15:54+01:00",
       "status": "ok",
-      "cards": 17,
+      "cards": 14,
       "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
       "rule_ids": [
         "W074"
       ]
     },
     "Rohlík::kapesníky box 3vrstvé": {
-      "checked_at": "2026-11-13T06:19+01:00",
+      "checked_at": "2026-11-23T15:54+01:00",
       "status": "ok",
       "cards": 26,
       "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
@@ -1748,16 +1748,16 @@
       ]
     },
     "Košík::kapesníky box 3vrstvé": {
-      "checked_at": "2026-11-13T06:19+01:00",
+      "checked_at": "2026-11-23T15:54+01:00",
       "status": "ok",
-      "cards": 15,
+      "cards": 17,
       "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
       "rule_ids": [
         "W075"
       ]
     },
     "Rohlík::kapesníky v krabici": {
-      "checked_at": "2026-11-13T06:19+01:00",
+      "checked_at": "2026-11-23T15:54+01:00",
       "status": "ok",
       "cards": 25,
       "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
@@ -1766,7 +1766,7 @@
       ]
     },
     "Košík::kapesníky v krabici": {
-      "checked_at": "2026-11-13T06:19+01:00",
+      "checked_at": "2026-11-23T15:54+01:00",
       "status": "ok",
       "cards": 19,
       "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
