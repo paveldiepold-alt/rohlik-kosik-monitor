@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-11-24T03:57+01:00",
+  "checked_at": "2026-11-24T15:59+01:00",
   "coverage": {
     "failed_queries_24h": 0,
     "failed_query_examples": [],
@@ -7,11 +7,11 @@
     "queries_checked_24h": 16,
     "queries_responded_24h": 16,
     "watch_rules_total": 75,
-    "watch_rules_with_search_24h": 3,
+    "watch_rules_with_search_24h": 5,
     "coverage_window_hours": 240.0,
-    "queries_checked_window": 184,
-    "queries_responded_window": 182,
-    "watch_rules_with_search_window": 71,
+    "queries_checked_window": 176,
+    "queries_responded_window": 174,
+    "watch_rules_with_search_window": 62,
     "by_store": {
       "Rohlík": {
         "planned": 98,
@@ -25,7 +25,7 @@
       }
     },
     "batch_queries": 8,
-    "batch_product_rows_matched": 61,
+    "batch_product_rows_matched": 72,
     "batch_errors": 0,
     "catalog_completeness_verified": false,
     "warning": "Vyhledávací dotazy napříč katalogy, nikoli úplný export obou e-shopů. Neúplnost, blokace a změny cen jsou možné.",
@@ -69,16 +69,16 @@
       ]
     },
     "Rohlík::kuřecí stehna": {
-      "checked_at": "2026-11-13T12:15+01:00",
+      "checked_at": "2026-11-24T15:59+01:00",
       "status": "ok",
-      "cards": 29,
+      "cards": 30,
       "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
       "rule_ids": [
         "W002"
       ]
     },
     "Košík::kuřecí stehna": {
-      "checked_at": "2026-11-13T12:15+01:00",
+      "checked_at": "2026-11-24T15:59+01:00",
       "status": "ok",
       "cards": 28,
       "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
@@ -87,25 +87,25 @@
       ]
     },
     "Rohlík::kuřecí paličky": {
-      "checked_at": "2026-11-13T12:15+01:00",
+      "checked_at": "2026-11-24T15:59+01:00",
       "status": "ok",
-      "cards": 21,
+      "cards": 20,
       "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
       "rule_ids": [
         "W002"
       ]
     },
     "Košík::kuřecí paličky": {
-      "checked_at": "2026-11-13T12:15+01:00",
+      "checked_at": "2026-11-24T15:59+01:00",
       "status": "ok",
-      "cards": 14,
+      "cards": 12,
       "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
       "rule_ids": [
         "W002"
       ]
     },
     "Rohlík::vepřová krkovice": {
-      "checked_at": "2026-11-13T18:15+01:00",
+      "checked_at": "2026-11-24T15:59+01:00",
       "status": "ok",
       "cards": 26,
       "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
@@ -114,7 +114,7 @@
       ]
     },
     "Košík::vepřová krkovice": {
-      "checked_at": "2026-11-13T18:15+01:00",
+      "checked_at": "2026-11-24T15:59+01:00",
       "status": "ok",
       "cards": 18,
       "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
@@ -123,16 +123,16 @@
       ]
     },
     "Rohlík::vepřová panenka": {
-      "checked_at": "2026-11-13T18:15+01:00",
+      "checked_at": "2026-11-24T15:59+01:00",
       "status": "ok",
-      "cards": 176,
+      "cards": 165,
       "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
       "rule_ids": [
         "W004"
       ]
     },
     "Košík::vepřová panenka": {
-      "checked_at": "2026-11-13T18:15+01:00",
+      "checked_at": "2026-11-24T15:59+01:00",
       "status": "ok",
       "cards": 11,
       "detail": "Veřejné výsledky vyhledávání; úplnost neověřena",
